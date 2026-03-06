@@ -36,7 +36,7 @@ export default function Navbar() {
                     <Image
                         src="/logo.jpeg"
                         alt="PixlTools"
-                        width={100}
+                        width={99}
                         height={36}
                         className="h-9 w-auto object-contain"
                         priority

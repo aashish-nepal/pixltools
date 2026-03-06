@@ -42,7 +42,7 @@ export default function Footer() {
                             <Image
                                 src="/logo.jpeg"
                                 alt="PixlTools"
-                                width={100}
+                                width={99}
                                 height={30}
                                 className="h-7 w-auto object-contain"
                             />
