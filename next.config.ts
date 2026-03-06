@@ -6,6 +6,7 @@ const securityHeaders = [
   { key: "X-XSS-Protection", value: "1; mode=block" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
   {
     key: "Content-Security-Policy",
     value: [
@@ -23,6 +24,14 @@ const securityHeaders = [
   },
 ];
 
+// Minimal headers applied to API routes (no CSP / framing headers needed for JSON/binary endpoints)
+const apiHeaders = [
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains; preload" },
+];
+
 const nextConfig: NextConfig = {
   serverExternalPackages: ["sharp", "exifr"],
   images: {
@@ -32,8 +41,12 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/((?!api/).*)",
+        source: "/(.*)",
         headers: securityHeaders,
+      },
+      {
+        source: "/api/(.*)",
+        headers: apiHeaders,
       },
     ];
   },

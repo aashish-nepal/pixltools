@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
     const mimeMap: Record<string, string> = { jpeg: "image/jpeg", png: "image/png", webp: "image/webp" };
 
     const out = await sharp(buffer)
-        .resize(width, height, { fit: "inside", withoutEnlargement: false })
+        .resize(width, height, { fit: "inside", withoutEnlargement: true })
         .toFormat(fmt)
         .toBuffer();
 
