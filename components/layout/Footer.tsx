@@ -40,7 +40,7 @@ export default function Footer() {
                     <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
                         <Link href="/" className="inline-flex items-center w-fit">
                             <Image
-                                src="/logo.png"
+                                src="/logo.jpeg"
                                 alt="PixlTools"
                                 width={100}
                                 height={30}

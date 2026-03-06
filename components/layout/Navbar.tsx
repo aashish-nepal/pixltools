@@ -34,7 +34,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center group">
                     <Image
-                        src="/logo.png"
+                        src="/logo.jpeg"
                         alt="PixlTools"
                         width={100}
                         height={36}
