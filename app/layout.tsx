@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://pixltools.com"),
@@ -67,6 +68,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               `}
             </Script>
           </>
+        )}
+        {/* Google AdSense */}
+        {ADSENSE_ID && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
         )}
         <Navbar />
         {children}
