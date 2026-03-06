@@ -73,9 +73,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {ADSENSE_ID && (
           <Script
             async
+            strategy="beforeInteractive"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
             crossOrigin="anonymous"
-            strategy="afterInteractive"
           />
         )}
         <Navbar />
