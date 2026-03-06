@@ -27,7 +27,7 @@ const homeFaqs = [
 const STATS = [
   { value: "30+", label: "Free Tools" },
   { value: "10MB", label: "Max File Size" },
-  { value: "0s", label: "Signup Time" },
+  { value: "0", label: "Accounts Needed" },
   { value: "100%", label: "Private & Secure" },
 ];
 
@@ -308,7 +308,7 @@ export default function HomePage() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {FEATURES.map(({ icon: Icon, title, desc, color, bg, border }) => (
-            <div key={title} className={`group bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition-all hover:shadow-lg hover:shadow-black/30`}>
+            <div key={title} className={`group bg-slate-900 border border-slate-800 hover:border-slate-700 rounded-2xl p-6 transition-all hover:shadow-lg hover:shadow-black/30 hover:-translate-y-1`}>
               <div className={`inline-flex items-center justify-center w-10 h-10 ${bg} ${color} rounded-xl mb-4 border ${border}`}>
                 <Icon size={18} strokeWidth={1.8} />
               </div>
@@ -320,7 +320,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── SEO CONTENT ───── */}
-      <section className="bg-slate-900 border-y border-slate-800 py-20 px-4">
+      <section className="bg-slate-900 border-y border-slate-800 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Image Optimization Guide</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Image Optimization Matters</h2>
@@ -392,7 +392,7 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
               href="/compress-image"
-              className="inline-flex items-center justify-center gap-2 bg-slate-950 text-emerald-400 font-bold px-7 py-3.5 rounded-2xl hover:bg-slate-900 transition-colors shadow-lg"
+              className="inline-flex items-center justify-center gap-2 bg-slate-950 text-white font-bold px-7 py-3.5 rounded-2xl hover:bg-slate-900 transition-colors shadow-lg"
             >
               <Zap size={16} />
               Compress Image Free
