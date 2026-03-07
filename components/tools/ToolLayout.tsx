@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import UploadArea from "@/components/tools/UploadArea";
 import AdBanner from "@/components/ui/AdBanner";
 import FAQSection from "@/components/ui/FAQSection";
-import { buildJsonLdWebApp, buildJsonLdFAQ } from "@/lib/utils";
+import { buildJsonLdWebApp, buildJsonLdFAQ, buildJsonLdBreadcrumb, buildJsonLdHowTo } from "@/lib/utils";
 import {
     AlertCircle, Download, RotateCcw, Loader2,
     ShieldCheck, Zap, Infinity, UserX, CheckCircle2,
@@ -162,8 +162,11 @@ export default function ToolLayout({
         return `${base}-pixltools.${ext}`;
     };
 
-    const webAppSchema = buildJsonLdWebApp(toolName, toolDesc, `https://pixltools.com/${toolName.toLowerCase().replace(/\s+/g, "-")}`);
+    const toolSlug = toolName.toLowerCase().replace(/\s+/g, "-");
+    const webAppSchema = buildJsonLdWebApp(toolName, toolDesc, `https://pixltools.com/${toolSlug}`);
     const faqSchema = buildJsonLdFAQ(faqs);
+    const breadcrumbSchema = buildJsonLdBreadcrumb(toolName, toolSlug);
+    const howToSchema = buildJsonLdHowTo(toolName, howToUse);
 
     const savings = originalSize > 0 && resultSize > 0
         ? Math.round((1 - resultSize / originalSize) * 100)
@@ -173,6 +176,8 @@ export default function ToolLayout({
         <main className="min-h-screen bg-slate-950">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
 
             {/* ── Hero ────────────────────────────────────────────── */}
             <div className="relative overflow-hidden bg-slate-950 border-b border-slate-800/60">

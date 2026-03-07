@@ -47,6 +47,10 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large" },
   },
+  alternates: {
+    canonical: "https://pixltools.com",
+    languages: { "en": "https://pixltools.com" },
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

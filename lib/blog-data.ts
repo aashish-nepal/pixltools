@@ -648,6 +648,683 @@ High-quality JPG at 150 DPI, suitable for web display and social sharing.
 Our online tool converts the first page. For multi-page extraction, use a desktop tool.`,
         relatedSlugs: ["best-image-formats-for-websites", "how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites"],
     },
+    {
+        slug: "how-to-reduce-photo-size-in-kb",
+        title: "How to Reduce Photo Size in KB – Fast & Free",
+        excerpt: "Need to reduce a photo to under 200KB, 100KB, or 50KB? Here's exactly how to do it online for free.",
+        date: "2026-02-20",
+        readTime: 5,
+        category: "Compression",
+        content: `## Why You Need to Reduce Photo Size in KB
+
+Many websites, forms, and apps have strict file size limits. Government portals often require photos under 100KB. Email attachments have limits. Dating apps require small profile photos. Getting a photo to a specific file size is a common real-world challenge.
+
+## How File Size Works
+
+Image file size depends on three things:
+
+1. **Dimensions (pixels)** — A 4000×3000px photo has 12 million pixels. A 1000×750px photo has 750,000 pixels. The smaller photo is 16x less data before compression.
+2. **Compression level (quality)** — JPEG quality 80 is roughly half the size of quality 100, with barely any visible difference.
+3. **Format** — WEBP is 25–35% smaller than JPEG at the same quality. PNG is much larger than JPEG for photographs.
+
+## Step-by-Step: Reduce to Any Target KB
+
+### Target under 500KB
+Resize to 1200×900px maximum, save as JPEG at quality 80. Most photos will be 100–300KB.
+
+### Target under 200KB
+Resize to 1000×750px, JPEG quality 75. Result: typically 80–180KB.
+
+### Target under 100KB
+Resize to 800×600px, JPEG quality 70. Result: usually 50–100KB.
+
+### Target under 50KB
+Resize to 600×450px, JPEG quality 65. Result: typically 30–60KB.
+
+## Free Online Tool
+
+Our [Image Compressor](/compress-image) tool lets you compress images online for free. You can also use our [Resize Image](/resize-image) tool to reduce dimensions first, then compress.
+
+**Tip**: Always resize before compressing. Compressing a large image gives worse results than compressing a correctly-sized image.
+
+## By Format
+
+**JPEG/JPG**: Use quality 70–85. Most effective for photos.
+**PNG**: Convert to JPEG first if transparency isn't required. PNG files for photos are 3–5x larger than JPEG.
+**WEBP**: Use quality 75. Produces the smallest files of any format.
+
+## FAQ
+
+**Can I reduce file size without losing quality?**
+You can reduce it significantly (50–70%) at quality 80 with negligible visible loss. Below quality 70, artifacts become visible.
+
+**What tool should I use?**
+Our free [Compress Image](/compress-image) tool works for JPG, PNG, and WEBP with no signup required.
+
+**Why are my PNG photos so large?**
+PNG uses lossless compression — great for graphics, but for photos the files are huge. Convert to JPEG to reduce by 60–80%.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites"],
+    },
+    {
+        slug: "how-to-convert-jpg-to-pdf-free",
+        title: "How to Convert JPG to PDF Online – Free & Instant",
+        excerpt: "Convert any JPG, PNG, or WEBP image to a PDF document in seconds. No software, no signup, completely free.",
+        date: "2026-02-22",
+        readTime: 5,
+        category: "Conversion",
+        content: `## Why Convert JPG to PDF?
+
+PDF is the universal document format — accepted by government offices, schools, employers, and businesses worldwide. When you need to submit photos as a document, convert images to a shareable portfolio, or archive photos in a printable format, PDF is the answer.
+
+## How to Convert JPG to PDF for Free
+
+Use our free [Image to PDF](/image-to-pdf) converter:
+
+1. Visit the [Image to PDF](/image-to-pdf) tool
+2. Upload your JPG, PNG, or WEBP image (up to 10MB)
+3. Click "Process" — your image is instantly converted to a PDF
+4. Click "Download PDF" to save your file
+
+No signup. No watermarks. Works on phones, tablets, and desktop.
+
+## Tips for the Best PDF Output
+
+**Use the highest quality original.** PDF conversion preserves the image quality exactly. If you start with a blurry photo, the PDF will also be blurry.
+
+**Resize first for print.** For A4 print (210×297mm at 300 DPI), your image should be at least 2480×3508px. Use our [Resize Image](/resize-image) tool first if needed.
+
+**Portrait vs landscape.** Most PDFs default to portrait (vertical) orientation. For landscape photos (wider than tall), the PDF page will match the photo's orientation automatically.
+
+## Converting Multiple Images to PDF
+
+Our online tool converts one image per PDF. For multi-image PDFs:
+- Use Adobe Acrobat (paid) or PDF24 (free desktop tool)
+- Combine image-to-PDF files using a PDF merger tool
+
+## The Reverse: PDF to JPG
+
+Need to do the reverse? Our [PDF to Image](/pdf-to-image) tool extracts PDF pages as JPG images, perfect for sharing a PDF slide as a social media post.
+
+## FAQ
+
+**What image formats can I convert to PDF?**
+JPG, PNG, and WEBP. All common web formats are supported.
+
+**Is the PDF output good quality for printing?**
+Yes — at 150 DPI for screen use and digital submission. For professional print, start with a high-resolution image (300+ DPI source).
+
+**Is it free?**
+Completely free, with no watermarks on the output PDF.`,
+        relatedSlugs: ["how-to-convert-pdf-to-jpg-online-free", "best-image-formats-for-websites", "how-to-reduce-photo-size-in-kb"],
+    },
+    {
+        slug: "how-to-make-image-smaller",
+        title: "How to Make an Image Smaller – 3 Easy Methods",
+        excerpt: "Make images smaller in 3 ways: reduce file size, shrink dimensions, or both. All free, all online, no software needed.",
+        date: "2026-02-25",
+        readTime: 6,
+        category: "Optimization",
+        content: `## What Does "Make an Image Smaller" Mean?
+
+"Smaller" means different things in different contexts:
+
+- **Smaller file size** (KB/MB) — for email attachments, website uploads, faster loading
+- **Smaller dimensions** (pixels) — for fitting into a container or meeting size restrictions
+- **Both** — the most common need
+
+This guide covers all three approaches.
+
+## Method 1: Reduce File Size (Compression)
+
+Compression reduces KB/MB without changing pixel dimensions. Best for:
+- Images already at the right dimensions but too heavy for upload
+- Website images that need to load faster
+- Email attachments over the limit
+
+**How to compress:**
+1. Go to [Compress Image](/compress-image)
+2. Upload your image
+3. Adjust quality (lower = smaller file, more compression artifacts)
+4. Download
+
+**Results**: Quality 80 typically reduces JPEG by 60–75% with barely visible loss.
+
+## Method 2: Reduce Dimensions (Resize)
+
+Resizing makes the image physically smaller in pixels. Best for:
+- Images that are too large to display correctly
+- Fitting specific container sizes (e.g., 800px max width for a blog)
+- Reducing file size more aggressively than compression alone
+
+**How to resize:**
+1. Go to [Resize Image](/resize-image)
+2. Enter your target width (e.g., 800px)
+3. Enable "Maintain aspect ratio" to avoid distortion
+4. Download
+
+## Method 3: Both (Best Results)
+
+For maximum size reduction, resize first, then compress:
+
+1. **Resize** to the maximum dimensions you'll actually display the image at
+2. **Compress** to target quality 75–85
+
+This combination typically reduces a 5MB smartphone photo to under 100KB with no visible quality loss at normal viewing distances.
+
+## Choosing the Right Format
+
+Switching formats can also make images dramatically smaller:
+- **PNG → JPEG**: For photos without transparency, saves 60–80%
+- **JPEG → WEBP**: Saves 25–35% at equal quality
+- **PNG → WEBP**: Saves 25% losslessly, or more with lossy
+
+Use our [JPG to WEBP](/jpg-to-webp) or [PNG to WEBP](/png-to-webp) converters.
+
+## FAQ
+
+**How small can I make an image without quality loss?**
+For JPEG, quality 80 is the practical floor for imperceptible quality loss. Below that, compression artifacts become visible.
+
+**Can I make an image smaller for Instagram?**
+Instagram compresses uploads anyway. For best results, upload at 1080px width, JPEG quality 90+. Our [Resize Image](/resize-image) tool can crop to the right dimensions.
+
+**What's the fastest way to make an image under 1MB?**
+Resize to 1200px maximum width, then compress at quality 80. This handles 95% of use cases.`,
+        relatedSlugs: ["how-to-reduce-photo-size-in-kb", "how-to-compress-images-without-losing-quality", "how-to-resize-images-for-web-complete-guide"],
+    },
+    {
+        slug: "how-to-optimize-images-for-instagram",
+        title: "How to Optimize Images for Instagram – Get Maximum Quality",
+        excerpt: "Stop Instagram from destroying your photo quality. The exact dimensions, format, and compression settings for perfect Instagram uploads.",
+        date: "2026-03-01",
+        readTime: 7,
+        category: "Social Media",
+        content: `## Why Instagram Degrades Your Photos
+
+Instagram re-compresses every image you upload. If your photo is the wrong size or format, Instagram compresses it twice — once to fit its container, and again with its own quality algorithm. The result is a blurry, washed-out version of your original.
+
+Upload at the exact right specs and Instagram only compresses once, preserving maximum quality.
+
+## Instagram Image Specifications 2026
+
+| Post Type | Optimal Size | Aspect Ratio | Format |
+|---|---|---|---|
+| Square | 1080×1080px | 1:1 | JPEG |
+| Portrait (best for feed) | 1080×1350px | 4:5 | JPEG |
+| Landscape | 1080×566px | 1.91:1 | JPEG |
+| Story / Reel | 1080×1920px | 9:16 | JPEG |
+| Profile picture | 320×320px | 1:1 | JPEG |
+
+**Always use JPEG for Instagram**, not PNG. Instagram converts PNG to JPEG internally, and the conversion introduces extra compression.
+
+## The Key Setting: File Size Limit
+
+Instagram's image processing kicks in hardest on files over 1MB. To avoid aggressive re-compression:
+- **Keep images under 1MB** if possible
+- For a 1080×1350px portrait, target 500–900KB
+
+## Step-by-Step: Perfect Instagram Upload
+
+1. **Resize** your image to 1080px wide using our [Resize Image](/resize-image) tool. Enable "maintain aspect ratio."
+2. **Crop** to the right aspect ratio using our [Crop Image](/crop-image) tool (4:5 for portrait = 1080×1350px ending).
+3. **Compress** to quality 85 using our [Compress Image](/compress-image) tool. This gives excellent quality at under 500KB.
+4. **Upload** to Instagram. You should notice significantly better sharpness.
+
+## Instagram-Specific Tips
+
+**Profile grid view**: Instagram shows thumbnails at 293×293px in the grid. Make sure your main subject is centered and visible at this small size.
+
+**Avoid over-sharpening**: Some editing apps add heavy sharpening for Instagram. This creates ugly halos at Instagram's compression rate. Keep sharpening subtle.
+
+**Story dimensions**: Stories display at 1920px tall on most phones. Use the full 1080×1920px to avoid Instagram pillarboxing your content.
+
+## FAQ
+
+**Does Instagram reduce image quality?**
+Yes — Instagram re-compresses all uploaded images. Uploading at the exact recommended specs minimizes this quality loss.
+
+**What quality JPEG for Instagram?**
+Quality 85 saves at roughly 400–700KB for a 1080×1350px image, maintaining excellent visual quality after Instagram's re-compression.
+
+**Can I upload WEBP to Instagram?**
+No — Instagram doesn't accept WEBP. Convert to JPEG first using our [WEBP to JPG](/webp-to-jpg) converter.`,
+        relatedSlugs: ["how-to-resize-images-for-social-media-2026", "best-image-size-for-blogs-and-social-media", "how-to-compress-images-without-losing-quality"],
+    },
+    {
+        slug: "how-to-crop-an-image-online-free",
+        title: "How to Crop an Image Online Free – No Software Needed",
+        excerpt: "Crop any photo to a custom size, aspect ratio, or preset dimensions instantly. Free, no login, works on any device.",
+        date: "2026-03-03",
+        readTime: 5,
+        category: "Resize",
+        content: `## What is Image Cropping?
+
+Cropping removes the outer edges of an image to focus on a specific area, change the aspect ratio, or meet a platform's required dimensions. Unlike resizing (which scales the entire image), cropping cuts away parts of the image without scaling.
+
+## When to Crop vs Resize
+
+| Need | Action |
+|---|---|
+| Make an image fit a square frame | Crop to 1:1 aspect ratio |
+| Make an image load faster | Resize to smaller dimensions |
+| Focus on a subject in the center | Crop to remove the borders |
+| Change from portrait to landscape | Crop with new aspect ratio |
+| Meet exact pixel dimensions | Crop + resize combination |
+
+## How to Crop an Image Online Free
+
+Use our [Crop Image](/crop-image) tool:
+
+1. Go to [Crop Image](/crop-image)
+2. Upload your image (JPG, PNG, or WEBP)
+3. Enter your crop settings:
+   - **Custom dimensions**: specify exact pixel width and height
+   - **Aspect ratio presets**: 1:1, 4:3, 16:9, 4:5, 9:16
+4. Choose crop positioning (top, center, bottom)
+5. Click "Process" and download your cropped image
+
+## Common Crop Dimensions
+
+| Platform | Dimensions | Aspect Ratio |
+|---|---|---|
+| Instagram square | 1080×1080px | 1:1 |
+| Instagram portrait | 1080×1350px | 4:5 |
+| YouTube thumbnail | 1280×720px | 16:9 |
+| Facebook post | 1200×630px | 1.91:1 |
+| Twitter header | 1500×500px | 3:1 |
+
+## Tips for Better Crops
+
+**Rule of thirds**: Position your main subject at the intersections of an imaginary 3×3 grid rather than dead center. Results are more dynamic and engaging.
+
+**Crop tightly for portraits**: For headshots, crop just above the top of the head and below the shoulders. This creates more impact than showing the full body.
+
+**Check the thumbnail**: After cropping, zoom out to see how it looks at thumbnail size (Instagram grid, Google search results). The subject should be clearly identifiable.
+
+## FAQ
+
+**Can I crop without losing quality?**
+Cropping does not affect image quality — it only removes pixels. The remaining pixels are unchanged.
+
+**Can I undo a crop?**
+Our tool always preserves your original file. Just re-upload and crop again with different settings.
+
+**What if I need to crop to exact pixels?**
+Enter the exact pixel dimensions in the custom crop field. The tool will center-crop to those dimensions.`,
+        relatedSlugs: ["how-to-resize-images-for-web-complete-guide", "how-to-resize-images-for-social-media-2026", "best-image-size-for-blogs-and-social-media"],
+    },
+    {
+        slug: "image-file-formats-explained",
+        title: "Image File Formats Explained: JPG, PNG, WEBP, SVG, AVIF & More",
+        excerpt: "A complete guide to every major image format — what each one is best for, file size comparisons, and when to use each.",
+        date: "2026-03-04",
+        readTime: 10,
+        category: "Formats",
+        content: `## Why Image Format Choice Matters
+
+Choosing the wrong format can make an image 10x larger than it needs to be, or destroy quality that could have been preserved. This guide covers every major format in plain language.
+
+## JPEG / JPG
+
+**Created**: 1992 | **Best for**: Photos, product images, backgrounds
+
+JPEG uses lossy compression — permanently removing data to achieve smaller file sizes. At quality 80, photos are 60–80% smaller than quality 100 with barely visible loss.
+
+✅ Universal browser and device support  
+✅ Small file sizes for photos  
+❌ No transparency  
+❌ Compression artifacts at low quality  
+❌ Not lossless — can't edit repeatedly without degradation  
+
+## PNG
+
+**Created**: 1996 | **Best for**: Logos, screenshots, UI graphics, images needing transparency
+
+PNG uses lossless compression — no data is discarded. Every pixel is preserved exactly. Supports full alpha transparency.
+
+✅ Lossless — perfect quality  
+✅ Full alpha transparency (8-bit)  
+✅ Great for sharp text and graphics  
+❌ Very large for photographs  
+❌ No animation support (use APNG for that)  
+
+## WEBP
+
+**Created**: 2010 by Google | **Best for**: All web images
+
+WEBP supports both lossy and lossless compression, plus transparency and animation. Consistently outperforms JPEG and PNG.
+
+✅ 25–35% smaller than JPEG at equivalent quality  
+✅ 25% smaller than PNG for lossless  
+✅ Supports transparency  
+✅ Supported by all modern browsers  
+❌ Not supported in some email clients  
+❌ Older browsers (IE, Safari <14) lack support  
+
+## SVG
+
+**Created**: 1999 | **Best for**: Icons, logos, illustrations
+
+SVG is a vector format — described by mathematical paths rather than pixels. Scales to any size without quality loss.
+
+✅ Infinite scalability (perfect at any size)  
+✅ Tiny file sizes for simple graphics  
+✅ Editable in code  
+❌ Not suitable for photographs  
+❌ Can be complex for detailed illustrations  
+
+## AVIF
+
+**Created**: 2019 | **Best for**: High-quality web images (bleeding edge)
+
+AVIF is the newest format, based on the AV1 video codec. Outperforms WEBP by 20–50% in compression efficiency.
+
+✅ Smallest file sizes of any format  
+✅ Supports HDR and wide colour gamut  
+❌ Slower encoding than WEBP  
+❌ Still gaining browser support (Chrome/Firefox/Safari 16+)  
+
+## GIF
+
+**Created**: 1987 | **Best for**: Simple animations only
+
+GIF supports animation but is limited to 256 colours, making it terrible for photos. For modern animations, use WEBP or video (MP4).
+
+## Format Comparison Table
+
+| Format | Compression | Transparency | Animation | Best For |
+|---|---|---|---|---|
+| JPEG | Lossy | ❌ | ❌ | Photos |
+| PNG | Lossless | ✅ | ❌ | Graphics |
+| WEBP | Both | ✅ | ✅ | Everything |
+| SVG | Vector | ✅ | ✅ | Icons/logos |
+| AVIF | Lossy | ✅ | ❌ | Next-gen photos |
+| GIF | Lossy | Partial | ✅ | Avoid |
+
+## Our Recommendation
+
+Default to **WEBP** for all web images. Convert your existing JPEGs and PNGs using our free converters:
+- [JPG to WEBP](/jpg-to-webp)
+- [PNG to WEBP](/png-to-webp)
+- [WEBP to JPG](/webp-to-jpg) (for compatibility)`,
+        relatedSlugs: ["best-image-formats-for-websites", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-compress-images-without-losing-quality"],
+    },
+    {
+        slug: "core-web-vitals-image-optimization",
+        title: "Core Web Vitals & Images: How to Fix LCP, CLS, and INP",
+        excerpt: "Images are the #1 cause of failing Core Web Vitals. Here's exactly how to fix LCP, CLS, and INP caused by image issues.",
+        date: "2026-03-05",
+        readTime: 9,
+        category: "Optimization",
+        content: `## Why Core Web Vitals Matter for SEO
+
+Google uses Core Web Vitals as a direct ranking signal. Sites that fail these metrics are penalized in search rankings. Images are the primary cause of failure for 80% of websites.
+
+The three metrics you need to fix:
+
+- **LCP** (Largest Contentful Paint) — how fast the main content loads
+- **CLS** (Cumulative Layout Shift) — how much content jumps around while loading
+- **INP** (Interaction to Next Paint) — how responsive the page feels
+
+## LCP — The Biggest Image Problem
+
+LCP measures the time until the largest visible element loads. On most websites, this is a hero image. **Target: under 2.5 seconds**.
+
+### Common LCP Image Failures:
+1. **Image is too large** — a 4MB hero photo when 200KB would suffice
+2. **Wrong format** — JPEG/PNG instead of WEBP
+3. **Not preloaded** — browser discovers the image late in rendering
+
+### How to Fix LCP:
+
+**Compress and resize** the hero image. For desktop hero images (1440px wide), a quality-80 WEBP should be under 150KB. Use our [Compress Image](/compress-image) tool.
+
+**Preload your hero image** in HTML:
+
+    <link rel="preload" as="image" href="/hero.webp" fetchpriority="high">
+
+**Convert to WEBP** using our [JPG to WEBP](/jpg-to-webp) converter for 30% smaller files.
+
+**Add a CDN** (Cloudflare is free). CDN edge servers serve your images from locations close to users, dramatically reducing latency.
+
+## CLS — Images Causing Layout Jumps
+
+CLS measures page layout stability. Images without explicit width and height cause massive CLS — they load in with zero size, then suddenly expand, pushing content down. **Target: under 0.1**.
+
+### Fix CLS from Images:
+
+Always specify width and height attributes:
+
+    <img src="photo.webp" width="1200" height="630" alt="Description">
+
+Or use CSS aspect-ratio:
+
+    img { aspect-ratio: 16/9; width: 100%; }
+
+For Next.js users, the Image component handles this automatically.
+
+## INP — Images Causing Interaction Delays
+
+INP measures responsiveness. Large images loaded synchronously block the main thread, causing interaction delays. **Target: under 200ms**.
+
+### Fix INP from Images:
+
+**Use lazy loading** for below-the-fold images:
+
+    <img src="photo.webp" loading="lazy" alt="Description">
+
+**Avoid huge images above the fold** — they compete for bandwidth with critical resources.
+
+**Use decoding="async"** for non-critical images:
+
+    <img src="photo.webp" decoding="async" alt="Description">
+
+## Measuring Your Score
+
+1. Visit https://pagespeed.web.dev
+2. Enter your URL
+3. Look at the "Opportunities" section — image issues are listed with exact savings estimates
+
+## Quick Wins Checklist
+
+- [ ] Hero image: WEBP format, under 150KB, preloaded
+- [ ] All images: explicit width and height attributes
+- [ ] Below-fold images: loading="lazy"
+- [ ] Format: WEBP across the site
+- [ ] CDN: Cloudflare or similar`,
+        relatedSlugs: ["how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites", "how-to-compress-images-without-losing-quality"],
+    },
+    {
+        slug: "how-to-flip-an-image-online",
+        title: "How to Flip an Image Online Free – Mirror Horizontally or Vertically",
+        excerpt: "Flip any photo horizontally (mirror effect) or vertically (upside down) in one click. Free, instant, no signup.",
+        date: "2026-03-06",
+        readTime: 4,
+        category: "Resize",
+        content: `## What Does Flipping an Image Do?
+
+Flipping creates a mirror image of your photo by reversing it along an axis:
+
+- **Horizontal flip** (left-right mirror): Creates a mirrored reflection of the image. The left side becomes the right side.
+- **Vertical flip** (upside down): Inverts the image top-to-bottom.
+
+## When Would You Flip an Image?
+
+**Horizontal flip uses:**
+- Correcting accidentally mirrored selfies (front cameras mirror by default on some phones)
+- Creating symmetrical designs
+- Placing subjects facing a specific direction in a layout
+- Text in image appears backwards (someone photographed a sign in a mirror)
+
+**Vertical flip uses:**
+- Creating water reflection effects
+- Correcting upside-down scans
+- Design and artistic effects
+
+## How to Flip an Image for Free
+
+Use our [Flip Image](/flip-image) tool:
+
+1. Go to [Flip Image](/flip-image)
+2. Upload your image (JPG, PNG, or WEBP)
+3. Select "Flip Horizontal" or "Flip Vertical"
+4. Download your flipped image
+
+Takes about 3–5 seconds. No signup required. No watermarks.
+
+## Flip vs Rotate — What's the Difference?
+
+**Flip** creates a mirror image (reverses along an axis). **Rotate** turns the image clockwise or counter-clockwise.
+
+If your phone photo is sideways, you need [Rotate Image](/rotate-image), not flip.
+If your selfie is mirrored, you need flip.
+
+## Does Flipping Reduce Image Quality?
+
+No. Flipping is a lossless operation — it rearranges existing pixels without recompressing. The output quality is identical to the input.
+
+## FAQ
+
+**How do I flip a photo on iPhone?**
+In the Photos app: tap Edit → tap the Crop icon → tap the flip icon (two overlapping triangles). Alternatively, use our free online tool.
+
+**Can I flip a PNG with transparency?**
+Yes — our tool preserves transparency when flipping PNG files.
+
+**How do I flip multiple images?**
+Currently our tool processes one image at a time. For batch processing, use ImageMagick on the command line.`,
+        relatedSlugs: ["how-to-crop-an-image-online-free", "how-to-resize-images-for-web-complete-guide", "how-to-make-image-smaller"],
+    },
+    {
+        slug: "what-is-image-dpi-and-how-to-change-it",
+        title: "What is Image DPI? How to Check and Change DPI Free Online",
+        excerpt: "DPI explained in plain language — what it means for print vs web, how to check your image's DPI, and how to change it.",
+        date: "2026-03-06",
+        readTime: 7,
+        category: "Optimization",
+        content: `## What is DPI?
+
+DPI stands for **Dots Per Inch** — a measurement of how many pixels are packed into one inch of printed output. The higher the DPI, the sharper and more detailed the printed result.
+
+| DPI | Use Case |
+|---|---|
+| 72 DPI | Screen display (web, apps) |
+| 96 DPI | Windows screen default |
+| 150 DPI | PDF and digital documents |
+| 300 DPI | Professional print (standard) |
+| 600 DPI | High-quality print (photography) |
+
+## DPI Only Matters for Print
+
+This is the most important thing to understand: **DPI has no effect on how images look on screen.**
+
+On a screen, only pixel dimensions matter. A 1920×1080px image at 72 DPI looks identical to the same image at 300 DPI on any monitor. The DPI tag is metadata that only matters to printers.
+
+When you send an image to a printer, the printer uses the DPI value to determine how large to print the image. A 3000×2400px image at 300 DPI will print at exactly 10×8 inches.
+
+## Do I Have Enough Resolution for Print?
+
+Formula: **Pixel dimension ÷ DPI = Print size in inches**
+
+- 3000px wide ÷ 300 DPI = **10 inches** wide at full quality
+- 1500px wide ÷ 300 DPI = **5 inches** wide at full quality
+- 600px wide ÷ 300 DPI = **only 2 inches** — anything larger will be blurry
+
+## How to Check an Image's DPI
+
+Use our [Image Metadata Viewer](/image-metadata-viewer):
+
+1. Go to [Image Metadata Viewer](/image-metadata-viewer)
+2. Upload your image
+3. Look for "Resolution" or "DPI" in the EXIF data
+
+Alternatively: right-click any image on Windows → Properties → Details tab → shows horizontal/vertical resolution.
+
+## How to Change DPI (Set to 300 for Print)
+
+Changing the DPI metadata alone does NOT change quality — it only changes the metadata tag. To actually make an image print well at a larger size, you need more pixels:
+
+**Method 1 — Just change the metadata (same pixels)**:
+Use image editing software like Photoshop (Image → Image Size → uncheck resample → change DPI). File size is unchanged, pixel count unchanged. Only affects print sizing.
+
+**Method 2 — Upscale to add pixels then set DPI**:
+Use our [Image Upscaler](/image-upscaler) to increase pixel count, then set DPI metadata. This gives you more pixels to work with for larger print sizes.
+
+## FAQ
+
+**What DPI should I use for photo printing?**
+300 DPI is the standard for professional prints. Less than 150 DPI will look noticeably blurry when printed.
+
+**Does DPI affect website images?**
+No. Web browsers ignore DPI metadata. Only pixel dimensions matter for screen display.
+
+**My printer says the image is too low resolution — what can I do?**
+Upscale the image using our [Image Upscaler](/image-upscaler) to increase pixel count, then try printing again.`,
+        relatedSlugs: ["how-to-upscale-images-without-losing-quality", "image-file-formats-explained", "best-image-formats-for-websites"],
+    },
+    {
+        slug: "how-to-convert-image-to-black-and-white",
+        title: "How to Convert a Color Image to Black and White Online Free",
+        excerpt: "Turn any photo into a professional black and white image instantly. Tips for dramatic results and avoiding flat grayscale.",
+        date: "2026-03-07",
+        readTime: 5,
+        category: "Advanced",
+        content: `## Why Convert to Black and White?
+
+Black and white photography has endured for over 150 years because it strips away distracting colour and focuses attention on light, shadow, texture, and composition. Modern uses include:
+
+- **Professional portraits** with a timeless look
+- **Artistic photography** emphasising texture and contrast
+- **Document scanning** where colour is irrelevant
+- **Social media aesthetics** — consistent B&W feeds look striking
+- **Historical effect** for images in articles or presentations
+
+## How to Convert to Black and White Online Free
+
+Use our [Grayscale Converter](/image-grayscale) tool:
+
+1. Go to [Grayscale Converter](/image-grayscale)
+2. Upload your colour image (JPG, PNG, or WEBP)
+3. Click "Process"
+4. Download your black and white image
+
+The conversion happens instantly. No signup. No watermarks.
+
+## Getting the Best Black and White Results
+
+The quality of a black and white conversion depends heavily on the original photo. Here's how to get dramatic results:
+
+**High contrast originals work best.** Photos with strong light and shadow — a face lit by window light, a building against a bright sky — convert beautifully. Flat, even lighting looks dull in black and white.
+
+**Boost contrast after converting.** Use our [Contrast Adjuster](/image-contrast) to increase contrast after converting to grayscale. Pull shadows darker and highlights brighter.
+
+**Sharpen slightly.** Black and white images benefit from a touch of sharpening to bring out texture in skin, fabric, and architecture. Use our [Image Sharpen](/image-sharpen) tool.
+
+## Difference: Grayscale vs Black and White
+
+- **Grayscale** technically means using only shades of grey (0–255), which is what our tool produces
+- **True black and white** in photography usually refers to high-contrast images with deep blacks and bright whites
+- In practice, the terms are used interchangeably
+
+## Famous Black and White Subjects
+
+- **Portraits**: Removes skin tone distractions, emphasises emotions
+- **Architecture**: Dramatic shadows and lines
+- **Nature/landscapes**: Storm clouds, fog, forests with dappled light
+- **Street photography**: Timeless, documentary quality
+
+## FAQ
+
+**Is grayscale conversion reversible?**
+No — converting to grayscale permanently removes colour data. Always keep the original colour file.
+
+**Can I make a selective colour effect (one colour, rest black and white)?**
+Not with our basic tool. For selective colour, use Photoshop or GIMP.
+
+**Does converting to grayscale reduce file size?**
+Slightly, because the colour channels are removed. JPEG grayscale images are typically 10–20% smaller than colour.`,
+        relatedSlugs: ["how-to-flip-an-image-online", "how-to-crop-an-image-online-free", "how-to-compress-images-without-losing-quality"],
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

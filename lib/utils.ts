@@ -46,17 +46,51 @@ export function getFileExtension(mime: string): string {
 export function buildJsonLdWebApp(name: string, desc: string, url: string) {
     return {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
+        "@type": "SoftwareApplication",
         name,
         description: desc,
         url,
-        applicationCategory: "MultimediaApplication",
+        applicationCategory: "UtilitiesApplication",
         operatingSystem: "Any",
         offers: {
             "@type": "Offer",
             price: "0",
             priceCurrency: "USD",
         },
+    };
+}
+
+export function buildJsonLdBreadcrumb(toolName: string, toolSlug: string) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://pixltools.com",
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: toolName,
+                item: `https://pixltools.com/${toolSlug}`,
+            },
+        ],
+    };
+}
+
+export function buildJsonLdHowTo(toolName: string, steps: string[]) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: `How to use ${toolName}`,
+        step: steps.map((text, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            text,
+        })),
     };
 }
 
