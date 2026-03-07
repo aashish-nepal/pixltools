@@ -198,7 +198,7 @@ export default function HomePage() {
             {TOOLS.length} Image Tools,{" "}
             <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Zero Cost</span>
           </h2>
-          <p className="text-slate-500 max-w-2xl">
+          <p className="text-slate-400 max-w-2xl">
             Every tool you need to optimize images for web, social media, print, and more.
           </p>
         </div>
@@ -256,7 +256,7 @@ export default function HomePage() {
           <div className="mb-14">
             <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Simple Process</p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Done in 3 Clicks</h2>
-            <p className="text-slate-500">No learning curve. No complicated settings.</p>
+            <p className="text-slate-400">No learning curve. No complicated settings.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             {/* Connector line (desktop) */}
@@ -302,7 +302,7 @@ export default function HomePage() {
         <div className="mb-14">
           <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Why PixlTools</p>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">Built for Professionals</h2>
-          <p className="text-slate-500 max-w-xl">
+          <p className="text-slate-400 max-w-xl">
             Enterprise-grade image processing made accessible to everyone.
           </p>
         </div>
@@ -360,7 +360,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
                 Common Questions,<br />Clear Answers
               </h2>
-              <p className="text-slate-500 text-sm leading-relaxed mb-6">
+              <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Everything you need to know about using PixlTools.
                 Can&apos;t find your answer?
               </p>

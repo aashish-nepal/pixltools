@@ -6,7 +6,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
@@ -55,7 +55,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="en" className={`${inter.variable} ${inter.className}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+      </head>
       <body>
         {/* Google Analytics 4 */}
         {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
@@ -66,7 +72,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
             crossOrigin="anonymous"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
         )}
         <Navbar />
