@@ -38,6 +38,16 @@ const nextConfig: NextConfig = {
     remotePatterns: [],
     formats: ["image/avif", "image/webp"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "pixltools.com" }],
+        destination: "https://www.pixltools.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

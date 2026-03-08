@@ -12,7 +12,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 const ADSENSE_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pixltools.com"),
+  metadataBase: new URL("https://www.pixltools.com"),
   title: {
     default: "Free Online Image Tools – Compress, Resize & Convert Images",
     template: "%s | PixlTools",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://pixltools.com",
+    url: "https://www.pixltools.com",
     siteName: "PixlTools",
     title: "Free Online Image Tools – Compress, Resize & Convert Images",
     description: "30+ free image tools. Compress, resize, crop, convert images instantly. No signup required.",
@@ -48,8 +48,11 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large" },
   },
   alternates: {
-    canonical: "https://pixltools.com",
-    languages: { "en": "https://pixltools.com" },
+    canonical: "https://www.pixltools.com",
+    languages: {
+      "en": "https://www.pixltools.com",
+      "x-default": "https://www.pixltools.com",
+    },
   },
 };
 

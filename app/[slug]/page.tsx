@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const tool = getToolBySlug(slug);
     if (!tool) return {};
-    const url = `https://pixltools.com/${tool.slug}`;
+    const url = `https://www.pixltools.com/${tool.slug}`;
     // #17 fix: use root-level OG image — per-slug opengraph-image.tsx doesn't exist
     const ogImage = "/opengraph-image";
     return {

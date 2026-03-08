@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: post.excerpt,
             images: [ogImageUrl],
         },
-        alternates: { canonical: `https://pixltools.com/blog/${slug}` },
+        alternates: { canonical: `https://www.pixltools.com/blog/${slug}` },
     };
 }
 
@@ -85,9 +85,9 @@ export default async function BlogPostPage({ params }: Props) {
         publisher: {
             "@type": "Organization",
             name: "PixlTools",
-            url: "https://pixltools.com",
+            url: "https://www.pixltools.com",
         },
-        mainEntityOfPage: { "@type": "WebPage", "@id": `https://pixltools.com/blog/${slug}` },
+        mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.pixltools.com/blog/${slug}` },
     };
 
     const faqSchema = buildJsonLdFAQ(blogFaqs);

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: "Image Optimization Blog – PixlTools",
         description: "Free guides and tutorials on image compression, format conversion, resizing, and web optimization.",
-        url: "https://pixltools.com/blog",
+        url: "https://www.pixltools.com/blog",
         type: "website",
         images: [
             {
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         description: "Free guides and tutorials on image compression, format conversion, and web optimization.",
         images: ["/opengraph-image"],
     },
-    alternates: { canonical: "https://pixltools.com/blog" },
+    alternates: { canonical: "https://www.pixltools.com/blog" },
 };
 
 export default function BlogPage() {

@@ -3,10 +3,10 @@ import { TOOLS } from "@/lib/tools-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 // Last time tool pages were meaningfully updated
-const TOOLS_LAST_UPDATED = new Date("2026-03-06");
+const TOOLS_LAST_UPDATED = new Date("2026-03-08");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const base = "https://pixltools.com";
+    const base = "https://www.pixltools.com";
     const now = new Date();
 
     const toolPages = TOOLS.map(tool => ({
