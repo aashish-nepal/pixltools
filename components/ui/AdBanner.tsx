@@ -1,4 +1,5 @@
 "use client";
+import { useEffect } from "react";
 
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
@@ -20,6 +21,17 @@ const SLOT_MAP: Record<string, string | undefined> = {
 
 export default function AdBanner({ slot }: { slot: string }) {
     const adSlot = SLOT_MAP[slot];
+
+     // Initialize AdSense after rendering the <ins> element
+  useEffect(() => {
+    if (typeof window !== "undefined" && (window as any).adsbygoogle && ADSENSE_CLIENT && adSlot) {
+      try {
+        (window as any).adsbygoogle.push({});
+      } catch (e) {
+        console.warn("AdSense push error:", e);
+      }
+    }
+  }, [adSlot]);
 
     // If AdSense client + slot ID are configured, render real ad unit
     if (ADSENSE_CLIENT && adSlot) {
