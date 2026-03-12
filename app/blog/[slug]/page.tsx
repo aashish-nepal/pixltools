@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { BLOG_POSTS, getPostBySlug } from "@/lib/blog-data";
 import { buildJsonLdFAQ } from "@/lib/utils";
 import FAQSection from "@/components/ui/FAQSection";
@@ -67,18 +68,144 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
+function renderInline(text: string) {
+    const nodes: ReactNode[] = [];
+    const pattern = /(\*\*[^*]+\*\*)|(\[[^\]]+\]\([^)]+\))/g;
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+    let keyIndex = 0;
+
+    while ((match = pattern.exec(text)) !== null) {
+        if (match.index > lastIndex) nodes.push(text.slice(lastIndex, match.index));
+        const token = match[0];
+
+        if (token.startsWith("**") && token.endsWith("**")) {
+            nodes.push(<strong key={`strong-${keyIndex++}`}>{token.slice(2, -2)}</strong>);
+        } else if (token.startsWith("[")) {
+            const parts = /\[([^\]]+)\]\(([^)]+)\)/.exec(token);
+            if (parts) {
+                const [, label, href] = parts;
+                if (href.startsWith("/")) {
+                    nodes.push(<Link key={`link-${keyIndex++}`} href={href}>{label}</Link>);
+                } else {
+                    nodes.push(<a key={`link-${keyIndex++}`} href={href} target="_blank" rel="noreferrer">{label}</a>);
+                }
+            } else {
+                nodes.push(token);
+            }
+        }
+
+        lastIndex = match.index + token.length;
+    }
+
+    if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+    return nodes;
+}
+
 function renderContent(content: string) {
     const lines = content.split("\n");
-    return lines.map((line, i) => {
-        if (line.startsWith("## ")) return <h2 key={i} className="text-2xl font-bold text-slate-200 mt-8 mb-4">{line.slice(3)}</h2>;
-        if (line.startsWith("### ")) return <h3 key={i} className="text-xl font-semibold text-slate-300 mt-6 mb-3">{line.slice(4)}</h3>;
-        if (line.startsWith("**") && line.endsWith("**")) return <p key={i} className="font-semibold text-slate-300 my-2">{line.slice(2, -2)}</p>;
-        if (line.startsWith("- ")) return <li key={i} className="ml-4 text-slate-500 my-1">{line.slice(2)}</li>;
-        if (line.match(/^\d+\./)) return <li key={i} className="ml-4 text-slate-500 my-1 list-decimal">{line.replace(/^\d+\.\s/, "")}</li>;
-        if (line.startsWith("| ")) return null;
-        if (line.trim() === "") return <br key={i} />;
-        return <p key={i} className="text-slate-500 leading-relaxed my-3">{line}</p>;
-    });
+    const nodes: ReactNode[] = [];
+    let i = 0;
+
+    while (i < lines.length) {
+        const line = lines[i];
+
+        if (line.startsWith("## ")) {
+            nodes.push(<h2 key={`h2-${i}`}>{renderInline(line.slice(3))}</h2>);
+            i += 1;
+            continue;
+        }
+        if (line.startsWith("### ")) {
+            nodes.push(<h3 key={`h3-${i}`}>{renderInline(line.slice(4))}</h3>);
+            i += 1;
+            continue;
+        }
+        if (line.startsWith("- ")) {
+            const items: React.ReactNode[] = [];
+            let j = i;
+            while (j < lines.length && lines[j].startsWith("- ")) {
+                items.push(<li key={`ul-${j}`}>{renderInline(lines[j].slice(2))}</li>);
+                j += 1;
+            }
+            nodes.push(<ul key={`ul-${i}`}>{items}</ul>);
+            i = j;
+            continue;
+        }
+        if (/^\d+\.\s/.test(line)) {
+            const items: React.ReactNode[] = [];
+            let j = i;
+            while (j < lines.length && /^\d+\.\s/.test(lines[j])) {
+                items.push(<li key={`ol-${j}`}>{renderInline(lines[j].replace(/^\d+\.\s/, ""))}</li>);
+                j += 1;
+            }
+            nodes.push(<ol key={`ol-${i}`} className="list-decimal ml-6 my-4">{items}</ol>);
+            i = j;
+            continue;
+        }
+        if (line.trim().startsWith("|")) {
+            const rows: string[] = [];
+            let j = i;
+            while (j < lines.length && lines[j].trim().startsWith("|")) {
+                rows.push(lines[j]);
+                j += 1;
+            }
+
+            const parseRow = (row: string) =>
+                row
+                    .trim()
+                    .replace(/^\|/, "")
+                    .replace(/\|$/, "")
+                    .split("|")
+                    .map((cell) => cell.trim());
+
+            const isSeparator = (row: string) =>
+                /^\s*\|?\s*:?-+:?\s*(\|\s*:?-+:?\s*)+\|?\s*$/.test(row);
+
+            const headerCells = rows.length ? parseRow(rows[0]) : [];
+            const bodyRows = rows.slice(1).filter((row) => !isSeparator(row)).map(parseRow);
+
+            nodes.push(
+                <div key={`table-${i}`} className="overflow-x-auto">
+                    <table className="w-full text-sm border border-violet-500/15 rounded-xl overflow-hidden bg-[#120f23]">
+                        {headerCells.length > 0 && (
+                            <thead className="bg-violet-500/10">
+                                <tr>
+                                    {headerCells.map((cell, idx) => (
+                                        <th key={`th-${i}-${idx}`} className="text-left text-violet-100 font-semibold px-4 py-3 border-b border-violet-500/15">
+                                            {renderInline(cell)}
+                                        </th>
+                                    ))}
+                                </tr>
+                            </thead>
+                        )}
+                        <tbody>
+                            {bodyRows.map((cells, rowIndex) => (
+                                <tr key={`tr-${i}-${rowIndex}`} className="odd:bg-[#15112a] even:bg-[#120f23]">
+                                    {cells.map((cell, cellIndex) => (
+                                        <td key={`td-${i}-${rowIndex}-${cellIndex}`} className="px-4 py-3 text-gray-300 border-b border-violet-500/10">
+                                            {renderInline(cell)}
+                                        </td>
+                                    ))}
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+            i = j;
+            continue;
+        }
+        if (line.trim() === "") {
+            nodes.push(<div key={`spacer-${i}`} className="h-3" />);
+            i += 1;
+            continue;
+        }
+
+        nodes.push(<p key={`p-${i}`}>{renderInline(line)}</p>);
+        i += 1;
+    }
+
+    return nodes;
 }
 
 const blogFaqs = [
@@ -141,26 +268,27 @@ export default async function BlogPostPage({ params }: Props) {
     };
 
     return (
-        <main className="min-h-screen bg-slate-950">
+        <main className="min-h-screen bg-[#0b0816]">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             {/* Header */}
-            <div className="bg-slate-950 border-b border-slate-800 text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6">
-                    <Link href="/blog" className="text-emerald-400 text-sm hover:text-emerald-300 mb-4 inline-block">← Back to Blog</Link>
-                    <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 rounded-full">{post!.category}</span>
-                    <h1 className="text-3xl md:text-4xl font-bold mt-4 mb-4 text-white">{post!.title}</h1>
-                    <p className="text-slate-400">{post!.excerpt}</p>
-                    <div className="flex items-center gap-4 mt-4 text-sm text-slate-500">
+            <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 text-white py-16">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[320px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6">
+                    <Link href="/blog" className="text-violet-400 text-sm hover:text-violet-300 mb-4 inline-block">← Back to Blog</Link>
+                    <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1 rounded-full">{post!.category}</span>
+                    <h1 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 text-center">{post!.title}</h1>
+                    <p className="text-gray-400 max-w-3xl text-center mx-auto">{post!.excerpt}</p>
+                    <div className="flex items-center gap-4 mt-4 py-4 text-sm text-gray-400 justify-center">
                         <span>📅 {new Date(post!.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
                         <span>⏱ {post!.readTime} min read</span>
                     </div>
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-12">
                 <AdBanner slot="Blog Post Top" />
 
                 <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -172,12 +300,24 @@ export default async function BlogPostPage({ params }: Props) {
                             const mid = Math.floor(lines.length / 2);
                             return (
                                 <>
-                                    <article className="bg-slate-900 rounded-2xl p-8 border border-slate-800">
-                                        {renderContent(lines.slice(0, mid).join("\n"))}
+                                    <article className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#141026] shadow-[0_20px_60px_rgba(17,10,40,0.65)]">
+                                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.12),transparent_60%)]" />
+                                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
+                                        <div className="relative z-10 p-8 md:p-10">
+                                            <div className="prose max-w-[720px]">
+                                                {renderContent(lines.slice(0, mid).join("\n"))}
+                                            </div>
+                                        </div>
                                     </article>
                                     <AdBanner slot="Blog Post Middle" />
-                                    <article className="bg-slate-900 rounded-2xl p-8 border border-slate-800 mt-6">
-                                        {renderContent(lines.slice(mid).join("\n"))}
+                                    <article className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#141026] shadow-[0_20px_60px_rgba(17,10,40,0.65)] mt-6">
+                                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.12),transparent_60%)]" />
+                                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
+                                        <div className="relative z-10 p-8 md:p-10">
+                                            <div className="prose max-w-[720px]">
+                                                {renderContent(lines.slice(mid).join("\n"))}
+                                            </div>
+                                        </div>
                                     </article>
                                 </>
                             );
@@ -190,14 +330,14 @@ export default async function BlogPostPage({ params }: Props) {
                         {/* Related Articles */}
                         {relatedPosts.length > 0 && (
                             <div className="mt-8">
-                                <h2 className="text-xl font-bold text-slate-200 mb-4">Related Articles</h2>
+                                <h2 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 py-6 text-center">Related Articles</h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {relatedPosts.map((rp) => (
-                                        <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group block bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/30 rounded-xl p-5 transition-all">
-                                            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-full">{rp.category}</span>
-                                            <p className="text-sm font-semibold text-slate-200 mt-3 mb-1 group-hover:text-white transition-colors line-clamp-2">{rp.title}</p>
-                                            <p className="text-xs text-slate-500 line-clamp-2">{rp.excerpt}</p>
-                                            <span className="text-xs text-emerald-400 mt-3 inline-block">Read article →</span>
+                                        <Link key={rp.slug} href={`/blog/${rp.slug}`} className="group block bg-[#16122a] hover:bg-[#1c1738] border border-violet-500/15 hover:border-violet-500/35 rounded-xl p-5 transition-all">
+                                            <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2 py-0.5 rounded-full">{rp.category}</span>
+                                            <p className="text-sm font-semibold text-violet-100 mt-3 mb-1 group-hover:text-white transition-colors line-clamp-2">{rp.title}</p>
+                                            <p className="text-xs text-gray-400 line-clamp-2">{rp.excerpt}</p>
+                                            <span className="text-xs text-violet-400 mt-3 inline-block">Read article →</span>
                                         </Link>
                                     ))}
                                 </div>
@@ -205,12 +345,17 @@ export default async function BlogPostPage({ params }: Props) {
                         )}
 
                         {/* CTA */}
-                        <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-white text-center mt-8">
-                            <h3 className="text-xl font-bold mb-2">Try Our Free Image Tools</h3>
-                            <p className="text-emerald-100 mb-4">30+ free online tools to compress, resize, convert and optimize your images.</p>
-                            <Link href="/" className="bg-slate-950 text-emerald-400 font-bold px-6 py-3 rounded-xl hover:bg-slate-900 transition-colors inline-block">
-                                Explore All Tools →
-                            </Link>
+                        <div className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#130f28] p-8 text-white text-center mt-10">
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.22),transparent_55%)]" />
+                            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(99,102,241,0.18),transparent_60%)]" />
+                            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-600/60 to-transparent" />
+                            <div className="relative z-10">
+                                <h3 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 text-center">Try Our Free Image Tools</h3>
+                                <p className="text-violet-100/80 mb-4">30+ free online tools to compress, resize, convert and optimize your images.</p>
+                                <Link href="/" className="bg-violet-500/15 border border-violet-400/30 text-violet-100 font-bold px-6 py-3 rounded-xl hover:bg-violet-500/25 transition-colors inline-block">
+                                    Explore All Tools →
+                                </Link>
+                            </div>
                         </div>
 
                         <AdBanner slot="Blog Post Bottom" />

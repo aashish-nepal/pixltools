@@ -273,10 +273,16 @@ body {
 }
 
 /* Prose for blog */
+.prose {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #8b87a8;
+}
+
 .prose h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin: 2rem 0 1rem;
+  margin: 2.2rem 0 1rem;
   color: #f1f0f7;
 }
 
@@ -284,23 +290,34 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   margin: 1.5rem 0 0.75rem;
-  color: #c4b5fd;
+  color: #c9bcff;
 }
 
 .prose p {
-  line-height: 1.8;
+  line-height: 1.9;
   margin: 1rem 0;
-  color: #8b87a8;
+  color: #9a96b3;
 }
 
 .prose ul {
   padding-left: 1.5rem;
   margin: 1rem 0;
+  list-style: disc;
+}
+
+.prose ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+  list-style: decimal;
 }
 
 .prose li {
   margin: 0.5rem 0;
-  color: #8b87a8;
+  color: #9a96b3;
+}
+
+.prose li::marker {
+  color: #6f66a8;
 }
 
 .prose a {
@@ -310,6 +327,15 @@ body {
 
 .prose strong {
   color: #f1f0f7;
+}
+
+.prose code {
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.4rem;
+  font-size: 0.95em;
+  color: #e9e6ff;
 }
 
 /* ── Testimonials infinite marquee ── */
