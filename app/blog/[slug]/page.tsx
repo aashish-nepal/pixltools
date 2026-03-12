@@ -16,15 +16,39 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const post = getPostBySlug(slug);
     if (!post) return {};
+    const url = `https://www.pixltools.com/blog/${slug}`;
     const ogImageUrl = `/blog/${slug}/opengraph-image`;
     return {
         title: `${post.title} | PixlTools Blog`,
         description: post.excerpt,
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                "max-image-preview": "large",
+                "max-video-preview": -1,
+            },
+        },
+        alternates: {
+            canonical: url,
+            languages: {
+                "en": url,
+                "x-default": url,
+            },
+        },
         openGraph: {
             title: post.title,
             description: post.excerpt,
             type: "article",
-            publishedTime: post.date,
+            url,
+            locale: "en_US",
+            siteName: "PixlTools",
+            publishedTime: new Date(post.date).toISOString(),
+            modifiedTime: new Date(post.date).toISOString(),
+            authors: ["https://www.pixltools.com/about"],
+            section: post.category,
             images: [
                 {
                     url: ogImageUrl,
@@ -40,7 +64,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             description: post.excerpt,
             images: [ogImageUrl],
         },
-        alternates: { canonical: `https://www.pixltools.com/blog/${slug}` },
     };
 }
 
@@ -92,10 +115,36 @@ export default async function BlogPostPage({ params }: Props) {
 
     const faqSchema = buildJsonLdFAQ(blogFaqs);
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.pixltools.com",
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: "Blog",
+                item: "https://www.pixltools.com/blog",
+            },
+            {
+                "@type": "ListItem",
+                position: 3,
+                name: post!.title,
+                item: `https://www.pixltools.com/blog/${slug}`,
+            },
+        ],
+    };
+
     return (
         <main className="min-h-screen bg-slate-950">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
             {/* Header */}
             <div className="bg-slate-950 border-b border-slate-800 text-white py-16">

@@ -41,7 +41,7 @@ const sections: { title: string; content: React.ReactNode }[] = [
                         "Upload images you do not have the legal right to process or modify",
                     ].map((item) => (
                         <li key={item} className="flex items-start gap-2">
-                            <span className="text-red-400 font-bold mt-0.5">✗</span>
+                            <span className="text-rose-400 font-bold mt-0.5">✗</span>
                             <span>{item}</span>
                         </li>
                     ))}
@@ -131,7 +131,7 @@ const sections: { title: string; content: React.ReactNode }[] = [
         content: (
             <p>
                 Questions about these Terms? Please visit our{" "}
-                <Link href="/about" className="text-emerald-400 hover:text-emerald-300 underline underline-offset-2">
+                <Link href="/about" className="text-violet-400 hover:text-violet-300 underline underline-offset-2">
                     contact page
                 </Link>{" "}
                 to get in touch.
@@ -142,21 +142,22 @@ const sections: { title: string; content: React.ReactNode }[] = [
 
 export default function TermsPage() {
     return (
-        <main className="min-h-screen bg-slate-950">
+        <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
-            <div className="bg-slate-950 border-b border-slate-800 py-14">
-                <div className="max-w-3xl mx-auto px-4 sm:px-6">
-                    <p className="text-xs font-bold uppercase tracking-widest text-emerald-400 mb-3">Legal</p>
-                    <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">Terms of Service</h1>
-                    <p className="text-slate-400">Last updated: March 2026</p>
+            <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-14">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-3xl mx-auto px-4 sm:px-6">
+                    <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">Legal</p>
+                    <h1 className="text-3xl md:text-4xl font-bold text-gray-300 mb-3">Terms of Service</h1>
+                    <p className="text-gray-400">Last updated: March 2026</p>
                 </div>
             </div>
 
             <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14">
-                {/* Highlight box */}
-                <div className="bg-slate-800/60 border border-slate-700 rounded-2xl p-5 mb-10">
-                    <p className="text-sm text-slate-400 leading-relaxed">
-                        <strong className="text-slate-200">Plain-language summary:</strong> PixlTools is a free service. You own your images. We
+                {/* Summary box */}
+                <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-5 mb-10">
+                    <p className="text-sm text-violet-300/60 leading-relaxed">
+                        <strong className="text-violet-200">Plain-language summary:</strong> PixlTools is a free service. You own your images. We
                         process and delete them immediately. Don&apos;t use the service for illegal content. We offer no guarantees and have no liability
                         since the service costs you nothing.
                     </p>
@@ -166,16 +167,19 @@ export default function TermsPage() {
                 <div className="space-y-10">
                     {sections.map(({ title, content }) => (
                         <section key={title}>
-                            <h2 className="text-xl font-bold text-slate-200 mb-3">{title}</h2>
-                            <div className="text-slate-500 leading-relaxed text-sm">{content}</div>
+                            <div className="flex items-center gap-4 mb-3">
+                                <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">{title}</h2>
+                                <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                            </div>
+                            <div className="text-gray-400 leading-relaxed text-sm">{content}</div>
                         </section>
                     ))}
                 </div>
 
                 {/* Back links */}
-                <div className="mt-14 pt-8 border-t border-slate-800 flex flex-wrap gap-4 text-sm">
-                    <Link href="/" className="text-emerald-400 hover:text-emerald-300 transition-colors">← Back to Home</Link>
-                    <Link href="/privacy-policy" className="text-slate-500 hover:text-slate-300 transition-colors">Privacy Policy →</Link>
+                <div className="mt-14 pt-8 border-t border-violet-500/10 flex flex-wrap gap-4 text-sm">
+                    <Link href="/" className="text-violet-400 hover:text-violet-300 transition-colors">← Back to Home</Link>
+                    <Link href="/privacy-policy" className="text-gray-400 hover:text-violet-300 transition-colors">Privacy Policy →</Link>
                 </div>
             </div>
         </main>

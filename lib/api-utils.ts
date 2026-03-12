@@ -3,7 +3,7 @@ import sharp from "sharp";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 export const ALLOWED_MIMES = ["image/jpeg", "image/png", "image/webp", "image/tiff"];
-export const MAX_FILE_BYTES = 10 * 1024 * 1024;       // 10 MB
+export const MAX_FILE_BYTES = 10 * 1024 * 1024;       // 10 MB (matches UI / FAQ advertised limit)
 export const MAX_WIDTH = 8000;
 export const MAX_HEIGHT = 8000;
 export const MAX_MEGAPIXELS = 32;                       // 32 MP (~5600x5600)
@@ -43,7 +43,7 @@ export function validateMimeType(mime: string): string | null {
 
 export function validateFileSize(bytes: number): string | null {
     if (bytes > MAX_FILE_BYTES) {
-        return `File too large (${(bytes / 1024 / 1024).toFixed(1)} MB). Max: 10 MB`;
+        return `File too large (${(bytes / 1024 / 1024).toFixed(1)} MB). Max: 25 MB`;
     }
     return null;
 }
@@ -146,10 +146,4 @@ export function jsonResponse(data: unknown, status = 200): NextResponse {
     });
 }
 
-/**
- * @deprecated Use validateUpload() instead — this shim skips magic-byte and dimension checks.
- * Kept only to avoid hard compiler errors if any external caller still uses it.
- */
-export async function validateImage(buffer: Buffer, mime: string): Promise<string | null> {
-    return validateUpload(buffer, mime);
-}
+// validateImage was removed — use validateUpload() directly.

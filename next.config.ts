@@ -34,6 +34,9 @@ const apiHeaders = [
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["sharp", "exifr"],
+  turbopack: {
+    root: __dirname,
+  },
   images: {
     remotePatterns: [],
     formats: ["image/avif", "image/webp"],

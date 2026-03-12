@@ -17,19 +17,22 @@ export interface ToolData {
     acceptedFormats: string[];
     outputFormat?: string;
     params?: Record<string, string>;
+    isPopular?: boolean;
+    isNew?: boolean;
 }
 
 export const TOOLS: ToolData[] = [
     {
         slug: "compress-image",
         name: "Compress Image",
-        shortDesc: "Reduce image file size while maintaining quality.",
+        shortDesc: "Perceptual compression tuned per image for maximum savings with minimal visible loss.",
         category: "compression",
         apiEndpoint: "/api/compress",
         icon: "🗜️",
         metaTitle: "Free Image Compressor – Reduce Image Size Online",
         metaDesc: "Compress JPG, PNG, and WEBP images online for free without losing quality. Fast, secure, no signup required.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        isPopular: true,
     },
     {
         slug: "compress-jpg",
@@ -77,6 +80,7 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Resize Image Online – Change Image Dimensions Free",
         metaDesc: "Resize images online for free. Change width, height, or scale percentage instantly.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        isPopular: true,
     },
     {
         slug: "crop-image",
@@ -268,6 +272,7 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Remove image background online for free. Automatic background removal for photos and graphics.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         outputFormat: "png",
+        isPopular: true,
     },
     {
         slug: "image-upscaler",
@@ -367,6 +372,56 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Reduce Image File Size Online Free – Image Size Reducer",
         metaDesc: "Reduce image file size online for free. Compress photos for email, social media, and websites.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+    },
+    {
+        slug: "image-to-base64",
+        name: "Image to Base64",
+        shortDesc: "Convert any image to a Base64 data URL for web embedding.",
+        category: "utilities",
+        apiEndpoint: "/api/image-to-base64",
+        icon: "💻",
+        metaTitle: "Image to Base64 Converter – Encode Images to Base64 Free",
+        metaDesc: "Convert images to Base64 online for free. Get the data URL for embedding images directly in HTML or CSS.",
+        acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        isNew: true,
+    },
+    {
+        slug: "svg-to-png",
+        name: "SVG to PNG",
+        shortDesc: "Convert SVG vector graphics to PNG images online.",
+        category: "conversion",
+        apiEndpoint: "/api/svg-to-png",
+        icon: "🎨",
+        metaTitle: "SVG to PNG Converter – Convert SVG to PNG Free Online",
+        metaDesc: "Convert SVG files to PNG online for free. High-quality vector to raster conversion in seconds.",
+        acceptedFormats: ["image/svg+xml"],
+        outputFormat: "png",
+        isNew: true,
+    },
+    {
+        slug: "heic-to-jpg",
+        name: "HEIC to JPG",
+        shortDesc: "Convert iPhone HEIC/HEIF photos to JPEG instantly.",
+        category: "conversion",
+        apiEndpoint: "/api/heic-to-jpg",
+        icon: "📱",
+        metaTitle: "HEIC to JPG Converter Free Online – Convert iPhone Photos",
+        metaDesc: "Convert HEIC and HEIF photos from iPhone to JPEG online for free. Fast, secure, no signup required.",
+        acceptedFormats: ["image/heic", "image/heif"],
+        outputFormat: "jpg",
+        isNew: true,
+    },
+    {
+        slug: "photo-collage-maker",
+        name: "Photo Collage Maker",
+        shortDesc: "Combine 2–16 images into a beautiful grid collage.",
+        category: "utilities",
+        apiEndpoint: "/api/collage",
+        icon: "🖼️",
+        metaTitle: "Free Online Photo Collage Maker – Create Image Grids",
+        metaDesc: "Make photo collages online for free. Combine up to 16 images into a custom grid layout. No watermarks.",
+        acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        isNew: true,
     },
 ];
 

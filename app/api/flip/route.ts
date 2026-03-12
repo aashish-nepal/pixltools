@@ -22,8 +22,16 @@ export async function POST(req: NextRequest) {
     const meta = await sharp(buffer).metadata();
     const fmt = (meta.format || "jpeg") as "jpeg" | "png" | "webp";
     const mimeMap: Record<string, string> = { jpeg: "image/jpeg", png: "image/png", webp: "image/webp" };
+    const quality = 82;
 
     const img = direction === "horizontal" ? sharp(buffer).flop() : sharp(buffer).flip();
-    const out = await img.toFormat(fmt).toBuffer();
+    let out: Buffer;
+    if (fmt === "png") {
+        out = await img.png().toBuffer();
+    } else if (fmt === "webp") {
+        out = await img.webp({ quality }).toBuffer();
+    } else {
+        out = await img.jpeg({ quality }).toBuffer();
+    }
     return imageResponse(out, mimeMap[fmt] || "image/jpeg");
 }

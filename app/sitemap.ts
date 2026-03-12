@@ -5,32 +5,70 @@ import { BLOG_POSTS } from "@/lib/blog-data";
 // Last time tool pages were meaningfully updated
 const TOOLS_LAST_UPDATED = new Date("2026-03-08");
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const base = "https://www.pixltools.com";
-    const now = new Date();
+// Stable dates for static pages — avoids telling Google they change on every build
+const STATIC_DATES = {
+    home: new Date("2026-03-12"),
+    blog: new Date("2026-03-12"),
+    about: new Date("2026-01-01"),
+    legal: new Date("2026-01-01"),
+    seoGuides: new Date("2026-03-08"),
+    premium: new Date("2026-03-08"),
+    apiAccess: new Date("2026-03-08"),
+};
 
-    const toolPages = TOOLS.map(tool => ({
-        url: `${base}/${tool.slug}`,
+const BASE = "https://www.pixltools.com";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+    // Manually curated pages (highest priority, stable dates)
+    const staticPages: MetadataRoute.Sitemap = [
+        { url: BASE, lastModified: STATIC_DATES.home, changeFrequency: "weekly", priority: 1.0 },
+        { url: `${BASE}/blog`, lastModified: STATIC_DATES.blog, changeFrequency: "weekly", priority: 0.7 },
+        { url: `${BASE}/premium`, lastModified: STATIC_DATES.premium, changeFrequency: "monthly", priority: 0.7 },
+        // SEO comparison & guide pages
+        { url: `${BASE}/jpg-vs-png`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
+        { url: `${BASE}/png-vs-webp`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
+        { url: `${BASE}/how-to-compress-images-for-instagram`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
+        // API access page
+        { url: `${BASE}/api-access`, lastModified: STATIC_DATES.apiAccess, changeFrequency: "monthly", priority: 0.6 },
+        // Informational / legal
+        { url: `${BASE}/about`, lastModified: STATIC_DATES.about, changeFrequency: "yearly", priority: 0.4 },
+        { url: `${BASE}/privacy-policy`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
+        { url: `${BASE}/terms`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
+    ];
+
+    // Tool pages — each includes its OG image for Google Image Search indexing
+    const toolPages: MetadataRoute.Sitemap = TOOLS.map(tool => ({
+        url: `${BASE}/${tool.slug}`,
         lastModified: TOOLS_LAST_UPDATED,
         changeFrequency: "monthly" as const,
         priority: 0.8,
+        images: [`${BASE}/opengraph-image`],
     }));
 
-    const blogPages = BLOG_POSTS.map(post => ({
-        url: `${base}/blog/${post.slug}`,
+    // Blog pages — each includes its per-post OG image
+    const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map(post => ({
+        url: `${BASE}/blog/${post.slug}`,
         lastModified: new Date(post.date),
         changeFrequency: "monthly" as const,
         priority: 0.6,
+        images: [`${BASE}/blog/${post.slug}/opengraph-image`],
     }));
 
-    return [
-        { url: base, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
-        { url: `${base}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-        { url: `${base}/about`, lastModified: now, changeFrequency: "yearly", priority: 0.4 },
-        { url: `${base}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-        { url: `${base}/terms`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-        ...toolPages,
-        ...blogPages,
-    ];
-}
+    // Deduplicate: static pages take precedence (they have hand-tuned priorities).
+    // Any URL in toolPages or blogPages that already exists in staticPages is dropped.
+    const seen = new Set<string>(staticPages.map(p => p.url));
 
+    const dedupedToolPages = toolPages.filter(p => {
+        if (seen.has(p.url)) return false;
+        seen.add(p.url);
+        return true;
+    });
+
+    const dedupedBlogPages = blogPages.filter(p => {
+        if (seen.has(p.url)) return false;
+        seen.add(p.url);
+        return true;
+    });
+
+    return [...staticPages, ...dedupedToolPages, ...dedupedBlogPages];
+}

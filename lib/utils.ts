@@ -21,10 +21,7 @@ export function validateFileSizeClient(bytes: number): boolean {
     return bytes <= MAX_FILE_SIZE_BYTES;
 }
 
-/** @deprecated Use validateFileSizeClient for clarity — this conflicts with the server-side validateFileSize */
-export function validateFileSize(bytes: number): boolean {
-    return bytes <= MAX_FILE_SIZE_BYTES;
-}
+
 
 export function formatBytes(bytes: number): string {
     if (bytes < 1024) return `${bytes} B`;
@@ -44,12 +41,14 @@ export function getFileExtension(mime: string): string {
 }
 
 export function buildJsonLdWebApp(name: string, desc: string, url: string) {
+    // Ensure url always uses www subdomain for consistency with canonical
+    const canonicalUrl = url.replace("https://pixltools.com", "https://www.pixltools.com");
     return {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         name,
         description: desc,
-        url,
+        url: canonicalUrl,
         applicationCategory: "UtilitiesApplication",
         operatingSystem: "Any",
         offers: {
@@ -69,13 +68,13 @@ export function buildJsonLdBreadcrumb(toolName: string, toolSlug: string) {
                 "@type": "ListItem",
                 position: 1,
                 name: "Home",
-                item: "https://pixltools.com",
+                item: "https://www.pixltools.com",
             },
             {
                 "@type": "ListItem",
                 position: 2,
                 name: toolName,
-                item: `https://pixltools.com/${toolSlug}`,
+                item: `https://www.pixltools.com/${toolSlug}`,
             },
         ],
     };

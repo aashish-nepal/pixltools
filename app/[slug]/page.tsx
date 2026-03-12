@@ -16,17 +16,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const tool = getToolBySlug(slug);
     if (!tool) return {};
     const url = `https://www.pixltools.com/${tool.slug}`;
-    // #17 fix: use root-level OG image — per-slug opengraph-image.tsx doesn't exist
     const ogImage = "/opengraph-image";
     return {
         title: tool.metaTitle,
         description: tool.metaDesc,
-        alternates: { canonical: url },
+        robots: {
+            index: true,
+            follow: true,
+            googleBot: {
+                index: true,
+                follow: true,
+                "max-image-preview": "large",
+                "max-video-preview": -1,
+            },
+        },
+        alternates: {
+            canonical: url,
+            languages: {
+                "en": url,
+                "x-default": url,
+            },
+        },
         openGraph: {
             title: tool.metaTitle,
             description: tool.metaDesc,
             url,
             type: "website",
+            locale: "en_US",
+            siteName: "PixlTools",
             images: [
                 {
                     url: ogImage,
@@ -50,5 +67,33 @@ export default async function ToolPage({ params }: Props) {
     const { slug } = await params;
     const tool = getToolBySlug(slug);
     if (!tool) notFound();
-    return <ToolPageClient tool={tool} />;
+
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://www.pixltools.com",
+            },
+            {
+                "@type": "ListItem",
+                position: 2,
+                name: tool.name,
+                item: `https://www.pixltools.com/${tool.slug}`,
+            },
+        ],
+    };
+
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+            />
+            <ToolPageClient tool={tool} />
+        </>
+    );
 }

@@ -3,10 +3,13 @@ import { NextRequest, NextResponse } from "next/server";
 
 /**
  * In-memory rate limiter using a sliding window.
- * Per-instance on serverless (each Vercel function instance has its own store).
- * For distributed rate limiting at scale, swap this for @upstash/ratelimit + Redis.
+ * ⚠ Per-instance on serverless: each Vercel function cold-start gets its own
+ *   independent store, so a user hitting multiple instances simultaneously can
+ *   exceed the limit. For production scale, replace with a distributed solution:
+ *   → npm install @upstash/ratelimit @upstash/redis
+ *   → https://github.com/upstash/ratelimit
  *
- * Limits: 20 requests per IP per 60 seconds per API route.
+ * Current limit: 20 requests per IP per 60 seconds per API route.
  */
 
 interface RateLimitEntry {

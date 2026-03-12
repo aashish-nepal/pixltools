@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus } from "@phosphor-icons/react";
 
 interface FAQItem {
     question: string;
@@ -19,8 +19,8 @@ export default function FAQSection({ faqs }: { faqs: FAQItem[] }) {
                         key={i}
                         className={`rounded-2xl border transition-all duration-200 overflow-hidden
               ${isOpen
-                                ? "border-emerald-500/30 bg-emerald-500/5 shadow-sm shadow-emerald-900/20"
-                                : "border-slate-800 bg-slate-900 hover:border-slate-700"
+                                ? "border-violet-500/30 bg-violet-500/5 shadow-sm shadow-violet-900/20"
+                                : "border-violet-500/10 bg-[#16122a] hover:border-violet-500/20"
                             }`}
                     >
                         <button
@@ -28,11 +28,11 @@ export default function FAQSection({ faqs }: { faqs: FAQItem[] }) {
                             onClick={() => setOpenIndex(isOpen ? null : i)}
                             aria-expanded={isOpen}
                         >
-                            <span className={`text-sm font-semibold leading-snug transition-colors ${isOpen ? "text-emerald-400" : "text-slate-300"}`}>
+                            <span className={`text-sm font-semibold leading-snug transition-colors ${isOpen ? "text-violet-300" : "text-white"}`}>
                                 {faq.question}
                             </span>
                             <span className={`flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-200
-                ${isOpen ? "bg-emerald-500 text-slate-950" : "bg-slate-700 text-slate-400"}`}>
+                ${isOpen ? "bg-violet-500 text-white" : "bg-violet-500/10 text-violet-400"}`}>
                                 {isOpen ? <Minus size={13} strokeWidth={2.5} /> : <Plus size={13} strokeWidth={2.5} />}
                             </span>
                         </button>
@@ -41,7 +41,7 @@ export default function FAQSection({ faqs }: { faqs: FAQItem[] }) {
                             className={`overflow-hidden transition-all duration-300 ease-out
                 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}
                         >
-                            <p className="px-6 pb-5 text-sm text-slate-500 leading-relaxed">
+                            <p className="px-6 pb-5 text-sm text-violet-300/60 leading-relaxed">
                                 {faq.answer}
                             </p>
                         </div>

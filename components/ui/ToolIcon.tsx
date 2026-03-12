@@ -1,25 +1,43 @@
 "use client";
 import {
-    Minimize2, FileImage, Maximize2, Crop, RotateCcw, FlipHorizontal2,
-    ArrowLeftRight, FileText, Stamp, Layers, Pipette, ScanSearch,
-    Scissors, ZoomIn, Eclipse, Sun, SunMedium, Focus, Image, Frame,
-    Move, ArrowDownToLine, LucideProps,
-} from "lucide-react";
+    // Compression
+    FileArrowDown, FileImage, FilePng, FileJpg, FileZip, ImageSquare, Images, Gauge,
+    // Resize / Crop / Transform
+    CornersOut, CornersIn, Crop, ArrowClockwise, ArrowsClockwise, ArrowsHorizontal,
+    FlipHorizontal, ArrowsOutSimple, ArrowsOut,
+    // Conversion
+    ArrowsLeftRight, FilePdf, FileDoc,
+    // Utilities
+    Stamp, Drop, Eyedropper, MagnifyingGlass, Eraser, Info,
+    // Advanced
+    MagicWand, Aperture, Sun, Sliders, Sparkle, FrameCorners,
+    Lightning, GridFour, Code, FileCode, SquaresFour,
+} from "@phosphor-icons/react";
 
-const ICON_COMPONENTS: Record<string, React.ComponentType<LucideProps>> = {
-    Minimize2, FileImage, Maximize2, Crop, RotateCcw, FlipHorizontal2,
-    ArrowLeftRight, FileText, Stamp, Layers, Pipette, ScanSearch,
-    Scissors, ZoomIn, Eclipse, Sun, SunMedium, Focus, Image, Frame,
-    Move, ArrowDownToLine,
+// Icon name → Phosphor component, with duotone weight preference
+const ICON_COMPONENTS: Record<string, React.ElementType> = {
+    // compression
+    FileArrowDown, FileImage, FilePng, FileJpg, FileZip, ImageSquare, Images, Gauge,
+    // resize/crop/transform
+    CornersOut, CornersIn, Crop, ArrowClockwise, ArrowsClockwise, ArrowsHorizontal,
+    FlipHorizontal, ArrowsOutSimple, ArrowsOut,
+    // conversion
+    ArrowsLeftRight, FilePdf, FileDoc,
+    // utilities
+    Stamp, Drop, Eyedropper, MagnifyingGlass, Eraser, Info,
+    // advanced
+    MagicWand, Aperture, Sun, Sliders, Sparkle, FrameCorners,
+    Lightning, GridFour, Code, FileCode, SquaresFour,
 };
 
 interface Props {
     name: string;
     size?: number;
     className?: string;
+    weight?: "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
 }
 
-export default function ToolIcon({ name, size = 20, className = "" }: Props) {
+export default function ToolIcon({ name, size = 20, className = "", weight = "duotone" }: Props) {
     const Icon = ICON_COMPONENTS[name] || FileImage;
-    return <Icon size={size} className={className} strokeWidth={1.7} />;
+    return <Icon size={size} className={className} weight={weight} />;
 }
