@@ -145,16 +145,16 @@ export default function PrivacyPolicyPage() {
     return (
         <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
-            <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-14">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-3xl mx-auto px-4 sm:px-6">
+            <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 text-center">
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">Legal</p>
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-300 mb-3">Privacy Policy</h1>
+                    <h1 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mb-4">Privacy Policy</h1>
                     <p className="text-gray-400">Last updated: March 2026</p>
                 </div>
             </div>
 
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-14">
                 {/* Highlight box */}
                 <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-5 mb-10 flex gap-4">
                     <span className="text-2xl">🔒</span>

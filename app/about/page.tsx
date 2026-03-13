@@ -40,17 +40,19 @@ export default function AboutPage() {
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
+                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 text-center">
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">About</p>
-                    <h1 className="text-3xl md:text-4xl font-bold text-gray-300 mb-4">Professional Image Tools,<br />Free for Everyone</h1>
-                    <p className="text-gray-400 text-lg leading-relaxed max-w-xl mx-auto">
+                    <h1 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mb-5">
+                        Professional Image Tools, Free for Everyone
+                    </h1>
+                    <p className="text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
                         PixlTools was built to give every developer, designer, blogger, and creator access to
                         enterprise-grade image processing — without the enterprise price tag.
                     </p>
                 </div>
             </div>
 
-            <div className="max-w-3xl mx-auto px-4 sm:px-6 py-14">
+            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-14">
 
                 {/* Mission */}
                 <section className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8 mb-10">
@@ -58,11 +60,11 @@ export default function AboutPage() {
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Our Mission</h2>
                         <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
                     </div>
-                    <p className="text-violet-300/60 leading-relaxed mb-4">
+                    <p className="text-gray-400 leading-relaxed mb-4">
                         Images are the most bandwidth-heavy resource on the web — and most people have no easy way to
                         optimise them. Professional tools cost money, require accounts, or leave watermarks. We think that&apos;s wrong.
                     </p>
-                    <p className="text-violet-300/60 leading-relaxed">
+                    <p className="text-gray-400 leading-relaxed">
                         PixlTools makes 30+ professional image operations available instantly in any browser, on any device,
                         completely free. Our tools run server-side on Sharp, the same library behind major platforms, so you
                         always get production-quality results.
@@ -72,8 +74,7 @@ export default function AboutPage() {
                 {/* Features */}
                 <section className="mb-10">
                     <div className="flex items-center gap-4 mb-6">
-                        <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Why PixlTools?</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <h2 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-4xl mb-5 text-center mx-auto">Why PixlTools?</h2>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {FEATURES.map(({ icon: Icon, title, desc, color, bg, border }) => (
@@ -89,16 +90,21 @@ export default function AboutPage() {
                 </section>
 
                 {/* Tools count */}
-                <section className="relative overflow-hidden bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 rounded-2xl p-8 text-center mb-10">
-                    <div className="absolute inset-0 opacity-20 pointer-events-none" />
-                    <div className="text-5xl font-black text-white mb-2">30+</div>
-                    <div className="text-violet-200/70 font-semibold mb-4">Free Image Tools Available</div>
-                    <Link
-                        href="/"
-                        className="inline-block bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-6 py-3 rounded-xl transition-colors"
-                    >
-                        Explore All Tools →
-                    </Link>
+                <section className="relative overflow-hidden rounded-2xl p-8 text-center mb-10 border border-violet-500/20 bg-[#0f0c1f]">
+                    <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_0%,rgba(139,92,246,0.35)_0%,rgba(99,102,241,0.18)_38%,rgba(8,6,16,0.96)_72%)]" />
+                    <div className="pointer-events-none absolute -top-28 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-fuchsia-500/20 blur-3xl" />
+                    <div className="pointer-events-none absolute -bottom-24 right-[-5%] h-64 w-64 rounded-full bg-indigo-400/20 blur-[90px]" />
+                    <div className="pointer-events-none absolute inset-0 opacity-30 [mask-image:radial-gradient(60%_60%_at_50%_50%,black,transparent)] bg-[linear-gradient(90deg,rgba(255,255,255,0.12)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.12)_1px,transparent_1px)] bg-[size:22px_22px]" />
+                    <div className="relative">
+                        <div className="text-5xl font-black text-white mb-2">30+</div>
+                        <div className="text-violet-200/80 font-semibold mb-4">Free Image Tools Available</div>
+                        <Link
+                            href="/"
+                            className="inline-block bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-6 py-3 rounded-xl transition-colors"
+                        >
+                            Explore All Tools →
+                        </Link>
+                    </div>
                 </section>
 
                 {/* Contact */}
@@ -119,10 +125,10 @@ export default function AboutPage() {
                             <p className="text-sm text-gray-400">
                                 Reach us at:{" "}
                                 <a
-                                    href="mailto:hello@pixltools.com"
+                                    href="mailto:contact@pixltools.com"
                                     className="text-violet-400 hover:text-violet-300 transition-colors underline underline-offset-2"
                                 >
-                                    hello@pixltools.com
+                                    contact@pixltools.com
                                 </a>
                             </p>
                         </div>
