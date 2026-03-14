@@ -20,7 +20,6 @@ export const metadata: Metadata = {
   },
   description:
     "Free online image tools. Compress, resize, crop, convert, and optimize images instantly. No signup required. Fast, secure, and 100% free.",
-  keywords: ["image compressor", "image converter", "resize image", "compress image", "jpg to png", "webp converter", "free image tools"],
   openGraph: {
     type: "website",
     locale: "en_US",
