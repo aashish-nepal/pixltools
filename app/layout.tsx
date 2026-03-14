@@ -20,6 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Free online image tools. Compress, resize, crop, convert, and optimize images instantly. No signup required. Fast, secure, and 100% free.",
+  keywords: ["image compressor", "image converter", "resize image", "compress image", "jpg to png", "webp converter", "free image tools"],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -50,7 +51,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.pixltools.com",
     languages: {
-      en: "https://www.pixltools.com",
+      "en": "https://www.pixltools.com",
       "x-default": "https://www.pixltools.com",
     },
   },
@@ -60,13 +61,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${display.variable} ${inter.className}`}>
       <head>
-        {/* Preconnects for fonts and ads */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-
-        {/* Google AdSense */}
+        {/* Google AdSense: use plain script tag to avoid data-nscript attr */}
         {ADSENSE_ID && (
           <script
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
@@ -82,7 +81,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
-
         {/* Floating email capture widget */}
         <EmailCapture />
       </body>
