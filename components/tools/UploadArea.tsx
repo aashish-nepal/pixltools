@@ -131,7 +131,7 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
 
                         <div>
                             <p className="text-lg font-semibold text-violet-100">
-                                {isDragOver ? "Release to spin up the pipeline" : "Drag & drop an image to begin compression"}
+                                {isDragOver ? "Release to spin up the pipeline" : "Drag & drop an image to get started"}
                             </p>
                             <p className="text-sm text-violet-300/50 mt-1">or <span className="text-violet-400 font-medium underline underline-offset-2">select from disk</span></p>
                         </div>
