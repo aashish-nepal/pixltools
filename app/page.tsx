@@ -536,7 +536,108 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ───── POPULAR GUIDES ───── */}
+      <section aria-label="Image optimization guides" className="relative overflow-hidden py-20 px-4" style={{ background: "#07050f" }}>
+        <SectionAtmosphere />
+        <div className="relative max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-6 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">
+              Free Image Optimization Guides
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                href: "/blog/how-to-convert-heic-to-jpg-on-iphone-and-mac",
+                category: "Conversion",
+                title: "How to Convert HEIC to JPG on iPhone & Mac",
+                excerpt: "iPhone photos save as HEIC by default. Here's how to convert to JPG on any device, for free.",
+                readTime: "6 min",
+                color: "text-sky-400",
+                bg: "bg-sky-500/10",
+              },
+              {
+                href: "/blog/how-to-compress-images-without-losing-quality",
+                category: "Compression",
+                title: "How to Compress Images Without Losing Quality",
+                excerpt: "Reduce file size by 60–80% while keeping your images pixel-perfect. The complete guide.",
+                readTime: "7 min",
+                color: "text-violet-400",
+                bg: "bg-violet-500/10",
+              },
+              {
+                href: "/blog/how-to-compress-image-for-whatsapp",
+                category: "Compression",
+                title: "How to Compress Images for WhatsApp",
+                excerpt: "Send high-quality photos on WhatsApp without the app degrading them.",
+                readTime: "5 min",
+                color: "text-emerald-400",
+                bg: "bg-emerald-500/10",
+              },
+              {
+                href: "/blog/webp-vs-jpg-vs-png-which-format-is-best",
+                category: "Formats",
+                title: "WebP vs JPG vs PNG – Which Format is Best?",
+                excerpt: "A complete breakdown of every image format to help you make the right choice.",
+                readTime: "8 min",
+                color: "text-amber-400",
+                bg: "bg-amber-500/10",
+              },
+              {
+                href: "/blog/how-to-reduce-image-file-size-on-iphone",
+                category: "Compression",
+                title: "How to Reduce Image File Size on iPhone",
+                excerpt: "4 free methods to shrink iPhone photos — no app installation needed.",
+                readTime: "5 min",
+                color: "text-pink-400",
+                bg: "bg-pink-500/10",
+              },
+              {
+                href: "/blog/best-free-image-compressor-online-2026",
+                category: "Compression",
+                title: "Best Free Image Compressor Online in 2026",
+                excerpt: "We compared the top online compressors for speed, quality, and privacy.",
+                readTime: "7 min",
+                color: "text-orange-400",
+                bg: "bg-orange-500/10",
+              },
+            ].map(({ href, category, title, excerpt, readTime, color, bg }) => (
+              <Link
+                key={href}
+                href={href}
+                className="group flex flex-col rounded-2xl border border-violet-500/15 bg-[#120f25]/70 p-5 hover:border-violet-500/30 hover:bg-[#1a1735]/80 transition-all duration-200"
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <span className={`text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full ${bg} ${color}`}>
+                    {category}
+                  </span>
+                  <span className="text-[10px] text-gray-500">{readTime} read</span>
+                </div>
+                <h3 className="text-sm font-semibold text-gray-200 group-hover:text-violet-200 transition-colors leading-snug mb-2">
+                  {title}
+                </h3>
+                <p className="text-xs text-gray-400 leading-relaxed flex-1">{excerpt}</p>
+                <span className={`text-xs font-semibold mt-3 flex items-center gap-1 ${color}`}>
+                  Read guide <ArrowRight size={11} />
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm text-violet-400 hover:text-violet-300 font-semibold transition-colors"
+            >
+              View all guides <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ───── BOTTOM CTA ───── */}
+
       <section className="relative overflow-hidden py-24 px-4" style={{ background: "#07050f" }}>
         <SectionAtmosphere />
 
@@ -596,6 +697,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-    </main>
+    </main >
   );
 }

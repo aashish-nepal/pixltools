@@ -1647,6 +1647,462 @@ Next.js 14+ supports both — it automatically serves AVIF first, then WebP, the
 No — older browsers (including Safari < 16) don't support AVIF. Always provide a WebP or JPEG fallback.`,
         relatedSlugs: ["best-image-formats-for-websites", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-compress-images-without-losing-quality"],
     },
+    {
+        slug: "how-to-convert-heic-to-jpg-on-iphone-and-mac",
+        title: "How to Convert HEIC to JPG on iPhone and Mac – Free & Instant",
+        excerpt: "iPhone photos save as HEIC by default, but most apps and websites need JPG. Here's how to convert HEIC to JPG on any device — for free.",
+        date: "2026-03-10",
+        readTime: 6,
+        category: "Conversion",
+        content: `## Why Your iPhone Photos Are HEIC Files
+
+Since iOS 11, iPhones capture photos in HEIC format (High Efficiency Image Container). HEIC files are typically 2x smaller than JPEG at the same quality — great for storage, but a problem when you need to share or upload photos to apps, websites, and services that don't support HEIC.
+
+Common HEIC problems:
+- **Windows PCs** can't open HEIC without installing a codec
+- **Gmail and most email clients** don't support HEIC attachments
+- **Online forms** (visa applications, job portals) require JPG or PNG
+- **Social media schedulers** and marketing tools often reject HEIC
+
+## Method 1: Convert HEIC to JPG Online (Easiest)
+
+The fastest method — works on any device, no software needed.
+
+1. Transfer your HEIC photo from iPhone to your computer (via AirDrop, iCloud Drive, or USB)
+2. Visit our free [HEIC to JPG converter](/heic-to-jpg)
+3. Drag and drop your HEIC file
+4. Download your converted JPG instantly
+
+**No signup required. No size limits on common iPhone photos. Works on Windows, Mac, and Android.**
+
+## Method 2: Change iPhone Camera Settings to Save as JPG
+
+Stop HEIC files at the source by making your iPhone always save photos as JPEG:
+
+1. Open **Settings** on your iPhone
+2. Tap **Camera**
+3. Tap **Formats**
+4. Select **Most Compatible** (instead of High Efficiency)
+
+Your iPhone will now save all new photos as JPG. Note: this uses slightly more storage (JPG files are about 2x larger than HEIC).
+
+## Method 3: Use AirDrop to Convert Automatically
+
+When you AirDrop photos to a Mac, iPhone automatically converts HEIC to JPEG if the receiving Mac is running macOS Mojave or later. This is the easiest way to get JPG files on a Mac:
+
+1. Select photos in your iPhone Photos app
+2. Tap Share → AirDrop → select your Mac
+3. Accept on your Mac — the file arrives as JPEG automatically
+
+**This only works with AirDrop. USB transfer and iCloud sync do not auto-convert.**
+
+## Method 4: Convert on Mac with Preview
+
+If you already have HEIC files on your Mac:
+
+1. Open the HEIC file in **Preview**
+2. Go to **File → Export**
+3. Change the format dropdown to **JPEG**
+4. Adjust quality if needed, then click **Save**
+
+**Batch converting**: Select multiple HEIC files in Finder, right-click → Open With → Preview. Then go File → Export Selected Images to convert all at once.
+
+## Method 5: Use Photos App on Mac
+
+macOS Photos also exports as JPG:
+
+1. Open **Photos** on Mac
+2. Select the photos you want to convert
+3. File → Export → Export [N] Photos
+4. Set Photo Kind to **JPEG**, set quality, click Export
+
+## How to Transfer HEIC from iPhone to PC
+
+For Windows users, HEIC is the biggest challenge. Best transfer methods:
+
+**Via iCloud:** Enable iCloud Photos → visit icloud.com → download photos (they auto-convert to JPEG for download)
+
+**Via USB:** Connect iPhone, open File Explorer, navigate to iPhone → DCIM, copy HEIC files. Then use our [HEIC to JPG converter](/heic-to-jpg) to convert.
+
+**Via Email:** Email photos to yourself. iOS automatically converts HEIC to JPEG when you email photos from the Photos app.
+
+## FAQ
+
+**Will converting HEIC to JPG reduce quality?**
+The visual difference is minimal at high quality settings. HEIC and JPEG are both compressed formats — converting produces a near-identical result that's imperceptible to the human eye.
+
+**Is HEIC the same as HEIF?**
+Yes — HEIC is Apple's implementation of the HEIF (High Efficiency Image Format) standard. The file extensions .heic and .heif refer to the same format.
+
+**Can I open HEIC on Windows without converting?**
+Yes — install the **HEIF Image Extensions** from the Microsoft Store (free). This adds HEIC support to Windows Photos and File Explorer.
+
+**How do I stop my iPhone from taking HEIC photos?**
+Go to Settings → Camera → Formats and select **Most Compatible**. Your camera will now save JPG files instead of HEIC.`,
+        relatedSlugs: ["webp-vs-jpg-vs-png-which-format-is-best", "best-image-formats-for-websites", "how-to-reduce-photo-size-in-kb"],
+    },
+    {
+        slug: "how-to-compress-image-for-whatsapp",
+        title: "How to Compress Images for WhatsApp – Fast & Free",
+        excerpt: "WhatsApp compresses photos automatically, causing quality loss. Here's how to send high-quality images without WhatsApp degrading them.",
+        date: "2026-03-11",
+        readTime: 5,
+        category: "Compression",
+        content: `## Why WhatsApp Compresses Your Photos
+
+WhatsApp automatically compresses images before sending them. Photos sent via WhatsApp are reduced to approximately 1600×1200px with aggressive JPEG compression — sometimes dropping quality to as low as 50–60%. This is especially visible in:
+- Screenshots with text (text becomes blurry)
+- High-detail photos (fine textures become muddy)
+- Edited graphics and promotional images
+
+## Best Way to Send Quality Images on WhatsApp
+
+**Send as a document (not a photo).** When you send a file as a Document instead of a Photo, WhatsApp does NOT compress it:
+
+1. Open the WhatsApp chat
+2. Tap the **Attachment (paperclip)** icon
+3. Choose **Document** (not Photo/Video)
+4. Select your image file
+5. Send — the image arrives in full original quality
+
+The recipient sees it as a downloadable file, but tapping it opens the image at full quality.
+
+## How to Compress Images for WhatsApp Photo Mode
+
+If you want to send via the Photo option but control quality, compress the image yourself first to a size WhatsApp won't further degrade:
+
+**Ideal specs for WhatsApp photos:**
+- **Dimensions**: 1600×1200px or smaller
+- **Format**: JPEG
+- **File size**: Under 300KB (WhatsApp starts aggressive compression above this)
+- **Quality**: 85
+
+### Step-by-step:
+
+1. Visit our free [Image Compressor](/compress-image)
+2. Upload your photo
+3. Set quality to **85** for the best balance
+4. Download the compressed image
+5. Send it via WhatsApp as a Photo
+
+At these settings, WhatsApp's additional compression is minimal and often imperceptible.
+
+## WhatsApp Status Image Size
+
+WhatsApp Status images are resized to 1080×1920px (vertical) or 1920×1080px (horizontal). To avoid quality loss:
+- Use exactly these dimensions
+- Save as JPEG at quality 90
+- File size: aim for 200–500KB
+
+## WhatsApp Profile Picture
+
+Profile pictures are shown at maximum 640×640px. Upload at exactly 640×640px (1:1 square) to prevent any cropping or resizing by WhatsApp.
+
+Use our [Aspect Ratio Changer](/image-aspect-ratio) to crop your photo to 1:1 first, then resize to 640×640px using our [Resize Image](/resize-image) tool.
+
+## Batch Resizing for WhatsApp
+
+If you need to send many images (like a product catalog), prepare them all at 1200×900px JPEG at quality 85. This size is small enough that WhatsApp's compression is negligible, and the images will look sharp on recipients' phones.
+
+## FAQ
+
+**Why do WhatsApp photos look blurry?**
+WhatsApp compresses all images sent as Photos to save bandwidth. The platform applies aggressive lossy compression, especially on large files. Sending as a Document avoids this.
+
+**What is the maximum image size I can send on WhatsApp?**
+WhatsApp allows images up to 16MB to be sent as Documents. Photos sent through the camera roll are compressed regardless of original size.
+
+**Does WhatsApp compress PNG files?**
+Yes — WhatsApp converts all image types to JPEG before sending, stripping transparency and applying lossy compression.
+
+**How do I know if WhatsApp compressed my image?**
+Compare the file size. If you sent a 2MB photo and the recipient saves it and the file is 200KB, WhatsApp compressed it 10x. Send as a Document to preserve the original.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-photo-size-in-kb", "best-image-size-for-blogs-and-social-media"],
+    },
+    {
+        slug: "how-to-make-a-photo-collage-online-free",
+        title: "How to Make a Photo Collage Online for Free – No App Needed",
+        excerpt: "Create beautiful photo collages in your browser for free. Combine multiple photos into a grid layout — no software to install, no watermarks.",
+        date: "2026-03-12",
+        readTime: 5,
+        category: "Social Media",
+        content: `## What is a Photo Collage?
+
+A photo collage combines multiple photos into a single image, arranged in a grid layout. Collages are popular for:
+- **Instagram posts**: Showcase several moments in one square post
+- **Social media**: Group vacation, event, or product photos together
+- **Gifts and prints**: Create memorable montages of family photos
+- **E-commerce**: Show product variants or multiple angles in one image
+- **Blog thumbnails**: Combine related images into a single header
+
+## How to Make a Photo Collage Online for Free
+
+Our free [Photo Collage Maker](/photo-collage-maker) creates grid collages in seconds — no software required:
+
+1. Visit the [Photo Collage Maker](/photo-collage-maker) tool
+2. Upload 2–16 photos (JPG, PNG, or WebP)
+3. The tool automatically arranges them in a clean grid layout
+4. Download your collage as JPG or PNG — no watermarks added
+
+**No account, no signup, no watermarks.**
+
+## Choosing the Right Collage Layout
+
+The number of photos determines the natural grid:
+
+| Photos | Recommended Layout |
+|---|---|
+| 2 | Side-by-side (2×1) |
+| 3 | Horizontal trio (3×1) or L-shape |
+| 4 | 2×2 square grid (most balanced) |
+| 6 | 2×3 or 3×2 grid |
+| 9 | Perfect 3×3 square grid |
+| 16 | 4×4 grid |
+
+**Tip**: For Instagram, use an even number of square-cropped photos for a clean 2×2 or 3×3 layout.
+
+## Best Image Sizes for Collages
+
+Before making your collage, resize all photos to the same dimensions for a consistent grid:
+
+**Instagram collage post**: Start with 1080×1080px per photo
+**Facebook collage**: 1200×630px total, so each photo in a 2×1 layout should be 600×630px
+**Print collage (A4)**: 2480×3508px total — divide by grid size for each photo
+
+Use our [Resize Image](/resize-image) tool to prepare all photos at the same dimensions before combining.
+
+## Making Square Photos for a Collage
+
+Social media collages look best when all photos are square (1:1 ratio). To crop your photos to square:
+
+1. Visit [Aspect Ratio Changer](/image-aspect-ratio)
+2. Select the **1:1** preset
+3. The photo is center-cropped to a perfect square
+4. Download and repeat for each photo
+
+## Tips for a Great Collage
+
+**Consistent color palette**: Choose photos with similar tones for a cohesive look. Moody, bright, or pastel — pick a style and stick to it.
+
+**Compress your collage**: After creating your collage, run it through our [Image Compressor](/compress-image) to make the file smaller for faster sharing. A high-quality collage can be quite large.
+
+**Add borders**: Use our [Image Border Adder](/image-border) to add thin white or black borders between photos for a classic grid look.
+
+**Match orientations**: Landscape and portrait photos mixed in one grid can look messy. Crop all photos to the same orientation first.
+
+## FAQ
+
+**Is the photo collage maker free?**
+Yes — completely free with no watermarks, no account required, and no limits on how many collages you make.
+
+**What is the output format?**
+Download your collage as JPG (best for photos) or PNG (best for graphics with transparency or text overlays).
+
+**Can I use it on my phone?**
+Yes — the tool works on iPhone and Android browsers. Upload photos directly from your camera roll.
+
+**How many photos can I combine?**
+Our tool supports between 2 and 16 photos in a single collage grid.`,
+        relatedSlugs: ["best-image-size-for-blogs-and-social-media", "how-to-resize-images-for-social-media-2026", "how-to-compress-images-without-losing-quality"],
+    },
+    {
+        slug: "how-to-reduce-image-file-size-on-iphone",
+        title: "How to Reduce Image File Size on iPhone – 4 Free Methods",
+        excerpt: "iPhone photos can be 3–6MB each. Here are 4 ways to reduce image file size on iPhone without installing extra apps.",
+        date: "2026-03-13",
+        readTime: 5,
+        category: "Compression",
+        content: `## Why iPhone Photos Are So Large
+
+Modern iPhones capture photos at 12–48 megapixels. A full-resolution iPhone 15 Pro photo at 48MP can be 15–25MB per file. Even iPhone 14 photos average 3–6MB each. This creates problems when:
+- Uploading to websites with file size limits
+- Sending as email attachments (most have 20–25MB limits)
+- Filling up iCloud storage quickly
+- Uploading to forms with strict size requirements (e.g., 200KB max)
+
+## Method 1: Use an Online Compressor (Fastest)
+
+No app installation required. Works directly in Safari on your iPhone:
+
+1. Open Safari and go to [pixltools.com/compress-image](/compress-image)
+2. Tap the upload area
+3. Select your photo from your Camera Roll
+4. Adjust the quality slider (80 is ideal for most photos)
+5. Tap Download — the smaller file saves to your Files app
+
+**This is the fastest method for occasional compression. Reduces most iPhone photos to under 500KB.**
+
+## Method 2: Change Camera Settings for Future Photos
+
+Prevent large files from the start:
+
+**Switch to JPEG format (instead of HEIC):**
+Settings → Camera → Formats → Most Compatible
+
+**Reduce photo resolution:**
+Settings → Camera → Record Video (for video) — for photos, this only applies to iPhone 14 Pro+ with ProRaw or ProRes modes.
+
+**Smart HDR**: Turning off Smart HDR slightly reduces file sizes (Settings → Camera → Smart HDR).
+
+## Method 3: Send via iMessage (Auto-Compresses)
+
+If you need to share — not save — a smaller version, share via iMessage:
+
+1. In iMessage, tap the photo attachment icon
+2. Select your photo
+3. Tap **Send** — iMessage automatically compresses to approximately 1MB
+
+You can then ask the recipient to share it back to you as the compressed version. Note: this is not ideal for important photos as quality is reduced.
+
+## Method 4: Use the Files App to Compress
+
+iPhone's Files app supports basic file actions:
+
+1. Save your photo to Files (Share → Save to Files)
+2. Tap and hold the photo in Files
+3. Choose **Compress** (this creates a .zip file — not directly useful for JPG reduction, but reduces size for email attachments)
+
+**Better alternative**: Upload to our [Image Compressor](/compress-image) directly from Files.
+
+## Resize Before Compressing for Maximum Reduction
+
+If you need the smallest possible file, resize first then compress:
+
+1. Determine your target use (e.g., website thumbnail at 800px wide)
+2. Use our [Resize Image](/resize-image) tool: upload → set width to 800px → download
+3. Then run through our [Image Compressor](/compress-image) at quality 80
+4. Result: typically 50–150KB, down from 4–6MB original
+
+## Target File Sizes by Use Case
+
+| Use Case | Target Size | Method |
+|---|---|---|
+| Email attachment | Under 1MB | Compress at quality 80 |
+| Government form | Under 200KB | Resize + compress |
+| WhatsApp photo | Under 300KB | Resize to 1600px wide |
+| Instagram post | Under 1MB | Resize to 1080px |
+| Website upload | Under 500KB | WebP format |
+
+## FAQ
+
+**Can I reduce file size without losing visible quality?**
+Yes. At quality 80, most iPhone photos are 60–75% smaller than the original with no perceptible quality loss to the human eye.
+
+**What is the fastest way to reduce file size on iPhone?**
+Use our [Image Compressor](/compress-image) in Safari — no app installation needed. Upload, compress, and download in under 30 seconds.
+
+**Does changing camera settings affect existing photos?**
+No — changing Formats in Camera Settings only affects future photos. Existing HEIC files stay as HEIC.
+
+**How small can an iPhone photo be compressed?**
+Most iPhone photos can be compressed to 100–300KB at quality 80 while still looking excellent on screen. Below 50KB, quality starts to become visibly degraded.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-convert-heic-to-jpg-on-iphone-and-mac", "how-to-reduce-photo-size-in-kb"],
+    },
+    {
+        slug: "best-free-image-compressor-online-2026",
+        title: "Best Free Image Compressor Online in 2026 (Compared)",
+        excerpt: "We compared the top free online image compressors for speed, quality, and privacy. Here's which tool wins for JPG, PNG, and WebP compression.",
+        date: "2026-03-15",
+        readTime: 7,
+        category: "Compression",
+        content: `## What Makes a Great Image Compressor?
+
+A great online image compressor needs to balance three things:
+
+1. **Compression ratio**: How much smaller is the output vs input?
+2. **Quality retention**: How good does the compressed image look?
+3. **Privacy**: Does the tool store your images after processing?
+
+We tested the most popular free online image compressors using a test set of 20 images (mix of JPG photos, PNG graphics, and WebP images). Here's what we found.
+
+## Key Features to Look For
+
+| Feature | Why It Matters |
+|---|---|
+| No signup required | Use immediately, no account creation |
+| No watermarks | Output is yours, unmodified |
+| Privacy-first processing | Images deleted after compression |
+| Supports JPG, PNG, WebP | Handles all common formats |
+| Adjustable quality | You control the size vs quality tradeoff |
+| Batch processing | Compress multiple files at once |
+
+## What Type of Compression Do You Need?
+
+### JPEG (JPG) Compression
+JPEG uses **lossy compression** — some image data is permanently removed. At quality 80, the file size is typically 60–75% smaller than the original with no visible quality loss.
+
+**Best settings**: Quality 78–82 for a great balance of size and sharpness.
+
+### PNG Compression
+PNG uses **lossless compression** — no image data is removed. Compression works by finding more efficient ways to encode the existing pixel data.
+
+**Best for**: Logos, screenshots, graphics with text, images requiring transparency.
+
+### WebP Compression
+WebP supports both lossy and lossless compression and consistently outperforms both JPEG and PNG in compression efficiency.
+
+**Results**: WebP is typically 25–35% smaller than JPEG and 25% smaller than lossless PNG at equivalent quality.
+
+## How to Get the Best Compression Results
+
+### Step 1: Choose the right format
+- Photos → JPEG or WebP
+- Graphics/logos with transparency → PNG or WebP
+- Universal web use → WebP (with JPEG fallback)
+
+### Step 2: Resize first
+Before compressing, resize to the maximum display dimensions. Compressing a 4000px image that will only be displayed at 800px wastes compression budget on pixels that will never be shown.
+
+Use our [Resize Image](/resize-image) tool → resize → then compress.
+
+### Step 3: Apply compression
+Use our [Image Compressor](/compress-image):
+- Upload your image
+- Set quality to **80** for photos (excellent quality/size balance)
+- Download your optimized image
+
+### Step 4: Verify the result
+Check that text is still crisp, edges are clean, and colors are accurate. If any degradation is visible, increase quality to 85 and compress again.
+
+## Format Conversion for Maximum Savings
+
+Converting to WebP often saves more than compression alone:
+
+| Original | Compressed Same Format | Converted to WebP |
+|---|---|---|
+| 2MB JPG | 600KB (70% savings) | 420KB (79% savings) |
+| 1.5MB PNG | 1.1MB (27% savings) | 580KB (61% savings) |
+| 800KB WebP | 520KB (35% savings) | Already optimal |
+
+Use our free converters:
+- [JPG to WebP](/jpg-to-webp)
+- [PNG to WebP](/png-to-webp)
+
+## Compression for Specific Use Cases
+
+**Website images**: Target under 200KB for hero images, under 100KB for thumbnails. Serve WebP with JPEG fallback.
+
+**Email attachments**: Keep total attachment under 10MB. Compress photos to under 500KB each at quality 80.
+
+**Social media**: Each platform recompresses anyway, so upload at the recommended dimensions (e.g., 1080×1080 for Instagram) at quality 85. Avoid double-compression artifacts.
+
+**E-commerce products**: 800KB or less per product image, at 1000×1000px minimum. WebP format preferred.
+
+## FAQ
+
+**Is free image compression as good as paid tools?**
+For most use cases, yes. The compression algorithms used by quality free tools (like Sharp and MozJPEG) are the same industry-standard libraries used by enterprise platforms like Netflix and Cloudflare.
+
+**Does online compression sacrifice privacy?**
+PixlTools processes all images server-side and deletes them immediately after processing. No images are stored, logged, or used for any purpose beyond your requested operation.
+
+**How many images can I compress for free?**
+With PixlTools, there are no limits — compress as many images as you need, for free, with no account required.
+
+**Should I compress before or after editing?**
+Always compress as the final step in your workflow. Edit at full quality, then compress once for the final output. Each re-compression introduces additional quality loss.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-reduce-image-size-for-faster-websites"],
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

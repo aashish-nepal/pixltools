@@ -1750,7 +1750,141 @@ export default function ToolLayout({
           </div>
         </div>
 
+        {/* ── Related Blog Posts ────────────────────────────── */}
+        {(() => {
+          // Map each tool slug to relevant blog post slugs
+          const TOOL_BLOG_MAP: Record<string, { slug: string; title: string; readTime: number }[]> = {
+            "compress-image": [
+              { slug: "how-to-compress-images-without-losing-quality", title: "How to Compress Images Without Losing Quality", readTime: 7 },
+              { slug: "best-free-image-compressor-online-2026", title: "Best Free Image Compressor Online in 2026", readTime: 7 },
+              { slug: "how-to-reduce-image-size-for-faster-websites", title: "How to Reduce Image Size for Faster Websites", readTime: 6 },
+            ],
+            "compress-jpg": [
+              { slug: "how-to-compress-images-without-losing-quality", title: "How to Compress Images Without Losing Quality", readTime: 7 },
+              { slug: "how-to-compress-image-for-whatsapp", title: "How to Compress Images for WhatsApp", readTime: 5 },
+              { slug: "how-to-reduce-photo-size-in-kb", title: "How to Reduce Photo Size in KB", readTime: 5 },
+            ],
+            "compress-png": [
+              { slug: "how-to-compress-images-without-losing-quality", title: "How to Compress Images Without Losing Quality", readTime: 7 },
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+            ],
+            "compress-webp": [
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+              { slug: "avif-vs-webp-which-is-better", title: "AVIF vs WebP – Which is Better?", readTime: 6 },
+            ],
+            "resize-image": [
+              { slug: "how-to-resize-images-for-web-complete-guide", title: "How to Resize Images for Web – Complete Guide", readTime: 7 },
+              { slug: "how-to-resize-images-for-social-media-2026", title: "How to Resize Images for Social Media", readTime: 6 },
+              { slug: "how-to-resize-image-without-photoshop", title: "How to Resize Images Without Photoshop", readTime: 5 },
+            ],
+            "crop-image": [
+              { slug: "how-to-crop-an-image-online-free", title: "How to Crop an Image Online for Free", readTime: 5 },
+              { slug: "best-image-size-for-blogs-and-social-media", title: "Best Image Sizes for Blogs & Social Media", readTime: 6 },
+            ],
+            "jpg-to-png": [
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+              { slug: "image-file-formats-explained", title: "Image File Formats Explained", readTime: 7 },
+            ],
+            "png-to-jpg": [
+              { slug: "how-to-convert-png-to-jpg-free", title: "How to Convert PNG to JPG Free", readTime: 5 },
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+            ],
+            "jpg-to-webp": [
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+              { slug: "core-web-vitals-image-optimization", title: "Core Web Vitals Image Optimization", readTime: 8 },
+              { slug: "avif-vs-webp-which-is-better", title: "AVIF vs WebP – Which is Better?", readTime: 6 },
+            ],
+            "webp-to-jpg": [
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+              { slug: "image-file-formats-explained", title: "Image File Formats Explained", readTime: 7 },
+            ],
+            "png-to-webp": [
+              { slug: "webp-vs-jpg-vs-png-which-format-is-best", title: "WebP vs JPG vs PNG – Which Format is Best?", readTime: 8 },
+              { slug: "best-image-formats-for-websites", title: "Best Image Formats for Websites", readTime: 7 },
+            ],
+            "heic-to-jpg": [
+              { slug: "how-to-convert-heic-to-jpg-on-iphone-and-mac", title: "How to Convert HEIC to JPG on iPhone & Mac", readTime: 6 },
+              { slug: "image-file-formats-explained", title: "Image File Formats Explained", readTime: 7 },
+            ],
+            "image-to-pdf": [
+              { slug: "how-to-convert-jpg-to-pdf-free", title: "How to Convert JPG to PDF Free", readTime: 5 },
+            ],
+            "pdf-to-image": [
+              { slug: "how-to-convert-pdf-to-jpg-online-free", title: "How to Convert PDF to JPG Online Free", readTime: 6 },
+            ],
+            "remove-image-background": [
+              { slug: "how-to-remove-image-background-for-free", title: "How to Remove Image Background for Free", readTime: 6 },
+            ],
+            "image-upscaler": [
+              { slug: "how-to-upscale-images-without-losing-quality", title: "How to Upscale Images Without Losing Quality", readTime: 7 },
+              { slug: "what-is-image-dpi-and-how-to-change-it", title: "What is Image DPI and How to Change It", readTime: 6 },
+            ],
+            "watermark-image": [
+              { slug: "how-to-add-watermark-to-images-online", title: "How to Add a Watermark to Images Online", readTime: 5 },
+            ],
+            "flip-image": [
+              { slug: "how-to-flip-an-image-online", title: "How to Flip an Image Online", readTime: 4 },
+            ],
+            "image-grayscale": [
+              { slug: "how-to-convert-image-to-black-and-white", title: "How to Convert Image to Black & White", readTime: 5 },
+            ],
+            "reduce-image-file-size": [
+              { slug: "how-to-make-image-smaller", title: "How to Make an Image Smaller", readTime: 5 },
+              { slug: "how-to-reduce-photo-size-in-kb", title: "How to Reduce Photo Size in KB", readTime: 5 },
+              { slug: "how-to-compress-image-for-whatsapp", title: "How to Compress Images for WhatsApp", readTime: 5 },
+            ],
+            "photo-collage-maker": [
+              { slug: "how-to-make-a-photo-collage-online-free", title: "How to Make a Photo Collage Online Free", readTime: 5 },
+              { slug: "how-to-optimize-images-for-instagram", title: "How to Optimize Images for Instagram", readTime: 5 },
+            ],
+            "image-aspect-ratio": [
+              { slug: "best-image-size-for-blogs-and-social-media", title: "Best Image Sizes for Blogs & Social Media", readTime: 6 },
+              { slug: "how-to-resize-images-for-social-media-2026", title: "How to Resize Images for Social Media", readTime: 6 },
+            ],
+            "image-thumbnail": [
+              { slug: "how-to-resize-images-for-social-media-2026", title: "How to Resize Images for Social Media", readTime: 6 },
+              { slug: "best-image-size-for-blogs-and-social-media", title: "Best Image Sizes for Blogs & Social Media", readTime: 6 },
+            ],
+          };
+
+          const posts = TOOL_BLOG_MAP[slug ?? ""] ?? [];
+          if (posts.length === 0) return null;
+
+          return (
+            <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent" aria-hidden="true" />
+              <div className="relative">
+                <div className="flex items-center gap-3 py-6 text-[11px] uppercase tracking-[0.35em] text-violet-300/70 hero-reveal" style={{ animationDelay: "0ms" }}>
+                  <span className="h-px w-8 bg-violet-500/70" />
+                  Guides
+                </div>
+                <h2 className="font-display text-gray-200 leading-[1.02] text-2xl sm:text-3xl lg:text-3xl mt-2 mb-5 rounded-xl border border-violet-500/20 bg-violet-500/10 px-3 py-1.5">
+                  Related Guides
+                </h2>
+                <div className="flex flex-col gap-3">
+                  {posts.map((post) => (
+                    <Link
+                      key={post.slug}
+                      href={`/blog/${post.slug}`}
+                      className="group flex items-center justify-between rounded-xl border border-violet-500/15 bg-[#16122a] hover:border-violet-500/30 hover:bg-[#1c1738] px-4 py-3 transition-all duration-200"
+                    >
+                      <span className="text-sm font-medium text-gray-300 group-hover:text-violet-200 transition-colors leading-snug">
+                        {post.title}
+                      </span>
+                      <div className="flex items-center gap-3 shrink-0 ml-4">
+                        <span className="text-[10px] text-gray-500 hidden sm:block">{post.readTime} min read</span>
+                        <ArrowRight size={13} className="text-violet-500 group-hover:text-violet-300 transition-colors" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })()}
+
         {/* ── Related Tools ────────────────────────────────────── */}
+
         {relatedTools.length > 0 && (
           <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
             <div

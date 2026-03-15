@@ -36,13 +36,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${BASE}/terms`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
     ];
 
-    // Tool pages — each includes its OG image for Google Image Search indexing
+    // Tool pages — each includes its own unique OG image for Google Image Search indexing
     const toolPages: MetadataRoute.Sitemap = TOOLS.map(tool => ({
         url: `${BASE}/${tool.slug}`,
         lastModified: TOOLS_LAST_UPDATED,
         changeFrequency: "monthly" as const,
         priority: 0.8,
-        images: [`${BASE}/opengraph-image`],
+        images: [`${BASE}/${tool.slug}/opengraph-image`],
     }));
 
     // Blog pages — each includes its per-post OG image
