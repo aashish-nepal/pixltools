@@ -45,14 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             type: "website",
             locale: "en_US",
             siteName: "PixlTools",
-            images: [
-                {
-                    url: ogImage,
-                    width: 1200,
-                    height: 630,
-                    alt: tool.name,
-                },
-            ],
+            images: [{ url: ogImage, width: 1200, height: 630, alt: tool.name }],
         },
         twitter: {
             card: "summary_large_image",
@@ -63,7 +56,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-
 export default async function ToolPage({ params }: Props) {
     const { slug } = await params;
     const tool = getToolBySlug(slug);
@@ -73,48 +65,25 @@ export default async function ToolPage({ params }: Props) {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-            {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://www.pixltools.com",
-            },
-            {
-                "@type": "ListItem",
-                position: 2,
-                name: tool.name,
-                item: `https://www.pixltools.com/${tool.slug}`,
-            },
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+            { "@type": "ListItem", position: 2, name: tool.name, item: `https://www.pixltools.com/${tool.slug}` },
         ],
     };
 
-    // SoftwareApplication schema — unlocks App-style rich results in Google
     const softwareAppSchema = {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         name: tool.name,
         operatingSystem: "Web",
         applicationCategory: "MultimediaApplication",
-        offers: {
-            "@type": "Offer",
-            price: "0",
-            priceCurrency: "USD",
-        },
+        offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
         description: tool.metaDesc,
         url: `https://www.pixltools.com/${tool.slug}`,
-        publisher: {
-            "@type": "Organization",
-            name: "PixlTools",
-            url: "https://www.pixltools.com",
-        },
+        publisher: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
     };
 
-    // FAQPage schema — per-tool FAQs for rich FAQ results in Google SERP
-    const faqSchema = tool.faqs && tool.faqs.length > 0
-        ? buildJsonLdFAQ(tool.faqs)
-        : null;
+    const faqSchema = tool.faqs && tool.faqs.length > 0 ? buildJsonLdFAQ(tool.faqs) : null;
 
-    // HowTo schema — step-by-step rich results in Google SERP
     const howToSchema = tool.howToSteps && tool.howToSteps.length > 0
         ? {
             "@context": "https://schema.org",
@@ -132,27 +101,80 @@ export default async function ToolPage({ params }: Props) {
 
     return (
         <>
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-            />
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
-            />
-            {faqSchema && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-                />
-            )}
-            {howToSchema && (
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-                />
-            )}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
+            {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
+            {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
+
             <ToolPageClient tool={tool} />
+
+            {/* Trust signals — visible, unique content not shown by ToolPageClient */}
+            <div className="bg-[#0b0816] pb-10">
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {[
+                            { icon: "🔒", title: "100% Private", desc: "Your images are deleted immediately after processing. We never store or share your files." },
+                            { icon: "⚡", title: "Powered by Sharp", desc: "Industry-leading image processing library used by Netflix, Vercel, and thousands of companies worldwide." },
+                            { icon: "🆓", title: "Always Free", desc: "No account, no watermarks, no limits. PixlTools is free to use for everyone, forever." },
+                        ].map(({ icon, title, desc }) => (
+                            <div key={title} className="bg-[#14102a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
+                                <span className="text-2xl flex-shrink-0">{icon}</span>
+                                <div>
+                                    <h3 className="text-sm font-semibold text-violet-200 mb-1">{title}</h3>
+                                    <p className="text-xs text-gray-400 leading-relaxed">{desc}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
+            {/*
+                Visually hidden server-rendered text for Google's crawler.
+                Invisible to users (position absolute, 1x1px, clipped).
+                No visual duplication — Google reads this as plain HTML without JS.
+            */}
+            <div
+                aria-hidden="true"
+                style={{
+                    position: "absolute",
+                    width: "1px",
+                    height: "1px",
+                    overflow: "hidden",
+                    clip: "rect(0,0,0,0)",
+                    whiteSpace: "nowrap",
+                }}
+            >
+                <h2>About {tool.name}</h2>
+                <p>{tool.metaDesc}</p>
+                <p>{tool.shortDesc}</p>
+                {tool.extendedDesc && <p>{tool.extendedDesc}</p>}
+
+                {tool.howToSteps && tool.howToSteps.length > 0 && (
+                    <>
+                        <h2>How to Use {tool.name}</h2>
+                        <ol>
+                            {tool.howToSteps.map((step, i) => (
+                                <li key={i}><strong>{step.name}</strong>: {step.text}</li>
+                            ))}
+                        </ol>
+                    </>
+                )}
+
+                {tool.faqs && tool.faqs.length > 0 && (
+                    <>
+                        <h2>Frequently Asked Questions about {tool.name}</h2>
+                        <dl>
+                            {tool.faqs.map((faq, i) => (
+                                <div key={i}>
+                                    <dt>{faq.question}</dt>
+                                    <dd>{faq.answer}</dd>
+                                </div>
+                            ))}
+                        </dl>
+                    </>
+                )}
+            </div>
         </>
     );
 }

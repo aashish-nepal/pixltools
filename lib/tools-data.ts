@@ -19,6 +19,7 @@ export interface ToolData {
     slug: string;
     name: string;
     shortDesc: string;
+    extendedDesc?: string;
     category: ToolCategory;
     apiEndpoint: string;
     icon: string;
@@ -38,6 +39,7 @@ export const TOOLS: ToolData[] = [
         slug: "compress-image",
         name: "Compress Image",
         shortDesc: "Perceptual compression tuned per image for maximum savings with minimal visible loss.",
+        extendedDesc: "Image compression is one of the most effective ways to speed up a website, reduce hosting bandwidth, and improve Google's Core Web Vitals score — specifically Largest Contentful Paint (LCP). PixlTools uses Sharp's perceptual compression engine to analyze each image individually and apply the optimal quality setting, meaning you get the smallest possible file without visible degradation. Unlike many online compressors, PixlTools never upscales or resamples your image — it only removes redundant data, so the output is pixel-accurate at the quality level you choose.",
         category: "compression",
         apiEndpoint: "/api/compress",
         icon: "🗜️",
@@ -62,6 +64,7 @@ export const TOOLS: ToolData[] = [
         slug: "compress-jpg",
         name: "Compress JPG",
         shortDesc: "Compress JPEG images to reduce file size instantly.",
+        extendedDesc: "JPEG is the most widely used image format on the web, and uncompressed or over-sized JPEGs are the single biggest contributor to slow page load times. The JPEG format uses lossy compression based on the Discrete Cosine Transform (DCT), which means you can reduce file size dramatically before quality becomes perceptible to the human eye. At quality 80, a typical JPEG is 60–75% smaller than its full-quality version — cutting both page load time and storage costs — while retaining sharpness and color accuracy that most users cannot distinguish from the original.",
         category: "compression",
         apiEndpoint: "/api/compress",
         icon: "📸",
@@ -118,6 +121,7 @@ export const TOOLS: ToolData[] = [
         slug: "resize-image",
         name: "Resize Image",
         shortDesc: "Resize images to any dimension in pixels or percentage.",
+        extendedDesc: "Resizing images correctly is critical for both performance and presentation. Serving an image that is larger than its display size wastes bandwidth — a 2400px wide image displayed at 800px forces the browser to download 3× more data than needed, directly hurting your PageSpeed score and Core Web Vitals. PixlTools lets you resize by exact pixel dimensions, percentage, or one of six social media presets (Instagram, YouTube, Twitter, and more), with an optional aspect-ratio lock to prevent distortion. All resizing is done server-side with Lanczos resampling, which produces sharper results than browser-based tools.",
         category: "resize-crop",
         apiEndpoint: "/api/resize",
         icon: "📐",
@@ -141,6 +145,7 @@ export const TOOLS: ToolData[] = [
         slug: "crop-image",
         name: "Crop Image",
         shortDesc: "Crop images to a specific area or aspect ratio.",
+        extendedDesc: "Cropping is the most fundamental image editing operation — it lets you remove unwanted areas, change composition, and prepare images for specific aspect ratios required by social platforms. Instagram posts require 1:1 or 4:5, YouTube thumbnails need 16:9, and print photos traditionally use 4:3 or 3:2. PixlTools supports both free-form pixel cropping and locked aspect ratio presets, making it easy to hit the exact dimensions any platform requires without buying desktop software.",
         category: "resize-crop",
         apiEndpoint: "/api/crop",
         icon: "✂️",
@@ -189,6 +194,7 @@ export const TOOLS: ToolData[] = [
         slug: "jpg-to-png",
         name: "JPG to PNG",
         shortDesc: "Convert JPEG images to PNG format with transparency support.",
+        extendedDesc: "Converting from JPG to PNG is necessary when you need to add a transparent background, layer an image over another, or work in a design tool that requires lossless quality. Unlike JPEG, PNG uses lossless compression — meaning every pixel is preserved exactly with no compression artifacts. This is essential for logos, icons, text overlays, and screenshots where crisp edges matter. PixlTools converts JPG to PNG instantly, preserving all color information and enabling full alpha channel support in the output file.",
         category: "conversion",
         apiEndpoint: "/api/convert",
         icon: "🔃",
@@ -225,6 +231,7 @@ export const TOOLS: ToolData[] = [
         slug: "jpg-to-webp",
         name: "JPG to WEBP",
         shortDesc: "Convert JPEG images to modern WEBP format.",
+        extendedDesc: "WebP is Google's modern image format, designed to replace JPEG for photographs on the web. At the same visual quality, WebP files are 25-35% smaller than JPEG — a massive improvement that directly reduces bandwidth usage and improves Largest Contentful Paint (LCP), a key Core Web Vitals metric. All major browsers — Chrome, Firefox, Safari (14+), and Edge — support WebP natively. Converting your JPG library to WebP is one of the highest-impact, lowest-effort performance improvements you can make to a website.",
         category: "conversion",
         apiEndpoint: "/api/convert",
         icon: "🔃",
@@ -401,6 +408,7 @@ export const TOOLS: ToolData[] = [
         slug: "remove-image-background",
         name: "Background Remover",
         shortDesc: "Remove background from images automatically.",
+        extendedDesc: "AI background removal has transformed what was once a time-consuming Photoshop task into a one-click operation. PixlTools uses a server-side AI model trained on millions of images to detect and segment the main subject from its background — handling complex edges like hair, fur, glasses, and fine details. The output is always a transparent PNG file, ready to be placed on any new background, used in an e-commerce listing, added to a presentation, or layered into a design project. No payment, no account, and no Photoshop license required.",
         category: "advanced",
         apiEndpoint: "/api/background-remove",
         icon: "🪄",
@@ -425,6 +433,7 @@ export const TOOLS: ToolData[] = [
         slug: "image-upscaler",
         name: "Image Upscaler",
         shortDesc: "Increase image resolution without losing quality.",
+        extendedDesc: "Traditional image upscaling (bicubic or bilinear interpolation) simply stretches existing pixels, creating a blurry result. AI upscaling works fundamentally differently — it analyzes patterns in the image and synthesizes new pixel detail that is plausible given the surrounding context. This produces sharper edges, clearer text, and more realistic textures at 2x and 4x the original resolution. PixlTools' upscaler is ideal for enlarging old photos, preparing low-resolution product images for print, or recovering detail from compressed screenshots.",
         category: "advanced",
         apiEndpoint: "/api/upscale",
         icon: "🔭",

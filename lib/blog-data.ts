@@ -2103,6 +2103,408 @@ With PixlTools, there are no limits — compress as many images as you need, for
 Always compress as the final step in your workflow. Edit at full quality, then compress once for the final output. Each re-compression introduces additional quality loss.`,
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-reduce-image-size-for-faster-websites"],
     },
+    {
+        slug: "how-to-optimize-images-for-core-web-vitals",
+        title: "How to Optimize Images for Core Web Vitals (LCP, CLS & FID)",
+        excerpt: "Images are the #1 cause of poor Core Web Vitals scores. Learn exactly how to optimize every image on your site to improve LCP, prevent layout shifts, and pass Google's performance thresholds.",
+        date: "2026-03-01",
+        readTime: 12,
+        category: "Optimization",
+        content: `## What Are Core Web Vitals?
+
+Core Web Vitals are a set of real-world performance metrics that Google uses to evaluate the quality of a user's experience on your website. Since May 2021, they have been a confirmed ranking factor in Google Search. Getting good Core Web Vitals scores directly improves your SEO performance.
+
+The three Core Web Vitals metrics are:
+
+- **LCP (Largest Contentful Paint)**: How long it takes for the largest visible content element to load. Target: under 2.5 seconds.
+- **CLS (Cumulative Layout Shift)**: How much the page layout unexpectedly shifts during loading. Target: under 0.1.
+- **INP (Interaction to Next Paint)**: How quickly the page responds to user interactions. Target: under 200ms.
+
+Images are the primary cause of poor LCP and CLS scores. Getting these right is the single most impactful thing most websites can do for performance.
+
+## LCP: Making Your Hero Image Load Fast
+
+The Largest Contentful Paint element on most pages is the hero image — the large banner or feature image at the top of the page. Here's how to optimise it:
+
+### 1. Use the Right Format
+
+Convert your hero image to WebP. WebP files are 25–35% smaller than equivalent JPEG files with no perceptible quality difference. Use our free [JPG to WebP](/jpg-to-webp) converter to make the switch in seconds.
+
+### 2. Size the Image Correctly
+
+Never serve a 4000×3000px image in an 800px-wide container. This wastes bandwidth and delays LCP. Resize your hero image to the maximum width it will be displayed at — usually 1400–1920px for full-width banners. Use our [Image Resize](/resize-image) tool to set exact dimensions.
+
+### 3. Compress Aggressively
+
+At WebP quality 75–80, your hero image will look identical to the original but be dramatically smaller. Use our [Compress Image](/compress-image) tool and aim for under 200KB for a hero image.
+
+### 4. Set fetchpriority="high" on the Hero
+
+The browser has no way of knowing which image is most important until it parses the HTML. Add fetchpriority="high" to your hero image tag to tell the browser to prioritise it above other resources on the page.
+
+### 5. Add Width and Height Attributes
+
+Always add explicit width and height attributes to your img tags. This reserves space for the image before it loads, preventing layout shifts (CLS). Modern browsers use the width/height ratio to calculate the correct amount of vertical space to reserve before the image downloads.
+
+### 6. Preload the Hero Image
+
+Use a link rel="preload" tag in your head section to tell the browser to fetch the hero image as soon as possible, before the HTML is fully parsed. This alone can improve LCP by 500ms–1s on many sites.
+
+## CLS: Preventing Layout Shifts from Images
+
+Cumulative Layout Shift is caused by content that moves after it loads. Images without dimensions are the biggest culprit — when an image loads without reserved space, it pushes everything below it down the page.
+
+### Always Reserve Space with Width and Height
+
+In HTML, setting width and height on images tells the browser the exact aspect ratio before the image downloads. Modern browsers use this to reserve the correct amount of space, preventing layout shift. This is one of the most impactful single changes you can make to a web page.
+
+### Use CSS aspect-ratio
+
+If you're using CSS to control image dimensions, apply an aspect-ratio property to the container element. This tells the browser to reserve a fixed ratio of space for the container, even before its contents load. Pair it with object-fit: cover on the image itself to fill the space correctly.
+
+### Avoid Injecting Images with JavaScript
+
+Images loaded dynamically after the page renders (via JavaScript) cause layout shifts because the browser has already laid out the page. Render images server-side wherever possible, and avoid inserting images into the DOM after the initial paint.
+
+## Serving Responsive Images
+
+Different devices need different image sizes. A desktop with a 4K monitor benefits from a 2560px image. A mobile phone only needs 390px. Serving one large image to all devices wastes bandwidth and hurts LCP on mobile.
+
+Use the HTML srcset attribute to tell the browser which image to use at each screen size. Combined with the sizes attribute, this lets the browser choose the most appropriate image for the current viewport and display density. Create multiple sizes using our [Image Resize](/resize-image) tool — export at 400px, 800px, and 1600px widths, then convert all to WebP.
+
+## Lazy Loading Below-Fold Images
+
+For images below the fold (below the initially visible viewport), add loading="lazy" to the img tag. This tells the browser not to download those images until the user scrolls near them, dramatically improving initial page load time and LCP.
+
+**Important**: Never lazy-load your hero or above-the-fold images. Only apply lazy loading to images that are definitely below the initial viewport. Lazy-loading the hero image is one of the most common LCP mistakes and can add 1–2 seconds to your LCP score.
+
+## Real-World Impact: Before and After
+
+A typical content website that implements all these optimisations sees:
+
+| Metric | Before | After |
+|---|---|---|
+| LCP | 4.2s (Poor) | 1.8s (Good) |
+| CLS | 0.24 (Poor) | 0.02 (Good) |
+| Page weight | 2.8 MB | 680 KB |
+| PageSpeed score | 42 | 89 |
+
+These are real-world numbers from sites that have applied the techniques above. The most common quick win is switching hero images from oversized PNGs or JPEGs to correctly-sized WebP files with a preload hint.
+
+## Measuring Your Core Web Vitals
+
+Use these tools to measure and track your improvements:
+
+- **Google PageSpeed Insights** (pagespeed.web.dev) — Free, instant analysis of any URL
+- **Chrome DevTools Lighthouse** — Built into Chrome, run locally on any page including staging
+- **Google Search Console** — Shows Core Web Vitals data aggregated from your real users
+- **WebPageTest** — Advanced waterfall analysis, filmstrip view, and multi-location testing
+
+Aim for "Good" scores on all three Core Web Vitals: LCP under 2.5s, CLS under 0.1, and INP under 200ms.
+
+## Checklist: Core Web Vitals Image Optimisation
+
+Work through this checklist on your most important pages first (homepage, landing pages, top blog posts):
+
+- Hero image converted to WebP format
+- Hero image resized to actual display dimensions (not served oversized)
+- Hero image compressed to under 200KB
+- Hero image has fetchpriority="high" attribute
+- All images have explicit width and height attributes
+- Below-fold images have loading="lazy" attribute
+- Responsive srcset images served to mobile vs desktop
+- PageSpeed Insights score above 75 on mobile
+
+## FAQ
+
+**Do Core Web Vitals directly affect my Google ranking?**
+Yes. Since May 2021, Core Web Vitals are a confirmed ranking signal in Google Search. Pages with "Good" scores have a competitive advantage over pages with "Poor" or "Needs Improvement" scores, all else being equal.
+
+**What is the single most impactful change I can make?**
+For most sites, converting the hero image from JPEG/PNG to WebP and adding a preload hint delivers the biggest LCP improvement with the least effort. This alone can move you from "Poor" to "Good" on many pages.
+
+**How long does it take for improvements to be reflected in Search Console?**
+Google Search Console aggregates Core Web Vitals data from real users over a 28-day rolling window. After making changes, wait 4 weeks and compare the before/after data in the Core Web Vitals report.
+
+**Do I need to fix CWV on every page?**
+Focus on your highest-traffic pages first. Google evaluates each URL independently, but the pages that most affect your rankings are those that generate the most impressions in Search.`,
+        relatedSlugs: ["how-to-reduce-image-size-for-faster-websites", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-compress-images-without-losing-quality"],
+    },
+    {
+        slug: "image-resolution-dpi-ppi-explained",
+        title: "Image Resolution Explained: DPI, PPI, Pixels & Megapixels for Beginners",
+        excerpt: "DPI, PPI, resolution, megapixels — what does it all mean? This complete beginner's guide explains image resolution in plain English so you can confidently prepare images for print, web, and social media.",
+        date: "2026-03-07",
+        readTime: 11,
+        category: "Guides",
+        content: `## Why Resolution Matters
+
+You've probably seen the warning before: "Image resolution is too low." Or maybe you've uploaded a photo that looked sharp on your phone screen but came out blurry when printed. Understanding image resolution is the key to avoiding these problems — and to confidently preparing images for any output, whether that's a website, a business card, or a billboard.
+
+This guide explains everything from first principles, with no assumptions about prior knowledge.
+
+## What Is a Pixel?
+
+A pixel (short for "picture element") is the smallest unit of a digital image. Every digital image is made up of a rectangular grid of pixels, each with a specific colour value expressed as red, green, and blue components. A photo taken on a modern smartphone might contain 12 million pixels arranged in a grid 4000 pixels wide × 3000 pixels tall.
+
+The total number of pixels in an image is called its resolution. We often express this as dimensions (e.g., "1920×1080 pixels") or as a megapixel count (e.g., "12 MP").
+
+## What Are Megapixels?
+
+A megapixel is simply one million pixels. A 12-megapixel camera captures images with approximately 12 million pixels. You can calculate megapixels by multiplying width × height and dividing by one million:
+
+- 4000 × 3000 = 12,000,000 pixels = 12 MP
+- 1920 × 1080 = 2,073,600 pixels ≈ 2 MP
+- 6000 × 4000 = 24,000,000 pixels = 24 MP
+
+More megapixels mean more detail — but also larger file sizes. For most web purposes, even 2 MP is more than enough resolution. For large-format print (A1, A0, or poster size), you want 12 MP or more.
+
+## What Is PPI (Pixels Per Inch)?
+
+PPI stands for Pixels Per Inch and measures how densely pixels are packed on a screen. A screen with 100 PPI has 100 pixels in every inch of its physical display area. A screen with 400 PPI (like a modern iPhone Retina display) packs 400 pixels into each inch — making images look sharp and crisp at normal viewing distance.
+
+PPI is a physical property of the display device, not of the image file itself. A 1920×1080 image looks the same in pixel count on a 72 PPI monitor and a 300 PPI screen — but it will look sharper on the high-PPI screen because those pixels are physically smaller and more densely packed.
+
+### What PPI Should I Use for Screen?
+
+For web design and digital use, PPI doesn't apply the same way it does for print. What matters for screens is the pixel dimensions of the image relative to the container it will be displayed in. A 1920×1080 image displayed in a 1920px-wide container will always fill it perfectly, regardless of the monitor's PPI. Focus on pixel dimensions, not PPI, when preparing images for the web.
+
+## What Is DPI (Dots Per Inch)?
+
+DPI stands for Dots Per Inch and is technically a printing term describing how many ink dots a printer places in each inch of paper. A 300 DPI print has 300 individual ink dots per inch — enough to produce a sharp, photographic-quality print that looks continuous to the human eye at normal reading distance.
+
+In everyday usage, people often use PPI and DPI interchangeably, even though they technically refer to different things. When someone says "this image is 72 DPI," they usually mean the image's metadata says 72 pixels per inch — a convention originally set by early Macintosh monitors from the 1980s.
+
+### What DPI Do I Need for Print?
+
+| Use Case | Minimum DPI | Ideal DPI |
+|---|---|---|
+| Standard office printing | 150 DPI | 300 DPI |
+| Professional photo printing | 240 DPI | 300 DPI |
+| Large format (A1 posters, banners) | 72–100 DPI | 150 DPI |
+| Billboards (viewed from far away) | 15–25 DPI | 50 DPI |
+| Business cards | 300 DPI | 600 DPI |
+
+For most purposes, 300 DPI is the standard for print quality. Below 150 DPI, most people can see individual pixels in printed output.
+
+## How Are Pixels and Print Size Related?
+
+The relationship between pixel dimensions and print size depends on DPI. The formula is straightforward:
+
+Print size in inches = Pixel dimension divided by DPI
+
+For example: A 3000×2400 pixel image printed at 300 DPI produces a 10×8 inch print (3000 ÷ 300 = 10 inches wide, 2400 ÷ 300 = 8 inches tall). The same 3000×2400 image printed at 150 DPI would produce a 20×16 inch print — but at half the sharpness.
+
+| Pixel Dimensions | At 300 DPI | At 150 DPI |
+|---|---|---|
+| 600 × 400 | 2 × 1.3 inches | 4 × 2.7 inches |
+| 1200 × 900 | 4 × 3 inches | 8 × 6 inches |
+| 2400 × 1800 | 8 × 6 inches | 16 × 12 inches |
+| 3600 × 2400 | 12 × 8 inches | 24 × 16 inches |
+
+## Does DPI in Image Metadata Actually Matter for Web?
+
+No. The DPI value stored in an image's metadata (EXIF data) has absolutely no effect on how the image looks in a web browser. Browsers render images based purely on pixel dimensions, not the DPI metadata.
+
+A 1920×1080 image tagged as "72 DPI" and the exact same image tagged as "300 DPI" will look completely identical in a browser. The DPI metadata is only read by print software like Adobe InDesign, Microsoft Word, or your printer driver.
+
+This is a very common source of confusion. If someone tells you "web images should be 72 DPI," what they really mean is: don't export huge high-resolution images for web use — not that the DPI value itself matters.
+
+## Upscaling vs Downscaling
+
+Downscaling (reducing pixel dimensions) always looks good. You're throwing away pixels the viewer won't be able to see anyway.
+
+Upscaling (increasing pixel dimensions) is more problematic. When you make an image larger than its original pixel dimensions, the software has to invent new pixels — and the results are always some degree of blurry or soft.
+
+Traditional upscaling algorithms (bicubic, Lanczos) interpolate between existing pixels. They can increase size by about 2x before quality degrades noticeably. AI upscaling, like our [Image Upscaler](/image-upscaler) tool, uses neural networks trained on millions of images to synthesise realistic detail — producing much sharper 2–4x upscales than traditional methods.
+
+The key rule: always try to start with the highest-resolution original you have. Downscale rather than upscale wherever possible.
+
+## Practical Examples
+
+### Preparing a Photo for Instagram
+
+Instagram posts display at 1080×1080px for square format, or 1080×1350px for portrait. Your 12MP phone photo might be 4000×3000px — far larger than needed. Resize to 1080×1080px using our [Image Resize](/resize-image) tool (crop to square, or leave as the original ratio). Then compress to WebP or JPEG at quality 80. The final file will be under 200KB — perfect for fast loading and clear display.
+
+### Printing a 4×6 Photo at 300 DPI
+
+For a 4×6 inch print at 300 DPI you need: 4 × 300 = 1200px wide, 6 × 300 = 1800px tall. So a 1200×1800px image is the minimum resolution for a sharp 4×6 print. A 12MP phone photo (4000×3000px) provides far more than enough — you could print as large as 13×10 inches at 300 DPI.
+
+### Designing a Website Banner
+
+For a full-width web banner, pixel dimensions are all that matter. Set your banner to 1400×500px (or whatever maximum width your site uses), save as WebP at quality 80, and you're done. The DPI value in the file is irrelevant for any web display.
+
+## Summary: Quick Reference
+
+| Term | What It Means | Matters For |
+|---|---|---|
+| Resolution | Total pixel dimensions (e.g., 1920×1080) | Everything |
+| Megapixels | Total pixels divided by 1,000,000 | Camera specs, print size |
+| PPI | Pixels per inch on a screen | Screen sharpness |
+| DPI | Dots per inch in print | Printing only |
+| File size | KB/MB of the image file | Web performance |
+
+## FAQ
+
+**My image looks fine on screen but blurry when printed. Why?**
+Your image doesn't have enough pixels to print at the size you're trying to print it. Calculate the required pixels for your print size: multiply the print dimensions (in inches) by your target DPI (usually 300). If your image has fewer pixels than required, you need a higher-resolution original.
+
+**Should I change the DPI setting in Photoshop before saving for web?**
+No. The DPI setting in Photoshop (or any editor) has no effect on how the image looks in a browser. Only the pixel dimensions matter for web. Set the pixel width and height to what you need, and leave the DPI at whatever it defaults to.
+
+**What resolution does a typical smartphone camera produce?**
+Modern iPhone and Android flagship cameras produce 12–200 megapixel images (4000–16000px on the longest edge). This is far more than enough resolution for any web use, and usually enough for large-format printing as well.`,
+        relatedSlugs: ["how-to-resize-images-for-web-complete-guide", "best-image-size-for-blogs-and-social-media", "how-to-upscale-images-without-losing-quality"],
+    },
+    {
+        slug: "how-to-batch-process-images-without-photoshop",
+        title: "How to Batch Process Images Without Photoshop (Free Methods)",
+        excerpt: "Need to resize, compress, or convert dozens of images at once without paying for Photoshop? Here are the best free methods for batch processing images — including online tools, command-line options, and free desktop software.",
+        date: "2026-03-12",
+        readTime: 10,
+        category: "Guides",
+        content: `## Why Batch Process Images?
+
+Processing images one by one is tedious and time-consuming. Whether you're preparing a product catalogue with 200 photos for an e-commerce site, exporting a wedding gallery for client delivery, or optimising an entire website's image library for faster loading, you need batch processing.
+
+Photoshop's batch scripts and actions are powerful, but Adobe's subscription costs $55+/month. The good news: there are excellent free alternatives that can handle most batch processing tasks just as well — and in some cases, faster.
+
+This guide covers the main approaches, from simplest to most powerful, so you can choose the right tool for your situation.
+
+## Method 1: PixlTools (No Installation Required)
+
+For most everyday tasks, PixlTools is the fastest option — zero setup, works in any browser on any device, and processes images one at a time with consistent, professional-quality results. While the tools currently process one image per session, you can work through a batch quickly with no software to install, no file size limitations from desktop RAM, and no account needed.
+
+Popular tools for batch-style workflows:
+
+- [Compress Image](/compress-image) — Reduce file size up to 80% with one click
+- [JPG to WebP](/jpg-to-webp) — Convert your entire photo library to modern WebP format
+- [Resize Image](/resize-image) — Resize to exact social media or web dimensions
+- [PNG to JPG](/png-to-jpg) — Convert graphics to JPEG for smaller file sizes
+
+**Best for**: Quick processing of small batches (5–30 images), one-off format conversions, situations where you need online access without installing software.
+
+## Method 2: IrfanView (Windows, Free)
+
+IrfanView is a free, lightweight image viewer and editor for Windows with genuinely excellent batch processing capabilities. It has been around since 1996 and remains one of the best free batch tools available for Windows users.
+
+### How to Batch Convert in IrfanView
+
+1. Open IrfanView and go to File, then Batch Conversion/Rename
+2. Navigate to your source folder and select all images (Ctrl+A to select all)
+3. Choose your output format from the dropdown (JPEG, PNG, WebP, etc.)
+4. Click the Advanced button to set quality, resize dimensions, and other options
+5. Browse to choose an output folder
+6. Click Start Batch
+
+IrfanView can process hundreds of images in seconds. You can apply a consistent resize, format conversion, and quality setting to an entire folder at once without any scripting knowledge.
+
+**Best for**: Windows users who want a free, fast desktop batch processor. Handles JPEG, PNG, WebP, TIFF, BMP, GIF, PDF, and 50+ other formats.
+
+## Method 3: GIMP with Script-Fu (Windows, Mac, Linux)
+
+GIMP is a free, open-source image editor comparable in features to an older version of Photoshop. It supports scripting through Script-Fu (a Scheme-based scripting language) that lets you apply the same editing operation to many images automatically. If you need to apply more complex edits (colour correction, cropping, layering) in a batch, GIMP is your best free option.
+
+### Getting Started with GIMP Batch
+
+In GIMP, go to Filters, then Script-Fu, then Console. You can type a script that loops through your image files, applies operations (resizing, format conversion, colour adjustments), and saves each result to an output folder.
+
+**Best for**: Advanced users comfortable with scripting who want a free, cross-platform tool with near-Photoshop editing capabilities, not just simple resize/convert operations.
+
+## Method 4: ImageMagick (Command Line)
+
+ImageMagick is the most powerful free image processing tool available. It's a command-line program used by major companies including Google, Facebook, and many CDNs to process millions of images programmatically. If you are comfortable with a terminal, ImageMagick is unbeatable for batch processing speed and flexibility.
+
+### Install ImageMagick
+
+- Mac: Install via Homebrew with "brew install imagemagick"
+- Windows: Download the installer from imagemagick.org
+- Linux: Install via your package manager (e.g., "sudo apt install imagemagick" on Ubuntu)
+
+### Common Batch Commands
+
+To resize all JPEGs in a folder to 1200px wide:
+
+    mogrify -path ./output -resize 1200x *.jpg
+
+To convert all PNGs to WebP at quality 80:
+
+    mogrify -path ./output -quality 80 -format webp *.png
+
+To compress all JPEGs to quality 80:
+
+    mogrify -path ./output -quality 80 *.jpg
+
+The "mogrify" command applies operations in-place (use -path to redirect output to a different folder and keep your originals). The "convert" command is used for more complex operations on individual files.
+
+**Best for**: Developers, power users, and anyone processing hundreds or thousands of images regularly. The most flexible and scriptable free option available.
+
+## Method 5: Sharp CLI (Node.js)
+
+Sharp is the same image processing library that powers PixlTools. It's extremely fast (C-based, built on the libvips pipeline), supports every modern format, and is available as both a Node.js library and a command-line tool.
+
+### Install Sharp CLI
+
+    npm install -g sharp-cli
+
+### Common Sharp CLI Commands
+
+To convert and resize all JPEGs in a folder:
+
+    sharp -i ./input/*.jpg -o ./output -f webp --quality 80 --resize 1200
+
+Sharp CLI is dramatically faster than ImageMagick for most operations. It processes large batches (hundreds of images) in seconds rather than minutes.
+
+**Best for**: JavaScript/Node.js developers who want programmatic batch processing integrated into a build pipeline or web application, with maximum performance.
+
+## Method 6: XnConvert (Windows, Mac, Linux — Free)
+
+XnConvert is a free, cross-platform GUI batch processor from the same team as XnView. It gives you the power of ImageMagick with a clean graphical interface — no command line required.
+
+Key features:
+- Process entire folders or custom file lists
+- 80+ output formats including WebP, AVIF, HEIC, TIFF, and PDF
+- Apply chains of operations: resize, then compress, then watermark, then convert
+- Rename output files using pattern rules (e.g., add -800w suffix)
+- Works identically on Windows, Mac, and Linux
+
+**Best for**: Non-technical users on any operating system who want a free, GUI-based batch processor with more options than IrfanView and no command-line requirement.
+
+## Choosing the Right Method
+
+| Method | Platform | Skill Level | Best For |
+|---|---|---|---|
+| PixlTools online | Any browser | Beginner | Small batches, quick conversions |
+| IrfanView | Windows only | Beginner | Fast Windows batch processing |
+| GIMP Script-Fu | Win/Mac/Linux | Intermediate | Complex edits + batch |
+| ImageMagick | Win/Mac/Linux | Advanced | Power users, shell scripting |
+| Sharp CLI | Win/Mac/Linux | Developer | Fastest bulk processing |
+| XnConvert | Win/Mac/Linux | Beginner | Cross-platform GUI batch |
+
+## Tips for Any Batch Processing Workflow
+
+**Always work on copies, not originals.** Never run batch operations directly on your original files. Always export to a separate output folder. One misconfigured command can permanently overwrite hundreds of irreplaceable photos.
+
+**Resize before compressing.** Compressing a 4000px image to 80% quality gives worse results than resizing to 1200px first, then compressing. Always resize to your target dimensions as the first step, then apply quality compression.
+
+**Choose format based on content type.** Use WebP or JPEG for photographs, PNG for graphics with transparency, and SVG for icons and logos. Converting a photo to PNG will make it much larger with no quality benefit.
+
+**Test on a small sample first.** Run your batch script on 5–10 test images before processing hundreds. Verify the output quality and dimensions look correct before committing the full batch.
+
+**Name files systematically.** Use consistent naming conventions for batched outputs: product-name-1200w.webp, client-photo-800px.jpg. This makes it easy to manage and reference files later, especially for web development where you might have multiple sizes of the same image.
+
+## FAQ
+
+**Can I batch process images for free without installing software?**
+Yes. PixlTools lets you process images in any browser without installing anything or creating an account. While it processes images one at a time rather than a full batch at once, there are no per-image costs or limits.
+
+**What is the fastest free tool for batch converting thousands of images?**
+For raw speed, Sharp CLI (Node.js) and ImageMagick are the fastest options for large batches. Both are command-line tools and can process hundreds of images per second on modern hardware.
+
+**Can I batch resize images to multiple sizes at once?**
+Yes. ImageMagick and Sharp CLI both support outputting multiple sizes from a single input image in one command. This is useful for generating responsive image sets (400px, 800px, 1600px) for a srcset attribute.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "webp-vs-jpg-vs-png-which-format-is-best"],
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {

@@ -364,7 +364,35 @@ export default async function BlogPostPage({ params }: Props) {
                     {/* ── Sticky Sidebar (1/3) ── */}
                     <aside className="lg:col-span-1 hidden lg:block">
                         <div className="sticky top-24 space-y-6">
-                            <AdBanner slot="Blog Sidebar Top" />
+                            {/* Popular Tools widget */}
+                            <div className="rounded-2xl border border-violet-500/20 bg-[#141026] overflow-hidden">
+                                <div className="bg-violet-500/10 border-b border-violet-500/15 px-5 py-3">
+                                    <p className="text-xs font-bold uppercase tracking-wider text-violet-400">🛠 Popular Free Tools</p>
+                                </div>
+                                <div className="divide-y divide-violet-500/10">
+                                    {[
+                                        { href: "/compress-image", icon: "🗜️", name: "Compress Image", desc: "Reduce file size up to 80%" },
+                                        { href: "/resize-image", icon: "📐", name: "Resize Image", desc: "Pixels, % or social presets" },
+                                        { href: "/remove-image-background", icon: "🪄", name: "Remove Background", desc: "AI-powered, transparent PNG" },
+                                        { href: "/jpg-to-webp", icon: "🔃", name: "JPG to WebP", desc: "Shrink photos 25–35%" },
+                                        { href: "/image-upscaler", icon: "🔭", name: "Image Upscaler", desc: "Enlarge up to 4× without blur" },
+                                        { href: "/image-color-picker", icon: "🎨", name: "Color Picker", desc: "Extract palette & HEX codes" },
+                                    ].map(({ href, icon, name, desc }) => (
+                                        <Link key={href} href={href} className="flex items-center gap-3 px-5 py-3.5 hover:bg-violet-500/5 transition-colors group">
+                                            <span className="text-xl flex-shrink-0">{icon}</span>
+                                            <div className="min-w-0">
+                                                <p className="text-sm font-semibold text-violet-100 group-hover:text-white transition-colors">{name}</p>
+                                                <p className="text-xs text-gray-500 truncate">{desc}</p>
+                                            </div>
+                                        </Link>
+                                    ))}
+                                </div>
+                                <div className="px-5 py-3 border-t border-violet-500/10">
+                                    <Link href="/" className="text-xs text-violet-400 hover:text-violet-300 transition-colors font-semibold">
+                                        View all 30+ tools →
+                                    </Link>
+                                </div>
+                            </div>
                             <AdBanner slot="Blog Sidebar Bottom" />
                         </div>
                     </aside>
