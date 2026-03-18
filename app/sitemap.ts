@@ -3,15 +3,15 @@ import { TOOLS } from "@/lib/tools-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 // Last time tool pages were meaningfully updated
-const TOOLS_LAST_UPDATED = new Date("2026-03-08");
+const TOOLS_LAST_UPDATED = new Date("2026-03-18");
 
 // Stable dates for static pages — avoids telling Google they change on every build
 const STATIC_DATES = {
-    home: new Date("2026-03-12"),
-    blog: new Date("2026-03-12"),
+    home: new Date("2026-03-18"),
+    blog: new Date("2026-03-18"),
     about: new Date("2026-01-01"),
     legal: new Date("2026-01-01"),
-    seoGuides: new Date("2026-03-08"),
+    seoGuides: new Date("2026-03-18"),
     premium: new Date("2026-03-08"),
     apiAccess: new Date("2026-03-08"),
 };

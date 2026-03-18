@@ -226,18 +226,36 @@ export default async function BlogPostPage({ params }: Props) {
 
     const articleSchema = {
         "@context": "https://schema.org",
-        "@type": "Article",
+        "@type": "BlogPosting",
         headline: post!.title,
         description: post!.excerpt,
-        datePublished: post!.date,
-        dateModified: post!.date,
-        author: { "@type": "Organization", name: "PixlTools" },
-        publisher: {
+        datePublished: new Date(post!.date).toISOString(),
+        dateModified: new Date(post!.date).toISOString(),
+        author: {
             "@type": "Organization",
             name: "PixlTools",
             url: "https://www.pixltools.com",
         },
+        publisher: {
+            "@type": "Organization",
+            name: "PixlTools",
+            url: "https://www.pixltools.com",
+            logo: {
+                "@type": "ImageObject",
+                url: "https://www.pixltools.com/logo.jpg",
+                width: 512,
+                height: 512,
+            },
+        },
+        image: `https://www.pixltools.com/blog/${slug}/opengraph-image`,
         mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.pixltools.com/blog/${slug}` },
+        inLanguage: "en-US",
+        isPartOf: {
+            "@type": "Blog",
+            "@id": "https://www.pixltools.com/blog",
+            name: "PixlTools Blog",
+            publisher: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
+        },
     };
 
     const faqSchema = buildJsonLdFAQ(blogFaqs);

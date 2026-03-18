@@ -302,7 +302,7 @@ Yes — our AI model handles hair, fur, and fine edges well when the original ph
 
 **Can I remove backgrounds in bulk?**
 The online tool processes one image at a time. For bulk processing, Sharp with the rembg model on Replicate is recommended.`,
-        relatedSlugs: ["how-to-remove-image-background-for-free", "how-to-reduce-image-size-for-faster-websites", "how-to-compress-images-without-losing-quality"],
+        relatedSlugs: ["how-to-add-watermark-to-images-online", "how-to-reduce-image-size-for-faster-websites", "how-to-compress-images-without-losing-quality"],
     },
     {
         slug: "how-to-upscale-images-without-losing-quality",
@@ -365,7 +365,7 @@ We support images up to 10MB for upscaling.
 
 **Does upscaling increase file size?**
 Yes — a 2x upscale quadruples the pixel count, which significantly increases file size. Compress the result afterwards if needed.`,
-        relatedSlugs: ["how-to-upscale-images-without-losing-quality", "how-to-compress-images-without-losing-quality", "best-image-formats-for-websites"],
+        relatedSlugs: ["how-to-remove-image-background-for-free", "how-to-compress-images-without-losing-quality", "best-image-formats-for-websites"],
     },
     {
         slug: "how-to-add-watermark-to-images-online",

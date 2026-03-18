@@ -315,7 +315,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-[1400px] mx-auto">
           {/* Section header */}
           <div className="mb-12 text-center">
-            <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Done in 3 Clicks</h2>
+            <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Compress, Convert &amp; Resize in 3 Clicks</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             {/* Connector line (desktop) */}
@@ -490,7 +490,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-8">
           {/* Section header */}
           <div className="mb-12 text-center">
-            <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Common Questions</h2>
+            <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Frequently Asked Questions About Image Tools</h2>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
 

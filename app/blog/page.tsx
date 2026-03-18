@@ -11,13 +11,13 @@ export const metadata: Metadata = {
         description: "Free guides and tutorials on image compression, format conversion, resizing, and web optimization.",
         url: "https://www.pixltools.com/blog",
         type: "website",
-        images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "PixlTools Blog – Image Optimization Guides" }],
+        images: [{ url: "https://www.pixltools.com/opengraph-image", width: 1200, height: 630, alt: "PixlTools Blog – Image Optimization Guides" }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Image Optimization Blog – PixlTools",
         description: "Free guides and tutorials on image compression, format conversion, and web optimization.",
-        images: ["/opengraph-image"],
+        images: ["https://www.pixltools.com/opengraph-image"],
     },
     alternates: { canonical: "https://www.pixltools.com/blog" },
 };
