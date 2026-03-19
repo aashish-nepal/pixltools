@@ -24,6 +24,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: BASE, lastModified: STATIC_DATES.home, changeFrequency: "weekly", priority: 1.0 },
         { url: `${BASE}/blog`, lastModified: STATIC_DATES.blog, changeFrequency: "weekly", priority: 0.7 },
         { url: `${BASE}/premium`, lastModified: STATIC_DATES.premium, changeFrequency: "monthly", priority: 0.7 },
+        // Photo collage maker (standalone tool page, not in TOOLS array)
+        { url: `${BASE}/photo-collage-maker`, lastModified: TOOLS_LAST_UPDATED, changeFrequency: "monthly", priority: 0.75 },
         // SEO comparison & guide pages
         { url: `${BASE}/jpg-vs-png`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
         { url: `${BASE}/png-vs-webp`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },

@@ -5,6 +5,30 @@ import { Code2, Zap, ShieldCheck, ArrowRight, CheckCircle2, Terminal } from "luc
 export const metadata: Metadata = {
     title: "PixlTools API Access — Integrate Image Processing into Your App",
     description: "Use the PixlTools image processing API to compress, resize, convert, and enhance images programmatically. JSON & binary responses. Works with any language.",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true, "max-image-preview": "large", "max-video-preview": -1 },
+    },
+    alternates: {
+        canonical: "https://www.pixltools.com/api-access",
+        languages: { "en": "https://www.pixltools.com/api-access", "x-default": "https://www.pixltools.com/api-access" },
+    },
+    openGraph: {
+        title: "PixlTools API Access — Integrate Image Processing into Your App",
+        description: "Use the PixlTools image processing API to compress, resize, convert, and enhance images programmatically.",
+        url: "https://www.pixltools.com/api-access",
+        type: "website",
+        locale: "en_US",
+        siteName: "PixlTools",
+        images: [{ url: "https://www.pixltools.com/opengraph-image", width: 1200, height: 630, alt: "PixlTools API Access – Image Processing API" }],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "PixlTools API Access — Integrate Image Processing into Your App",
+        description: "Use the PixlTools image processing API to compress, resize, convert, and enhance images programmatically.",
+        images: ["https://www.pixltools.com/opengraph-image"],
+    },
 };
 
 const ENDPOINTS = [

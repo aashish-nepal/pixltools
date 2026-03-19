@@ -5,12 +5,6 @@ import UploadArea from "@/components/tools/UploadArea";
 import ToolIcon from "@/components/ui/ToolIcon";
 import AdBanner from "@/components/ui/AdBanner";
 import FAQSection from "@/components/ui/FAQSection";
-import {
-  buildJsonLdWebApp,
-  buildJsonLdFAQ,
-  buildJsonLdBreadcrumb,
-  buildJsonLdHowTo,
-} from "@/lib/utils";
 import { TOOLS } from "@/lib/tools-data";
 import { TOOL_ICON_MAP } from "@/lib/icons";
 import {
@@ -895,33 +889,9 @@ export default function ToolLayout({
 
   const toolSlug = slug || toolName.toLowerCase().replace(/\s+/g, "-");
   const toolIconName = TOOL_ICON_MAP[toolSlug];
-  const webAppSchema = buildJsonLdWebApp(
-    toolName,
-    toolDesc,
-    `https://pixltools.com/${toolSlug}`
-  );
-  const faqSchema = buildJsonLdFAQ(faqs);
-  const breadcrumbSchema = buildJsonLdBreadcrumb(toolName, toolSlug);
-  const howToSchema = buildJsonLdHowTo(toolName, howToUse);
 
   return (
     <main className="min-h-screen bg-[#0b0816]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webAppSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
 
       {/* Lightbox */}
       {lightboxSrc && (

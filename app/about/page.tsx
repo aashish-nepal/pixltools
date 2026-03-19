@@ -5,6 +5,11 @@ import { ShieldCheck, Zap, Lock, Clock, Mail, Users, BookOpen, Code2 } from "luc
 export const metadata: Metadata = {
     title: "About PixlTools – Free Online Image Processing Tools",
     description: "PixlTools is a free, privacy-first image processing suite built on Sharp. Compress, resize, convert, and optimize images instantly — no signup, no watermarks, no data stored.",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true, "max-image-preview": "large", "max-video-preview": -1 },
+    },
     alternates: { canonical: "https://www.pixltools.com/about" },
     openGraph: {
         title: "About PixlTools – Free Online Image Processing Tools",

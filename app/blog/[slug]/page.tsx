@@ -395,6 +395,14 @@ export default async function BlogPostPage({ params }: Props) {
                                         { href: "/jpg-to-webp", icon: "🔃", name: "JPG to WebP", desc: "Shrink photos 25–35%" },
                                         { href: "/image-upscaler", icon: "🔭", name: "Image Upscaler", desc: "Enlarge up to 4× without blur" },
                                         { href: "/image-color-picker", icon: "🎨", name: "Color Picker", desc: "Extract palette & HEX codes" },
+                                        { href: "/image-sharpen", icon: "💎", name: "Sharpen Image", desc: "Crisp details in one click" },
+                                        { href: "/image-contrast", icon: "🌗", name: "Adjust Contrast", desc: "Bold or soft — your style" },
+                                        { href: "/image-border", icon: "🖼️", name: "Add Border", desc: "Custom color & pixel frame" },
+                                        { href: "/svg-to-png", icon: "🎨", name: "SVG to PNG", desc: "High-quality vector to raster" },
+                                        { href: "/image-to-pdf", icon: "📄", name: "Image to PDF", desc: "Instant, no watermarks" },
+                                        { href: "/image-to-base64", icon: "💻", name: "Image to Base64", desc: "Embed in HTML, CSS & JSON" },
+                                        { href: "/image-metadata-viewer", icon: "🔍", name: "EXIF Viewer", desc: "Camera & GPS metadata" },
+                                        { href: "/photo-collage-maker", icon: "🖼️", name: "Collage Maker", desc: "Combine up to 16 photos" },
                                     ].map(({ href, icon, name, desc }) => (
                                         <Link key={href} href={href} className="flex items-center gap-3 px-5 py-3.5 hover:bg-violet-500/5 transition-colors group">
                                             <span className="text-xl flex-shrink-0">{icon}</span>
