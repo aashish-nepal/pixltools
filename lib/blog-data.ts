@@ -3,6 +3,8 @@ export interface BlogPost {
     title: string;
     excerpt: string;
     date: string;
+    /** Optional — set when a post is meaningfully updated after initial publish */
+    updatedDate?: string;
     readTime: number;
     category: string;
     content: string;

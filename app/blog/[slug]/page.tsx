@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             locale: "en_US",
             siteName: "PixlTools",
             publishedTime: new Date(post.date).toISOString(),
-            modifiedTime: new Date(post.date).toISOString(),
+            modifiedTime: new Date(post.updatedDate ?? post.date).toISOString(),
             authors: ["https://www.pixltools.com/about"],
             section: post.category,
             images: [
@@ -230,7 +230,7 @@ export default async function BlogPostPage({ params }: Props) {
         headline: post!.title,
         description: post!.excerpt,
         datePublished: new Date(post!.date).toISOString(),
-        dateModified: new Date(post!.date).toISOString(),
+        dateModified: new Date(post!.updatedDate ?? post!.date).toISOString(),
         author: {
             "@type": "Organization",
             name: "PixlTools",

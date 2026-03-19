@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const tool = getToolBySlug(slug);
     if (!tool) return {};
     const url = `https://www.pixltools.com/${tool.slug}`;
-    const ogImage = `/opengraph-image`;
+    const ogImage = `/${tool.slug}/opengraph-image`;
     return {
         title: tool.metaTitle,
         description: tool.metaDesc,
@@ -129,52 +129,7 @@ export default async function ToolPage({ params }: Props) {
                 </div>
             </div>
 
-            {/*
-                Visually hidden server-rendered text for Google's crawler.
-                Invisible to users (position absolute, 1x1px, clipped).
-                No visual duplication — Google reads this as plain HTML without JS.
-            */}
-            <div
-                aria-hidden="true"
-                style={{
-                    position: "absolute",
-                    width: "1px",
-                    height: "1px",
-                    overflow: "hidden",
-                    clip: "rect(0,0,0,0)",
-                    whiteSpace: "nowrap",
-                }}
-            >
-                <h2>About {tool.name}</h2>
-                <p>{tool.metaDesc}</p>
-                <p>{tool.shortDesc}</p>
-                {tool.extendedDesc && <p>{tool.extendedDesc}</p>}
 
-                {tool.howToSteps && tool.howToSteps.length > 0 && (
-                    <>
-                        <h2>How to Use {tool.name}</h2>
-                        <ol>
-                            {tool.howToSteps.map((step, i) => (
-                                <li key={i}><strong>{step.name}</strong>: {step.text}</li>
-                            ))}
-                        </ol>
-                    </>
-                )}
-
-                {tool.faqs && tool.faqs.length > 0 && (
-                    <>
-                        <h2>Frequently Asked Questions about {tool.name}</h2>
-                        <dl>
-                            {tool.faqs.map((faq, i) => (
-                                <div key={i}>
-                                    <dt>{faq.question}</dt>
-                                    <dd>{faq.answer}</dd>
-                                </div>
-                            ))}
-                        </dl>
-                    </>
-                )}
-            </div>
         </>
     );
 }

@@ -21,13 +21,13 @@ export const metadata: Metadata = {
         type: "article",
         locale: "en_US",
         siteName: "PixlTools",
-        images: [{ url: "https://www.pixltools.com/opengraph-image", width: 1200, height: 630, alt: "PNG vs WEBP comparison guide – PixlTools" }],
+        images: [{ url: "https://www.pixltools.com/png-vs-webp/opengraph-image", width: 1200, height: 630, alt: "PNG vs WEBP comparison guide – PixlTools" }],
     },
     twitter: {
         card: "summary_large_image",
         title: "PNG vs WEBP: Which is Better for the Web?",
         description: "PNG vs WEBP comparison: file size, quality, transparency, browser support. Find out when to switch to WEBP.",
-        images: ["https://www.pixltools.com/opengraph-image"],
+        images: ["https://www.pixltools.com/png-vs-webp/opengraph-image"],
     },
 };
 

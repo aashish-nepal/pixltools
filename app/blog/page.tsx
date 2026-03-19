@@ -6,6 +6,11 @@ import AdBanner from "@/components/ui/AdBanner";
 export const metadata: Metadata = {
     title: "Image Optimization Blog – Tips, Guides & Best Practices | PixlTools",
     description: "Learn how to compress images, choose the right format, and optimize images for faster websites. Free image optimization guides and tutorials from PixlTools.",
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: { index: true, follow: true, "max-image-preview": "large", "max-video-preview": -1 },
+    },
     openGraph: {
         title: "Image Optimization Blog – PixlTools",
         description: "Free guides and tutorials on image compression, format conversion, resizing, and web optimization.",
@@ -67,9 +72,13 @@ export default function BlogPage() {
                 {/* Categories quick-nav */}
                 <div className="flex flex-wrap gap-2 mb-8">
                     {Array.from(new Set(BLOG_POSTS.map(p => p.category))).map(cat => (
-                        <span key={cat} className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1.5 rounded-full">
+                        <Link
+                            key={cat}
+                            href={`/blog?category=${encodeURIComponent(cat)}`}
+                            className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1.5 rounded-full hover:bg-violet-500/20 hover:border-violet-500/40 transition-colors"
+                        >
                             {cat}
-                        </span>
+                        </Link>
                     ))}
                 </div>
 
