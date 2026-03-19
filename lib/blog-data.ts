@@ -655,7 +655,7 @@ Our online tool converts the first page. For multi-page extraction, use a deskto
         title: "How to Reduce Photo Size in KB – Fast & Free",
         excerpt: "Need to reduce a photo to under 200KB, 100KB, or 50KB? Here's exactly how to do it online for free.",
         date: "2026-02-20",
-        readTime: 5,
+        readTime: 8,
         category: "Compression",
         content: `## Why You Need to Reduce Photo Size in KB
 
@@ -695,6 +695,47 @@ Our [Image Compressor](/compress-image) tool lets you compress images online for
 **PNG**: Convert to JPEG first if transparency isn't required. PNG files for photos are 3–5x larger than JPEG.
 **WEBP**: Use quality 75. Produces the smallest files of any format.
 
+## Common Real-World Use Cases
+
+### Government and Visa Application Portals
+Most official portals have a strict file size cap — typically 100KB to 200KB — alongside specific pixel dimensions (e.g., 35×45mm at 300 DPI for passport photos). The correct workflow: resize to the required pixel dimensions first, then compress until you're under the limit.
+
+### Email Attachments
+Gmail, Outlook, and Yahoo cap attachments at 10–25MB total, but a 5MB JPEG photo is still impractical to send to multiple recipients. Aim for under 500KB per photo for email. A 1200px wide JPEG at quality 80 is almost always under that threshold.
+
+### E-Commerce Product Listings
+Platforms like Amazon, eBay, Etsy, and Shopify accept large files but aggressively recompress everything internally. Uploading files over 5MB can fail or slow platform processing. Target: 1MB or less from your source, 2000px wide maximum.
+
+### Social Media Profile and Cover Photos
+Instagram, Facebook, LinkedIn, and Twitter/X recompress everything. To avoid double compression artifacts, upload at the platform-recommended pixel dimensions and keep your source under 500KB.
+
+## Format Comparison Table
+
+| Format | Best For | Typical 1080×1080 Size | Transparency |
+|---|---|---|---|
+| JPEG quality 80 | Photos | 150–300KB | No |
+| PNG | Graphics, logos | 500KB–2MB | Yes |
+| WEBP quality 80 | Any web image | 90–180KB | Yes |
+
+Switch to WEBP for an immediate 25–35% size reduction: [JPG to WEBP](/jpg-to-webp) | [PNG to WEBP](/png-to-webp).
+
+## Mobile Tips: Reducing Photo Size on iPhone and Android
+
+Smartphone cameras shoot 10–50MP photos by default — far more resolution than any website or app needs.
+
+- **iPhone**: Go to Settings → Camera → Formats → choose "Most Compatible" (JPEG). Or convert HEIC files after shooting with our [HEIC to JPG](/heic-to-jpg) tool.
+- **Android**: In the camera app settings, reduce resolution to 8MP (3264×2448px) for a practical balance of quality and file size.
+- **After transfer to desktop**: Run through our [Compress Image](/compress-image) tool to hit your target KB under any limit.
+
+## Developer Tips
+
+For web developers handling user image uploads:
+
+- Use **Sharp** (Node.js) with '.resize(800).jpeg({ quality: 80 })' for most web use cases
+- Validate file size client-side with 'file.size' before upload and prompt users to compress oversized files
+- Store only the processed version — never the raw upload — in cloud storage to minimize bandwidth and egress costs
+- Consider serving WEBP with JPEG fallback using the HTML '<picture>' element
+
 ## FAQ
 
 **Can I reduce file size without losing quality?**
@@ -704,7 +745,10 @@ You can reduce it significantly (50–70%) at quality 80 with negligible visible
 Our free [Compress Image](/compress-image) tool works for JPG, PNG, and WEBP with no signup required.
 
 **Why are my PNG photos so large?**
-PNG uses lossless compression — great for graphics, but for photos the files are huge. Convert to JPEG to reduce by 60–80%.`,
+PNG uses lossless compression — perfect for graphics but enormous for photos. Convert to JPEG to reduce by 60–80%.
+
+**Does resizing reduce file size?**
+Yes — dramatically. Halving the pixel dimensions (e.g., 3000px → 1500px wide) reduces file size by approximately 75% before compression, because you remove 75% of the total pixels.`,
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites"],
     },
     {
@@ -712,7 +756,7 @@ PNG uses lossless compression — great for graphics, but for photos the files a
         title: "How to Convert JPG to PDF Online – Free & Instant",
         excerpt: "Convert any JPG, PNG, or WEBP image to a PDF document in seconds. No software, no signup, completely free.",
         date: "2026-02-22",
-        readTime: 5,
+        readTime: 8,
         category: "Conversion",
         content: `## Why Convert JPG to PDF?
 
@@ -747,6 +791,49 @@ Our online tool converts one image per PDF. For multi-image PDFs:
 
 Need to do the reverse? Our [PDF to Image](/pdf-to-image) tool extracts PDF pages as JPG images, perfect for sharing a PDF slide as a social media post.
 
+## Common Use Cases for JPG to PDF Conversion
+
+### Government and Official Document Submissions
+Most government portals — visa applications, tax authorities, job applications — require document uploads in PDF format. If you have a scanned ID, utility bill, or passport photo as a JPG, converting it to PDF makes it immediately submission-ready.
+
+### Creating a Photo Portfolio
+Designers, photographers, and artists frequently need to send work samples to clients. A PDF portfolio looks far more professional than a folder full of JPEGs and opens cleanly on any device without extra software.
+
+### Academic and Job Applications
+Universities and employers often require certificates, transcripts, or qualification scans in PDF. Converting your JPGs to PDF ensures your documents open correctly regardless of the recipient's operating system.
+
+### Archiving Physical Documents
+If you photograph printed documents with your phone, converting those JPG photos to PDF creates archivable, searchable digital records. Named and dated PDF files are far easier to store and retrieve than loose image files.
+
+## Understanding Image Quality in PDFs
+
+When you embed a JPEG into a PDF, the image quality is preserved exactly as uploaded — the PDF format itself does not add compression. This means:
+
+- **Start with the highest quality original** — if the JPG was heavily compressed (quality 50 or below), the PDF will have the same compression artifacts
+- **For web / email use**: A 1200×1600px JPEG at quality 80 is ideal — small file, clear screen quality
+- **For A4 print** (210×297mm): You need at least 2480×3508px at 300 DPI for sharp print output
+- **For passport photo PDFs**: Upload at the portal's specified pixel dimensions (commonly 413×531px at 96–200 DPI)
+
+## What is DPI and Does it Matter for JPG to PDF?
+
+DPI (dots per inch) matters for print but not for screen display. For most online submissions and digital documents:
+
+- **Screen / web use**: 72–96 DPI is perfectly fine — the image will look sharp on any monitor
+- **Standard print (office, home)**: 150 DPI is adequate for laser printers
+- **Professional print**: 300 DPI at final print dimensions for crisp, professional results
+
+Our [Resize Image](/resize-image) tool can help you hit the exact pixel dimensions required before converting to PDF.
+
+## Comparing JPG to PDF Conversion Tools
+
+| Feature | PixlTools | Desktop Software | Mobile Apps |
+|---|---|---|---|
+| Price | Free | $20–$200/year | Often freemium |
+| No signup | Yes | No | No |
+| No watermarks | Yes | Yes | Often watermarked |
+| Works on mobile | Yes | No | Yes |
+| Batch convert | One at a time | Yes | Yes |
+
 ## FAQ
 
 **What image formats can I convert to PDF?**
@@ -756,7 +843,13 @@ JPG, PNG, and WEBP. All common web formats are supported.
 Yes — at 150 DPI for screen use and digital submission. For professional print, start with a high-resolution image (300+ DPI source).
 
 **Is it free?**
-Completely free, with no watermarks on the output PDF.`,
+Completely free, with no watermarks on the output PDF.
+
+**Can I convert a PNG or WEBP to PDF?**
+Yes — PixlTools accepts JPG, PNG, and WEBP for PDF conversion. Upload any of these formats and get a clean PDF instantly.
+
+**Why is my converted PDF so large?**
+PDF file size reflects the original image size. Compress your image first with our [Compress Image](/compress-image) tool, then convert to PDF for a smaller output.`,
         relatedSlugs: ["how-to-convert-pdf-to-jpg-online-free", "best-image-formats-for-websites", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -897,7 +990,7 @@ No — Instagram doesn't accept WEBP. Convert to JPEG first using our [WEBP to J
         title: "How to Crop an Image Online Free – No Software Needed",
         excerpt: "Crop any photo to a custom size, aspect ratio, or preset dimensions instantly. Free, no login, works on any device.",
         date: "2026-03-03",
-        readTime: 5,
+        readTime: 8,
         category: "Resize",
         content: `## What is Image Cropping?
 
@@ -943,16 +1036,68 @@ Use our [Crop Image](/crop-image) tool:
 
 **Check the thumbnail**: After cropping, zoom out to see how it looks at thumbnail size (Instagram grid, Google search results). The subject should be clearly identifiable.
 
+## Platform-Specific Cropping Guide
+
+### Instagram
+
+Instagram is the most crop-sensitive platform because images are displayed at significantly different sizes depending on context: 293×293px in the profile grid, 1080×1350px in the feed, and 1080×1920px in Stories.
+
+- **Grid optimization**: Your crop must work at 293×293px. Avoid putting critical details in corners that get cut off.
+- **Portrait posts (4:5)**: The 1080×1350px portrait crop shows the largest possible image area in the feed — use this for maximum visibility.
+- **Carousel posts**: All images in a carousel must have the same aspect ratio. Plan your crop before you start the series.
+
+Use our [Crop Image](/crop-image) tool with the 4:5 preset to create Instagram-perfect portrait crops.
+
+### YouTube Thumbnails
+
+YouTube displays thumbnails at 320×180px in search results, but requires the source file to be at least 1280×720px (16:9). A 16:9 crop of your image is essential — anything else gets pillarboxed or letterboxed by YouTube.
+
+Crop your image to 16:9 with our tool, then use the [Thumbnail Generator](/image-thumbnail) to resize to 1280×720px.
+
+### E-Commerce Product Photos
+
+Marketplaces like Amazon, Etsy, and Shopify display product images in square containers. Cropping to a 1:1 aspect ratio before uploading ensures your product fills the frame instead of having awkward whitespace on the sides. Aim for 2000×2000px minimum for Amazon's zoom feature.
+
+### LinkedIn and Professional Networks
+
+LinkedIn post images display best at 1200×628px (approximately 1.91:1). Profile photos should be square. Cover photos use a 4:1 ratio (1128×191px). Use the custom pixel crop option to hit these exact dimensions.
+
+## Crop vs Other Image Operations: What's the Difference?
+
+| Operation | What it does | Changes dimensions? | Changes quality? |
+|---|---|---|---|
+| Crop | Removes outer pixels | Yes (smaller) | No |
+| Resize | Scales all pixels | Yes | Minor |
+| Compress | Reduces file size | No | Minor |
+| Rotate | Reorients image | Swaps width/height | No |
+
+## Cropping on Mobile Devices
+
+You don't need a desktop to crop images — our tool works perfectly on iPhone and Android browsers.
+
+On mobile:
+- **iPhone**: Open Safari or Chrome → go to [pixltools.com/crop-image](/crop-image) → tap the upload button and choose from your Camera Roll
+- **Android**: Open Chrome → navigate to the tool → select the image from your gallery
+- The tool is fully touch-optimized — pinch and zoom work naturally
+
+For bulk cropping of many photos, a desktop browser is faster. But for one-off crops on the go, the mobile experience is seamless.
+
 ## FAQ
 
 **Can I crop without losing quality?**
-Cropping does not affect image quality — it only removes pixels. The remaining pixels are unchanged.
+Cropping does not affect image quality — it only removes pixels from the edges. The remaining pixels are unchanged in quality.
 
 **Can I undo a crop?**
 Our tool always preserves your original file. Just re-upload and crop again with different settings.
 
 **What if I need to crop to exact pixels?**
-Enter the exact pixel dimensions in the custom crop field. The tool will center-crop to those dimensions.`,
+Enter the exact pixel dimensions in the custom crop field. The tool will center-crop to those dimensions.
+
+**Does cropping reduce file size?**
+Yes — slightly, because fewer pixels means less data. For a large reduction in file size, use our [Compress Image](/compress-image) tool after cropping.
+
+**What is the best crop for Instagram in 2026?**
+For maximum feed presence, use 4:5 (portrait) at 1080×1350px. For Stories, use 9:16 at 1080×1920px. For the profile grid, make sure your main subject is visible in the center 293×293px area of the image.`,
         relatedSlugs: ["how-to-resize-images-for-web-complete-guide", "how-to-resize-images-for-social-media-2026", "best-image-size-for-blogs-and-social-media"],
     },
     {

@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: "30+ free image tools. Compress, resize, crop, convert images instantly. No signup required.",
     images: [
       {
-        url: "/opengraph-image",
+        url: "https://www.pixltools.com/opengraph-image",
         width: 1200,
         height: 630,
         alt: "PixlTools – Free Online Image Tools",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Free Online Image Tools – PixlTools",
     description: "30+ free image tools. Compress, resize, crop, convert images instantly.",
-    images: ["/opengraph-image"],
+    images: ["https://www.pixltools.com/opengraph-image"],
   },
   robots: {
     index: true,

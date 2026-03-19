@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const tool = getToolBySlug(slug);
     if (!tool) return {};
     const url = `https://www.pixltools.com/${tool.slug}`;
-    const ogImage = `/${tool.slug}/opengraph-image`;
+    const ogImage = `https://www.pixltools.com/${tool.slug}/opengraph-image`;
     return {
         title: tool.metaTitle,
         description: tool.metaDesc,

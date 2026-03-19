@@ -104,6 +104,11 @@ export default function HomePage() {
     name: "PixlTools",
     url: "https://www.pixltools.com",
     description: "30+ free online image tools. Compress, resize, convert, and optimize images instantly.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://www.pixltools.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string",
+    },
   };
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -117,6 +122,9 @@ export default function HomePage() {
       height: 512,
     },
     description: "Free online image tools — compress, resize, crop, convert, and optimize images instantly.",
+    sameAs: [
+      "https://www.pixltools.com",
+    ],
   };
 
   return (

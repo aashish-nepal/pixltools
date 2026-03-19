@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const post = getPostBySlug(slug);
     if (!post) return {};
     const url = `https://www.pixltools.com/blog/${slug}`;
-    const ogImageUrl = `/blog/${slug}/opengraph-image`;
+    const ogImageUrl = `https://www.pixltools.com/blog/${slug}/opengraph-image`;
     return {
         title: `${post.title} | PixlTools Blog`,
         description: post.excerpt,
@@ -232,9 +232,9 @@ export default async function BlogPostPage({ params }: Props) {
         datePublished: new Date(post!.date).toISOString(),
         dateModified: new Date(post!.updatedDate ?? post!.date).toISOString(),
         author: {
-            "@type": "Organization",
-            name: "PixlTools",
-            url: "https://www.pixltools.com",
+            "@type": "Person",
+            name: "PixlTools Editorial Team",
+            url: "https://www.pixltools.com/about",
         },
         publisher: {
             "@type": "Organization",
