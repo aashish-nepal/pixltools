@@ -5,6 +5,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import EmailCapture from "@/components/ui/EmailCapture";
+import MobileBottomNav from "@/components/layout/MobileBottomNav";
 
 const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
 const display = Space_Grotesk({ subsets: ["latin"], display: "swap", variable: "--font-display" });
@@ -63,12 +64,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
-        {/* Google AdSense: use plain script tag to avoid data-nscript attr */}
+        {/* Google AdSense: async + low priority so it never blocks LCP */}
         {ADSENSE_ID && (
           <script
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
             crossOrigin="anonymous"
             async
+            // @ts-expect-error fetchpriority is valid HTML but not in React types yet
+            fetchpriority="low"
           ></script>
         )}
       </head>
@@ -79,6 +82,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <Footer />
+        {/* iOS-style sticky bottom nav — mobile only */}
+        <MobileBottomNav />
         {/* Floating email capture widget */}
         <EmailCapture />
       </body>

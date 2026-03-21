@@ -541,3 +541,71 @@ body {
 .glass {
   isolation: isolate;
 }
+
+/* ─────────────────────────────────────────────────
+   MOBILE & TABLET PREMIUM UI ADDITIONS
+   ───────────────────────────────────────────────── */
+
+/* Slide-in drawer from right (mobile navbar) */
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-backdrop {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.mobile-drawer {
+  animation: slide-in-right 0.28s cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+.mobile-drawer-backdrop {
+  animation: fade-in-backdrop 0.2s ease both;
+}
+
+/* Bounce scroll arrow */
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); opacity: 0.6; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+
+.bounce-arrow {
+  animation: bounce-arrow 1.6s ease-in-out infinite;
+}
+
+/* Bottom nav safe area (iOS home indicator) */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Bottom nav glow */
+.bottom-nav-glow {
+  box-shadow: 0 -8px 40px rgba(139, 92, 246, 0.12);
+}
+
+/* Mobile hero badge shimmer */
+@keyframes badge-shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.badge-shimmer {
+  background: linear-gradient(90deg, rgba(139,92,246,0.15) 0%, rgba(167,139,250,0.35) 45%, rgba(139,92,246,0.15) 100%);
+  background-size: 200% auto;
+  animation: badge-shimmer 3s linear infinite;
+}
+
+/* Add bottom padding for pages when bottom nav is shown */
+@media (max-width: 639px) {
+  main {
+    padding-bottom: 4.5rem;
+  }
+}

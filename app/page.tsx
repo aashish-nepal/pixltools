@@ -15,11 +15,15 @@ import {
 function SectionAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
-      <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[70%] h-[60%] rounded-full bg-violet-600/12 blur-[170px]" />
-      <div className="absolute -bottom-28 right-[-5%] w-[55%] h-[55%] rounded-full bg-fuchsia-600/06 blur-[160px]" />
-      <div className="absolute inset-0 hero-grid-lines opacity-14" />
-      <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 80% 70% at 50% 0%, rgba(139,92,246,0.07), transparent 60%)" }} />
-      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(7,5,15,0.2) 0%, rgba(7,5,15,0.8) 85%, rgba(7,5,15,0.95) 100%)" }} />
+      {/* Mobile: single cheap CSS gradient — no blur() cost */}
+      <div className="sm:hidden absolute inset-0" style={{ background: "radial-gradient(ellipse 100% 50% at 50% 0%, rgba(109,40,217,0.12) 0%, transparent 70%)" }} />
+
+      {/* Desktop: full aurora */}
+      <div className="hidden sm:block absolute -top-24 left-1/2 -translate-x-1/2 w-[70%] h-[60%] rounded-full bg-violet-600/12 blur-[170px]" />
+      <div className="hidden sm:block absolute -bottom-28 right-[-5%] w-[55%] h-[55%] rounded-full bg-fuchsia-600/06 blur-[160px]" />
+      <div className="hidden sm:block absolute inset-0 hero-grid-lines opacity-14" />
+      <div className="hidden sm:block absolute inset-0" style={{ background: "radial-gradient(ellipse 80% 70% at 50% 0%, rgba(139,92,246,0.07), transparent 60%)" }} />
+      <div className="hidden sm:block absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(7,5,15,0.2) 0%, rgba(7,5,15,0.8) 85%, rgba(7,5,15,0.95) 100%)" }} />
     </div>
   );
 }
@@ -135,20 +139,24 @@ export default function HomePage() {
 
       {/* ───── HERO ───── */}
       <section className="relative overflow-hidden" style={{ background: "#07050f" }}>
-        {/* Aurora orbs */}
+        {/* Aurora orbs — hidden on mobile (blur() is GPU-expensive on low-end phones) */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Mobile: single cheap CSS gradient, no blur */}
+          <div className="sm:hidden absolute inset-0" style={{ background: "radial-gradient(ellipse 120% 60% at 50% 0%, rgba(109,40,217,0.22) 0%, transparent 70%)" }} />
+
+          {/* Desktop: full aurora blur suite */}
           {/* Structural grid */}
-          <div className="absolute inset-0 hero-grid-lines opacity-55" />
+          <div className="hidden sm:block absolute inset-0 hero-grid-lines opacity-55" />
           {/* Primary centre violet bloom */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[920px] h-[540px] rounded-full blur-[150px]" style={{ background: "radial-gradient(ellipse, rgba(109,40,217,0.42) 0%, rgba(76,29,149,0.22) 45%, transparent 72%)" }} />
+          <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[920px] h-[540px] rounded-full blur-[150px]" style={{ background: "radial-gradient(ellipse, rgba(109,40,217,0.42) 0%, rgba(76,29,149,0.22) 45%, transparent 72%)" }} />
           {/* Top-left indigo leak */}
-          <div className="absolute -top-24 -left-40 w-[520px] h-[520px] rounded-full blur-[110px]" style={{ background: "radial-gradient(ellipse, rgba(79,70,229,0.28) 0%, transparent 65%)" }} />
+          <div className="hidden sm:block absolute -top-24 -left-40 w-[520px] h-[520px] rounded-full blur-[110px]" style={{ background: "radial-gradient(ellipse, rgba(79,70,229,0.28) 0%, transparent 65%)" }} />
           {/* Bottom-right fuchsia accent */}
-          <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full blur-[120px]" style={{ background: "radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 68%)" }} />
+          <div className="hidden sm:block absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full blur-[120px]" style={{ background: "radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 68%)" }} />
           {/* Dot grid overlay */}
-          <div className="absolute inset-0 tool-hero-pattern opacity-60" />
+          <div className="hidden sm:block absolute inset-0 tool-hero-pattern opacity-60" />
           {/* Edge vignette */}
-          <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 85% 85% at 50% 45%, transparent 35%, #07050f 100%)" }} />
+          <div className="hidden sm:block absolute inset-0" style={{ background: "radial-gradient(ellipse 85% 85% at 50% 45%, transparent 35%, #07050f 100%)" }} />
           {/* Thin top specular line */}
           <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.45) 50%, transparent)" }} />
         </div>
@@ -157,22 +165,28 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
             {/* Copy */}
             <div className="text-left">
-              <div className="flex items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-violet-300/70 hero-reveal" style={{ animationDelay: "0ms" }}>
+              {/* Mobile-only animated badge */}
+              <div className="sm:hidden mb-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-violet-500/30 badge-shimmer">
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse" />
+                <span className="text-[11px] font-bold text-violet-300 tracking-wide">30+ Free Image Tools</span>
+              </div>
+
+              <div className="hidden sm:flex items-center gap-3 text-[11px] uppercase tracking-[0.35em] text-violet-300/70 hero-reveal" style={{ animationDelay: "0ms" }}>
                 <span className="h-px w-8 bg-violet-500/70" />
                 Pro-Grade Image Toolkit
               </div>
 
-              <h1 className="font-display text-gray-100 leading-[1.02] text-4xl sm:text-5xl lg:text-6xl mt-6 hero-reveal" style={{ animationDelay: "140ms" }}>
+              <h1 className="font-display text-gray-100 leading-[1.02] text-4xl sm:text-5xl lg:text-6xl mt-4 sm:mt-6 hero-reveal" style={{ animationDelay: "140ms" }}>
                 Pixel-perfect images
                 <span className="text-violet-300"> at production speed</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-slate-400 max-w-xl mt-6 leading-relaxed hero-reveal" style={{ animationDelay: "200ms" }}>
+              <p className="text-base sm:text-lg md:text-xl text-slate-400 max-w-xl mt-4 sm:mt-6 leading-relaxed hero-reveal" style={{ animationDelay: "200ms" }}>
                 Compress, resize, convert, and enhance images in seconds. Zero data retention, no signup,
                 and no watermarks. Powered by Sharp.
               </p>
 
-              <div className="flex flex-wrap gap-2 mt-6 hero-reveal" style={{ animationDelay: "260ms" }}>
+              <div className="flex flex-wrap gap-2 mt-4 sm:mt-6 hero-reveal" style={{ animationDelay: "260ms" }}>
                 {[
                   { icon: Lock, label: "Zero retention" },
                   { icon: Zap, label: "Instant results" },
@@ -185,30 +199,40 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 mt-8 hero-reveal" style={{ animationDelay: "320ms" }}>
+              {/* CTAs — vertical on mobile, horizontal on sm+ */}
+              <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 hero-reveal" style={{ animationDelay: "320ms" }}>
                 <Link
                   href="#tools"
-                  className="inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-bold px-7 py-3.5 rounded-2xl transition-all shadow-lg shadow-violet-900/50 hover:shadow-violet-800/60 hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-500 active:scale-95 text-white font-bold px-7 py-3.5 rounded-2xl transition-all shadow-lg shadow-violet-900/50 hover:shadow-violet-800/60 hover:-translate-y-0.5 w-full sm:w-auto"
                 >
                   <Zap size={16} />
                   Explore All Tools
                 </Link>
                 <Link
                   href="/compress-image"
-                  className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold px-7 py-3.5 rounded-2xl transition-all backdrop-blur-sm hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 active:scale-95 border border-white/15 text-white font-semibold px-7 py-3.5 rounded-2xl transition-all backdrop-blur-sm hover:-translate-y-0.5 w-full sm:w-auto"
                 >
                   Compress Image
                   <ArrowRight size={15} />
                 </Link>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-10 max-w-xl hero-reveal" style={{ animationDelay: "380ms" }}>
+              {/* Stats — 2×2 glassmorphism grid on mobile, 4-col on sm+ */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8 sm:mt-10 max-w-xl hero-reveal" style={{ animationDelay: "380ms" }}>
                 {STATS.map(({ value, label }) => (
-                  <div key={label} className="rounded-2xl border border-violet-500/15 bg-[#0f0d1f]/70 px-4 py-3 text-left">
-                    <div className="text-xl font-bold text-violet-300">{value}</div>
-                    <div className="text-xs text-violet-400/50 mt-0.5">{label}</div>
+                  <div key={label} className="group rounded-2xl border border-violet-500/20 bg-[#0f0d1f]/80 hover:border-violet-500/40 hover:bg-[#16122a]/80 backdrop-blur-sm px-3 sm:px-4 py-3 text-left transition-all">
+                    <div className="text-xl font-bold text-violet-300 group-hover:text-violet-200">{value}</div>
+                    <div className="text-xs text-violet-400/50 mt-0.5 leading-snug">{label}</div>
                   </div>
                 ))}
+              </div>
+
+              {/* Mobile-only scroll hint */}
+              <div className="sm:hidden mt-8 flex flex-col items-center gap-1 bounce-arrow">
+                <span className="text-[10px] text-gray-600 tracking-widest uppercase">Scroll to explore</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-violet-500/50">
+                  <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
               </div>
             </div>
 
