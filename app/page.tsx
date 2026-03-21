@@ -1,15 +1,18 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import AdBanner from "@/components/ui/AdBanner";
-import FAQSection from "@/components/ui/FAQSection";
+import dynamic from "next/dynamic";
 import ToolGridClient from "@/components/ui/ToolGridClient";
-import TrustBar from "@/components/ui/TrustBar";
 import { buildJsonLdFAQ } from "@/lib/utils";
 import { TOOLS } from "@/lib/tools-data";
 import {
   ShieldCheck, Zap, Star, ArrowRight, Upload, Settings2, Download,
   Globe, Lock, TrendingUp,
 } from "lucide-react";
+
+// Lazy-load below-fold components — keeps them out of the critical JS bundle
+const TrustBar = dynamic(() => import("@/components/ui/TrustBar"), { loading: () => null });
+const AdBanner = dynamic(() => import("@/components/ui/AdBanner"), { loading: () => null });
+const FAQSection = dynamic(() => import("@/components/ui/FAQSection"), { loading: () => null });
 
 /** Reusable aurora + grid-lines atmosphere used across multiple sections */
 function SectionAtmosphere() {
