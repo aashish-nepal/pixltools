@@ -78,9 +78,39 @@ const WHO_ITS_FOR = [
     { icon: "💼", label: "Business Professionals", desc: "Convert, compress, and watermark images for presentations, reports, and marketing materials." },
 ];
 
+const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "About PixlTools – Free Online Image Processing Tools",
+    description: "PixlTools is a free, privacy-first image processing suite built on Sharp. Compress, resize, convert, and optimize images instantly — no signup, no watermarks, no data stored.",
+    url: "https://www.pixltools.com/about",
+    datePublished: "2026-01-01",
+    dateModified: "2026-03-18",
+    inLanguage: "en-US",
+    publisher: {
+        "@type": "Organization",
+        name: "PixlTools",
+        url: "https://www.pixltools.com",
+        logo: {
+            "@type": "ImageObject",
+            url: "https://www.pixltools.com/logo.jpg",
+            width: 512,
+            height: 512,
+        },
+    },
+    breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+            { "@type": "ListItem", position: 2, name: "About", item: "https://www.pixltools.com/about" },
+        ],
+    },
+};
+
 export default function AboutPage() {
     return (
         <main className="min-h-screen bg-[#0b0816]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />

@@ -108,6 +108,13 @@ export default async function ToolPage({ params }: Props) {
 
             <ToolPageClient tool={tool} />
 
+            {/* extendedDesc: visible server-rendered text — Google indexes this on first crawl */}
+            {tool.extendedDesc && (
+                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 pb-4">
+                    <p className="text-xs text-gray-600 leading-relaxed">{tool.extendedDesc}</p>
+                </div>
+            )}
+
             {/* Trust signals — visible, unique content not shown by ToolPageClient */}
             <div className="bg-[#0b0816] pb-10">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6">

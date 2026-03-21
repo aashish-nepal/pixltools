@@ -80,15 +80,16 @@ export function buildJsonLdBreadcrumb(toolName: string, toolSlug: string) {
     };
 }
 
-export function buildJsonLdHowTo(toolName: string, steps: string[]) {
+export function buildJsonLdHowTo(toolName: string, steps: { name: string; text: string }[]) {
     return {
         "@context": "https://schema.org",
         "@type": "HowTo",
         name: `How to use ${toolName}`,
-        step: steps.map((text, i) => ({
+        step: steps.map((s, i) => ({
             "@type": "HowToStep",
             position: i + 1,
-            text,
+            name: s.name,
+            text: s.text,
         })),
     };
 }

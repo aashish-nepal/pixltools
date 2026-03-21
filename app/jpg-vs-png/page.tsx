@@ -44,9 +44,35 @@ const TABLE = [
     { feature: "Multiple saves", jpg: "Degrades each re-save", png: "No degradation" },
 ];
 
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "JPG vs PNG: Which Format Should You Use?",
+    description: "Complete comparison of JPG vs PNG image formats. Learn when to use JPEG vs PNG for photos, graphics, web, and print. Side-by-side feature table with examples.",
+    url: "https://www.pixltools.com/jpg-vs-png",
+    datePublished: "2026-03-18",
+    dateModified: "2026-03-18",
+    inLanguage: "en-US",
+    author: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
+    publisher: {
+        "@type": "Organization",
+        name: "PixlTools",
+        url: "https://www.pixltools.com",
+        logo: { "@type": "ImageObject", url: "https://www.pixltools.com/logo.jpg", width: 512, height: 512 },
+    },
+    breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+            { "@type": "ListItem", position: 2, name: "JPG vs PNG", item: "https://www.pixltools.com/jpg-vs-png" },
+        ],
+    },
+};
+
 export default function JpgVsPngPage() {
     return (
         <main className="min-h-screen bg-[#0b0816]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />

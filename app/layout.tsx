@@ -20,18 +20,6 @@ export const metadata: Metadata = {
   },
   description:
     "Free online image tools. Compress, resize, crop, convert, and optimize images instantly. No signup required. Fast, secure, and 100% free.",
-  keywords: [
-    "image compressor", "compress jpg", "compress png", "compress webp",
-    "resize image", "crop image", "rotate image", "flip image",
-    "jpg to png", "png to jpg", "jpg to webp", "webp to jpg",
-    "png to webp", "webp to png", "heic to jpg", "image to pdf", "pdf to image",
-    "svg to png", "remove background", "image upscaler", "ai upscale",
-    "image grayscale", "adjust brightness", "sharpen image",
-    "image thumbnail", "add watermark", "blur image",
-    "image color picker", "image metadata viewer", "image to base64",
-    "photo collage maker", "image border", "aspect ratio changer",
-    "reduce image size", "free image tools", "online image editor",
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -60,7 +48,6 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large" },
   },
   alternates: {
-    canonical: "https://www.pixltools.com",
     languages: {
       "en": "https://www.pixltools.com",
       "x-default": "https://www.pixltools.com",

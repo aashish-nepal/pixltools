@@ -44,9 +44,35 @@ const TABLE = [
     { feature: "Metadata support", png: "Limited", webp: "EXIF/XMP/ICC supported" },
 ];
 
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "PNG vs WEBP: Which is Better for the Web?",
+    description: "PNG vs WEBP comparison: file size, quality, transparency, browser support. Find out when to use PNG and when to switch to modern WEBP format.",
+    url: "https://www.pixltools.com/png-vs-webp",
+    datePublished: "2026-03-18",
+    dateModified: "2026-03-18",
+    inLanguage: "en-US",
+    author: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
+    publisher: {
+        "@type": "Organization",
+        name: "PixlTools",
+        url: "https://www.pixltools.com",
+        logo: { "@type": "ImageObject", url: "https://www.pixltools.com/logo.jpg", width: 512, height: 512 },
+    },
+    breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+            { "@type": "ListItem", position: 2, name: "PNG vs WEBP", item: "https://www.pixltools.com/png-vs-webp" },
+        ],
+    },
+};
+
 export default function PngVsWebpPage() {
     return (
         <main className="min-h-screen bg-[#0b0816]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">

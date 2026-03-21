@@ -222,7 +222,7 @@ export default async function BlogPostPage({ params }: Props) {
     const relatedPosts = (post!.relatedSlugs ?? [])
         .map((s) => BLOG_POSTS.find((p) => p.slug === s))
         .filter((p): p is NonNullable<typeof p> => !!p && p.slug !== slug)
-        .slice(0, 3);
+        .slice(0, 6);
 
     const articleSchema = {
         "@context": "https://schema.org",
@@ -313,33 +313,17 @@ export default async function BlogPostPage({ params }: Props) {
 
                     {/* ── Main content column (2/3) ── */}
                     <div className="lg:col-span-2">
-                        {(() => {
-                            const lines = post!.content.split("\n");
-                            const mid = Math.floor(lines.length / 2);
-                            return (
-                                <>
-                                    <article className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#141026] shadow-[0_20px_60px_rgba(17,10,40,0.65)]">
-                                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.12),transparent_60%)]" />
-                                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
-                                        <div className="relative z-10 p-8 md:p-10">
-                                            <div className="prose max-w-[720px]">
-                                                {renderContent(lines.slice(0, mid).join("\n"))}
-                                            </div>
-                                        </div>
-                                    </article>
-                                    <AdBanner slot="Blog Post Middle" />
-                                    <article className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#141026] shadow-[0_20px_60px_rgba(17,10,40,0.65)] mt-6">
-                                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.12),transparent_60%)]" />
-                                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
-                                        <div className="relative z-10 p-8 md:p-10">
-                                            <div className="prose max-w-[720px]">
-                                                {renderContent(lines.slice(mid).join("\n"))}
-                                            </div>
-                                        </div>
-                                    </article>
-                                </>
-                            );
-                        })()}
+                        <article className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#141026] shadow-[0_20px_60px_rgba(17,10,40,0.65)]">
+                            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.12),transparent_60%)]" />
+                            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
+                            <div className="relative z-10 p-8 md:p-10">
+                                <div className="prose max-w-[720px]">
+                                    {renderContent(post!.content)}
+                                </div>
+                            </div>
+                        </article>
+
+                        <AdBanner slot="Blog Post Middle" />
 
                         <div className="mt-8">
                             <FAQSection faqs={blogFaqs} />

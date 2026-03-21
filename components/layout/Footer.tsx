@@ -94,26 +94,25 @@ export default function Footer() {
                     {/* Resources & Legal */}
                     <div className="flex flex-col gap-8">
                         <div>
-                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Resources</p>
+                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Learn</p>
                             <ul className="flex flex-col gap-2.5">
                                 <li>
                                     <Link href="/blog" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
                                         <BookOpen size={11} /> Image Guides Blog
                                     </Link>
                                 </li>
+                                <li><Link href="/blog/how-to-compress-images-without-losing-quality" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Compress Without Losing Quality</Link></li>
+                                <li><Link href="/blog/best-free-image-compressor-online-2026" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Best Image Compressors 2026</Link></li>
+                                <li><Link href="/blog/webp-vs-jpg-vs-png-which-format-is-best" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">WebP vs JPG vs PNG Guide</Link></li>
+                                <li><Link href="/blog/how-to-resize-images-for-web-complete-guide" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Resize Images for Web Guide</Link></li>
+                                <li><Link href="/blog/how-to-remove-image-background-for-free" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Remove Background Free</Link></li>
+                                <li><Link href="/blog/image-file-formats-explained" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Image Formats Explained</Link></li>
+                                <li><Link href="/blog/what-is-image-dpi-and-how-to-change-it" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Image DPI Guide</Link></li>
+                                <li><Link href="/jpg-vs-png" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">JPG vs PNG</Link></li>
+                                <li><Link href="/png-vs-webp" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">PNG vs WebP</Link></li>
                                 <li>
                                     <Link href="/about" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
                                         <Info size={11} /> About PixlTools
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/compress-image" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">
-                                        Compress Image Free
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/resize-image" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">
-                                        Resize Image Online
                                     </Link>
                                 </li>
                             </ul>

@@ -51,9 +51,49 @@ const STEPS = [
     { n: 5, title: "Avoid double-compression", desc: "Instagram re-compresses your uploads. Uploading an already-compressed image means two rounds of lossy compression. Start from the original file each time." },
 ];
 
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "How to Compress Images for Instagram (2026 Guide)",
+    description: "Learn the exact image sizes, compression settings, and formats Instagram recommends for posts, stories, reels, and profiles.",
+    url: "https://www.pixltools.com/how-to-compress-images-for-instagram",
+    datePublished: "2026-03-18",
+    dateModified: "2026-03-18",
+    inLanguage: "en-US",
+    author: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
+    publisher: {
+        "@type": "Organization",
+        name: "PixlTools",
+        url: "https://www.pixltools.com",
+        logo: { "@type": "ImageObject", url: "https://www.pixltools.com/logo.jpg", width: 512, height: 512 },
+    },
+    breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+            { "@type": "ListItem", position: 2, name: "Compress for Instagram", item: "https://www.pixltools.com/how-to-compress-images-for-instagram" },
+        ],
+    },
+};
+
+const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Compress Images for Instagram",
+    description: "Learn the exact image sizes and compression settings to keep your Instagram photos looking sharp.",
+    step: STEPS.map((s) => ({
+        "@type": "HowToStep",
+        position: s.n,
+        name: s.title,
+        text: s.desc,
+    })),
+};
+
 export default function InstagramCompressionPage() {
     return (
         <main className="min-h-screen bg-[#0b0816]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-fuchsia-500/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">

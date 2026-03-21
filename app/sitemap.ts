@@ -2,8 +2,11 @@ import { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/tools-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
-// Last time tool pages were meaningfully updated
-const TOOLS_LAST_UPDATED = new Date("2026-03-18");
+// Auto-derived: picks the most recent blog post date so sitemap stays fresh without manual edits
+const TOOLS_LAST_UPDATED = BLOG_POSTS.length > 0
+    ? new Date(Math.max(...BLOG_POSTS.map(p => new Date(p.date).getTime())))
+    : new Date("2026-03-21");
+
 
 // Stable dates for static pages — avoids telling Google they change on every build
 const STATIC_DATES = {
@@ -31,20 +34,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${BASE}/png-vs-webp`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
         { url: `${BASE}/how-to-compress-images-for-instagram`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
         // API access page
-        { url: `${BASE}/api-access`, lastModified: STATIC_DATES.apiAccess, changeFrequency: "monthly", priority: 0.6 },
+        { url: `${BASE}/api-access`, lastModified: STATIC_DATES.apiAccess, changeFrequency: "monthly", priority: 0.65 },
         // Informational / legal
-        { url: `${BASE}/about`, lastModified: STATIC_DATES.about, changeFrequency: "yearly", priority: 0.4 },
+        { url: `${BASE}/about`, lastModified: STATIC_DATES.about, changeFrequency: "yearly", priority: 0.5 },
         { url: `${BASE}/privacy-policy`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
         { url: `${BASE}/terms`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
     ];
 
-    // Tool pages — each includes its own unique OG image for Google Image Search indexing
     const toolPages: MetadataRoute.Sitemap = TOOLS.map(tool => ({
         url: `${BASE}/${tool.slug}`,
         lastModified: TOOLS_LAST_UPDATED,
         changeFrequency: "monthly" as const,
         priority: 0.8,
-        images: [`${BASE}/${tool.slug}/opengraph-image`],
     }));
 
     // Blog pages — each includes its per-post OG image
@@ -52,8 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${BASE}/blog/${post.slug}`,
         lastModified: new Date(post.date),
         changeFrequency: "monthly" as const,
-        priority: 0.6,
-        images: [`${BASE}/blog/${post.slug}/opengraph-image`],
+        priority: 0.7,
     }));
 
     // Deduplicate: static pages take precedence (they have hand-tuned priorities).

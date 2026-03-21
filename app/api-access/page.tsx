@@ -57,9 +57,39 @@ const response = await fetch('https://pixltools.com/api/compress', {
 const blob = await response.blob();
 const url = URL.createObjectURL(blob);`;
 
+const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "PixlTools API Access — Integrate Image Processing into Your App",
+    description: "Use the PixlTools image processing API to compress, resize, convert, and enhance images programmatically. JSON & binary responses. Works with any language.",
+    url: "https://www.pixltools.com/api-access",
+    datePublished: "2026-03-08",
+    dateModified: "2026-03-08",
+    inLanguage: "en-US",
+    publisher: {
+        "@type": "Organization",
+        name: "PixlTools",
+        url: "https://www.pixltools.com",
+        logo: {
+            "@type": "ImageObject",
+            url: "https://www.pixltools.com/logo.jpg",
+            width: 512,
+            height: 512,
+        },
+    },
+    breadcrumb: {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+            { "@type": "ListItem", position: 2, name: "API Access", item: "https://www.pixltools.com/api-access" },
+        ],
+    },
+};
+
 export default function ApiAccessPage() {
     return (
         <main className="min-h-screen bg-[#0b0816]">
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />

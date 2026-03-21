@@ -32,6 +32,8 @@ export interface ToolData {
     isNew?: boolean;
     faqs?: ToolFAQ[];
     howToSteps?: HowToStep[];
+    description?: string[];
+    benefits?: string[];
 }
 
 export const TOOLS: ToolData[] = [
@@ -47,6 +49,8 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Reduce JPG, PNG & WebP file sizes up to 90% instantly. No quality loss, no signup, no watermarks. Try it free — results in seconds.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         isPopular: true,
+        description: ["Reduce your image file size by up to 80% without noticeable quality loss. Our compressor uses advanced algorithms to find the perfect balance between file size and visual quality.", "Whether you need to compress photos for emailing, uploading to websites, or saving storage space, our tool delivers professional results in seconds.", "Simply upload your image, and our Sharp-powered compressor will optimize it automatically. Download the compressed result with a single click."],
+        benefits: ["Reduce file size up to 80%", "Preserve visual quality", "Supports JPG, PNG, WEBP", "No quality loss perceptible", "Instant compression", "Perfect for web uploads"],
         howToSteps: [
             { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
             { name: "Adjust Quality", text: "Move the quality slider to balance file size and visual quality. Quality 80 is the sweet spot for most images." },
@@ -72,6 +76,8 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Compress JPEG images up to 80% smaller online. Fast, secure, no account needed. Download your optimized JPG in seconds — completely free.",
         acceptedFormats: ["image/jpeg"],
         params: { format: "jpeg" },
+        description: ["Compress JPEG images online for free. Our JPG compressor uses intelligent lossy compression to dramatically reduce file size while maintaining excellent visual quality.", "JPEG compression works by reducing color detail that the human eye is least sensitive to. Our tool applies the optimal quality setting for the best size-to-quality ratio.", "Perfect for reducing photo sizes before emailing, posting on social media, or uploading to websites."],
+        benefits: ["Reduces JPG size up to 80%", "Smart quality optimization", "Maintains color accuracy", "Instant processing", "No signup needed", "Batch-ready workflow"],
         howToSteps: [
             { name: "Upload JPG", text: "Click or drag and drop your JPEG file (up to 10 MB) into the uploader." },
             { name: "Set Quality", text: "Adjust the quality slider. Values between 75–85 give the best balance of size and quality." },
@@ -95,6 +101,13 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Compress PNG images online for free. Preserve full transparency while reducing file size significantly. No signup, no watermarks, instant results.",
         acceptedFormats: ["image/png"],
         params: { format: "png" },
+        description: ["Compress PNG images online without losing transparency. PNG lossless compression reduces file size without removing any pixel data.", "Our tool uses advanced PNG optimization to eliminate redundant data and apply efficient encoding, typically reducing sizes by 20–50%.", "Ideal for screenshots, graphics, logos, and any image requiring transparency preservation."],
+        benefits: ["Lossless — zero quality loss", "Preserves transparency/alpha", "Reduces PNG size 20–50%", "Perfect for logos & graphics", "Fast processing", "No signup required"],
+        howToSteps: [
+            { name: "Upload Your PNG", text: "Click or drag and drop your PNG image (up to 10 MB). Logos, icons, and screenshots with transparency are fully supported." },
+            { name: "Compress", text: "Click Process. PixlTools applies lossless PNG optimisation — no pixels are altered, only the encoding is made more efficient." },
+            { name: "Download Optimised PNG", text: "Download your smaller PNG. Transparency is fully preserved, and quality is pixel-perfect identical to the original." },
+        ],
         faqs: [
             { question: "Does PNG compression reduce quality?", answer: "No. PNG uses lossless compression — every pixel is preserved exactly. Our tool applies smart encoding to reduce file size without any quality loss." },
             { question: "Will transparency be preserved?", answer: "Yes. Our PNG compressor fully preserves alpha transparency channels." },
@@ -113,6 +126,13 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Compress WebP images for free. Achieve even smaller file sizes with minimal quality reduction. No account needed — instant results.",
         acceptedFormats: ["image/webp"],
         params: { format: "webp" },
+        description: ["Compress WEBP images online for free. WEBP's modern compression algorithm supports both lossy and lossless modes, making it the most versatile web image format.", "Our compressor reduces WEBP file sizes while maintaining the excellent quality WEBP is known for — smaller than equivalent JPEG or PNG files.", "Ideal for web developers optimizing images for faster page loads and better Core Web Vitals scores."],
+        benefits: ["Best compression ratio available", "Supports transparency", "Modern web standard", "Smaller than JPEG/PNG", "Instant processing", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your WebP", text: "Click or drag and drop your WebP image (up to 10 MB) into the upload area." },
+            { name: "Compress", text: "Click Process. PixlTools re-encodes your WebP at the optimal quality setting for the smallest file size without visible quality loss." },
+            { name: "Download Compressed WebP", text: "Download your compressed WebP. It's smaller and ready to serve — with better performance scores than the original." },
+        ],
         faqs: [
             { question: "Why should I use WebP instead of JPG?", answer: "WebP images are 25–35% smaller than JPEG at the same visual quality, making them ideal for faster website loading." },
             { question: "Is WebP supported by all browsers?", answer: "Yes — all modern browsers including Chrome, Firefox, Safari 14+, and Edge support WebP, covering over 95% of users." },
@@ -131,6 +151,8 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Resize images to any dimension online for free. Set exact pixels or scale by percentage. Maintain aspect ratio or set custom dimensions. Instant download.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         isPopular: true,
+        description: ["Resize images to any dimension you need. Set exact pixel dimensions, scale by percentage, or choose from preset sizes for social media, web, and print.", "Our resize tool uses high-quality Lanczos resampling to ensure sharp, clear results at any size — no blurry or pixelated output.", "Resize images for Instagram, Facebook, Twitter, YouTube thumbnails, blog posts, emails, and more."],
+        benefits: ["Exact pixel dimensions", "Maintain aspect ratio option", "High-quality resampling", "Supports all major formats", "Fast and free", "Perfect for social media"],
         howToSteps: [
             { name: "Upload Image", text: "Drag and drop or click to upload your JPG, PNG, or WebP image (up to 10 MB)." },
             { name: "Set New Dimensions", text: "Enter your target width and height in pixels, or enter a percentage to scale proportionally. Toggle 'Maintain Aspect Ratio' to avoid distortion." },
@@ -154,6 +176,13 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Crop Image Free – Cut to Any Size or Aspect Ratio",
         metaDesc: "Crop images online for free. Set custom pixel dimensions, choose a preset aspect ratio, or cut a specific area. No signup, instant download.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Crop images to any dimensions or aspect ratio online. Remove unwanted areas from photos to highlight the important parts.", "Our crop tool lets you set exact crop coordinates or choose from preset ratios like 1:1 (square), 16:9 (widescreen), 4:3, and more.", "Perfect for creating product thumbnails, social media posts, profile pictures, and banner images."],
+        benefits: ["Precise pixel-level control", "Preset aspect ratios", "High quality output", "All formats supported", "Instant preview", "Free to use"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Set Crop Area", text: "Use the interactive crop handles to select the area you want to keep, or choose a preset aspect ratio like 1:1, 16:9, or 4:3." },
+            { name: "Download Cropped Image", text: "Click Process then Download. Your image is cropped precisely to your selection — no quality loss on the remaining area." },
+        ],
         faqs: [
             { question: "Can I crop to a specific aspect ratio?", answer: "Yes — choose presets like 1:1 (square), 16:9, 4:3, or 9:16 for social media, or enter custom pixel dimensions." },
             { question: "Will cropping reduce image quality?", answer: "No. Cropping only removes pixels from the edges — the remaining image content is untouched and retains full quality." },
@@ -171,10 +200,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Rotate Image Free Online – 90°, 180° or Any Angle",
         metaDesc: "Rotate images online for free. Rotate 90°, 180°, 270° or enter any custom angle. No signup, no watermarks. Instant result.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Rotate images online to any angle. Fix portrait/landscape orientation issues, or apply creative rotations for artistic effect.", "Our rotate tool supports 90°, 180°, and 270° rotation as well as any custom angle. Rotations are applied losslessly wherever possible.", "Fix photos taken sideways on your phone, rotate scanned documents, or create angled photo effects in seconds."],
+        benefits: ["90°, 180°, 270° presets", "Custom angle support", "High quality output", "All formats supported", "Instant processing", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Choose Rotation", text: "Select a preset rotation (90°, 180°, 270°) for a lossless flip, or type any custom angle for precise rotation." },
+            { name: "Download Rotated Image", text: "Click Process then Download to save your rotated image. No watermarks — ever." },
+        ],
         faqs: [
             { question: "Can I rotate to a custom angle?", answer: "Yes — enter any rotation angle (e.g., 45°, 15°) in the custom angle field. The image will be rotated precisely to that angle." },
             { question: "Will rotating add white borders to my image?", answer: "For preset 90°, 180°, and 270° rotations, no borders are added. For custom angles, some padding may be added to fit the rotated content." },
             { question: "Can I rotate PNG images with transparency?", answer: "Yes. PNG transparency is fully preserved when rotating." },
+            { question: "Why does my phone show photos sideways on some apps?", answer: "Smartphones embed an EXIF orientation tag instead of rotating the actual pixels. Apps that ignore this tag display photos incorrectly. Rotating with PixlTools writes the rotation into the pixel data directly, guaranteeing correct display on every app, browser, and device." },
+            { question: "Does rotating affect image quality?", answer: "Rotating at 90°, 180°, or 270° is completely lossless — no pixels are resampled. Custom angles (e.g., 45°) require interpolation which causes a very slight softening, similar to scaling." },
+            { question: "Will rotating change my image file size?", answer: "90° and 270° rotations swap width and height but the file size stays virtually identical. Custom angle rotations may increase file size slightly due to added padding pixels." },
+            { question: "Can I straighten a crooked photo with this tool?", answer: "Yes — if your photo is slightly tilted, enter a small correction angle (e.g., -2° or 3°). For precise horizon straightening, start with a small angle and adjust until the horizon looks level." },
         ],
     },
     {
@@ -188,10 +228,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Flip Image Free Online – Mirror Photo Horizontally or Vertically",
         metaDesc: "Flip or mirror images online for free. Flip horizontally or vertically in one click. No signup, no watermarks. Works on JPG, PNG, WebP.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Flip images horizontally or vertically online for free. Create mirror images of photos instantly without any software.", "Horizontal flipping (left-right mirror) and vertical flipping (upside-down) are both supported. The operation is lossless and preserves full image quality.", "Useful for creating symmetric compositions, fixing mirrored text in photos, and artistic image manipulation."],
+        benefits: ["Horizontal & vertical flip", "Lossless processing", "Instant result", "All formats supported", "No software needed", "Free to use"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Choose Flip Direction", text: "Select Flip Horizontal to mirror left-to-right (like a mirror reflection), or Flip Vertical to flip the image upside down." },
+            { name: "Download Flipped Image", text: "Click Process then Download. The flip is lossless — no pixels are changed, just rearranged." },
+        ],
         faqs: [
             { question: "What is the difference between flip horizontal and flip vertical?", answer: "Flip horizontal mirrors the image left-to-right (like a mirror). Flip vertical flips the image upside down." },
             { question: "Will flipping affect image quality?", answer: "No. Flipping is a lossless operation — no pixels are added or removed, quality is identical to the original." },
             { question: "Can I flip a PNG with transparency?", answer: "Yes. PNG transparency is fully preserved when flipping." },
+            { question: "Does flipping horizontal fix a mirrored selfie?", answer: "Yes — front-facing cameras mirror images left-to-right, which is why text on your shirt appears backwards in selfies. Flipping horizontally restores the natural orientation." },
+            { question: "Is flipping the same as rotating 180°?", answer: "No. Rotating 180° is equivalent to flipping both horizontally and vertically simultaneously. A single horizontal or vertical flip is a pure mirror — the result is different from any rotation." },
+            { question: "Can flipping create a symmetrical image?", answer: "You can use a horizontal flip as the first step toward creating symmetrical compositions. Flip your image, then composite the two versions side-by-side using a design tool like Canva or Photoshop." },
+            { question: "What formats can I flip?", answer: "You can flip JPG, PNG, and WebP images. PNG files retain full alpha transparency after flipping." },
         ],
     },
     {
@@ -207,6 +258,13 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/jpeg"],
         outputFormat: "png",
         params: { to: "png" },
+        description: ["Convert JPEG images to PNG format online for free. PNG output preserves every detail and adds transparency support not available in JPEG.", "Converting from JPG to PNG is ideal when you need to add a transparent layer, edit the image further without quality loss, or use it in a context requiring lossless quality.", "The conversion is instant and completely free — no watermarks, no limits."],
+        benefits: ["Full lossless PNG output", "Transparency support added", "Perfect for further editing", "No quality reduction", "Instant conversion", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your JPG", text: "Click or drag and drop your JPEG image (up to 10 MB). Any .jpg or .jpeg file is accepted." },
+            { name: "Convert to PNG", text: "Click Process. Your JPEG is converted to PNG using lossless encoding — no further quality loss occurs after this conversion." },
+            { name: "Download PNG", text: "Download your converted PNG. You can now open it in any design tool, add transparency, or use it in any context requiring lossless quality." },
+        ],
         faqs: [
             { question: "Why convert JPG to PNG?", answer: "PNG supports transparency and lossless compression, making it ideal for logos, UI graphics, and images that need crisp edges." },
             { question: "Does converting JPG to PNG improve quality?", answer: "Converting to PNG won't recover quality lost during JPEG compression, but the PNG output will not degrade further on repeated saves." },
@@ -226,6 +284,13 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/png"],
         outputFormat: "jpeg",
         params: { to: "jpeg" },
+        description: ["Convert PNG images to JPEG format online. JPEG is universally compatible and produces much smaller file sizes for photographic content.", "Converting PNG to JPG is useful when you need to reduce file size for email, social media, or web use, and your image doesn't need transparency.", "Our converter produces high-quality JPEG output with an intelligent quality setting that balances size and visual fidelity."],
+        benefits: ["Much smaller file size", "Universal compatibility", "High quality JPEG output", "Fast conversion", "No watermarks", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your PNG", text: "Click or drag and drop your PNG image (up to 10 MB). Note: if your PNG has a transparent background, it will be filled with white in the output JPG." },
+            { name: "Convert to JPG", text: "Click Process. Your PNG is converted to a high-quality JPEG — typically 60–80% smaller than the original PNG." },
+            { name: "Download JPG", text: "Download your converted JPG. It's ready for email, social media, and any platform where PNG would be too large." },
+        ],
         faqs: [
             { question: "Why convert PNG to JPG?", answer: "JPG files are far smaller than PNG for photographs — often 60–80% smaller — making them faster to load and easier to share." },
             { question: "What happens to PNG transparency when converted?", answer: "JPEG doesn't support transparency, so transparent areas will be filled with a white background during conversion." },
@@ -245,6 +310,8 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/jpeg"],
         outputFormat: "webp",
         params: { to: "webp" },
+        description: ["Convert JPEG images to WEBP format for superior web performance. WEBP achieves 25–35% smaller file sizes than JPEG at equivalent quality.", "WEBP is supported by all modern browsers and is recommended by Google as the ideal web image format for faster page loads and better SEO.", "Converting your JPG library to WEBP is one of the most impactful optimizations for website performance."],
+        benefits: ["25–35% smaller than JPEG", "Better quality retention", "All modern browsers supported", "Boost page speed scores", "Instant conversion", "Free forever"],
         howToSteps: [
             { name: "Upload JPG", text: "Drag and drop or click to upload your JPEG image (up to 10 MB)." },
             { name: "Convert", text: "Click the Process button. Your image is automatically converted to WebP format." },
@@ -269,6 +336,13 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/webp"],
         outputFormat: "jpeg",
         params: { to: "jpeg" },
+        description: ["Convert WEBP images to JPEG for maximum compatibility. While WEBP is excellent for web use, some apps, email clients, and devices don't yet support it.", "Our WEBP to JPG converter produces high-quality JPEG output that works on every device, email client, and app.", "Quickly convert WEBP files for use in Word documents, email attachments, older image editors, or any system that doesn't support WEBP."],
+        benefits: ["Universal JPEG compatibility", "High quality output", "Works everywhere", "Instant conversion", "No signup needed", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your WebP", text: "Click or drag and drop your WebP image (up to 10 MB) into the upload area." },
+            { name: "Convert to JPG", text: "Click Process. Your WebP is converted to a high-quality JPEG compatible with every device, app, and email client." },
+            { name: "Download JPG", text: "Download your converted JPG. It opens everywhere — from Photoshop to Windows Photo Viewer to Gmail." },
+        ],
         faqs: [
             { question: "Why convert WebP to JPG?", answer: "While WebP is supported by modern browsers, some older apps, email clients, and editing software don't support it. JPG is universally compatible." },
             { question: "Will the converted JPG be lower quality?", answer: "At our default quality setting, the visual difference is negligible. JPEG is an excellent format for sharing and compatibility." },
@@ -288,6 +362,13 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/png"],
         outputFormat: "webp",
         params: { to: "webp" },
+        description: ["Convert PNG to WEBP for smaller file sizes with transparency support. WEBP lossless is typically 26% smaller than PNG while preserving every pixel.", "This conversion is ideal for web graphics, logos, and UI elements that need transparency but also need to be as small as possible.", "WEBP supports both transparency and animation, making it the future-proof replacement for PNG on the web."],
+        benefits: ["26% smaller than PNG lossless", "Transparency preserved", "Better for web performance", "Lossless quality option", "Fast conversion", "Free to use"],
+        howToSteps: [
+            { name: "Upload Your PNG", text: "Click or drag and drop your PNG image (up to 10 MB). PNG transparency is fully preserved in the WebP output." },
+            { name: "Convert to WebP", text: "Click Process. Your PNG is converted to WebP — typically 25–50% smaller — while retaining the same visual quality and transparency." },
+            { name: "Download WebP", text: "Download your converted WebP. It's smaller, faster to load, and ready to serve on any modern browser." },
+        ],
         faqs: [
             { question: "Can WebP replace PNG for web use?", answer: "Yes — WebP supports both lossless and lossy compression, as well as transparency (alpha channel), making it a perfect PNG replacement for web use." },
             { question: "Will my PNG transparency be kept in WebP?", answer: "Yes. WebP fully supports transparency (alpha channel), just like PNG." },
@@ -307,6 +388,13 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/webp"],
         outputFormat: "png",
         params: { to: "png" },
+        description: ["Convert WEBP images to PNG format for lossless compatibility. PNG is universally supported on all devices and software.", "WEBP to PNG conversion is useful when you need to use images in applications that don't support WEBP, like older design tools, Microsoft Office, or certain CMS platforms.", "The output PNG preserves full quality including transparency if present in the original WEBP."],
+        benefits: ["Universal PNG compatibility", "Lossless quality preserved", "Transparency retained", "Works in all apps", "Instant conversion", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your WebP", text: "Click or drag and drop your WebP image (up to 10 MB). Both lossless and lossy WebP files are supported." },
+            { name: "Convert to PNG", text: "Click Process. Your WebP is converted to a lossless PNG — fully editable in Photoshop, Figma, GIMP, and all design tools." },
+            { name: "Download PNG", text: "Download your converted PNG. Full alpha transparency is preserved throughout the conversion." },
+        ],
         faqs: [
             { question: "Why convert WebP to PNG?", answer: "PNG is needed when lossless quality is critical — for editing, printing, or use in applications that require pixel-perfect graphics." },
             { question: "Is WebP to PNG conversion lossless?", answer: "Yes. When converting a lossless WebP to PNG, no quality is lost. For lossy WebP source files, the quality matches the original WebP." },
@@ -325,6 +413,8 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Convert images to PDF online for free. Turn JPG, PNG, or WebP into a PDF document instantly. No software, no signup, no watermarks.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         outputFormat: "pdf",
+        description: ["Convert images to PDF documents online for free. Turn any JPG, PNG, or WEBP image into a professional PDF file in seconds.", "Image to PDF conversion is essential for creating document archives, sending images via email as PDFs, or assembling visual portfolios.", "Our converter produces a clean PDF with your image perfectly sized to the page — no extra white space, no distortion."],
+        benefits: ["JPG, PNG, WEBP to PDF", "Clean professional output", "Perfect for documents", "No watermarks", "Instant conversion", "Free forever"],
         howToSteps: [
             { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
             { name: "Convert to PDF", text: "Click the Process button. Your image is instantly converted into a properly-formatted PDF document on our secure servers." },
@@ -349,6 +439,13 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Convert PDF to JPG online for free. Extract any PDF page as a high-quality image. No software, no signup. Works on any browser.",
         acceptedFormats: ["application/pdf"],
         outputFormat: "jpeg",
+        description: ["Convert PDF pages to images online for free. Extract any page from a PDF and save it as a high-quality JPEG image.", "PDF to image conversion is useful for creating thumbnails of PDF documents, extracting diagrams or charts, and sharing PDF content on image-only platforms.", "Upload your PDF and instantly download the first page as an image."],
+        benefits: ["High quality output", "Fast PDF rendering", "No software required", "Works with any PDF", "Instant processing", "Free to use"],
+        howToSteps: [
+            { name: "Upload Your PDF", text: "Click or drag and drop your PDF file (up to 10 MB) into the upload area. The first page of the PDF will be converted." },
+            { name: "Convert to Image", text: "Click Process. PixlTools renders the PDF page server-side at 150 DPI, accurately preserving fonts, vector graphics, and embedded images." },
+            { name: "Download JPG", text: "Download your converted image. It's ready to share on social media, embed in emails, or use as a preview or thumbnail." },
+        ],
         faqs: [
             { question: "What is the output image quality?", answer: "Pages are exported at 150 DPI — ideal for web display and social sharing. For print-quality output, use a 300 DPI desktop tool." },
             { question: "Can I convert password-protected PDFs?", answer: "Password-protected PDFs must be unlocked before uploading. Our tool supports standard unlocked PDF files." },
@@ -366,10 +463,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Add Watermark to Image Free – Text Watermark Tool",
         metaDesc: "Add custom text watermarks to protect your photos online for free. Choose position, size, and opacity. No signup, no watermarks added by us.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Add text watermarks to your images online for free. Protect your photos and graphics from unauthorized use with custom text overlays.", "Our watermark tool lets you position text anywhere on your image and choose font size to create professional watermarks.", "Perfect for photographers, content creators, and businesses protecting their visual content."],
+        benefits: ["Custom text watermarks", "Adjustable opacity", "Protect your content", "All formats supported", "Instant processing", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Enter Watermark Text", text: "Type your watermark text — your name, website URL, or copyright notice (e.g. ‘© 2026 YourName.com’). Choose position and opacity." },
+            { name: "Download Watermarked Image", text: "Click Process then Download. Your watermarked image is ready instantly with no additional watermarks from us." },
+        ],
         faqs: [
             { question: "What text can I use as a watermark?", answer: "Any text — your name, website URL, copyright notice, or brand name (e.g., '© 2026 YourSite.com')." },
             { question: "Will adding a watermark reduce image quality?", answer: "No. The watermark is composited at full image quality. The result is identical in quality to the original." },
             { question: "Can I control the watermark opacity and position?", answer: "Yes — choose from multiple position presets (corners, center) and adjust opacity from 10% to 100%." },
+            { question: "What opacity should I use for a professional watermark?", answer: "40–60% opacity is the professional standard — visible enough to deter copying and establish ownership, subtle enough not to obscure the image itself. Use 80–100% opacity only when the watermark is a key part of the image design." },
+            { question: "Will watermarking prevent anyone from stealing my photos?", answer: "Visible watermarks deter casual copying and make credit-stripping require deliberate effort. For strongest protection, use a diagonal center watermark at 50% opacity — this is hardest to crop out. No watermark is technically uncircumventable, but a well-placed one significantly raises the effort required." },
+            { question: "Can I add a logo image as a watermark instead of text?", answer: "Our tool currently supports text watermarks. For logo/image watermarking, you can convert your logo to text (e.g., using your brand name) or use a tool like Canva or Photoshop for image-over-image compositing." },
+            { question: "Does watermarking change the image file size?", answer: "Negligibly — the added text pixels are a tiny fraction of the total image. The resulting file size is effectively identical to the original." },
         ],
     },
     {
@@ -383,10 +491,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Blur Image Free – Hide Info or Add Artistic Effect",
         metaDesc: "Blur images online for free. Apply Gaussian blur to hide sensitive info, faces, or license plates — or create a dreamy artistic effect. No signup.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Apply Gaussian blur effects to images online for free. Blur photos to hide sensitive information, create artistic depth-of-field effects, or build overlays.", "Our blur tool uses Sharp's Gaussian blur algorithm, which produces natural-looking, smooth blur without artifacts.", "Adjust the blur strength from subtle softening to extreme blur — perfect for backgrounds, privacy protection, and creative photography."],
+        benefits: ["Natural Gaussian blur", "Adjustable blur strength", "Great for privacy", "Artistic background blur", "Instant processing", "Free to use"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Set Blur Strength", text: "Adjust the blur radius slider. Use 3–5 for a subtle artistic effect, or 10–20 to effectively hide faces, license plates, or sensitive text." },
+            { name: "Download Blurred Image", text: "Click Process then Download to save your blurred image instantly. No watermarks, no account needed." },
+        ],
         faqs: [
             { question: "Can I blur only part of an image?", answer: "Our current tool applies blur to the entire image. For selective blurring (e.g., blurring a face), use a desktop editor like GIMP or Photoshop." },
             { question: "What blur strength should I use?", answer: "A blur radius of 3–5 is subtle for artistic effects. Use 10–20 to effectively hide sensitive information like faces or license plates." },
-            { question: "Does blurring reduce file size?", answer: "Yes — blurred images compress more efficiently because they have less high-frequency detail, resulting in smaller file sizes." },
+            { question: "Does blurring reduce file size?", answer: "Yes — blurred images compress more efficiently because they have less high-frequency detail, resulting in significantly smaller file sizes after JPEG or WebP compression." },
+            { question: "What is Gaussian blur?", answer: "Gaussian blur is a mathematical smoothing algorithm named after mathematician Carl Friedrich Gauss. It replaces each pixel's value with a weighted average of its surrounding pixels, where pixels closer to the center contribute more than distant ones. The result is a smooth, natural-looking softness — unlike box blur which creates a rigid, blocky appearance." },
+            { question: "How do I blur a license plate or face before sharing a photo?", answer: "Upload your image and set the blur radius to 15–25 for strong anonymisation. This level of Gaussian blur makes faces and license plates unrecognisable while keeping the surrounding image clear. For full-image privacy (e.g. screenshots with personal data), use a radius of 20–30." },
+            { question: "Can I use blur to create a background effect?", answer: "Yes — applying a moderate blur (radius 5–8) to a photo creates a shallow depth-of-field effect that isolates the subject aesthetically. This is popular for profile photos, social media backgrounds, and presentation slide imagery." },
+            { question: "What image formats can I blur?", answer: "You can blur JPG, PNG, and WebP images. PNG files with transparency are supported — the transparent areas remain transparent after blurring." },
         ],
     },
     {
@@ -400,6 +519,8 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Image Color Picker Free – Extract Color Palette & HEX",
         metaDesc: "Pick and extract colors from any image online for free. Get dominant colors, hex codes, and RGB values instantly. No signup, no watermarks.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Extract dominant colors and color palettes from any image online. Get hex codes, RGB values, and percentage coverage for the most prominent colors in your image.", "Our color picker analyzes your image and identifies the top dominant colors, making it perfect for brand color extraction, design inspiration, and creative projects.", "Upload any photo and instantly see its color DNA displayed as beautiful swatches with hex codes ready to copy."],
+        benefits: ["Extract dominant colors", "Hex and RGB values", "Design inspiration tool", "Brand color extraction", "Instant analysis", "Free forever"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload any JPG, PNG, or WebP image. Works with photos, logos, screenshots, and artwork." },
             { name: "Extract Colors", text: "Click Process. PixlTools analyzes the image and extracts the most dominant colors using perceptual clustering." },
@@ -422,6 +543,8 @@ export const TOOLS: ToolData[] = [
         metaTitle: "EXIF Viewer Free – View Image Metadata Online",
         metaDesc: "View image EXIF metadata online for free. See camera model, shutter speed, GPS location, date taken, and more. No signup, instant results.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp", "image/tiff"],
+        description: ["View hidden metadata stored inside your images. EXIF data can contain camera settings, GPS location, date/time, and much more.", "Our metadata viewer extracts all available EXIF, IPTC, and XMP data from your images, displaying it in a clear, organized format.", "Essential for photographers who want to review camera settings, privacy-conscious users wanting to check what info their photos contain, and developers working with image data."],
+        benefits: ["Full EXIF data display", "GPS location info", "Camera settings revealed", "Copyright info", "Date/time metadata", "Privacy check tool"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload your JPG, PNG, WebP, or TIFF image. JPEG files from cameras typically contain the richest EXIF data." },
             { name: "View Metadata", text: "PixlTools extracts and displays all embedded EXIF data including camera model, GPS location, shutter speed, aperture, ISO, and more." },
@@ -446,6 +569,8 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         outputFormat: "png",
         isPopular: true,
+        description: ["Remove image backgrounds automatically online for free. Our AI detects and removes solid or near-solid color backgrounds, producing a transparent PNG output.", "Background removal is essential for product photography, creating stickers, compositing images, and professional presentations.", "Upload your image and download a clean transparent PNG ready for any background."],
+        benefits: ["Automatic background removal", "Transparent PNG output", "Great for products", "No manual selection", "Instant processing", "Free to use"],
         howToSteps: [
             { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP photo (up to 10 MB). Works best with clear contrast between the subject and background." },
             { name: "AI Removes the Background", text: "Our AI automatically detects and removes the background from your image. Processing takes just a few seconds." },
@@ -469,6 +594,8 @@ export const TOOLS: ToolData[] = [
         metaTitle: "AI Image Upscaler Free – Enlarge Up to 4x, No Blur",
         metaDesc: "Upscale images 2x, 3x, or 4x without blurring using AI. Enlarge photos, product images & artwork for free. No account needed, instant results.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Increase image resolution online for free. Upscale small or low-resolution images to larger dimensions using Lanczos resampling for sharp, clean results.", "Our upscaler can increase image dimensions up to 4x the original size, making small images usable for print, presentations, and high-resolution displays.", "Ideal for upscaling old photos, small graphics, thumbnails, and low-res images for print use."],
+        benefits: ["2x, 3x, 4x upscaling", "Lanczos resampling", "Sharper than browser scaling", "All formats supported", "Fast processing", "Free forever"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload your JPG, PNG, or WebP image (up to 10 MB). Works best when starting from the highest quality original available." },
             { name: "Choose Upscale Factor", text: "Select 2x, 3x, or 4x. For best results, choose 2x — AI results are sharpest at this scale." },
@@ -492,10 +619,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Grayscale Converter Free – Color Photo to Black & White",
         metaDesc: "Convert images to black and white grayscale online for free. Perfect for photography, design, and artistic effects. Instant download, no signup.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Convert color images to grayscale (black and white) online for free. Remove all color information while preserving the full range of tones and details in your image.", "Grayscale conversion is used in artistic photography, document scanning, reducing file sizes, and preparing images for certain printing processes.", "Our tool uses perceptual grayscale conversion that preserves natural brightness levels, producing professional black and white results."],
+        benefits: ["Perceptual grayscale", "Full tonal range", "Artistic photography", "Reduces file size", "All formats supported", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP color image (up to 10 MB) into the upload area." },
+            { name: "Convert to Grayscale", text: "Click Process. PixlTools converts your image to grayscale using the industry-standard ITU-R BT.709 luminance formula for accurate tonal representation." },
+            { name: "Download Black & White Image", text: "Click Download to save your grayscale image. Works for photography portfolios, design assets, and editorial use." },
+        ],
         faqs: [
             { question: "What does grayscale conversion do?", answer: "Grayscale conversion removes all color information from an image, replacing each pixel with a shade of gray that represents its luminance (brightness)." },
             { question: "Is grayscale the same as black and white?", answer: "Grayscale images contain all shades from pure black to pure white, making them true black-and-white images with full tonal range." },
-            { question: "Can I convert back from grayscale to color?", answer: "No — once color information is removed, it cannot be recovered. Always keep a copy of the original color image." },
+            { question: "Can I convert back from grayscale to color?", answer: "No — once color information is removed, it cannot be recovered. Always keep a backup copy of the original color image before converting." },
+            { question: "What types of photos look best in grayscale?", answer: "High-contrast subjects work best — portraits with strong facial structure, architectural photography with defined lines and shadows, landscape shots with dramatic skies, and street photography. Images that rely on color for their visual impact (e.g. food photography, product shots) generally work less well in grayscale." },
+            { question: "Does grayscale conversion reduce file size?", answer: "For PNG and WebP formats, yes — grayscale pixel data compresses significantly more efficiently than full-color (RGB) data, often reducing file size by 30–60%. For JPEG, the reduction is minimal because JPEG already uses luminance-chrominance separation internally." },
+            { question: "How does PixlTools calculate grayscale?", answer: "PixlTools uses the ITU-R BT.709 luminance formula: Gray = 0.2126×Red + 0.7152×Green + 0.0722×Blue. This weights green heavily because human vision is most sensitive to green wavelengths, producing a perceptually accurate tonal result — not a flat average that would give muddy, inaccurate brightness values." },
+            { question: "Can I apply grayscale to just part of an image?", answer: "Our tool converts the entire image. For selective desaturation — keeping one element in color while making the rest grayscale — use a desktop editor like Photoshop (Hue/Saturation adjustment layer with mask) or GIMP's Color Rotate tool." },
         ],
     },
     {
@@ -509,10 +647,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Adjust Image Brightness Free – Lighten or Darken Photos",
         metaDesc: "Adjust image brightness online for free. Lighten underexposed or darken overexposed photos with a simple slider. No signup, instant results.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Adjust image brightness online for free. Lighten dark photos or darken overexposed images with a precise brightness control.", "Our brightness adjustment uses Sharp's modulate function for natural-looking results that preserve color accuracy and tonal balance.", "Perfect for fixing poorly lit photos, adjusting images for print vs screen display, and enhancing visual appeal."],
+        benefits: ["Precise brightness control", "Natural-looking results", "Fix dark or overexposed photos", "Color accuracy maintained", "Instant processing", "Free to use"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Adjust Brightness", text: "Move the slider right to brighten an underexposed photo, or left to darken an overexposed one. Start with small adjustments for natural results." },
+            { name: "Download Adjusted Image", text: "Click Process then Download to save your brightness-corrected image instantly. No account required." },
+        ],
         faqs: [
             { question: "How much can I adjust brightness?", answer: "You can brighten or darken an image across a wide range. Moving the slider too far in either direction will clip highlights or shadows." },
             { question: "Does adjusting brightness affect image quality?", answer: "Moderate brightness adjustments have minimal impact on quality. Extreme adjustments can cause clipping (pure white or pure black areas losing detail)." },
-            { question: "Can I undo a brightness adjustment?", answer: "Re-upload your original image to start fresh. We recommend keeping an unedited copy of your original." },
+            { question: "Can I undo a brightness adjustment?", answer: "Re-upload your original image to start fresh. We recommend always keeping an unedited copy of your original before making adjustments." },
+            { question: "What is the difference between brightness and exposure?", answer: "In practice they are equivalent for digital editing. 'Exposure' is a photography term for light captured in-camera; 'brightness' in post-processing applies a linear multiplier to all pixel values. Increasing brightness by a fixed multiplier in PixlTools produces the same result as pulling the exposure slider in Lightroom or Camera Raw." },
+            { question: "Should I adjust brightness before or after other edits?", answer: "Adjust brightness first to establish the correct exposure baseline, then apply contrast, saturation, and sharpening in that order. Brightness changes affect how all subsequent adjustments look, so setting it correctly first produces the most predictable results." },
+            { question: "Can brightness adjustment recover a severely underexposed photo?", answer: "For mild to moderate underexposure, yes — brightening the image pulls detail out of shadows effectively. For severely underexposed images, significant brightening reveals digital noise (graininess) in the previously dark areas. In those cases, a dedicated noise-reduction pass after brightening is recommended." },
+            { question: "What formats can I adjust brightness on?", answer: "You can adjust brightness on JPG, PNG, and WebP images. For PNG files with transparency, the adjustment is applied to the visible (non-transparent) pixels only." },
         ],
     },
     {
@@ -526,6 +675,8 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Adjust Image Contrast Free – Enhance Photo Quality",
         metaDesc: "Adjust image contrast online for free. Boost contrast to make colors pop or reduce it for a softer look. No account needed, instant download.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Adjust image contrast online for free. Increase contrast to make images pop with deeper shadows and brighter highlights, or reduce it for a softer, flatter look.", "Our contrast tool uses linear contrast adjustment for precise control — perfect for improving dull or flat photos.", "Ideal for improving weather-affected outdoor photos, product images that look washed out, and preparing images for print."],
+        benefits: ["Precise contrast control", "Improve dull photos", "Natural-looking results", "All formats supported", "Instant processing", "Free forever"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload your JPG, PNG, or WebP image. The preview will update as you adjust the contrast setting." },
             { name: "Adjust Contrast", text: "Move the slider right to increase contrast (punchier, more vivid) or left to decrease it (softer, more muted). Start with small adjustments for natural results." },
@@ -548,6 +699,8 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Sharpen Image Free – Crisp Details in Seconds",
         metaDesc: "Sharpen blurry or soft images online for free. Make photo details crisper and more defined with one click. No signup, instant download.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Sharpen soft or blurry images online for free. Enhance edge definition and fine detail to make photos look crisper and more professional.", "Our sharpening tool uses Sharp's advanced unsharp mask algorithm for natural-looking sharpening that enhances details without introducing harsh halos or artifacts.", "Perfect for sharpening slightly out-of-focus photos, improving product images, and enhancing fine texture details."],
+        benefits: ["Professional sharpening", "No halo artifacts", "Enhance photo detail", "All formats supported", "Instant processing", "Free to use"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload your JPG, PNG, or WebP image. Sharpening works best on slightly soft images — it cannot recover severely blurry or out-of-focus shots." },
             { name: "Apply Sharpening", text: "Click Process. PixlTools applies a professional unsharp mask to enhance edge contrast and bring out fine detail across the image." },
@@ -570,6 +723,13 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Thumbnail Generator Free – YouTube, Blog & Social Media",
         metaDesc: "Generate optimized thumbnails for YouTube (1280×720), blogs, and social media online for free. No signup, instant download, no watermarks.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Generate perfectly sized thumbnails for YouTube, blog posts, social media, and website listings. Resize images to standard thumbnail dimensions instantly.", "Our thumbnail generator crops and resizes images to the exact pixel dimensions required by major platforms — no guesswork needed.", "Choose from YouTube (1280×720), Instagram (1080×1080), blog (800×450), or enter custom dimensions."],
+        benefits: ["Platform-specific presets", "YouTube, Instagram, blog sizes", "Smart cropping", "Exact pixel output", "Instant generation", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Choose Thumbnail Preset", text: "Select a platform preset — YouTube (1280×720), Instagram (1080×1080), Twitter (1600×900), or a custom size — or enter exact pixel dimensions." },
+            { name: "Download Thumbnail", text: "Click Process then Download. Your thumbnail is sized exactly for the chosen platform, ready to upload without any cropping surprises." },
+        ],
         faqs: [
             { question: "What size thumbnail does YouTube require?", answer: "YouTube thumbnails should be 1280×720px (16:9 aspect ratio) at a minimum. Our tool generates thumbnails at the exact right dimensions." },
             { question: "What sizes can I generate?", answer: "You can generate thumbnails for YouTube (1280×720), Instagram (1080×1080), Twitter (1600×900), LinkedIn (1200×627), and custom sizes." },
@@ -587,6 +747,8 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Add Border to Image Free – Custom Color & Size",
         metaDesc: "Add custom borders and frames to images online for free. Choose border size, color, and style instantly. No signup, no watermarks.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Add custom borders and frames to images online for free. Choose border width, color, and style to frame your photos professionally.", "Our border tool uses Sharp's extend function to add precise pixel borders around any image without distorting the original content.", "Perfect for framing product images, creating social media posts with consistent spacing, and adding artistic frames to photos."],
+        benefits: ["Custom border width", "Any color border", "Pixel-precise control", "All formats supported", "Instant processing", "Free to use"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload your JPG, PNG, or WebP image. PNG files with transparency are supported — the border will be added outside the transparent area." },
             { name: "Set Border Options", text: "Choose your border width in pixels (e.g., 20px for a subtle frame, 60px for a bold border) and select any color using the color picker." },
@@ -609,10 +771,21 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Change Aspect Ratio Free – 16:9, 4:3, 1:1 & More",
         metaDesc: "Change image aspect ratio online for free. Resize to 16:9, 4:3, 1:1, 9:16, or any custom ratio. No signup, instant download.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Change image aspect ratio to standard ratios like 16:9, 4:3, 1:1, and more. Resize and crop images to fit the target ratio perfectly.", "Our aspect ratio tool is essential for preparing images for different platforms — videos need 16:9, Instagram squares need 1:1, and portrait shots need 9:16.", "Choose smart cropping to fit your image into any aspect ratio without distortion."],
+        benefits: ["Standard aspect ratio presets", "Smart center cropping", "Platform-ready output", "Instant processing", "All formats supported", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Select Aspect Ratio", text: "Choose a preset ratio — 16:9 (YouTube/widescreen), 1:1 (Instagram square), 4:5 (Instagram portrait), 9:16 (Stories/Reels), or 4:3 (standard). Or enter a custom ratio." },
+            { name: "Download Cropped Image", text: "Click Process then Download. Your image is center-cropped to your chosen ratio, ready to upload to any platform without unexpected auto-cropping." },
+        ],
         faqs: [
             { question: "What aspect ratios can I set?", answer: "Presets include 16:9 (widescreen), 4:3 (standard), 1:1 (square), 9:16 (portrait/mobile), and 21:9 (cinematic). You can also enter custom ratios." },
-            { question: "Will changing aspect ratio crop my image?", answer: "Yes — changing the aspect ratio requires either cropping the image or adding padding (letterboxing) to fit the new ratio without distortion." },
-            { question: "What is the best aspect ratio for Instagram?", answer: "1:1 (square) at 1080×1080px for posts, 4:5 (portrait) at 1080×1350px for maximum display size, and 9:16 at 1080×1920px for Stories and Reels." },
+            { question: "Will changing aspect ratio crop my image?", answer: "Yes — changing the aspect ratio requires cropping the image to fit the new proportions. PixlTools always crops from the center, preserving the most important part of the composition." },
+            { question: "What is the best aspect ratio for Instagram?", answer: "1:1 (square) at 1080×1080px for feed posts, 4:5 (portrait) at 1080×1350px for maximum screen real estate in the feed, and 9:16 at 1080×1920px for Stories and Reels." },
+            { question: "What aspect ratio does YouTube require for thumbnails?", answer: "YouTube requires a 16:9 aspect ratio for video thumbnails, ideally at 1280×720px minimum resolution. Thumbnails uploaded at other ratios are automatically cropped by YouTube, often cutting off important elements." },
+            { question: "What is the difference between 4:3 and 16:9?", answer: "4:3 is the traditional TV and photography ratio — nearly square, with a slight rectangular shape. 16:9 is the modern widescreen standard used by YouTube, Netflix, and all contemporary monitors and TVs. 16:9 is roughly 33% wider than 4:3 for the same height." },
+            { question: "Will changing the aspect ratio reduce my image resolution?", answer: "Cropping to a new ratio removes pixels from the trimmed edges, reducing the total pixel count but not the sharpness of the remaining area. The resulting image is equally sharp — just at a smaller canvas size." },
+            { question: "What aspect ratio should I use for LinkedIn posts?", answer: "LinkedIn recommends 1.91:1 (landscape) at 1200×627px for link previews and article headers, and 1:1 (square) for standard image posts. Video posts should be 16:9." },
         ],
     },
     {
@@ -626,6 +799,13 @@ export const TOOLS: ToolData[] = [
         metaTitle: "Reduce Image File Size Free – Compress Photos Online",
         metaDesc: "Reduce image file size for email, social media & websites online for free. Compress photos to under 100KB, 200KB, or 500KB. No signup.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
+        description: ["Reduce image file size to meet upload limits for email, social media, websites, and apps. Our reducer combines resizing and compression for maximum size reduction.", "Whether you need to fit an image under 1MB for email, under 200KB for a website, or under 5MB for an app upload, our tool gets it done.", "Upload any JPG, PNG, or WEBP image and download a dramatically smaller version ready for any platform."],
+        benefits: ["Reduce size for email", "Meet upload size limits", "Optimize for web", "Auto optimal settings", "Instant processing", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Image", text: "Click or drag and drop your JPG, PNG, or WebP image (up to 10 MB) into the upload area." },
+            { name: "Set Target Size", text: "Adjust the quality slider to achieve your target file size. Use quality 70–75 for under 100KB, and 80–85 for under 500KB for most photos." },
+            { name: "Download Reduced Image", text: "Click Process then Download. Your reduced image is ready — smaller and optimised for email, web upload, or any file size-limited platform." },
+        ],
         faqs: [
             { question: "How do I reduce an image to under 100KB?", answer: "Resize to 800×600px first, then compress at quality 70–75. This typically results in files of 50–100KB for most photos." },
             { question: "What's the best way to reduce file size for email?", answer: "Keep dimensions below 1200px wide and compress to quality 80. Most email-ready photos should be 200–500KB." },
@@ -644,6 +824,8 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Convert images to Base64 data URLs online for free. Embed images directly in HTML, CSS, or JSON without external files. No signup, instant copy.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         isNew: true,
+        description: ["Convert images to Base64 encoded strings online for free. Get a data URL ready to embed directly in HTML, CSS, or JSON without a separate image file.", "Base64 encoding eliminates extra HTTP requests — perfect for embedding small icons, logos, and UI elements in emails and single-file HTML pages.", "Upload any image and get the complete data URL instantly, ready to paste into your code."],
+        benefits: ["Embed images in HTML/CSS", "No extra HTTP requests", "Perfect for emails", "Copy to clipboard", "Instant encoding", "Free forever"],
         howToSteps: [
             { name: "Upload Your Image", text: "Upload your JPG, PNG, or WebP image. For best results, use small images (icons, logos, UI elements) under 50KB." },
             { name: "Generate Base64 String", text: "Click Process. PixlTools encodes your image into a complete Base64 data URL string ready to paste into HTML, CSS, or JSON." },
@@ -668,6 +850,8 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/svg+xml"],
         outputFormat: "png",
         isNew: true,
+        description: ["Convert SVG vector files to PNG images online for free. Get a pixel-perfect, universally compatible raster version of your vector graphic at any resolution.", "SVG to PNG conversion is essential when you need to use logos and icons in apps, emails, or systems that don't support SVG format.", "PixlTools renders SVG files server-side with high fidelity — complex gradients, text, and shapes are all preserved accurately."],
+        benefits: ["Pixel-perfect PNG output", "Universal compatibility", "Any resolution output", "Complex SVG supported", "Instant conversion", "Free forever"],
         howToSteps: [
             { name: "Upload Your SVG", text: "Upload your SVG file. PixlTools supports all standard SVG features including gradients, filters, text, and complex paths." },
             { name: "Set Output Resolution", text: "Choose your target PNG dimensions. For Retina displays, use 2× your intended display size. For print, target 300 DPI at the print dimensions." },
@@ -692,6 +876,8 @@ export const TOOLS: ToolData[] = [
         acceptedFormats: ["image/heic", "image/heif"],
         outputFormat: "jpg",
         isNew: true,
+        description: ["Convert HEIC photos from iPhone to JPG for universal compatibility. HEIC is Apple's default format but isn't supported by most apps, websites, and Windows software.", "Our HEIC to JPG converter decodes Apple HEIC files and re-encodes them as high-quality JPEG — fully compatible everywhere.", "Instantly make your iPhone photos usable on Windows, Android, and any website without specialist software."],
+        benefits: ["Universal JPG compatibility", "iPhone HEIC supported", "High quality output", "Works on Windows", "Instant conversion", "Free forever"],
         howToSteps: [
             { name: "Upload HEIC Photo", text: "Click or drag and drop your iPhone HEIC or HEIF photo (up to 10 MB). Transfer the file from your iPhone using AirDrop, iCloud, or USB." },
             { name: "Convert to JPG", text: "Click Process. Your HEIC photo is automatically converted to a high-quality JPEG file." },
@@ -716,6 +902,13 @@ export const TOOLS: ToolData[] = [
         metaDesc: "Make photo collages online for free. Combine up to 16 images into a custom grid layout. No watermarks, no signup. Download as JPG or PNG instantly.",
         acceptedFormats: ["image/jpeg", "image/png", "image/webp"],
         isNew: true,
+        description: ["Combine 2 to 16 photos into a single beautiful grid collage online for free. Perfect for social media posts, family albums, and event recaps.", "PixlTools automatically calculates an intelligent grid layout based on the number of photos you select — no manual arrangement needed.", "Download your collage as a high-quality JPG or PNG with no watermarks, instantly."],
+        benefits: ["Combine up to 16 photos", "Auto grid layout", "JPG or PNG output", "No watermarks ever", "Works on mobile", "Free forever"],
+        howToSteps: [
+            { name: "Upload Your Photos", text: "Select 2 to 16 photos from your device. You can upload JPG, PNG, or WebP images — mix and match formats freely." },
+            { name: "Arrange Your Collage", text: "The grid layout is automatically calculated based on the number of images you upload. Reorder images as needed before processing." },
+            { name: "Download Your Collage", text: "Click Process then Download to save your collage as a high-quality JPG or PNG. No watermarks — ever." },
+        ],
         faqs: [
             { question: "How many photos can I combine in one collage?", answer: "You can combine between 2 and 16 photos into a single grid collage. The layout automatically adjusts based on the number of images." },
             { question: "Will my collage have watermarks?", answer: "No — all PixlTools outputs are 100% watermark-free. Your collage belongs to you." },
