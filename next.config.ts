@@ -70,6 +70,26 @@ const nextConfig: NextConfig = {
         source: "/api/(.*)",
         headers: apiHeaders,
       },
+      // Long-term immutable caching for hashed static chunks (JS, CSS, fonts)
+      {
+        source: "/_next/static/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      // 1-hour caching for public folder assets (images, icons, manifests)
+      {
+        source: "/(.*)\\.(ico|png|svg|jpg|jpeg|webp|woff2|woff)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
     ];
   },
 };
