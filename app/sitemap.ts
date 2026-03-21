@@ -2,10 +2,16 @@ import { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/tools-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
-// Auto-derived: picks the most recent blog post date so sitemap stays fresh without manual edits
-const TOOLS_LAST_UPDATED = BLOG_POSTS.length > 0
+// Auto-derived from latest blog post
+const BLOG_LATEST = BLOG_POSTS.length > 0
     ? new Date(Math.max(...BLOG_POSTS.map(p => new Date(p.date).getTime())))
-    : new Date("2026-03-21");
+    : new Date("2026-01-01");
+
+// Bump this manually when you make significant changes to tool pages
+const TOOLS_CONTENT_UPDATED = new Date("2026-03-21");
+
+// Use whichever is more recent — auto-updates when a new blog post is newer
+const TOOLS_LAST_UPDATED = new Date(Math.max(BLOG_LATEST.getTime(), TOOLS_CONTENT_UPDATED.getTime()));
 
 
 // Stable dates for static pages — avoids telling Google they change on every build
