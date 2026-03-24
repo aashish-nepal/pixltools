@@ -5,6 +5,8 @@ export interface BlogPost {
     date: string;
     /** Optional — set when a post is meaningfully updated after initial publish */
     updatedDate?: string;
+    /** Author display name — shown on the post page and in Article schema */
+    author?: string;
     readTime: number;
     category: string;
     content: string;
@@ -2656,4 +2658,13 @@ Yes. ImageMagick and Sharp CLI both support outputting multiple sizes from a sin
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
     return BLOG_POSTS.find((p) => p.slug === slug);
+}
+
+export function getPostsByCategory(category: string): BlogPost[] {
+    const normalized = category.toLowerCase().replace(/-/g, " ");
+    return BLOG_POSTS.filter((p) => p.category.toLowerCase() === normalized);
+}
+
+export function getAllCategories(): string[] {
+    return Array.from(new Set(BLOG_POSTS.map((p) => p.category)));
 }

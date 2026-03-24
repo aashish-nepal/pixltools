@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Shield, FileText, Map, BookOpen, Lock, Clock, ShieldCheck, Info } from "lucide-react";
+import { Shield, FileText, Map, BookOpen, Lock, Clock, ShieldCheck, Info, Twitter, Linkedin, Youtube, ExternalLink } from "lucide-react";
 
 const POPULAR_TOOLS = [
     { name: "Compress Image", slug: "compress-image" },
@@ -60,6 +60,46 @@ export default function Footer() {
                                     {label}
                                 </div>
                             ))}
+                        </div>
+
+                        {/* Social links — rel="me" lets Google verify Organisation.sameAs */}
+                        <div className="flex items-center gap-3 pt-2">
+                            <a
+                                href="https://twitter.com/pixltools"
+                                rel="me noopener noreferrer"
+                                target="_blank"
+                                aria-label="PixlTools on Twitter / X"
+                                className="text-gray-500 hover:text-violet-400 transition-colors"
+                            >
+                                <Twitter size={15} />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/pixltools"
+                                rel="me noopener noreferrer"
+                                target="_blank"
+                                aria-label="PixlTools on LinkedIn"
+                                className="text-gray-500 hover:text-violet-400 transition-colors"
+                            >
+                                <Linkedin size={15} />
+                            </a>
+                            <a
+                                href="https://www.youtube.com/@pixltools"
+                                rel="me noopener noreferrer"
+                                target="_blank"
+                                aria-label="PixlTools on YouTube"
+                                className="text-gray-500 hover:text-violet-400 transition-colors"
+                            >
+                                <Youtube size={15} />
+                            </a>
+                            <a
+                                href="https://www.producthunt.com/products/pixltools"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                aria-label="PixlTools on Product Hunt"
+                                className="text-gray-500 hover:text-violet-400 transition-colors"
+                            >
+                                <ExternalLink size={15} />
+                            </a>
                         </div>
                     </div>
 

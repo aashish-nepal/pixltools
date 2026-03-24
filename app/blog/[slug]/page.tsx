@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { BLOG_POSTS, getPostBySlug } from "@/lib/blog-data";
-import { buildJsonLdFAQ } from "@/lib/utils";
+
 import FAQSection from "@/components/ui/FAQSection";
 import AdBanner from "@/components/ui/AdBanner";
 import Link from "next/link";
@@ -233,7 +233,7 @@ export default async function BlogPostPage({ params }: Props) {
         dateModified: new Date(post!.updatedDate ?? post!.date).toISOString(),
         author: {
             "@type": "Person",
-            name: "PixlTools Editorial Team",
+            name: post!.author ?? "PixlTools Editorial Team",
             url: "https://www.pixltools.com/about",
         },
         publisher: {
@@ -258,7 +258,7 @@ export default async function BlogPostPage({ params }: Props) {
         },
     };
 
-    const faqSchema = buildJsonLdFAQ(blogFaqs);
+
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -285,11 +285,25 @@ export default async function BlogPostPage({ params }: Props) {
         ],
     };
 
+    const consolidatedSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            articleSchema,
+            breadcrumbSchema,
+            {
+                "@type": "FAQPage",
+                mainEntity: blogFaqs.map((faq) => ({
+                    "@type": "Question",
+                    name: faq.question,
+                    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+                })),
+            },
+        ],
+    };
+
     return (
         <main className="min-h-screen bg-[#0b0816]">
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(consolidatedSchema) }} />
 
             {/* Header */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 text-white py-16">
@@ -299,9 +313,10 @@ export default async function BlogPostPage({ params }: Props) {
                     <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1 rounded-full">{post!.category}</span>
                     <h1 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 text-center">{post!.title}</h1>
                     <p className="text-gray-400 max-w-3xl text-center mx-auto">{post!.excerpt}</p>
-                    <div className="flex items-center gap-4 mt-4 py-4 text-sm text-gray-400 justify-center">
+                    <div className="flex items-center gap-4 mt-4 py-4 text-sm text-gray-400 justify-center flex-wrap">
                         <span>📅 {new Date(post!.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
                         <span>⏱ {post!.readTime} min read</span>
+                        <span>✍️ {post!.author ?? "PixlTools Editorial Team"}</span>
                     </div>
                 </div>
             </div>

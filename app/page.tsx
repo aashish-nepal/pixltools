@@ -34,6 +34,9 @@ function SectionAtmosphere() {
 export const metadata: Metadata = {
   title: "Free Online Image Tools – Compress, Resize & Convert | PixlTools",
   description: "30+ free online image tools. Compress JPG, PNG, WEBP, resize images, convert formats, add watermarks, and more. No signup. 100% free.",
+  alternates: {
+    canonical: "https://www.pixltools.com",
+  },
 };
 
 
@@ -130,7 +133,10 @@ export default function HomePage() {
     },
     description: "Free online image tools — compress, resize, crop, convert, and optimize images instantly.",
     sameAs: [
-      "https://www.pixltools.com",
+      "https://twitter.com/pixltools",
+      "https://www.linkedin.com/company/pixltools",
+      "https://www.youtube.com/@pixltools",
+      "https://www.producthunt.com/products/pixltools",
     ],
   };
 

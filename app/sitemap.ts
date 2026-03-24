@@ -16,8 +16,9 @@ const TOOLS_LAST_UPDATED = new Date(Math.max(BLOG_LATEST.getTime(), TOOLS_CONTEN
 
 // Stable dates for static pages — avoids telling Google they change on every build
 const STATIC_DATES = {
-    home: new Date("2026-03-18"),
-    blog: new Date("2026-03-18"),
+    // Home and blog dates auto-derive from latest content so they stay accurate
+    home: new Date(Math.max(BLOG_LATEST.getTime(), TOOLS_CONTENT_UPDATED.getTime())),
+    blog: BLOG_LATEST,
     about: new Date("2026-01-01"),
     legal: new Date("2026-01-01"),
     seoGuides: new Date("2026-03-18"),
@@ -78,5 +79,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         return true;
     });
 
-    return [...staticPages, ...dedupedToolPages, ...dedupedBlogPages];
+    // Blog category pages — one page per unique category, indexed by Google
+    const categories = Array.from(new Set(BLOG_POSTS.map(p => p.category)));
+    const categoryPages: MetadataRoute.Sitemap = categories.map(cat => ({
+        url: `${BASE}/blog/category/${encodeURIComponent(cat.toLowerCase().replace(/\s+/g, "-"))}`,
+        lastModified: BLOG_LATEST,
+        changeFrequency: "weekly" as const,
+        priority: 0.6,
+    }));
+
+    return [...staticPages, ...dedupedToolPages, ...dedupedBlogPages, ...categoryPages];
 }

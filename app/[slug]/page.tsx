@@ -111,6 +111,8 @@ export default async function ToolPage({ params }: Props) {
             "@type": "HowTo",
             name: `How to Use ${tool.name} Online Free`,
             description: tool.metaDesc,
+            image: `https://www.pixltools.com/${tool.slug}/opengraph-image`,
+            totalTime: "PT1M",
             step: howToSteps,
         };
     }
