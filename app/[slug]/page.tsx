@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { TOOLS, getToolBySlug } from "@/lib/tools-data";
 import ToolPageClient from "./ToolPageClient";
-import { buildJsonLdFAQ } from "@/lib/utils";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -82,29 +81,48 @@ export default async function ToolPage({ params }: Props) {
         publisher: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
     };
 
-    const faqSchema = tool.faqs && tool.faqs.length > 0 ? buildJsonLdFAQ(tool.faqs) : null;
+    const faqItems = tool.faqs && tool.faqs.length > 0
+        ? tool.faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        }))
+        : null;
 
-    const howToSchema = tool.howToSteps && tool.howToSteps.length > 0
-        ? {
+    const howToSteps = tool.howToSteps && tool.howToSteps.length > 0
+        ? tool.howToSteps.map((s, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: s.name,
+            text: s.text,
+        }))
+        : null;
+
+    // Single consolidated @graph block — prevents Google from seeing duplicate FAQPage schemas
+    const graphItems: object[] = [breadcrumbSchema, softwareAppSchema];
+    if (faqItems) {
+        graphItems.push({ "@type": "FAQPage", mainEntity: faqItems });
+    }
+    
+    let howToSchema = null;
+    if (howToSteps) {
+        howToSchema = {
             "@context": "https://schema.org",
             "@type": "HowTo",
             name: `How to Use ${tool.name} Online Free`,
             description: tool.metaDesc,
-            step: tool.howToSteps.map((s, i) => ({
-                "@type": "HowToStep",
-                position: i + 1,
-                name: s.name,
-                text: s.text,
-            })),
-        }
-        : null;
+            step: howToSteps,
+        };
+    }
+
+    const consolidatedSchema = { "@context": "https://schema.org", "@graph": graphItems };
 
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }} />
-            {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
-            {howToSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(consolidatedSchema) }} />
+            {howToSchema && (
+                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+            )}
 
             <ToolPageClient tool={tool} />
 
