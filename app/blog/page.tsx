@@ -4,7 +4,7 @@ import { BLOG_POSTS } from "@/lib/blog-data";
 import AdBanner from "@/components/ui/AdBanner";
 
 export const metadata: Metadata = {
-    title: "Image Optimization Blog – Free Guides & Tutorials | PixlTools",
+    title: "Image Optimization Blog – Free Guides & Tutorials",
     description: "Learn how to compress images, choose the right format, and optimize images for faster websites. Free image optimization guides and tutorials from PixlTools.",
     robots: {
         index: true,
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
         googleBot: { index: true, follow: true, "max-image-preview": "large", "max-video-preview": -1 },
     },
     openGraph: {
-        title: "Image Optimization Blog – Free Guides & Tutorials | PixlTools",
+        title: "Image Optimization Blog – Free Guides & Tutorials",
         description: "Free guides and tutorials on image compression, format conversion, resizing, and web optimization.",
         url: "https://www.pixltools.com/blog",
         type: "website",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Image Optimization Blog – Free Guides & Tutorials | PixlTools",
+        title: "Image Optimization Blog – Free Guides & Tutorials",
         description: "Free guides and tutorials on image compression, format conversion, and web optimization.",
         images: ["https://www.pixltools.com/opengraph-image"],
     },

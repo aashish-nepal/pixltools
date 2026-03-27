@@ -103,7 +103,7 @@ export default async function ToolPage({ params }: Props) {
     if (faqItems) {
         graphItems.push({ "@type": "FAQPage", mainEntity: faqItems });
     }
-    
+
     let howToSchema = null;
     if (howToSteps) {
         howToSchema = {
