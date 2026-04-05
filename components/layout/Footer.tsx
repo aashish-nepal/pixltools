@@ -22,6 +22,15 @@ const CONVERT_TOOLS = [
     { name: "PDF to Image", slug: "pdf-to-image" },
 ];
 
+const MORE_TOOLS = [
+    { name: "Sharpen Image", slug: "image-sharpen" },
+    { name: "Add Border", slug: "image-border" },
+    { name: "SVG to PNG", slug: "svg-to-png" },
+    { name: "EXIF Metadata Viewer", slug: "image-metadata-viewer" },
+    { name: "Photo Collage Maker", slug: "photo-collage-maker" },
+    { name: "HEIC to JPG", slug: "heic-to-jpg" },
+];
+
 const TRUST_BADGES = [
     { icon: ShieldCheck, label: "No data stored" },
     { icon: Lock, label: "No account needed" },
@@ -117,18 +126,32 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Convert */}
-                    <div>
-                        <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Convert</p>
-                        <ul className="flex flex-col gap-2.5">
-                            {CONVERT_TOOLS.map(({ name, slug }) => (
-                                <li key={slug}>
-                                    <Link href={`/${slug}`} className="text-xs text-gray-300 hover:text-violet-300 transition-colors">
-                                        {name}
-                                    </Link>
-                                </li>
-                            ))}
-                        </ul>
+                    {/* Convert + More Tools */}
+                    <div className="flex flex-col gap-8">
+                        <div>
+                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Convert</p>
+                            <ul className="flex flex-col gap-2.5">
+                                {CONVERT_TOOLS.map(({ name, slug }) => (
+                                    <li key={slug}>
+                                        <Link href={`/${slug}`} className="text-xs text-gray-300 hover:text-violet-300 transition-colors">
+                                            {name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div>
+                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">More Tools</p>
+                            <ul className="flex flex-col gap-2.5">
+                                {MORE_TOOLS.map(({ name, slug }) => (
+                                    <li key={slug}>
+                                        <Link href={`/${slug}`} className="text-xs text-gray-300 hover:text-violet-300 transition-colors">
+                                            {name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
                     {/* Resources & Legal */}
@@ -159,8 +182,18 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Legal</p>
+                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Company</p>
                             <ul className="flex flex-col gap-2.5">
+                                <li>
+                                    <Link href="/premium" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
+                                        ✨ Premium
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link href="/api-access" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
+                                        🔌 API Access
+                                    </Link>
+                                </li>
                                 <li>
                                     <Link href="/privacy-policy" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
                                         <Shield size={11} /> Privacy Policy
@@ -172,8 +205,8 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/sitemap.xml" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
-                                        <Map size={11} /> Sitemap
+                                    <Link href="/sitemap-page" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
+                                        <Map size={11} /> Full Site Map
                                     </Link>
                                 </li>
                             </ul>

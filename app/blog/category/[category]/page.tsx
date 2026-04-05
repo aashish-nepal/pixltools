@@ -35,9 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         title: `${label} Guides & Tips – Image Optimization | PixlTools Blog`,
         description: `Browse all free ${label.toLowerCase()} guides on PixlTools. Learn best practices, tips, and step-by-step tutorials on ${label.toLowerCase()} for images.`,
         robots: {
-            index: true,
+            index: false,   // thin filter page — excluded to preserve crawl budget for content pages
             follow: true,
-            googleBot: { index: true, follow: true, "max-image-preview": "large" },
+            googleBot: { index: false, follow: true },
         },
         alternates: { canonical: url },
         openGraph: {
