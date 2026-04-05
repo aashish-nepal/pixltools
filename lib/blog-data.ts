@@ -16,9 +16,10 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
     {
         slug: "how-to-compress-images-without-losing-quality",
-        title: "How to Compress Images Without Losing Quality",
+        title: "How to Compress Images Without Losing Quality (2026 Guide)",
         excerpt: "Learn the best techniques to reduce image file size while preserving visual quality for web and mobile.",
         date: "2025-12-01",
+        updatedDate: "2026-04-05",
         readTime: 7,
         category: "Compression",
         content: `## Why Image Compression Matters
@@ -59,9 +60,10 @@ WEBP is the best modern format — smaller than JPEG and PNG with excellent qual
     },
     {
         slug: "best-image-formats-for-websites",
-        title: "Best Image Formats for Websites: PNG vs JPG vs WEBP",
+        title: "Best Image Formats for Websites in 2026: PNG vs JPG vs WebP",
         excerpt: "A comprehensive comparison of image formats to help you choose the right one for your website.",
         date: "2025-12-05",
+        updatedDate: "2026-04-05",
         readTime: 9,
         category: "Formats",
         content: `## Choosing the Right Image Format
@@ -112,9 +114,10 @@ Use WEBP as your primary format with JPEG/PNG fallbacks. For logos and UI elemen
     },
     {
         slug: "how-to-reduce-image-size-for-faster-websites",
-        title: "How to Reduce Image Size for Faster Websites",
+        title: "How to Reduce Image Size for Faster Websites (2026 Guide)",
         excerpt: "Step-by-step guide to optimize images and dramatically improve your website's loading speed.",
         date: "2025-12-10",
+        updatedDate: "2026-04-05",
         readTime: 8,
         category: "Optimization",
         content: `## The Impact of Image Size on Website Speed
@@ -152,9 +155,10 @@ Use Google PageSpeed Insights or WebPageTest to measure your improvements. A wel
     },
     {
         slug: "best-image-size-for-blogs-and-social-media",
-        title: "Best Image Size for Blogs and Social Media in 2025",
+        title: "Best Image Size for Blogs and Social Media in 2026",
         excerpt: "The ultimate guide to image dimensions for every platform — WordPress, Instagram, Twitter, Facebook, and more.",
         date: "2025-12-15",
+        updatedDate: "2026-04-05",
         readTime: 6,
         category: "Social Media",
         content: `## Why Image Dimensions Matter
@@ -202,9 +206,10 @@ Our free Image Resize tool lets you resize any image to exact pixel dimensions i
     },
     {
         slug: "how-to-resize-images-for-web-complete-guide",
-        title: "How to Resize Images for Web – Complete Guide",
+        title: "How to Resize Images for Web – Complete Guide (2026)",
         excerpt: "Everything you need to know about resizing images for the web, including responsive images and modern techniques.",
         date: "2025-12-20",
+        updatedDate: "2026-04-05",
         readTime: 10,
         category: "Resize",
         content: `## Introduction to Web Image Resizing
@@ -2653,6 +2658,269 @@ For raw speed, Sharp CLI (Node.js) and ImageMagick are the fastest options for l
 **Can I batch resize images to multiple sizes at once?**
 Yes. ImageMagick and Sharp CLI both support outputting multiple sizes from a single input image in one command. This is useful for generating responsive image sets (400px, 800px, 1600px) for a srcset attribute.`,
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "webp-vs-jpg-vs-png-which-format-is-best"],
+    },
+    {
+        slug: "how-to-compress-image-below-20kb",
+        title: "How to Compress an Image Below 20KB (Free & Online)",
+        excerpt: "Need an image under 20KB for a form, job portal, or government website? Here's the fastest way to hit that file size limit without destroying quality.",
+        date: "2026-04-05",
+        readTime: 6,
+        category: "Compression",
+        content: `## Why 20KB?
+
+Many government portals, job application websites, and university admission forms require a passport photo or signature image under a specific file size — commonly 20KB, 50KB, or 100KB. Uploading an image that exceeds this limit is one of the most frustrating form errors users encounter, especially because most smartphones produce photos between 2MB and 8MB by default.
+
+This guide shows you exactly how to get any image below 20KB without quality that looks obviously degraded.
+
+## The Two Levers: Dimensions and Compression
+
+Getting an image to a specific file size requires controlling two things:
+
+1. **Pixel dimensions** — A 4000×3000 pixel photo contains 12 million pixels. A 200×250 pixel passport photo contains 50,000 pixels. Smaller dimensions = dramatically smaller files.
+2. **Compression quality** — How much detail the compression algorithm throws away to save space.
+
+For a target of 20KB, you nearly always need to reduce *both*. A correctly dimensioned passport photo (200×200 to 400×400 pixels) at quality 60–70 will typically land between 8KB and 22KB.
+
+## Step-by-Step: Compress Image Below 20KB
+
+### Step 1 – Resize to the required dimensions first
+
+Before applying any compression, resize your image to the correct pixel dimensions for the use case:
+
+- **Passport photo**: 200×200 to 413×531 pixels (depending on the portal)
+- **Signature**: 100×50 to 280×80 pixels
+- **Profile photo**: 200×200 to 400×400 pixels
+
+Use [PixlTools' free Resize tool](/resize-image) to set exact pixel dimensions. This single step reduces file size by 80–95% for smartphone photos.
+
+### Step 2 – Apply compression
+
+After resizing, upload the result to [PixlTools' Image Compressor](/compress-image) and slide the quality setting down to 60–70 for JPEG images. At this quality level, passport photos look clean and professional — the difference is only visible at extreme zoom.
+
+### Step 3 – Check the file size
+
+Download the result and check its file size:
+- **Mac**: Right-click → Get Info
+- **Windows**: Right-click → Properties
+- **iPhone/Android**: Open the photo app → tap the image → view details
+
+If it's still over 20KB, reduce the quality to 55 or trim 10–20px from each dimension and repeat.
+
+## What Quality Setting Gives a 20KB Image?
+
+This table shows approximate file sizes for a 400×400 JPEG at different quality settings:
+
+| Quality | Approximate Size |
+|---|---|
+| 90 | 45–80 KB |
+| 80 | 25–45 KB |
+| 70 | 15–25 KB |
+| 60 | 10–18 KB |
+| 50 | 7–13 KB |
+
+For most government document requirements, **quality 65–70 at 300×350 pixels** reliably produces a file between 12KB and 20KB that still looks clean and sharp.
+
+## Use JPEG, Not PNG
+
+PNG files are lossless — they cannot be compressed as aggressively as JPEG. A 400×400 PNG photograph will typically be 150–400KB regardless of PNG compression settings, because lossless compression cannot match lossy JPEG at very small file sizes.
+
+**Always use JPEG for document photos targeting sizes under 50KB.**
+
+WebP is an even better choice if the portal accepts it — WebP achieves the same visual quality as JPEG at 25–35% smaller file sizes.
+
+## Common Mistakes
+
+**Mistake 1: Compressing without resizing first**
+Compressing a 4000×3000 pixel image to quality 20 still produces a 200–400KB file. Resize first.
+
+**Mistake 2: Saving as PNG**
+PNG cannot achieve below-20KB file sizes for photographs. Use JPEG.
+
+**Mistake 3: Using a screenshot instead of the original**
+Screenshots are often already compressed and low-resolution. Start with the highest-quality original available.
+
+## Frequently Asked Questions
+
+**How do I compress a photo to less than 20KB without losing quality?**
+Start by resizing to the required pixel dimensions (usually 200×300 to 400×500px for passport photos). Then compress at quality 65–70 using a JPEG compressor. At these dimensions, quality loss is imperceptible at normal viewing sizes.
+
+**Can I compress a PNG to below 20KB?**
+Not for photographs. PNG uses lossless compression, which typically cannot achieve below-20KB sizes for photographic content. Convert to JPEG first using [PixlTools' PNG to JPG converter](/png-to-jpg), then compress.
+
+**What resolution should a 20KB passport photo be?**
+Most portals accept 200×200 to 400×513 pixels (2:2.5 aspect ratio for standard passport photos). At 300×375 pixels, JPEG quality 70 typically produces a file of 12–18KB.
+
+**Why is my image still too large after compression?**
+If the file is still above 20KB after compression, the pixel dimensions are likely still too large. Resize to 300×300 or smaller, then compress again at quality 65.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-make-image-smaller", "how-to-reduce-photo-size-in-kb"],
+    },
+    {
+        slug: "how-to-compress-images-for-email",
+        title: "How to Compress Images for Email – Smaller Attachments, Faster Send",
+        excerpt: "Email providers limit attachments to 10–25MB. Here's how to compress photos before attaching them so they send faster and actually get delivered.",
+        date: "2026-04-05",
+        readTime: 5,
+        category: "Compression",
+        content: `## Why Image Size Matters for Email
+
+Email providers impose attachment size limits — typically 10MB (Outlook), 25MB (Gmail), or 20MB (Yahoo Mail). Exceed these and your email bounces or the attachment is silently stripped. Even within the limit, large attachments slow down send times, fill recipients' inboxes, and often trigger spam filters that scan oversized messages more aggressively.
+
+For photos taken on a modern smartphone, a single uncompressed JPEG is typically 3–8MB. Attach three photos to an email and you're already at 9–24MB — right at the limit.
+
+The target for email attachments:
+- **Single photo**: 500KB–1MB per image
+- **Multiple photos (3–5)**: 200–400KB per image  
+- **Thumbnails/previews**: 50–150KB
+
+## The Fastest Method: PixlTools Image Compressor
+
+1. Go to [PixlTools Compress Image](/compress-image)
+2. Upload your photo (JPG, PNG, or WebP)
+3. Set quality to **75–80** — this produces files 60–80% smaller with no visible difference at normal screen sizes
+4. Download and attach to your email
+
+For multiple photos, process each one and then attach them all. The entire process takes under a minute per image.
+
+## Which Format to Use for Email
+
+| Format | Best For | Email Size |
+|---|---|---|
+| **JPEG** | Photos, portraits, landscapes | ✅ Smallest — use this |
+| **PNG** | Screenshots, graphics with text | ⚠️ Larger — only if needed |
+| **WebP** | Modern browsers/apps | ⚠️ Some email clients don't render it inline |
+| **HEIC** | iPhone originals | ❌ Many clients can't open — convert to JPG first |
+
+**For email, always use JPEG.** It gives the smallest file size for photographs. If you're sending iPhone photos, [convert HEIC to JPG](/heic-to-jpg) before attaching.
+
+## What Quality Setting for Email?
+
+| Quality | Typical Output Size (3MP photo) | Verdict |
+|---|---|---|
+| 90 | 1.2–2.5 MB | Too large for multiple attachments |
+| 80 | 600KB–1.2 MB | Good for single photos |
+| 75 | 400–800 KB | Ideal for 2–4 attachments |
+| 65 | 200–450 KB | Best for 5+ photos |
+| 50 | 150–300 KB | Noticeable quality drop |
+
+**Quality 75–80 is the sweet spot** — significant size savings with quality that looks professional at any normal viewing or print size.
+
+## Resize Before You Compress
+
+If you need very small email attachments (under 300KB), resize the image to a smaller dimension first — then compress. A 1200×900 pixel JPEG at quality 75 is typically 150–300KB, compared to 500–800KB for the same quality at 3000×2250 pixels.
+
+Use [PixlTools Resize Image](/resize-image) to shrink dimensions first, then compress.
+
+## Gmail-Specific Tip
+
+Gmail automatically converts attached images to "Drive links" when your email exceeds ~25MB total. Recipients must click a Google Drive link instead of seeing the attachment inline. Keeping each image under 500KB ensures photos appear inline in the email body, which looks far more professional.
+
+## iPhone Users: Convert HEIC First
+
+iPhones shoot in HEIC format by default — a format that most Windows PCs and email clients cannot open natively. Before emailing photos from an iPhone:
+
+1. Use [PixlTools HEIC to JPG converter](/heic-to-jpg) to convert
+2. Then compress with the image compressor
+3. Attach the resultant JPG
+
+Alternatively, go to **iPhone Settings → Camera → Formats → Most Compatible** to make your iPhone shoot in JPEG automatically.
+
+## Frequently Asked Questions
+
+**What is the ideal image size for email attachments?**
+Aim for 200–800KB per image. This keeps total email size under 5MB for most use cases, well within all provider limits, and fast to send and receive.
+
+**How do I compress photos before emailing on iPhone?**
+Open [pixltools.com](https://www.pixltools.com) in Safari on your iPhone, tap Compress Image, upload from your photo library, and download the compressed result. No app installation needed.
+
+**Will compressing photos for email reduce their quality?**
+At quality 75–80, the difference is imperceptible on screen and in print at normal sizes. Your recipient will not be able to tell the difference from the original.
+
+**Why did Gmail say my attachment was too large?**
+Gmail's attachment limit is 25MB per email. Each smartphone photo is typically 3–8MB, so 4–5 uncompressed photos exceed this. Compress photos to 500KB each and you can attach 40+ per email.`,
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-compress-image-below-20kb", "how-to-convert-heic-to-jpg-on-iphone-and-mac"],
+    },
+    {
+        slug: "how-to-compress-image-to-100kb",
+        title: "How to Compress an Image to 100KB or 200KB – Fast & Free",
+        excerpt: "Form portals, job sites, and admissions pages often require photos under 100KB or 200KB. Here's exactly how to hit that target without guessing.",
+        date: "2026-04-05",
+        readTime: 5,
+        category: "Compression",
+        content: `## The 100KB and 200KB File Size Limit
+
+Government portals, university applications, HR systems, and job boards frequently require uploaded images to be under a specific file size — most commonly 100KB or 200KB. These limits apply to passport photos, signature scans, and profile pictures.
+
+A typical smartphone photo is 3,000–8,000KB. Getting it to 100KB requires reducing both the pixel dimensions and the compression quality in the right combination.
+
+## The Two-Step Method
+
+### Step 1: Resize to appropriate dimensions
+
+The most effective way to reduce any image to under 100–200KB is to resize it to the actual display size required by the form. Common requirements:
+
+- **Passport photo**: 200×200 to 413×531 pixels
+- **Signature image**: 280×80 to 400×120 pixels  
+- **Profile photo**: 150×150 to 300×300 pixels
+
+Go to [PixlTools Resize Image](/resize-image), enter the pixel dimensions required by the form, and download. This step alone typically reduces a smartphone photo from 4MB to 150–500KB.
+
+### Step 2: Compress to your target
+
+After resizing, upload to [PixlTools Image Compressor](/compress-image) and adjust quality:
+
+**To reach ~200KB**: Use quality 75–80 on a 400–600px image
+**To reach ~100KB**: Use quality 65–70 on a 300–400px image
+**To reach ~50KB**: Use quality 55–60 on a 200–300px image
+
+## Target Size Reference Table
+
+| Dimensions | Quality 80 | Quality 70 | Quality 60 |
+|---|---|---|---|
+| 600×600 px | 120–200 KB | 80–130 KB | 55–90 KB |
+| 400×400 px | 60–100 KB | 40–70 KB | 28–50 KB |
+| 300×300 px | 35–60 KB | 22–40 KB | 15–28 KB |
+| 200×200 px | 15–28 KB | 10–18 KB | 7–13 KB |
+
+Use this as a starting point, then adjust — actual file sizes vary based on image content (solid backgrounds compress to much smaller than complex scenes).
+
+## Use JPEG, Not PNG, for Document Photos
+
+PNG uses lossless compression, so a 400×400 PNG photo will typically be 200–600KB regardless of compression settings. For passport photos and document uploads targeting 100KB or 200KB, **always use JPEG**.
+
+If your image is PNG, use [PixlTools PNG to JPG converter](/png-to-jpg) first, then compress the resulting JPEG.
+
+## Checking Your File Size
+
+After downloading your compressed image:
+
+- **Windows**: Right-click the file → Properties → check "Size"
+- **Mac**: Right-click → Get Info → check "Size"
+- **iPhone**: Open Files app → long-press the image → Info
+
+If the file is still over your target, download the image again at a slightly lower quality setting (reduce by 5) or trim 20–30 pixels from each dimension.
+
+## Common Mistakes
+
+**Compressing without resizing first**: A 3000×2000 pixel image at quality 50 still produces a 400–600KB JPEG. Resize to 400×300 first.
+
+**Saving as PNG for photos**: PNG cannot reliably produce sub-100KB files for photographs. Use JPEG.
+
+**Compressing multiple times**: Re-compressing a JPEG adds compression artifacts without making it smaller. Start from the original full-quality file each time.
+
+## Frequently Asked Questions
+
+**How do I reduce an image to exactly 100KB?**
+There is no single formula since file size depends on pixel content. Start with the table above as a guide, download, check the size, and adjust quality by ±5 until you land in the right range. Two or three attempts is usually enough.
+
+**Can I compress a PNG to 100KB?**
+Not for photographs. Use [PNG to JPG converter](/png-to-jpg) first, then compress the JPEG to your target.
+
+**What dimensions should a 100KB profile photo be?**
+A 300×300 pixel JPEG at quality 70 typically produces a 22–40KB file. A 500×500 pixel JPEG at quality 75 is typically 60–100KB. Start with 400×400 at quality 75.
+
+**Does compressing to 100KB make the image look bad?**
+At the dimensions required for most form uploads (200–400px), quality 65–75 is effectively indistinguishable from the original at normal viewing sizes on screen and in print.`,
+        relatedSlugs: ["how-to-compress-image-below-20kb", "how-to-compress-images-for-email", "how-to-reduce-photo-size-in-kb"],
     },
 ];
 
