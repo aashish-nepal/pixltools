@@ -2919,6 +2919,328 @@ A 300×300 pixel JPEG at quality 70 typically produces a 22–40KB file. A 500×
 At the dimensions required for most form uploads (200–400px), quality 65–75 is effectively indistinguishable from the original at normal viewing sizes on screen and in print.`,
         relatedSlugs: ["how-to-compress-image-below-20kb", "how-to-compress-images-for-email", "how-to-reduce-photo-size-in-kb"],
     },
+    {
+        slug: "how-to-compress-images-for-email",
+        title: "How to Compress Images for Email Attachments (Under 1MB)",
+        excerpt: "Sending large image attachments that bounce or clog inboxes? Here's exactly how to compress photos for email — fast and free.",
+        date: "2026-04-12",
+        readTime: 7,
+        category: "Compression",
+        author: "PixlTools Editorial Team",
+        content: `## Why Email Image Compression Matters
+
+Most email providers — Gmail, Outlook, Yahoo Mail — cap total attachment size at 10–25MB. But even below that limit, sending large image files is frustrating for recipients: slow downloads on mobile, storage consumption, and inbox clutter. The goal is to get each photo under 500KB–1MB before attaching it, which keeps emails snappy on any device.
+
+## What Makes Image Files Large?
+
+Three things control file size:
+
+1. **Pixel dimensions** — A photo straight from your phone is typically 4000×3000px or larger. That is far more resolution than any email needs.
+2. **File format** — PNG files can be 3–5× larger than JPEG for the same photo. HEIC (iPhone) files need to be converted first.
+3. **Quality / compression level** — JPEG at quality 80 looks identical to quality 100 but is typically 60–75% smaller.
+
+Getting all three right gives you the smallest possible file with no visible quality loss.
+
+## Step-by-Step: Compress Any Photo for Email
+
+### Step 1: Convert the format (if needed)
+
+- **iPhone HEIC photos**: Use our [HEIC to JPG](/heic-to-jpg) converter to get a compatible JPEG first.
+- **PNG photos**: Use [PNG to JPG](/png-to-jpg) — JPEG is far smaller for photos.
+- **JPEG already?** Skip to Step 2.
+
+### Step 2: Resize to email-appropriate dimensions
+
+You don't need a 4000px wide photo in an email. Use our [Resize Image](/resize-image) tool:
+
+- **Inline images in an email body**: 800px wide maximum
+- **Attachments the recipient will view on screen**: 1200px wide maximum
+- **Attachments for print**: 2400px wide at 300 DPI
+
+Resizing from 4000px to 1200px removes 91% of pixels before you even compress — it's the single biggest file size reducer.
+
+### Step 3: Compress to your target size
+
+Use our [Compress Image](/compress-image) tool:
+
+- Quality 80 → best for photos, typically 100–300KB at 1200px wide
+- Quality 75 → slightly smaller, still excellent quality
+- Quality 70 → approach this only if you need under 100KB
+
+## Target File Sizes for Email
+
+| Use Case | Target Size | Width |
+|---|---|---|
+| Quick share, casual email | Under 500KB | 1200px |
+| Professional email, client | Under 300KB | 1000px |
+| Form / portal upload | Under 200KB | 800px |
+| Government / visa portal | Under 100KB | 400–600px |
+
+## Format Comparison for Email
+
+| Format | 1200×900 photo | Transparency | Recommended? |
+|---|---|---|---|
+| JPEG quality 80 | 100–250KB | No | ✅ Best for email |
+| PNG | 800KB–2MB | Yes | ❌ Too large for photos |
+| WEBP | 70–180KB | Yes | ⚠️ Some email clients don't display |
+
+**Always use JPEG for email attachments.** WEBP is not reliably displayed in email clients like Outlook.
+
+## Bulk Compressing Multiple Photos
+
+Our tool currently processes one image at a time. For fast bulk workflow:
+
+1. Compress each photo with [Compress Image](/compress-image)
+2. Zip the compressed files before attaching — Gmail and Outlook accept .zip files
+
+## Common Email Image Mistakes
+
+**Attaching straight from your phone camera**: Phones shoot 10–50MP photos — typically 5–15MB each. Always compress before sending.
+
+**Using PNG for photos**: PNG lossless compression keeps every pixel perfectly, making it the wrong choice for photographs in an email. A PNG photo can be 10× larger than an equivalent JPEG.
+
+**Re-compressing an already-compressed JPEG**: Each save of a JPEG introduces new quality loss. Always start from the original, unedited photo.
+
+## FAQ
+
+**What is the maximum email attachment size?**
+Gmail allows up to 25MB total per email. Outlook allows 20MB. Yahoo Mail allows 25MB. But large attachments load slowly for mobile recipients — keeping each image under 1MB is better practice regardless of the technical limit.
+
+**Why does my photo look blurry after compressing for email?**
+You may have resized too aggressively. For a 1200px wide image, quality 75–80 should look sharp. If it looks blurry, use quality 85 and accept a slightly larger file.
+
+**Should I send images inline or as attachments?**
+For professional emails, attach images rather than embedding them inline. Inline images are often blocked by email clients on the recipient's side.`,
+        faqs: [
+            { question: "What is the best file size for email image attachments?", answer: "Keep each image under 500KB for casual emails and under 200KB for form or portal uploads. At 1200px wide and JPEG quality 80, most photos land between 100–300KB." },
+            { question: "Should I use JPEG or PNG for email attachments?", answer: "Always use JPEG for photos sent by email. PNG files for photographs can be 3–10× larger than JPEG with no visible quality benefit." },
+            { question: "How do I compress images for email on iPhone?", answer: "iPhone photos are saved as HEIC by default. Use PixlTools HEIC to JPG converter, then compress with the Image Compressor. Target 1200px wide at JPEG quality 80 for email." },
+            { question: "Can I send WebP images by email?", answer: "WebP is not reliably supported in email clients like Outlook and many mobile mail apps. Stick to JPEG for maximum compatibility." },
+        ],
+        relatedSlugs: ["how-to-reduce-photo-size-in-kb", "how-to-compress-images-without-losing-quality", "how-to-make-image-smaller"],
+    },
+    {
+        slug: "how-to-convert-heic-to-jpg-on-iphone",
+        title: "How to Convert HEIC to JPG on iPhone – Free & Instant",
+        excerpt: "iPhone saves photos as HEIC by default — a format many apps and websites don't support. Here's how to convert HEIC to JPG quickly and for free.",
+        date: "2026-04-12",
+        readTime: 6,
+        category: "Conversion",
+        author: "PixlTools Editorial Team",
+        content: `## What is HEIC?
+
+HEIC (High Efficiency Image Container) is the default photo format on iPhones running iOS 11 and later. Apple switched to HEIC because it produces files roughly **half the size of JPEG** at the same visual quality — great for saving storage on your phone.
+
+The problem: HEIC is not universally supported. Many websites, form portals, design tools, and non-Apple apps cannot open HEIC files. Windows doesn't support HEIC without a paid codec. Most online tools only accept JPEG or PNG.
+
+## How to Convert HEIC to JPG Online Free
+
+The fastest method — no software, works from any device:
+
+1. Visit our free [HEIC to JPG](/heic-to-jpg) converter
+2. Upload your HEIC file (drag and drop or click to browse)
+3. Click Process — your file is converted instantly
+4. Download your JPG
+
+No signup. No watermarks. Your file is deleted from our servers immediately after processing.
+
+## Change iPhone Camera Settings (Prevent HEIC)
+
+If you want your iPhone to shoot in JPEG instead of HEIC going forward:
+
+1. Open **Settings** on your iPhone
+2. Tap **Camera**
+3. Tap **Formats**
+4. Select **Most Compatible** (instead of "High Efficiency")
+
+Your camera will now save photos directly as JPEG. Note this slightly increases photo file sizes since HEIC is more efficient.
+
+## How to Convert HEIC to JPG on a Mac
+
+If you have a Mac, you can convert without any tool:
+
+1. Open the HEIC file in **Preview** (default photo app)
+2. Go to **File → Export**
+3. Change the format dropdown to **JPEG**
+4. Choose quality and click Save
+
+For bulk conversion: select multiple HEIC files in Finder → right-click → **Quick Actions → Convert Image** → choose JPEG.
+
+## How to Convert HEIC to JPG on Windows
+
+Windows 10/11 does not include native HEIC support. Options:
+
+- **Free online**: Use our [HEIC to JPG](/heic-to-jpg) converter — works from any browser without installing anything
+- **Microsoft Store**: Install "HEIC Image Extensions" (free from Microsoft) to open HEIC in Photos app
+- **VLC Media Player**: Free, open-source, can view HEIC files
+
+## Why HEIC Files Look Better Than JPEG at the Same Size
+
+HEIC uses a more modern compression algorithm (HEVC/H.265) compared to JPEG's DCT algorithm from 1992. At the same visual quality, HEIC files are typically 40–50% smaller. When you convert HEIC to JPEG, the resulting JPG file will be larger than the original HEIC — this is normal and expected.
+
+## HEIC vs JPEG: Which Should You Use?
+
+| | HEIC | JPEG |
+|---|---|---|
+| File size | Smaller (best) | Larger |
+| Compatibility | Apple devices only | Universal |
+| Email / web upload | Often rejected | Always accepted |
+| Design tools (Figma, Photoshop) | Limited support | Full support |
+| Social media | Auto-converted | Native support |
+
+**Use HEIC** to keep photos on your iPhone. **Convert to JPEG** before uploading, emailing, or sharing outside the Apple ecosystem.
+
+## FAQ
+
+**Does converting HEIC to JPG reduce quality?**
+The conversion itself adds minimal quality loss if you use a high-quality JPEG setting (80–90). The original HEIC is often of superior technical quality, but the visible difference in a converted JPG at quality 85 is imperceptible to the human eye.
+
+**Why can't I upload HEIC to websites?**
+Most web platforms (government portals, social media, job sites, email) only accept JPEG, PNG, or WebP. HEIC is an Apple-proprietary format not yet widely adopted outside Apple's ecosystem.
+
+**Will my AirDropped photos be HEIC?**
+Yes — AirDrop sends the original HEIC file. The recipient needs a Mac or iPhone to open it natively. For sharing with Windows or Android users, convert to JPEG first.`,
+        faqs: [
+            { question: "What is a HEIC file?", answer: "HEIC (High Efficiency Image Container) is the default photo format Apple uses on iPhones. It produces smaller files than JPEG at the same quality but is not supported by most non-Apple apps, Windows (without extra software), and many websites." },
+            { question: "How do I convert HEIC to JPG for free?", answer: "Use PixlTools free HEIC to JPG converter — upload your HEIC file and download a JPEG instantly. No signup, no watermarks, works from any browser." },
+            { question: "Does converting HEIC to JPG lose quality?", answer: "At quality 80–90, the quality difference is invisible to the human eye. The JPG file will be larger than the original HEIC, which is normal since HEIC uses more efficient compression." },
+            { question: "How do I stop iPhone from saving photos as HEIC?", answer: "Go to Settings → Camera → Formats → select 'Most Compatible'. Your iPhone will then save photos as JPEG instead of HEIC." },
+            { question: "Can I open HEIC on Windows?", answer: "Windows does not support HEIC natively. Install 'HEIC Image Extensions' from the Microsoft Store (free), or convert HEIC to JPG using PixlTools — which works from any browser." },
+        ],
+        relatedSlugs: ["best-image-formats-for-websites", "how-to-compress-images-for-email", "how-to-reduce-photo-size-in-kb"],
+    },
+    {
+        slug: "best-image-size-for-wordpress",
+        title: "Best Image Size for WordPress Websites (2026 Guide)",
+        excerpt: "The right image dimensions and file size for WordPress can cut your page load time in half. Here's the complete guide with recommended sizes for every image type.",
+        date: "2026-04-12",
+        readTime: 8,
+        category: "Optimization",
+        author: "PixlTools Editorial Team",
+        content: `## Why Image Size Matters in WordPress
+
+Images are typically the largest assets on a WordPress page — accounting for 50–70% of total page weight. Google's Core Web Vitals (specifically Largest Contentful Paint) penalises pages with slow-loading images. Uploading correctly sized, compressed images is the single highest-impact optimization you can make to a WordPress site.
+
+## WordPress Image Size Recommendations
+
+### Featured Images (Post Thumbnails)
+
+Featured images appear at the top of blog posts and in post grids on your homepage and archive pages.
+
+- **Recommended dimensions**: 1200×628px (16:9 ratio)
+- **File size target**: Under 150KB
+- **Format**: JPEG for photos, PNG only for graphics with transparency
+- **Why 1200×628?** This is also the Open Graph size for social sharing — the same image serves both your blog and social previews.
+
+### In-Post Images (Content Images)
+
+Images embedded inside blog post content.
+
+- **Recommended width**: 800–1024px (height proportional)
+- **File size target**: Under 100KB for standard photos, under 200KB for detailed images
+- **Format**: WebP (with JPEG fallback), or JPEG
+
+WordPress automatically generates multiple sizes (thumbnail, medium, large, full) when you upload an image. Never upload a 5000px image just for a 800px content area — the browser downloads the original before WordPress can serve the smaller version.
+
+### Header / Hero Images
+
+Full-width images at the top of pages.
+
+- **Recommended dimensions**: 1920×600px to 1920×1080px
+- **File size target**: Under 300KB
+- **Tip**: Use JPEG quality 80. Hero images are large — every extra KB matters for LCP.
+
+### WordPress Media Library — What Sizes are Generated?
+
+By default, WordPress creates these sizes on upload:
+
+| Name | Default Size |
+|---|---|
+| Thumbnail | 150×150px (cropped) |
+| Medium | Max 300×300px |
+| Medium Large | Max 768px wide |
+| Large | Max 1024×1024px |
+| Full | Your original upload |
+
+Always upload at a reasonable size. Uploading a 6000px photo just bloats your Media Library with multiple huge versions.
+
+## How to Optimize Images Before Uploading to WordPress
+
+### Step 1: Resize to display dimensions
+
+Use our [Resize Image](/resize-image) tool to reduce to the maximum dimensions you'll display:
+- Featured image → 1200×628px
+- In-post → 1024px wide max
+- Hero → 1920×800px
+
+### Step 2: Compress
+
+Use our [Compress Image](/compress-image) tool at quality 80 (JPEG) or quality 75 (WebP). For most WordPress images:
+
+| Image Type | Target After Compression |
+|---|---|
+| Featured image 1200×628 | Under 120KB |
+| In-post photo 1024px | Under 90KB |
+| Hero 1920×800 | Under 250KB |
+| Thumbnail 300×300 | Under 30KB |
+
+### Step 3: Convert to WebP (recommended)
+
+WebP produces 25–35% smaller files than JPEG at the same quality. Modern WordPress (6.1+) and all major hosting providers support WebP. Use our [JPG to WebP](/jpg-to-webp) or [PNG to WebP](/png-to-webp) converters.
+
+## WordPress Plugins vs Manual Optimization
+
+Many WordPress sites use image optimization plugins (Smush, ShortPixel, Imagify). These are useful for existing Media Libraries, but they have limits:
+
+- They cannot fix images that are oversized in pixel dimensions — only compression
+- They add plugin overhead and API calls on every upload
+- Free tiers have monthly compression limits
+
+**Best practice**: Optimize before upload using PixlTools (free, no limits), then use a plugin only for the existing library.
+
+## WooCommerce Product Images
+
+WooCommerce has its own image size requirements:
+
+- **Product image (main)**: 800×800px square (1:1 ratio)
+- **Product gallery**: Same as main, 800×800px
+- **Shop catalog / archive**: 400×400px (handled by WooCommerce automatically from the 800px source)
+- **File size**: Under 100KB per product image
+
+Square product images look cleanest in WooCommerce grids. Use our [Crop Image](/crop-image) tool to crop to 1:1 before compressing.
+
+## PageSpeed Score: How Images Affect It
+
+Google PageSpeed Insights reports three image-related warnings:
+
+- **"Properly size images"** — Your image upload dimensions are larger than the display size. Fix: resize before upload.
+- **"Efficiently encode images"** — Images are not compressed enough. Fix: use quality 80 JPEG or WebP.
+- **"Serve images in next-gen formats"** — You're serving JPEG/PNG where WebP would be smaller. Fix: convert to WebP.
+
+Fixing all three can push your PageSpeed score from the 50s to the 80s–90s.
+
+## FAQ
+
+**What is the ideal image size for WordPress blog posts?**
+Featured images at 1200×628px under 150KB, and in-post images at max 1024px wide under 100KB. Always upload at the exact display dimensions rather than relying on WordPress to serve the right size.
+
+**Does WordPress automatically compress images?**
+WordPress applies a light compression (quality ~82) on upload since version 4.5, but it does not resize images. Uploading a 5000px photo still stores a 5000px original in your Media Library.
+
+**What format should I use for WordPress images?**
+Use WebP for all photos on modern WordPress sites — it's 25–35% smaller than JPEG. Keep JPEG fallbacks for older themes that don't serve WebP correctly.
+
+**How do I check if my WordPress images are slowing my site?**
+Run your URL through Google PageSpeed Insights (pagespeed.web.dev). The "Opportunities" section shows exactly which images are oversized or under-compressed and how much load time you can save.`,
+        faqs: [
+            { question: "What is the best image size for WordPress featured images?", answer: "1200×628px (16:9 ratio) at under 150KB in JPEG format. This works for both your blog layout and social media Open Graph preview images." },
+            { question: "What image format should I use in WordPress?", answer: "WebP is the best format for WordPress sites in 2026 — 25–35% smaller than JPEG. Convert using PixlTools JPG to WebP converter before uploading. Keep JPEG fallbacks if your theme is older." },
+            { question: "Does WordPress resize images automatically?", answer: "WordPress creates several fixed size variants (thumbnail, medium, large) but does not reduce your original upload. A 6000px photo uploaded stays as 6000px in your Media Library. Always resize before uploading." },
+            { question: "How do I fix 'properly size images' in Google PageSpeed?", answer: "Resize images to their exact display dimensions before uploading. Use PixlTools Resize Image tool — set the width to the maximum your theme displays (typically 800–1200px wide) and upload that version." },
+            { question: "What size should WooCommerce product images be?", answer: "800×800px square (1:1 ratio) at under 100KB per image. WooCommerce automatically generates smaller catalog versions from your 800px source." },
+        ],
+        relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites"],
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
