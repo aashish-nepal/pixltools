@@ -290,14 +290,19 @@ export default async function BlogPostPage({ params }: Props) {
         "@graph": [
             articleSchema,
             breadcrumbSchema,
-            {
-                "@type": "FAQPage",
-                mainEntity: blogFaqs.map((faq) => ({
-                    "@type": "Question",
-                    name: faq.question,
-                    acceptedAnswer: { "@type": "Answer", text: faq.answer },
-                })),
-            },
+            // Only emit FAQPage schema when the post has its own topic-specific FAQs.
+            // Generic fallback FAQs (same on every post) are not emitted to avoid
+            // Google treating them as boilerplate and suppressing the page.
+            ...(post!.faqs && post!.faqs.length > 0
+                ? [{
+                    "@type": "FAQPage",
+                    mainEntity: post!.faqs.map((faq) => ({
+                        "@type": "Question",
+                        name: faq.question,
+                        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+                    })),
+                }]
+                : []),
         ],
     };
 

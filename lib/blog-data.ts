@@ -11,6 +11,8 @@ export interface BlogPost {
     category: string;
     content: string;
     relatedSlugs?: string[];
+    /** Optional post-specific FAQs — emitted in FAQPage schema when present */
+    faqs?: { question: string; answer: string }[];
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -19,7 +21,6 @@ export const BLOG_POSTS: BlogPost[] = [
         title: "How to Compress Images Without Losing Quality (2026 Guide)",
         excerpt: "Learn the best techniques to reduce image file size while preserving visual quality for web and mobile.",
         date: "2025-12-01",
-        updatedDate: "2026-04-05",
         readTime: 7,
         category: "Compression",
         content: `## Why Image Compression Matters
@@ -63,7 +64,6 @@ WEBP is the best modern format — smaller than JPEG and PNG with excellent qual
         title: "Best Image Formats for Websites in 2026: PNG vs JPG vs WebP",
         excerpt: "A comprehensive comparison of image formats to help you choose the right one for your website.",
         date: "2025-12-05",
-        updatedDate: "2026-04-05",
         readTime: 9,
         category: "Formats",
         content: `## Choosing the Right Image Format
@@ -117,7 +117,6 @@ Use WEBP as your primary format with JPEG/PNG fallbacks. For logos and UI elemen
         title: "How to Reduce Image Size for Faster Websites (2026 Guide)",
         excerpt: "Step-by-step guide to optimize images and dramatically improve your website's loading speed.",
         date: "2025-12-10",
-        updatedDate: "2026-04-05",
         readTime: 8,
         category: "Optimization",
         content: `## The Impact of Image Size on Website Speed
@@ -158,7 +157,6 @@ Use Google PageSpeed Insights or WebPageTest to measure your improvements. A wel
         title: "Best Image Size for Blogs and Social Media in 2026",
         excerpt: "The ultimate guide to image dimensions for every platform — WordPress, Instagram, Twitter, Facebook, and more.",
         date: "2025-12-15",
-        updatedDate: "2026-04-05",
         readTime: 6,
         category: "Social Media",
         content: `## Why Image Dimensions Matter
@@ -209,7 +207,6 @@ Our free Image Resize tool lets you resize any image to exact pixel dimensions i
         title: "How to Resize Images for Web – Complete Guide (2026)",
         excerpt: "Everything you need to know about resizing images for the web, including responsive images and modern techniques.",
         date: "2025-12-20",
-        updatedDate: "2026-04-05",
         readTime: 10,
         category: "Resize",
         content: `## Introduction to Web Image Resizing

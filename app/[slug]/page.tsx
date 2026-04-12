@@ -128,10 +128,15 @@ export default async function ToolPage({ params }: Props) {
 
             <ToolPageClient tool={tool} />
 
-            {/* extendedDesc: visible server-rendered text — Google indexes this on first crawl */}
+            {/* extendedDesc: fully visible "About This Tool" section — same content for users and Googlebot */}
             {tool.extendedDesc && (
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 pb-4">
-                    <p className="text-xs text-gray-600 leading-relaxed">{tool.extendedDesc}</p>
+                <div className="bg-[#0b0816] pb-6">
+                    <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                        <div className="bg-[#110e24] border border-violet-500/15 rounded-2xl p-6 sm:p-8">
+                            <h2 className="text-base font-semibold text-violet-300 mb-3">About This Tool</h2>
+                            <p className="text-sm text-gray-300 leading-relaxed">{tool.extendedDesc}</p>
+                        </div>
+                    </div>
                 </div>
             )}
 
