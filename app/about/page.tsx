@@ -80,31 +80,50 @@ const WHO_ITS_FOR = [
 
 const webPageSchema = {
     "@context": "https://schema.org",
-    "@type": "AboutPage",
-    name: "About PixlTools – Free Online Image Processing Tools",
-    description: "PixlTools is a free, privacy-first image processing suite built on Sharp. Compress, resize, convert, and optimize images instantly — no signup, no watermarks, no data stored.",
-    url: "https://www.pixltools.com/about",
-    datePublished: "2026-01-01",
-    dateModified: "2026-03-18",
-    inLanguage: "en-US",
-    publisher: {
-        "@type": "Organization",
-        name: "PixlTools",
-        url: "https://www.pixltools.com",
-        logo: {
-            "@type": "ImageObject",
-            url: "https://www.pixltools.com/logo.jpg",
-            width: 512,
-            height: 512,
+    "@graph": [
+        {
+            "@type": "AboutPage",
+            name: "About PixlTools – Free Online Image Processing Tools",
+            description: "PixlTools is a free, privacy-first image processing suite built on Sharp. Compress, resize, convert, and optimize images instantly — no signup, no watermarks, no data stored.",
+            url: "https://www.pixltools.com/about",
+            datePublished: "2026-01-01",
+            dateModified: "2026-04-14",
+            inLanguage: "en-US",
+            publisher: {
+                "@type": "Organization",
+                name: "PixlTools",
+                url: "https://www.pixltools.com",
+                logo: {
+                    "@type": "ImageObject",
+                    url: "https://www.pixltools.com/logo.jpg",
+                    width: 512,
+                    height: 512,
+                },
+            },
+            author: { "@id": "https://www.pixltools.com/about#author" },
+            breadcrumb: {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
+                    { "@type": "ListItem", position: 2, name: "About", item: "https://www.pixltools.com/about" },
+                ],
+            },
         },
-    },
-    breadcrumb: {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://www.pixltools.com" },
-            { "@type": "ListItem", position: 2, name: "About", item: "https://www.pixltools.com/about" },
-        ],
-    },
+        {
+            "@type": "Person",
+            "@id": "https://www.pixltools.com/about#author",
+            name: "Aashish Nepal",
+            url: "https://www.pixltools.com/about",
+            sameAs: ["https://www.linkedin.com/in/aashish-nepal-56247727b/"],
+            jobTitle: "Founder & Software Developer",
+            worksFor: {
+                "@type": "Organization",
+                name: "PixlTools",
+                url: "https://www.pixltools.com",
+            },
+            description: "Full-stack developer and founder of PixlTools. Specialises in web performance, image optimisation, and building fast, accessible developer tools.",
+        },
+    ],
 };
 
 export default function AboutPage() {
@@ -224,6 +243,47 @@ export default function AboutPage() {
                     </div>
                 </section>
 
+                {/* Author */}
+                <section id="author" className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
+                    <div className="flex items-center gap-4 mb-6">
+                        <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Meet the Author</h2>
+                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-6 items-start">
+                        {/* Avatar */}
+                        <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-3xl font-black text-white select-none">
+                            AN
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <div className="flex flex-wrap items-center gap-3 mb-2">
+                                <h3 className="text-lg font-bold text-violet-100">Aashish Nepal</h3>
+                                <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2.5 py-0.5 rounded-full">
+                                    Founder &amp; Developer
+                                </span>
+                            </div>
+                            <p className="text-sm text-gray-400 leading-relaxed mb-4">
+                                Aashish Nepal is a full-stack developer and the founder of PixlTools. He built the platform
+                                to make professional-grade image processing accessible to everyone — developers, designers,
+                                bloggers, and creators alike — without paywalls or privacy trade-offs. He has hands-on
+                                experience with web performance optimisation, server-side image pipelines using Sharp and
+                                libvips, and building production-ready Next.js applications. The guides and tutorials on
+                                the PixlTools blog are written and reviewed by Aashish to ensure accuracy and practical value.
+                            </p>
+                            <a
+                                href="https://www.linkedin.com/in/aashish-nepal-56247727b/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-sm font-semibold text-violet-400 hover:text-violet-300 transition-colors border border-violet-500/20 bg-violet-500/5 hover:bg-violet-500/15 px-4 py-2 rounded-xl"
+                            >
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                                LinkedIn Profile →
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Our Commitment */}
                 <section className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-3 mb-5">
@@ -234,14 +294,14 @@ export default function AboutPage() {
                         <p>
                             Beyond building tools, we publish in-depth guides and tutorials on image optimisation on our
                             <Link href="/blog" className="text-violet-400 hover:text-violet-300 transition-colors mx-1">blog</Link>.
-                            Every article is written by practitioners with real-world experience in web performance,
-                            digital photography, and image processing. We don&apos;t publish for search rankings — we publish
-                            because we genuinely want you to understand how images work and how to get the most out of them.
+                            Every article is written by Aashish Nepal, drawing on real-world experience in web performance,
+                            image processing pipelines, and modern frontend development. Content is published to genuinely
+                            help you understand how images work — not just to rank in search.
                         </p>
                         <p>
-                            Our guides cover topics like choosing the right image format, optimizing for Google Core Web Vitals,
-                            social media image dimension requirements, and advanced compression techniques. All content
-                            is regularly reviewed and updated to reflect current platform specifications and best practices.
+                            Our guides cover choosing the right image format, optimizing for Google Core Web Vitals,
+                            social media image dimensions, and advanced compression techniques. All content is regularly
+                            reviewed and updated to reflect current platform specifications and best practices.
                         </p>
                     </div>
                 </section>

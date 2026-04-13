@@ -24,13 +24,13 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         siteName: "PixlTools",
-        images: [{ url: "https://www.pixltools.com/opengraph-image", width: 1200, height: 630, alt: "Photo Collage Maker – PixlTools" }],
+        images: [{ url: "https://www.pixltools.com/photo-collage-maker/opengraph-image", width: 1200, height: 630, alt: "Photo Collage Maker – PixlTools" }],
     },
     twitter: {
         card: "summary_large_image",
         title: "Free Photo Collage Maker – Combine Images Online",
         description: "Create beautiful photo collages online for free. Combine up to 16 images into a custom grid.",
-        images: ["https://www.pixltools.com/opengraph-image"],
+        images: ["https://www.pixltools.com/photo-collage-maker/opengraph-image"],
     },
 };
 
@@ -59,6 +59,9 @@ export default function PhotoCollageMakerPage() {
     return (
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@graph": [breadcrumbSchema, softwareSchema] }) }} />
+            {/* sr-only h1 ensures Googlebot always has a primary heading in the static HTML,
+                even before the client component hydrates. Invisible to sighted users. */}
+            <h1 className="sr-only">Free Photo Collage Maker – Combine Images Online | PixlTools</h1>
             <CollageMakerClient />
 
             {/* Server-rendered content — fully visible to users and Googlebot */}

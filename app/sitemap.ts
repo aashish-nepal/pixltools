@@ -18,7 +18,8 @@ const STATIC_DATES = {
     home: new Date(Math.max(BLOG_LATEST.getTime(), TOOLS_CONTENT_UPDATED.getTime())),
     blog: BLOG_LATEST,
     about: new Date("2026-01-01"),
-    seoGuides: new Date("2026-03-18"),
+    // Updated to match dateModified on the guide pages (2026-04-14)
+    seoGuides: new Date("2026-04-14"),
     premium: new Date("2026-03-08"),
     apiAccess: new Date("2026-03-08"),
 };
@@ -38,10 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${BASE}/how-to-compress-images-for-instagram`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
         // API access
         { url: `${BASE}/api-access`, lastModified: STATIC_DATES.apiAccess, changeFrequency: "monthly", priority: 0.65 },
-        // Informational — legal pages are noindex so excluded from sitemap
+        // Informational
         { url: `${BASE}/about`, lastModified: STATIC_DATES.about, changeFrequency: "yearly", priority: 0.5 },
-        // HTML sitemap — crawlable anchor links for every page
-        { url: `${BASE}/sitemap-page`, lastModified: TOOLS_LAST_UPDATED, changeFrequency: "weekly", priority: 0.4 },
+        // NOTE: /sitemap-page intentionally excluded — it's a crawl-budget cost with no ranking value.
     ];
 
     const toolPages: MetadataRoute.Sitemap = TOOLS.map(tool => ({

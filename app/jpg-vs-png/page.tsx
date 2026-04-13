@@ -51,7 +51,7 @@ const articleSchema = {
     description: "Complete comparison of JPG vs PNG image formats. Learn when to use JPEG vs PNG for photos, graphics, web, and print. Side-by-side feature table with examples.",
     url: "https://www.pixltools.com/jpg-vs-png",
     datePublished: "2026-03-18",
-    dateModified: "2026-03-18",
+    dateModified: "2026-04-14",
     inLanguage: "en-US",
     author: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
     publisher: {

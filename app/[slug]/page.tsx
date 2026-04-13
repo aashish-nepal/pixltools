@@ -140,15 +140,38 @@ export default async function ToolPage({ params }: Props) {
                 </div>
             )}
 
-            {/* Trust signals — visible, unique content not shown by ToolPageClient */}
+            {/* Trust signals — category-specific so each tool page has unique content */}
             <div className="bg-[#0b0816] pb-10">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {[
-                            { icon: "🔒", title: "100% Private", desc: "Your images are deleted immediately after processing. We never store or share your files." },
-                            { icon: "⚡", title: "Powered by Sharp", desc: "Industry-leading image processing library used by Netflix, Vercel, and thousands of companies worldwide." },
-                            { icon: "🆓", title: "Always Free", desc: "No account, no watermarks, no limits. PixlTools is free to use for everyone, forever." },
-                        ].map(({ icon, title, desc }) => (
+                        {((): { icon: string; title: string; desc: string }[] => {
+                            if (tool.category === "compression") return [
+                                { icon: "🗜️", title: "Up to 90% Smaller", desc: `${tool.name} uses Smart compression targeting the best quality-to-size ratio — not a blanket quality cut.` },
+                                { icon: "🔒", title: "Files Never Stored", desc: "Your image is processed and deleted immediately. Nothing is saved on our servers after you download." },
+                                { icon: "🆓", title: "No Limits, No Cost", desc: "Compress as many images as you need. No account, no daily cap, no watermarks — free forever." },
+                            ];
+                            if (tool.category === "resize-crop") return [
+                                { icon: "📐", title: "Pixel-Perfect Output", desc: `${tool.name} outputs at your exact target dimensions — no rounding, no unwanted padding.` },
+                                { icon: "🔒", title: "Private by Design", desc: "Uploaded images are deleted from our servers the moment processing finishes. We never keep your files." },
+                                { icon: "📱", title: "Works on Any Device", desc: "Fully optimized for iPhone and Android browsers — no app download or desktop required." },
+                            ];
+                            if (tool.category === "conversion") return [
+                                { icon: "🔄", title: "Lossless Conversion", desc: `${tool.name} preserves all image data through the format change — no unexpected quality loss.` },
+                                { icon: "🔒", title: "Zero Data Retention", desc: "Converted files are deleted from our servers immediately after download. Your files stay yours." },
+                                { icon: "⚡", title: "Instant Results", desc: "Conversion typically completes in under 3 seconds for files up to 10 MB." },
+                            ];
+                            if (tool.category === "advanced") return [
+                                { icon: "🤖", title: "AI-Powered Processing", desc: `${tool.name} uses machine learning models to deliver results that rule-based tools cannot match.` },
+                                { icon: "🔒", title: "No Data Ever Stored", desc: "Images are processed ephemerally and deleted immediately. We have no access to your files after processing." },
+                                { icon: "🎯", title: "Professional Quality", desc: "Outputs match the quality of desktop apps like Photoshop — without the price tag or the installation." },
+                            ];
+                            // utilities
+                            return [
+                                { icon: "🛠️", title: "Browser-Based", desc: `${tool.name} runs entirely in your browser — no software to install, no extensions, no plugins.` },
+                                { icon: "🔒", title: "Fully Private", desc: "Your images are deleted from our servers immediately after processing. Nothing is logged or shared." },
+                                { icon: "🆓", title: "Always Free", desc: "No account required. No watermarks. No usage limits. PixlTools is free for everyone, forever." },
+                            ];
+                        })().map(({ icon, title, desc }) => (
                             <div key={title} className="bg-[#14102a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
                                 <span className="text-2xl flex-shrink-0">{icon}</span>
                                 <div>

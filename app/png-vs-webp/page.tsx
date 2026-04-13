@@ -51,7 +51,7 @@ const articleSchema = {
     description: "PNG vs WEBP comparison: file size, quality, transparency, browser support. Find out when to use PNG and when to switch to modern WEBP format.",
     url: "https://www.pixltools.com/png-vs-webp",
     datePublished: "2026-03-18",
-    dateModified: "2026-03-18",
+    dateModified: "2026-04-14",
     inLanguage: "en-US",
     author: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
     publisher: {

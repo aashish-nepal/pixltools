@@ -48,13 +48,10 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large" },
   },
-  alternates: {
-    canonical: "https://www.pixltools.com",
-    languages: {
-      "en": "https://www.pixltools.com",
-      "x-default": "https://www.pixltools.com",
-    },
-  },
+  // NOTE: Do NOT set alternates/canonical here.
+  // Each page sets its own canonical via alternates.canonical.
+  // A root-level canonical would cause all pages without an explicit override
+  // to declare the homepage as their canonical URL.
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

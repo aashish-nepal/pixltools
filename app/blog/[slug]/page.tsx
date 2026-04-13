@@ -208,11 +208,8 @@ function renderContent(content: string) {
     return nodes;
 }
 
-const blogFaqs = [
-    { question: "Are all image tools free?", answer: "Yes — all 30+ tools on PixlTools are completely free to use." },
-    { question: "What image formats are supported?", answer: "JPG, PNG, WEBP, and PDF are supported across our various tools." },
-    { question: "Is my data stored?", answer: "No — images are processed and deleted immediately. We never store your files." },
-];
+// Generic blogFaqs removed — same questions on every post = thin content signal.
+// FAQs are now only shown when the post defines its own topic-specific faqs in blog-data.ts.
 
 export default async function BlogPostPage({ params }: Props) {
     const { slug } = await params;
@@ -233,8 +230,9 @@ export default async function BlogPostPage({ params }: Props) {
         dateModified: new Date(post!.updatedDate ?? post!.date).toISOString(),
         author: {
             "@type": "Person",
-            name: post!.author ?? "PixlTools Editorial Team",
-            url: "https://www.pixltools.com/about",
+            name: post!.author ?? "Aashish Nepal",
+            url: "https://www.pixltools.com/about#author",
+            sameAs: "https://www.linkedin.com/in/aashish-nepal-56247727b/",
         },
         publisher: {
             "@type": "Organization",
@@ -321,7 +319,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <div className="flex items-center gap-4 mt-4 py-4 text-sm text-gray-400 justify-center flex-wrap">
                         <span>📅 {new Date(post!.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
                         <span>⏱ {post!.readTime} min read</span>
-                        <span>✍️ {post!.author ?? "PixlTools Editorial Team"}</span>
+                        <span>✍️ {post!.author ?? "Aashish Nepal"}</span>
                     </div>
                 </div>
             </div>
@@ -345,9 +343,12 @@ export default async function BlogPostPage({ params }: Props) {
 
                         <AdBanner slot="Blog Post Middle" />
 
-                        <div className="mt-8">
-                            <FAQSection faqs={blogFaqs} />
-                        </div>
+                        {/* Only render FAQ section when the post has its own topic-specific FAQs */}
+                        {post!.faqs && post!.faqs.length > 0 && (
+                            <div className="mt-8">
+                                <FAQSection faqs={post!.faqs} />
+                            </div>
+                        )}
 
                         {/* Related Articles */}
                         {relatedPosts.length > 0 && (

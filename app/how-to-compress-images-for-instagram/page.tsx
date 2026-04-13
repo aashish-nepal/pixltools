@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-    title: "How to Compress Images for Instagram (2025 Guide) | PixlTools",
+    title: "How to Compress Images for Instagram (2026 Guide) | PixlTools",
     description: "Learn the exact image sizes, compression settings, and formats Instagram recommends for posts, stories, reels, and profiles. Keep quality high with small file sizes.",
     robots: {
         index: true,
@@ -18,19 +18,19 @@ export const metadata: Metadata = {
         },
     },
     openGraph: {
-        title: "How to Compress Images for Instagram (2025 Guide)",
+        title: "How to Compress Images for Instagram (2026 Guide)",
         description: "Learn the exact image sizes, compression settings, and formats Instagram recommends for posts, stories, reels, and profiles.",
         url: "https://www.pixltools.com/how-to-compress-images-for-instagram",
         type: "article",
         locale: "en_US",
         siteName: "PixlTools",
-        images: [{ url: "https://www.pixltools.com/opengraph-image", width: 1200, height: 630, alt: "How to compress images for Instagram – PixlTools" }],
+        images: [{ url: "https://www.pixltools.com/how-to-compress-images-for-instagram/opengraph-image", width: 1200, height: 630, alt: "How to compress images for Instagram – PixlTools" }],
     },
     twitter: {
         card: "summary_large_image",
-        title: "How to Compress Images for Instagram (2025 Guide)",
+        title: "How to Compress Images for Instagram (2026 Guide)",
         description: "Learn the exact image sizes, compression settings, and formats Instagram recommends for posts, stories, reels, and profiles.",
-        images: ["https://www.pixltools.com/opengraph-image"],
+        images: ["https://www.pixltools.com/how-to-compress-images-for-instagram/opengraph-image"],
     },
 };
 
@@ -58,7 +58,7 @@ const articleSchema = {
     description: "Learn the exact image sizes, compression settings, and formats Instagram recommends for posts, stories, reels, and profiles.",
     url: "https://www.pixltools.com/how-to-compress-images-for-instagram",
     datePublished: "2026-03-18",
-    dateModified: "2026-03-18",
+    dateModified: "2026-04-14",
     inLanguage: "en-US",
     author: { "@type": "Organization", name: "PixlTools", url: "https://www.pixltools.com" },
     publisher: {
@@ -136,7 +136,7 @@ export default function InstagramCompressionPage() {
                 {/* Recommended sizes table */}
                 <div>
                     <div className="flex items-center gap-4 mb-6">
-                        <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Recommended Instagram Image Sizes (2025)</h2>
+                        <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Recommended Instagram Image Sizes (2026)</h2>
                         <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-violet-500/15">
