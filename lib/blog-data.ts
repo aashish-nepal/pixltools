@@ -2700,6 +2700,324 @@ Run your URL through Google PageSpeed Insights (pagespeed.web.dev). The "Opportu
         ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites"],
     },
+    // ── Long-tail targeted posts (low competition, specific intent) ──────────
+    {
+        slug: "compress-image-for-passport-visa-application",
+        title: "How to Compress a Photo for Passport, Visa or Job Application",
+        excerpt: "Most passport and visa portals accept images under 100KB or 200KB. Here's how to compress your photo to the exact file size required — free, online, no software.",
+        date: "2026-04-14",
+        readTime: 6,
+        category: "Compression",
+        author: "Aashish Nepal",
+        content: `## Why Government Portals Reject Your Photo
+
+Online application portals for passports, visas, and job applications almost always impose two requirements on uploaded photos:
+
+1. **File size limit** — commonly 100KB, 200KB, or 500KB
+2. **Pixel dimension limit** — usually 200×200px to 600×800px
+
+A photo taken on a modern phone is typically 3–8MB and 4000+ pixels wide. Upload that and the portal rejects it immediately. You need to reduce both the dimensions and the file size before uploading.
+
+## What Size Does Your Portal Need?
+
+| Application Type | Common Size Limit | Common Dimensions |
+|---|---|---|
+| Indian Passport (Seva) | 100KB | 200×200px |
+| Nepal passport / citizenship | 80KB | 413×531px |
+| UK Visa (UKVI) | 6MB (but JPEG) | At least 600×750px |
+| US Visa (DS-160) | 240KB | 600×600px |
+| Job applications (most portals) | 100–200KB | No fixed size |
+| Upwork / Freelancer profile | Under 5MB (but aim for 150KB) | At least 250×250px |
+
+**Always confirm the exact requirements on the portal itself — these specifications change.**
+
+## Step 1 — Resize to the Required Pixel Dimensions
+
+Before compressing, resize your photo to the required dimensions. Compressing an oversized image still leaves it too large in pixels (many portals check dimensions, not just file size).
+
+1. Go to [Resize Image](/resize-image)
+2. Upload your photo (JPG or PNG)
+3. Enter the target width and height (e.g. 200×200 for Indian passport)
+4. Enable **Lock Aspect Ratio** if the portal doesn't specify exact dimensions
+5. Download your resized image
+
+## Step 2 — Compress to the Target File Size
+
+1. Go to [Compress Image](/compress-image)
+2. Upload your resized photo
+3. The tool compresses at quality 80 by default — this typically brings a 200×200px JPEG to 8–25KB (well under 100KB)
+4. If the portrait is larger (e.g. 600×800px), the result will be 30–80KB
+
+**Check the output file size** before uploading. On Mac: right-click the file → Get Info. On Windows: right-click → Properties.
+
+## What If It's Still Too Big?
+
+If your compressed photo is still above the limit, the usual cause is that your image is still too large in pixels. Repeat Step 1 with smaller dimensions, then compress again.
+
+As a rough guide for JPEG photos:
+- 200×200px at quality 80 → ~10–25KB  
+- 400×400px at quality 80 → ~35–70KB  
+- 600×800px at quality 80 → ~60–120KB  
+
+## Common Mistakes
+
+**Don't use PNG for ID photos.** PNG files are 3–5× larger than JPEG for the same photo. Most portals require JPEG anyway. Convert using our [PNG to JPG](/png-to-jpg) tool.
+
+**Don't crop on your phone camera first.** Phone crop tools often save at full phone resolution. Use our [Crop Image](/crop-image) tool to crop at the exact dimensions you need.
+
+**Don't skip resizing.** Compressing a 4000×3000px image to quality 40 to hit a 100KB limit will produce a blurry disaster. Resize first, then compress at quality 75–85.
+
+## FAQ
+
+**What format should a passport photo be?**  
+JPEG (JPG) for almost all portals worldwide. Avoid PNG, WEBP, or HEIC — convert to JPG first.
+
+**Can I compress an iPhone HEIC photo for a passport application?**  
+Yes — convert it to JPEG first using our [HEIC to JPG](/heic-to-jpg) converter. Then resize and compress.
+
+**My compressed photo looks blurry — what do I do?**  
+You've either compressed too aggressively (try quality 80 instead of lower) or the original photo was too small to begin with. Use a well-lit, high-resolution original for ID photos.
+
+**The portal shows an error saying "invalid image format."**  
+This usually means the portal expects JPEG but received PNG or another format. Use [PNG to JPG](/png-to-jpg) or [WEBP to JPG](/webp-to-jpg) to convert first.`,
+        relatedSlugs: ["how-to-compress-image-below-20kb", "how-to-compress-image-to-100kb", "how-to-compress-images-on-iphone-and-android"],
+    },
+    {
+        slug: "compress-image-below-50kb",
+        title: "How to Compress an Image Below 50KB (Free & Online)",
+        excerpt: "Need to get a photo under 50KB for a job application, government portal, or email? Here's the exact process — no software, works on phone and desktop.",
+        date: "2026-04-14",
+        readTime: 5,
+        category: "Compression",
+        author: "Aashish Nepal",
+        content: `## Why 50KB?
+
+50KB is a common file size limit on job application portals, government registration sites, and some email systems in South and Southeast Asia. A standard smartphone photo is 3,000–8,000× larger than this limit — so you need both to resize the pixel dimensions AND compress the JPEG quality.
+
+## The Two-Step Process
+
+Getting below 50KB reliably requires two steps — skipping either one usually fails.
+
+### Step 1 — Resize the Image
+
+A 4000×3000px photo compressed to quality 10 will still be large and look terrible. The right approach is to reduce the pixel dimensions to something reasonable first.
+
+**Target dimensions for common 50KB use cases:**
+
+| Use Case | Recommended Dimensions |
+|---|---|
+| Profile photo / avatar | 300×300px |
+| Job application photo | 413×531px (passport style) |
+| Signature image | 200×60px |
+| Document scan preview | 800×600px |
+
+1. Go to [Resize Image](/resize-image)
+2. Upload your image
+3. Set width to your target (height auto-calculates with aspect ratio locked)
+4. Download the resized image
+
+### Step 2 — Compress the Resized Image
+
+1. Go to [Compress Image](/compress-image)
+2. Upload your resized image
+3. Download — at quality 80 and small dimensions, most photos land well under 50KB
+
+## Expected Output Sizes at Quality 80
+
+| Dimensions | Expected JPEG Size (photo) |
+|---|---|
+| 200×200px | 8–20KB ✅ |
+| 300×300px | 15–35KB ✅ |
+| 413×531px | 25–50KB ✅ |
+| 600×800px | 50–100KB ⚠️ |
+| 800×1000px | 80–150KB ❌ |
+
+For photos with lots of detail (faces, textures), file sizes tend to be at the higher end of these ranges.
+
+## If the Result Is Still Above 50KB
+
+Try these in order:
+1. **Reduce dimensions further** — go to 300×300px or smaller
+2. **Lower quality slightly** — quality 70 instead of 80 (difference is nearly invisible at small sizes)
+3. **Convert to JPEG** — if you uploaded a PNG, convert it to JPEG first using [PNG to JPG](/png-to-jpg). PNG at 413×531px can be 200–400KB; JPEG at the same size is 30–60KB
+
+## FAQ
+
+**What's the smallest I can compress a photo without it looking bad?**  
+For small profile-size images (under 400×400px), quality 70–75 is the minimum before visible degradation. Below quality 60, you'll see obvious blocky JPEG artefacts.
+
+**Can I compress a PNG below 50KB?**  
+For photos, convert to JPEG first — PNG lossless compression can't match JPEG for photographic content. For logos and graphics with few colours, PNG can go below 50KB at small dimensions.
+
+**I compressed to 48KB but the portal says it's too large — why?**  
+Some portals measure in KiB (kibibytes) not KB (kilobytes). 1 KiB = 1.024 KB, so their "50KB" might mean 51.2 actual kilobytes. Compress to 45KB to be safe.`,
+        faqs: [
+            { question: "How do I compress an image to exactly 50KB?", answer: "Resize to 300×300px or smaller, then compress at quality 80 using our free Compress Image tool. Most photos hit 20–45KB at this size and quality setting." },
+            { question: "Will my photo look blurry after compressing to 50KB?", answer: "Not at small dimensions. At 300×300px and quality 80, the result looks sharp on screen. Quality only becomes visibly poor below 60 at very low resolutions." },
+        ],
+        relatedSlugs: ["compress-image-for-passport-visa-application", "how-to-compress-image-below-20kb", "how-to-compress-image-to-100kb"],
+    },
+    {
+        slug: "heic-to-jpg-converter-windows-11",
+        title: "How to Convert HEIC to JPG on Windows 11 – Free, No Software",
+        excerpt: "iPhone photos are saved as HEIC, but Windows 11 can't open them without extra steps. Here are 3 free methods to convert HEIC to JPG on Windows 11 — no paid software needed.",
+        date: "2026-04-14",
+        readTime: 6,
+        category: "Conversion",
+        author: "Aashish Nepal",
+        content: `## Why Windows 11 Can't Open HEIC Files
+
+HEIC (High Efficiency Image Container) is Apple's default photo format since iOS 11. Windows 11 does not include HEIC support out of the box. When you transfer iPhone photos to your PC, Windows shows them as unknown file types — the Photos app can't open them and File Explorer shows a generic icon.
+
+There are three ways to fix this, in order from easiest to most technical.
+
+## Method 1 — Convert Online (No Software, Fastest)
+
+Works on any Windows 11 PC, takes about 10 seconds.
+
+1. Transfer your HEIC file from iPhone to PC (via USB, iCloud, or email)
+2. Go to [HEIC to JPG Converter](/heic-to-jpg)
+3. Drag and drop your HEIC file
+4. Click Download — your JPG is ready instantly
+
+**No signup. No watermarks. File is deleted immediately after conversion.**
+
+This is the best method if you only need to convert a few photos occasionally.
+
+## Method 2 — Install the Free Microsoft HEIC Codec
+
+This installs native HEIC support directly into Windows 11, so Photos app and File Explorer can open HEIC files directly — without converting them first.
+
+1. Open the **Microsoft Store** (search "Store" in the Start menu)
+2. Search for **"HEIF Image Extensions"**
+3. Click **Get** (it's free from Microsoft)
+4. Once installed, Windows 11 can open HEIC files natively in Photos app
+
+**Note:** This lets you *view* HEIC files. To convert them to JPG, right-click → Open with Photos → File → Save as → select JPEG.
+
+For bulk conversion, this method is slow. Use Method 1 or Method 3 instead.
+
+## Method 3 — Use iCloud for Windows (Auto-Converts on Download)
+
+If you use iCloud Photos, enable the automatic HEIC→JPEG conversion:
+
+1. Install **iCloud for Windows** from icloud.com
+2. Open iCloud settings → Photos
+3. Enable **"Keep originals"** → change to **"Download and keep originals"**
+4. Select **"Download in JPEG and original formats"**
+
+iCloud will now download all your iPhone photos as JPEGs automatically.
+
+## How to Transfer HEIC Files from iPhone to Windows 11
+
+**Best method — USB cable:**
+1. Connect iPhone with USB cable
+2. Unlock iPhone and trust the connection
+3. Open **File Explorer** → click your iPhone under "This PC"
+4. Navigate to Internal Storage → DCIM → camera folders
+5. Copy the HEIC files to your desktop
+
+**Automatic JPEG on USB transfer** (iPhone setting):
+- On iPhone: Settings → Photos → scroll down to "Transfer to Mac or PC"
+- Select **Automatic** instead of "Keep Originals"
+- Now when you drag photos to Windows, iPhone automatically sends JPEGs
+
+## Method Comparison
+
+| Method | Speed | Batch? | Requires Install? |
+|---|---|---|---|
+| Online converter | Fast | Up to 5 at once | No |
+| Microsoft HEIC Codec | Medium | One at a time | Free download |
+| iCloud for Windows | Automatic | Unlimited | Free download |
+| iPhone USB "Automatic" setting | Automatic | All photos | No |
+
+## FAQ
+
+**Can Windows 11 open HEIC files without installing anything?**  
+No — Windows 11 requires either the free HEIF Image Extensions codec from the Microsoft Store, or a third-party tool. Without these, HEIC files show as unsupported.
+
+**Is converting HEIC to JPG safe for my photos?**  
+Yes — the visual difference between HEIC and JPEG at quality 85+ is imperceptible. You lose the HEIC file's slightly more efficient compression, but gain universal compatibility.
+
+**Will converting HEIC to JPG remove the photo's location data?**  
+No — GPS and EXIF metadata is preserved in the JPEG output by our converter. If you want to strip location data for privacy, use our [EXIF Viewer & Remover](/image-metadata-viewer) after converting.
+
+**My iPhone photos transferred as HEIC even though I set Automatic — why?**  
+The Automatic setting only works when transferring via USB to an updated version of iTunes or Windows Photos. Copying via File Explorer always transfers the original HEIC file.`,
+        relatedSlugs: ["how-to-convert-heic-to-jpg-on-iphone-and-mac", "how-to-compress-images-on-iphone-and-android", "webp-vs-jpg-vs-png-which-format-is-best"],
+    },
+    {
+        slug: "webp-to-jpg-free-online",
+        title: "WebP to JPG Converter – Free, Instant, No Signup",
+        excerpt: "Convert WebP images to JPG in seconds — free online tool, no account needed. Works on Windows, Mac, iPhone and Android. Preserves quality, no watermarks.",
+        date: "2026-04-14",
+        readTime: 5,
+        category: "Conversion",
+        author: "Aashish Nepal",
+        content: `## Why You Might Need to Convert WebP to JPG
+
+WebP is an excellent modern format for the web — smaller files, great quality. But it has compatibility gaps that make JPG the safer choice in certain situations:
+
+- **Email clients** — Gmail and Outlook do not display WebP images inline. Recipients see a broken image or an attachment they can't open.
+- **WhatsApp** — WebP is not supported as a photo attachment. It appears as a document.
+- **Microsoft Office** — Word, PowerPoint, and Excel do not embed WebP images by default. You need JPG or PNG.
+- **Photo printing services** — Most online print labs (Snapfish, Shutterfly, etc.) don't accept WebP uploads.
+- **Government / job portals** — Almost all accept JPG only.
+- **Design tools** — Older versions of Photoshop and many other desktop apps can't open WebP natively.
+
+## How to Convert WebP to JPG (Online, Free)
+
+1. Go to [WebP to JPG Converter](/webp-to-jpg)
+2. Click "Upload" or drag and drop your WebP file
+3. Download your JPG — ready in about 2 seconds
+
+No account. No watermark on output. File deleted immediately after conversion.
+
+## What Happens to Image Quality?
+
+WebP to JPG conversion involves decompressing the WebP and re-encoding as JPEG. At quality 85 (our default), the output is **visually identical** to the WebP original for the vast majority of images.
+
+The one case where quality matters: if your WebP file uses lossless encoding (common for screenshots and graphics), converting to JPEG introduces minor compression artefacts. For those files, PNG is a better conversion target — use our [WebP to PNG](/webp-to-png) converter instead.
+
+## WebP to JPG vs WebP to PNG — Which Should You Use?
+
+| Content Type | Use JPG | Use PNG |
+|---|---|---|
+| Photographs | ✅ Best choice | File size too large |
+| Screenshots with text | ⚠️ May blur text | ✅ Sharp and lossless |
+| Graphics / logos | ⚠️ Artefacts on edges | ✅ Better quality |
+| Transparent background | ❌ Loses transparency | ✅ Preserves transparency |
+| Email or WhatsApp sharing | ✅ Best compatibility | ✅ Also works |
+
+## How to Batch Convert WebP to JPG
+
+Our tool processes one file at a time. For converting many WebP files at once:
+
+**On Windows** — Use [iLoveIMG batch converter](https://www.iloveimg.com) (free, up to 30 files)
+
+**On Mac** — Select WebP files in Finder → right-click → Quick Actions → Convert Image → select JPG
+
+**Command line (any OS)** — Install ImageMagick, then:
+    mogrify -format jpg *.webp
+
+## FAQ
+
+**Does converting WebP to JPG reduce quality?**  
+At quality 85 (our default), the difference is imperceptible for photos. For screenshots with text, there may be slight blurring — use WebP to PNG for those.
+
+**Can I convert WebP to JPG on iPhone?**  
+Yes — our converter works in Safari on iPhone. Upload the WebP file, download the JPG directly to your Photos.
+
+**My WebP file has a transparent background — what happens?**  
+Transparency is not supported in JPEG. Transparent areas will be filled with white by default. If you need to keep transparency, convert to PNG instead.
+
+**Why is my converted JPG larger than the WebP?**  
+JPEG uses different compression than WebP. It's normal for a quality-85 JPG to be 20–40% larger than the equivalent WebP. This is a trade-off for broader compatibility.
+
+**How do I open a WebP file on Windows?**  
+Modern Edge and Chrome can open WebP files by dragging them into the browser. To open in Photos, you need the WebP codec or simply convert to JPG first.`,
+        relatedSlugs: ["avif-vs-webp-which-is-better", "how-to-convert-png-to-jpg-free", "best-image-formats-for-websites"],
+    },
 ];
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
