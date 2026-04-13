@@ -4,8 +4,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Privacy Policy – PixlTools",
     description: "Learn how PixlTools handles your data. We process images in real-time and never store, log, or share your files.",
-    robots: { index: true, follow: true },
+    robots: { index: false, follow: true },
 };
+
 
 const sections: { title: string; content: React.ReactNode }[] = [
     {

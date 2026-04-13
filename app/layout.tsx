@@ -49,6 +49,7 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large" },
   },
   alternates: {
+    canonical: "https://www.pixltools.com",
     languages: {
       "en": "https://www.pixltools.com",
       "x-default": "https://www.pixltools.com",
