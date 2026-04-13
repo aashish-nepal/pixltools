@@ -52,10 +52,38 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // www redirect — non-www → www
       {
         source: "/:path*",
         has: [{ type: "host", value: "pixltools.com" }],
         destination: "https://www.pixltools.com/:path*",
+        permanent: true,
+      },
+      // ── Duplicate content consolidation redirects ─────────────────────────
+      // Weaker duplicate → canonical version (preserves link equity)
+      {
+        source: "/blog/best-free-image-compressor-online-2026",
+        destination: "/blog/best-free-online-image-compressor-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-convert-heic-to-jpg-on-iphone",
+        destination: "/blog/how-to-convert-heic-to-jpg-on-iphone-and-mac",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-optimize-images-for-core-web-vitals",
+        destination: "/blog/core-web-vitals-image-optimization",
+        permanent: true,
+      },
+      {
+        source: "/blog/image-resolution-dpi-ppi-explained",
+        destination: "/blog/what-is-image-dpi-and-how-to-change-it",
+        permanent: true,
+      },
+      {
+        source: "/blog/how-to-optimize-images-for-instagram",
+        destination: "/how-to-compress-images-for-instagram",
         permanent: true,
       },
     ];
