@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BLOG_POSTS, getAllCategories, getPostsByCategory } from "@/lib/blog-data";
+import { CalendarBlank, Clock } from "@phosphor-icons/react/dist/ssr";
 
 interface Props { params: Promise<{ category: string }>; }
 
@@ -149,8 +150,8 @@ export default async function CategoryPage({ params }: Props) {
                                 <h2 className="text-lg font-bold text-violet-100 mb-2 line-clamp-2">{post.title}</h2>
                                 <p className="text-gray-400 text-sm leading-relaxed flex-1 line-clamp-3">{post.excerpt}</p>
                                 <div className="flex items-center gap-3 mt-4 text-xs text-gray-400">
-                                    <span>📅 {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
-                                    <span>⏱ {post.readTime} min read</span>
+                                    <span className="flex items-center gap-1"><CalendarBlank size={12} weight="duotone" className="text-violet-400" /> {new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
+                                    <span className="flex items-center gap-1"><Clock size={12} weight="duotone" className="text-violet-400" /> {post.readTime} min read</span>
                                 </div>
                             </article>
                         </Link>

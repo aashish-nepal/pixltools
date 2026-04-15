@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useCallback, DragEvent, useEffect } from "react";
-import { UploadCloud, Link2, X, Loader2 } from "lucide-react";
+import { UploadCloud, Link2, X, Loader2, Lock, Zap, Trash2 } from "lucide-react";
 
 interface UploadAreaProps {
     onFileSelect: (file: File) => void;
@@ -9,16 +9,16 @@ interface UploadAreaProps {
 }
 
 const FORMAT_ICONS: Record<string, string> = {
-    jpeg: "🖼",
-    jpg: "🖼",
-    png: "📄",
-    webp: "🌐",
-    gif: "🎞",
-    pdf: "📋",
-    svg: "✏️",
-    tiff: "🖼",
-    bmp: "🖼",
-    avif: "🌐",
+    jpeg: "JPG",
+    jpg: "JPG",
+    png: "PNG",
+    webp: "WEBP",
+    gif: "GIF",
+    pdf: "PDF",
+    svg: "SVG",
+    tiff: "TIFF",
+    bmp: "BMP",
+    avif: "AVIF",
 };
 
 export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 25 }: UploadAreaProps) {
@@ -95,8 +95,7 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
 
     const formatLabels = acceptedFormats.map(f => {
         const ext = f.split("/")[1].toLowerCase();
-        const icon = FORMAT_ICONS[ext] || "📁";
-        return { ext: ext.toUpperCase(), icon };
+        return { ext: ext.toUpperCase() };
     });
 
     return (
@@ -138,9 +137,8 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
 
                         {/* Format badges with icons */}
                         <div className="flex items-center gap-2 flex-wrap justify-center">
-                            {formatLabels.map(({ ext, icon }) => (
+                            {formatLabels.map(({ ext }) => (
                                 <span key={ext} className="inline-flex items-center gap-1 text-xs bg-violet-500/10 text-violet-300 border border-violet-500/20 px-2.5 py-1 rounded-lg font-semibold tracking-wide">
-                                    <span>{icon}</span>
                                     {ext}
                                 </span>
                             ))}
@@ -166,8 +164,12 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
                         </div>
 
                         {/* Trust line */}
-                        <p className="text-xs text-gray-600 font-medium">
-                            🔒 Encrypted transfer &nbsp;·&nbsp; ⚡ Real-time processing &nbsp;·&nbsp; 🗑 Auto-delete after processing
+                        <p className="flex items-center justify-center gap-3 text-xs text-gray-600 font-medium">
+                            <span className="flex items-center gap-1"><Lock size={11} className="text-violet-500" /> Encrypted transfer</span>
+                            <span>·</span>
+                            <span className="flex items-center gap-1"><Zap size={11} className="text-violet-500" /> Real-time processing</span>
+                            <span>·</span>
+                            <span className="flex items-center gap-1"><Trash2 size={11} className="text-violet-500" /> Auto-delete after processing</span>
                         </p>
                     </div>
                 </div>

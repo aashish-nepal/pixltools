@@ -6,6 +6,9 @@ import { BLOG_POSTS, getPostBySlug } from "@/lib/blog-data";
 import FAQSection from "@/components/ui/FAQSection";
 import AdBanner from "@/components/ui/AdBanner";
 import Link from "next/link";
+import ToolIcon from "@/components/ui/ToolIcon";
+import { TOOL_ICON_MAP } from "@/lib/icons";
+import { CalendarBlank, Clock, PencilSimple, Wrench } from "@phosphor-icons/react/dist/ssr";
 
 interface Props { params: Promise<{ slug: string }>; }
 
@@ -317,9 +320,9 @@ export default async function BlogPostPage({ params }: Props) {
                     <h1 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 text-center">{post!.title}</h1>
                     <p className="text-gray-400 max-w-3xl text-center mx-auto">{post!.excerpt}</p>
                     <div className="flex items-center gap-4 mt-4 py-4 text-sm text-gray-400 justify-center flex-wrap">
-                        <span>📅 {new Date(post!.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
-                        <span>⏱ {post!.readTime} min read</span>
-                        <span>✍️ {post!.author ?? "Aashish Nepal"}</span>
+                        <span className="flex items-center gap-1.5"><CalendarBlank size={14} weight="duotone" className="text-violet-400" /> {new Date(post!.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>
+                        <span className="flex items-center gap-1.5"><Clock size={14} weight="duotone" className="text-violet-400" /> {post!.readTime} min read</span>
+                        <span className="flex items-center gap-1.5"><PencilSimple size={14} weight="duotone" className="text-violet-400" /> {post!.author ?? "Aashish Nepal"}</span>
                     </div>
                 </div>
             </div>
@@ -390,27 +393,29 @@ export default async function BlogPostPage({ params }: Props) {
                             {/* Popular Tools widget */}
                             <div className="rounded-2xl border border-violet-500/20 bg-[#141026] overflow-hidden">
                                 <div className="bg-violet-500/10 border-b border-violet-500/15 px-5 py-3">
-                                    <p className="text-xs font-bold uppercase tracking-wider text-violet-400">🛠 Popular Free Tools</p>
+                                    <p className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-violet-400"><Wrench size={13} weight="duotone" /> Popular Free Tools</p>
                                 </div>
                                 <div className="divide-y divide-violet-500/10">
                                     {[
-                                        { href: "/compress-image", icon: "🗜️", name: "Compress Image", desc: "Reduce file size up to 80%" },
-                                        { href: "/resize-image", icon: "📐", name: "Resize Image", desc: "Pixels, % or social presets" },
-                                        { href: "/remove-image-background", icon: "🪄", name: "Remove Background", desc: "AI-powered, transparent PNG" },
-                                        { href: "/jpg-to-webp", icon: "🔃", name: "JPG to WebP", desc: "Shrink photos 25–35%" },
-                                        { href: "/image-upscaler", icon: "🔭", name: "Image Upscaler", desc: "Enlarge up to 4× without blur" },
-                                        { href: "/image-color-picker", icon: "🎨", name: "Color Picker", desc: "Extract palette & HEX codes" },
-                                        { href: "/image-sharpen", icon: "💎", name: "Sharpen Image", desc: "Crisp details in one click" },
-                                        { href: "/image-contrast", icon: "🌗", name: "Adjust Contrast", desc: "Bold or soft — your style" },
-                                        { href: "/image-border", icon: "🖼️", name: "Add Border", desc: "Custom color & pixel frame" },
-                                        { href: "/svg-to-png", icon: "🎨", name: "SVG to PNG", desc: "High-quality vector to raster" },
-                                        { href: "/image-to-pdf", icon: "📄", name: "Image to PDF", desc: "Instant, no watermarks" },
-                                        { href: "/image-to-base64", icon: "💻", name: "Image to Base64", desc: "Embed in HTML, CSS & JSON" },
-                                        { href: "/image-metadata-viewer", icon: "🔍", name: "EXIF Viewer", desc: "Camera & GPS metadata" },
-                                        { href: "/photo-collage-maker", icon: "🖼️", name: "Collage Maker", desc: "Combine up to 16 photos" },
-                                    ].map(({ href, icon, name, desc }) => (
+                                        { href: "/compress-image", slug: "compress-image", name: "Compress Image", desc: "Reduce file size up to 80%" },
+                                        { href: "/resize-image", slug: "resize-image", name: "Resize Image", desc: "Pixels, % or social presets" },
+                                        { href: "/remove-image-background", slug: "remove-image-background", name: "Remove Background", desc: "AI-powered, transparent PNG" },
+                                        { href: "/jpg-to-webp", slug: "jpg-to-webp", name: "JPG to WebP", desc: "Shrink photos 25–35%" },
+                                        { href: "/image-upscaler", slug: "image-upscaler", name: "Image Upscaler", desc: "Enlarge up to 4× without blur" },
+                                        { href: "/image-color-picker", slug: "image-color-picker", name: "Color Picker", desc: "Extract palette & HEX codes" },
+                                        { href: "/image-sharpen", slug: "image-sharpen", name: "Sharpen Image", desc: "Crisp details in one click" },
+                                        { href: "/image-contrast", slug: "image-contrast", name: "Adjust Contrast", desc: "Bold or soft — your style" },
+                                        { href: "/image-border", slug: "image-border", name: "Add Border", desc: "Custom color & pixel frame" },
+                                        { href: "/svg-to-png", slug: "svg-to-png", name: "SVG to PNG", desc: "High-quality vector to raster" },
+                                        { href: "/image-to-pdf", slug: "image-to-pdf", name: "Image to PDF", desc: "Instant, no watermarks" },
+                                        { href: "/image-to-base64", slug: "image-to-base64", name: "Image to Base64", desc: "Embed in HTML, CSS & JSON" },
+                                        { href: "/image-metadata-viewer", slug: "image-metadata-viewer", name: "EXIF Viewer", desc: "Camera & GPS metadata" },
+                                        { href: "/photo-collage-maker", slug: "photo-collage-maker", name: "Collage Maker", desc: "Combine up to 16 photos" },
+                                    ].map(({ href, slug, name, desc }) => (
                                         <Link key={href} href={href} className="flex items-center gap-3 px-5 py-3.5 hover:bg-violet-500/5 transition-colors group">
-                                            <span className="text-xl flex-shrink-0">{icon}</span>
+                                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 group-hover:border-violet-500/40 group-hover:bg-violet-500/10 flex items-center justify-center transition-all">
+                                                <ToolIcon name={TOOL_ICON_MAP[slug] || "FileImage"} size={16} className="text-violet-200 group-hover:text-violet-400" />
+                                            </div>
                                             <div className="min-w-0">
                                                 <p className="text-sm font-semibold text-violet-100 group-hover:text-white transition-colors">{name}</p>
                                                 <p className="text-xs text-gray-500 truncate">{desc}</p>

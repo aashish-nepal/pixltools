@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { TOOLS } from "@/lib/tools-data";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import ToolIcon from "@/components/ui/ToolIcon";
+import { TOOL_ICON_MAP } from "@/lib/icons";
 
 export const metadata: Metadata = {
     title: "Full Site Map – All Tools & Blog Articles | PixlTools",
@@ -106,7 +108,9 @@ export default function SitemapPage() {
                                                 href={`/${tool.slug}`}
                                                 className="flex items-center gap-3 px-5 py-3 hover:bg-violet-500/5 transition-colors group"
                                             >
-                                                <span className="text-base flex-shrink-0">{tool.icon}</span>
+                                                <span className="flex-shrink-0 text-violet-400/70 group-hover:text-violet-300 transition-colors">
+                                                    <ToolIcon name={TOOL_ICON_MAP[tool.slug] || "FileImage"} size={16} className="" />
+                                                </span>
                                                 <span className="text-sm text-gray-300 group-hover:text-violet-200 transition-colors">
                                                     {tool.name}
                                                 </span>

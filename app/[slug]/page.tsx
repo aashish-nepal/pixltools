@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { TOOLS, getToolBySlug } from "@/lib/tools-data";
 import ToolPageClient from "./ToolPageClient";
+import { Gauge, Lock, Gift, Resize, ArrowsClockwise, Lightning, Robot, Target, Wrench, DeviceMobile } from "@phosphor-icons/react/dist/ssr";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -144,36 +145,38 @@ export default async function ToolPage({ params }: Props) {
             <div className="bg-[#0b0816] pb-10">
                 <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        {((): { icon: string; title: string; desc: string }[] => {
+                        {((): { Icon: React.ElementType; iconClass: string; title: string; desc: string }[] => {
                             if (tool.category === "compression") return [
-                                { icon: "🗜️", title: "Up to 90% Smaller", desc: `${tool.name} uses Smart compression targeting the best quality-to-size ratio — not a blanket quality cut.` },
-                                { icon: "🔒", title: "Files Never Stored", desc: "Your image is processed and deleted immediately. Nothing is saved on our servers after you download." },
-                                { icon: "🆓", title: "No Limits, No Cost", desc: "Compress as many images as you need. No account, no daily cap, no watermarks — free forever." },
+                                { Icon: Gauge, iconClass: "text-violet-400", title: "Up to 90% Smaller", desc: `${tool.name} uses Smart compression targeting the best quality-to-size ratio — not a blanket quality cut.` },
+                                { Icon: Lock, iconClass: "text-violet-400", title: "Files Never Stored", desc: "Your image is processed and deleted immediately. Nothing is saved on our servers after you download." },
+                                { Icon: Gift, iconClass: "text-violet-400", title: "No Limits, No Cost", desc: "Compress as many images as you need. No account, no daily cap, no watermarks — free forever." },
                             ];
                             if (tool.category === "resize-crop") return [
-                                { icon: "📐", title: "Pixel-Perfect Output", desc: `${tool.name} outputs at your exact target dimensions — no rounding, no unwanted padding.` },
-                                { icon: "🔒", title: "Private by Design", desc: "Uploaded images are deleted from our servers the moment processing finishes. We never keep your files." },
-                                { icon: "📱", title: "Works on Any Device", desc: "Fully optimized for iPhone and Android browsers — no app download or desktop required." },
+                                { Icon: Resize, iconClass: "text-violet-400", title: "Pixel-Perfect Output", desc: `${tool.name} outputs at your exact target dimensions — no rounding, no unwanted padding.` },
+                                { Icon: Lock, iconClass: "text-violet-400", title: "Private by Design", desc: "Uploaded images are deleted from our servers the moment processing finishes. We never keep your files." },
+                                { Icon: DeviceMobile, iconClass: "text-violet-400", title: "Works on Any Device", desc: "Fully optimized for iPhone and Android browsers — no app download or desktop required." },
                             ];
                             if (tool.category === "conversion") return [
-                                { icon: "🔄", title: "Lossless Conversion", desc: `${tool.name} preserves all image data through the format change — no unexpected quality loss.` },
-                                { icon: "🔒", title: "Zero Data Retention", desc: "Converted files are deleted from our servers immediately after download. Your files stay yours." },
-                                { icon: "⚡", title: "Instant Results", desc: "Conversion typically completes in under 3 seconds for files up to 10 MB." },
+                                { Icon: ArrowsClockwise, iconClass: "text-violet-400", title: "Lossless Conversion", desc: `${tool.name} preserves all image data through the format change — no unexpected quality loss.` },
+                                { Icon: Lock, iconClass: "text-violet-400", title: "Zero Data Retention", desc: "Converted files are deleted from our servers immediately after download. Your files stay yours." },
+                                { Icon: Lightning, iconClass: "text-violet-400", title: "Instant Results", desc: "Conversion typically completes in under 3 seconds for files up to 10 MB." },
                             ];
                             if (tool.category === "advanced") return [
-                                { icon: "🤖", title: "AI-Powered Processing", desc: `${tool.name} uses machine learning models to deliver results that rule-based tools cannot match.` },
-                                { icon: "🔒", title: "No Data Ever Stored", desc: "Images are processed ephemerally and deleted immediately. We have no access to your files after processing." },
-                                { icon: "🎯", title: "Professional Quality", desc: "Outputs match the quality of desktop apps like Photoshop — without the price tag or the installation." },
+                                { Icon: Robot, iconClass: "text-violet-400", title: "AI-Powered Processing", desc: `${tool.name} uses machine learning models to deliver results that rule-based tools cannot match.` },
+                                { Icon: Lock, iconClass: "text-violet-400", title: "No Data Ever Stored", desc: "Images are processed ephemerally and deleted immediately. We have no access to your files after processing." },
+                                { Icon: Target, iconClass: "text-violet-400", title: "Professional Quality", desc: "Outputs match the quality of desktop apps like Photoshop — without the price tag or the installation." },
                             ];
                             // utilities
                             return [
-                                { icon: "🛠️", title: "Browser-Based", desc: `${tool.name} runs entirely in your browser — no software to install, no extensions, no plugins.` },
-                                { icon: "🔒", title: "Fully Private", desc: "Your images are deleted from our servers immediately after processing. Nothing is logged or shared." },
-                                { icon: "🆓", title: "Always Free", desc: "No account required. No watermarks. No usage limits. PixlTools is free for everyone, forever." },
+                                { Icon: Wrench, iconClass: "text-violet-400", title: "Browser-Based", desc: `${tool.name} runs entirely in your browser — no software to install, no extensions, no plugins.` },
+                                { Icon: Lock, iconClass: "text-violet-400", title: "Fully Private", desc: "Your images are deleted from our servers immediately after processing. Nothing is logged or shared." },
+                                { Icon: Gift, iconClass: "text-violet-400", title: "Always Free", desc: "No account required. No watermarks. No usage limits. PixlTools is free for everyone, forever." },
                             ];
-                        })().map(({ icon, title, desc }) => (
+                        })().map(({ Icon, iconClass, title, desc }) => (
                             <div key={title} className="bg-[#14102a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
-                                <span className="text-2xl flex-shrink-0">{icon}</span>
+                                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                                    <Icon size={18} weight="duotone" className={iconClass} />
+                                </div>
                                 <div>
                                     <h3 className="text-sm font-semibold text-violet-200 mb-1">{title}</h3>
                                     <p className="text-xs text-gray-400 leading-relaxed">{desc}</p>

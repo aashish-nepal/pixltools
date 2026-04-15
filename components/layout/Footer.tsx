@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Shield, FileText, Map, BookOpen, Lock, Clock, ShieldCheck, Info, Twitter, Linkedin, Youtube, ExternalLink } from "lucide-react";
+import { Shield, FileText, Map, BookOpen, Lock, Clock, ShieldCheck, Info, Twitter, Linkedin, Youtube, ExternalLink, Star, Plug } from "lucide-react";
 
 const POPULAR_TOOLS = [
     { name: "Compress Image", slug: "compress-image" },
@@ -186,12 +186,12 @@ export default function Footer() {
                             <ul className="flex flex-col gap-2.5">
                                 <li>
                                     <Link href="/premium" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
-                                        ✨ Premium
+                                        <Star size={11} /> Premium
                                     </Link>
                                 </li>
                                 <li>
                                     <Link href="/api-access" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
-                                        🔌 API Access
+                                        <Plug size={11} /> API Access
                                     </Link>
                                 </li>
                                 <li>

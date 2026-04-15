@@ -1,6 +1,7 @@
 "use client";
 import React, { useCallback, useState } from "react";
 import { Loader2, Lock, Unlock } from "lucide-react";
+import { Resize, ArrowsClockwise, Drop, Sun, Circle, Crop, Image, MagnifyingGlass, Stamp, FrameCorners, ArrowsHorizontal } from "@phosphor-icons/react";
 
 export interface ToolControlsProps {
     slug: string;
@@ -49,23 +50,22 @@ export interface ToolControlsProps {
     onProcess: () => void;
     loading: boolean;
 }
-
 const SOCIAL_PRESETS = [
-    { name: "Instagram", icon: "📸", w: 1080, h: 1080 },
-    { name: "HD Video", icon: "🖥", w: 1920, h: 1080 },
-    { name: "YT Thumb", icon: "▶", w: 1280, h: 720 },
-    { name: "Twitter", icon: "🐦", w: 1600, h: 900 },
-    { name: "Story", icon: "📱", w: 1080, h: 1920 },
-    { name: "Banner", icon: "🖌", w: 1500, h: 500 },
+    { name: "Instagram", label: "IG", w: 1080, h: 1080 },
+    { name: "HD Video", label: "HD", w: 1920, h: 1080 },
+    { name: "YT Thumb", label: "YT", w: 1280, h: 720 },
+    { name: "Twitter", label: "TW", w: 1600, h: 900 },
+    { name: "Story", label: "9:16", w: 1080, h: 1920 },
+    { name: "Banner", label: "BNR", w: 1500, h: 500 },
 ];
 
-const ASPECT_SHAPES: Record<string, { label: string; w: number; h: number; icon: string }> = {
-    "16:9": { label: "16:9", w: 16, h: 9, icon: "🖥" },
-    "4:3": { label: "4:3", w: 4, h: 3, icon: "📷" },
-    "1:1": { label: "1:1", w: 1, h: 1, icon: "⬜" },
-    "3:2": { label: "3:2", w: 3, h: 2, icon: "🖼" },
-    "9:16": { label: "9:16", w: 9, h: 16, icon: "📱" },
-    "21:9": { label: "21:9", w: 21, h: 9, icon: "🎬" },
+const ASPECT_SHAPES: Record<string, { label: string; w: number; h: number; desc: string }> = {
+    "16:9": { label: "16:9", w: 16, h: 9, desc: "Widescreen" },
+    "4:3": { label: "4:3", w: 4, h: 3, desc: "Standard" },
+    "1:1": { label: "1:1", w: 1, h: 1, desc: "Square" },
+    "3:2": { label: "3:2", w: 3, h: 2, desc: "Photo" },
+    "9:16": { label: "9:16", w: 9, h: 16, desc: "Portrait" },
+    "21:9": { label: "21:9", w: 21, h: 9, desc: "Cinema" },
 };
 
 const thumbPresets: Record<string, { w: number; h: number }> = {
@@ -98,7 +98,7 @@ export function ToolControls(props: ToolControlsProps) {
             {/* Compress quality slider */}
             {isCompressTool ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4 space-y-3">
-                    <p className="text-xs font-bold text-violet-400 uppercase tracking-wider">⚙ Compression Settings</p>
+                    <p className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider"><Circle size={12} weight="duotone" /> Compression Settings</p>
                     <div className="flex items-center justify-between">
                         <label className="text-sm text-gray-400">Quality: <span className="text-violet-300 font-bold">{quality}%</span></label>
                         {originalSizeKB !== null && (
@@ -118,12 +118,12 @@ export function ToolControls(props: ToolControlsProps) {
             {/* Resize image */}
             {s === "resize-image" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4 space-y-4">
-                    <p className="text-xs font-bold text-violet-400 uppercase tracking-wider">📐 Resize Settings</p>
+                    <p className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider"><Resize size={13} weight="duotone" /> Resize Settings</p>
                     <div className="flex gap-1 bg-[#16122a] p-1 rounded-lg border border-violet-500/10">
                         {(["pixels", "percent"] as const).map(m => (
                             <button key={m} onClick={() => setScaleMode(m)}
                                 className={`flex-1 text-xs font-semibold py-1.5 rounded-md transition-all ${scaleMode === m ? "bg-violet-600 text-white" : "text-gray-500 hover:text-violet-300"}`}>
-                                {m === "pixels" ? "📏 Pixels" : "% Scale"}
+                                {m === "pixels" ? "Pixels" : "% Scale"}
                             </button>
                         ))}
                     </div>
@@ -179,10 +179,10 @@ export function ToolControls(props: ToolControlsProps) {
                     <div>
                         <p className="text-xs text-gray-500 mb-2 font-medium">Quick presets</p>
                         <div className="grid grid-cols-3 gap-1.5">
-                            {SOCIAL_PRESETS.map(({ name, icon, w, h }) => (
+                            {SOCIAL_PRESETS.map(({ name, label, w, h }) => (
                                 <button key={name} onClick={() => { setResizeW(w); setResizeH(h); setScaleMode("pixels"); setScalePercent(100); }}
                                     className="flex flex-col items-center gap-0.5 text-[10px] bg-[#16122a] border border-violet-500/15 hover:border-violet-500/35 hover:bg-violet-500/10 text-gray-400 hover:text-violet-300 rounded-lg px-2 py-2 transition-all">
-                                    <span className="text-base">{icon}</span>
+                                    <span className="text-[10px] font-black text-violet-400">{label}</span>
                                     <span className="font-semibold">{name}</span>
                                     <span className="text-gray-600">{w}×{h}</span>
                                 </button>
@@ -212,7 +212,7 @@ export function ToolControls(props: ToolControlsProps) {
 
             {s === "reduce-image-file-size" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4 space-y-2">
-                    <p className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3">📐 Output Dimensions</p>
+                    <p className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3"><Resize size={13} weight="duotone" /> Output Dimensions</p>
                     <div className="grid grid-cols-2 gap-3">
                         <div>
                             <label className="text-sm text-gray-400 mb-1 block">Width (px)</label>
@@ -230,7 +230,7 @@ export function ToolControls(props: ToolControlsProps) {
             {s === "image-aspect-ratio" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4 space-y-4">
                     <div className="flex items-center justify-between">
-                        <label className="text-xs font-bold text-violet-400 uppercase tracking-wider">📺 Target Aspect Ratio</label>
+                        <label className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider"><ArrowsHorizontal size={13} weight="duotone" /> Target Aspect Ratio</label>
                         {detectedRatio && (
                             <span className="text-[10px] text-gray-500 bg-[#16122a] border border-violet-500/15 px-2 py-0.5 rounded-full">
                                 Current: <span className="text-violet-400 font-semibold">{detectedRatio}</span>
@@ -238,7 +238,7 @@ export function ToolControls(props: ToolControlsProps) {
                         )}
                     </div>
                     <div className="grid grid-cols-3 gap-2">
-                        {Object.entries(ASPECT_SHAPES).map(([ratio, { icon, w, h }]) => {
+                        {Object.entries(ASPECT_SHAPES).map(([ratio, { desc, w, h }]) => {
                             const maxDim = 32;
                             const tileW = w >= h ? maxDim : Math.round(maxDim * w / h);
                             const tileH = h >= w ? maxDim : Math.round(maxDim * h / w);
@@ -249,7 +249,7 @@ export function ToolControls(props: ToolControlsProps) {
                                     <div className={`border-2 rounded-sm ${active ? "border-violet-400" : "border-gray-600"}`}
                                         style={{ width: tileW, height: tileH }} />
                                     <span className="text-[10px] font-bold">{ratio}</span>
-                                    <span className="text-[9px] text-gray-600">{icon}</span>
+                                    <span className="text-[9px] text-gray-600">{desc}</span>
                                 </button>
                             );
                         })}
@@ -352,7 +352,7 @@ export function ToolControls(props: ToolControlsProps) {
             {/* Rotate image */}
             {s === "rotate-image" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4 space-y-4">
-                    <p className="text-xs font-bold text-violet-400 uppercase tracking-wider">🔄 Rotation</p>
+                    <p className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider"><ArrowsClockwise size={13} weight="duotone" /> Rotation</p>
                     <div className="flex items-center gap-2">
                         <label className="text-xs text-gray-400 shrink-0">Custom</label>
                         <input type="number" value={rotateAngle} onChange={e => setRotateAngle(+e.target.value)}
@@ -373,14 +373,14 @@ export function ToolControls(props: ToolControlsProps) {
                             <button onClick={() => setStraightenAngle(0)} className="mt-1 text-[10px] text-violet-400 hover:text-violet-300 transition-colors">↺ Reset straighten</button>
                         )}
                     </div>
-                    <p className="text-[10px] text-gray-600 flex items-center gap-1">👁 Preview updates live in the image above</p>
+                    <p className="text-[10px] text-gray-600 flex items-center gap-1">Preview updates live in the image above</p>
                 </div>
             ) : null}
 
             {/* Flip image */}
             {s === "flip-image" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4 space-y-3">
-                    <p className="text-xs font-bold text-violet-400 uppercase tracking-wider">🪞 Flip Direction</p>
+                    <p className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider"><ArrowsHorizontal size={13} weight="duotone" /> Flip Direction</p>
                     <div className="grid grid-cols-3 gap-2">
                         {(["horizontal", "vertical", "both"] as const).map(d => (
                             <button key={d} onClick={() => setFlipDir(d)}
@@ -390,13 +390,13 @@ export function ToolControls(props: ToolControlsProps) {
                             </button>
                         ))}
                     </div>
-                    <p className="text-[10px] text-gray-600">👁 Preview updates live in the image above</p>
+                    <p className="text-[10px] text-gray-600">Preview updates live in the image above</p>
                 </div>
             ) : null}
 
             {s === "blur-image" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">💧 Blur Strength: <span className="text-violet-300">{blurSigma}</span></label>
+                    <label className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block"><Drop size={13} weight="duotone" /> Blur Strength: <span className="text-violet-300">{blurSigma}</span></label>
                     <input type="range" min={1} max={20} value={blurSigma} onChange={e => setBlurSigma(+e.target.value)} className="w-full accent-violet-500" />
                     <div className="flex justify-between text-xs text-gray-600 mt-1">
                         <span>Subtle</span><span>Extreme</span>
@@ -406,7 +406,7 @@ export function ToolControls(props: ToolControlsProps) {
 
             {s === "image-brightness" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">☀️ Brightness: <span className="text-violet-300">{brightness.toFixed(1)}</span></label>
+                    <label className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block"><Sun size={13} weight="duotone" /> Brightness: <span className="text-violet-300">{brightness.toFixed(1)}</span></label>
                     <input type="range" min={0.1} max={3} step={0.1} value={brightness} onChange={e => setBrightness(+e.target.value)} className="w-full accent-violet-500" />
                     <div className="flex justify-between text-xs text-gray-600 mt-1">
                         <span>Darker</span><span>Brighter</span>
@@ -416,7 +416,7 @@ export function ToolControls(props: ToolControlsProps) {
 
             {s === "image-contrast" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">🔲 Contrast: <span className="text-violet-300">{contrast.toFixed(1)}</span></label>
+                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">Contrast: <span className="text-violet-300">{contrast.toFixed(1)}</span></label>
                     <input type="range" min={0.1} max={3} step={0.1} value={contrast} onChange={e => setContrast(+e.target.value)} className="w-full accent-violet-500" />
                     <div className="flex justify-between text-xs text-gray-600 mt-1">
                         <span>Flat / Matte</span><span>High Contrast</span>
@@ -426,14 +426,14 @@ export function ToolControls(props: ToolControlsProps) {
 
             {s === "watermark-image" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">🖊 Watermark Text</label>
+                    <label className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block"><Stamp size={13} weight="duotone" /> Watermark Text</label>
                     <input type="text" value={watermarkText} onChange={e => setWatermarkText(e.target.value)} className="w-full border border-violet-500/20 bg-[#16122a] text-violet-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500/50 placeholder-violet-900/50" placeholder="© Your Name" />
                 </div>
             ) : null}
 
             {s === "image-border" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <p className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3">🖼 Border Settings</p>
+                    <p className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3"><FrameCorners size={13} weight="duotone" /> Border Settings</p>
                     <div className="grid grid-cols-2 gap-3">
                         <div>
                             <label className="text-sm text-gray-400 mb-1 block">Width (px): <span className="text-violet-300 font-medium">{borderWidth}</span></label>
@@ -449,7 +449,7 @@ export function ToolControls(props: ToolControlsProps) {
 
             {s === "image-upscaler" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">🔍 Upscale Factor</label>
+                    <label className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block"><MagnifyingGlass size={13} weight="duotone" /> Upscale Factor</label>
                     <div className="flex gap-2">
                         {[2, 3, 4].map(x => (
                             <button key={x} onClick={() => setUpscale(x)} className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${upscale === x ? "bg-violet-600 text-white border-violet-500" : "border-violet-500/20 text-gray-400 hover:border-violet-500/40 hover:text-violet-300"}`}>{x}×</button>
@@ -460,7 +460,7 @@ export function ToolControls(props: ToolControlsProps) {
 
             {s === "image-thumbnail" ? (
                 <div className="bg-[#0f0d1f] rounded-xl border border-violet-500/10 p-4">
-                    <label className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block">🖼 Thumbnail Preset</label>
+                    <label className="flex items-center gap-1.5 text-xs font-bold text-violet-400 uppercase tracking-wider mb-3 block"><Image size={13} weight="duotone" /> Thumbnail Preset</label>
                     <div className="flex gap-2 flex-wrap">
                         {Object.entries(thumbPresets).map(([key, dims]) => (
                             <button key={key} onClick={() => setThumbPreset(key)} className={`px-3 py-2 rounded-lg text-sm font-medium border transition-all ${thumbPreset === key ? "bg-violet-600 text-white border-violet-500" : "border-violet-500/20 text-gray-400 hover:border-violet-500/40 hover:text-violet-300"}`}>

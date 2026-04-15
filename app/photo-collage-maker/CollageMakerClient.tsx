@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef, useCallback, DragEvent } from "react";
 import { UploadCloud, X, Download, Loader2, Settings2 } from "lucide-react";
+import { Images } from "@phosphor-icons/react";
 
 interface FileEntry {
     id: string;
@@ -82,7 +83,9 @@ export default function CollageMakerClient() {
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
                 <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 py-14 text-center">
-                    <div className="inline-flex items-center justify-center w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-2xl mb-5 text-3xl">🖼️</div>
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-2xl mb-5">
+                        <Images size={32} weight="duotone" className="text-violet-400" />
+                    </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-3 tracking-tight">Photo Collage Maker</h1>
                     <p className="text-gray-400 text-lg max-w-xl mx-auto">
                         Combine up to 16 photos into a grid collage. Customize columns, spacing, and background color.
@@ -234,7 +237,9 @@ export default function CollageMakerClient() {
                         {/* Empty state */}
                         {files.length === 0 && !result && (
                             <div className="border border-dashed border-violet-500/15 rounded-2xl h-64 flex flex-col items-center justify-center text-center p-8">
-                                <div className="text-4xl mb-3">🖼️</div>
+                                <div className="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-3">
+                                    <Images size={28} weight="duotone" className="text-violet-400/50" />
+                                </div>
                                 <p className="text-gray-400 font-semibold">Your collage preview will appear here</p>
                                 <p className="text-xs text-violet-300/30 mt-1">Add at least 2 images to get started</p>
                             </div>

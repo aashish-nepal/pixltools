@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ShieldCheck, Zap, Lock, Clock, Mail, Users, BookOpen, Code2 } from "lucide-react";
+import { UploadSimple, Gear, DownloadSimple, Trash, Monitor, Camera, PencilSimple, ShoppingBag, DeviceMobile, Briefcase } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
     title: "About PixlTools – Free Online Image Processing Tools",
@@ -48,34 +49,34 @@ const FEATURES = [
 
 const HOW_IT_WORKS = [
     {
-        icon: "📤",
+        Icon: UploadSimple,
         step: "Upload",
         desc: "Select your image file from your device. We accept JPG, PNG, WEBP, PDF, HEIC, and SVG files up to 10 MB.",
     },
     {
-        icon: "⚙️",
+        Icon: Gear,
         step: "Process",
         desc: "Our server instantly processes your image using Sharp's battle-tested algorithms — the same engine behind major platforms like Canva and Vercel.",
     },
     {
-        icon: "📥",
+        Icon: DownloadSimple,
         step: "Download",
         desc: "Your result is ready in seconds. Click Download and get your optimized file — no watermarks, no compression on the output.",
     },
     {
-        icon: "🗑️",
+        Icon: Trash,
         step: "Deleted",
         desc: "Your file is permanently deleted from our servers immediately after download. We have zero access to your images after processing.",
     },
 ];
 
 const WHO_ITS_FOR = [
-    { icon: "🖥️", label: "Web Developers", desc: "Optimize images for faster page loads, better Core Web Vitals scores, and improved SEO." },
-    { icon: "📸", label: "Photographers", desc: "Batch-prepare photos for client delivery, social media, or online portfolios without expensive software." },
-    { icon: "✍️", label: "Bloggers & Writers", desc: "Resize and compress featured images to meet WordPress, Medium, or Substack upload requirements." },
-    { icon: "🛍️", label: "E-commerce Sellers", desc: "Prepare product images at the exact dimensions required by Amazon, Etsy, Shopify, and other platforms." },
-    { icon: "📱", label: "Social Media Creators", desc: "Resize content to the exact pixel dimensions needed for Instagram, YouTube, TikTok, and LinkedIn." },
-    { icon: "💼", label: "Business Professionals", desc: "Convert, compress, and watermark images for presentations, reports, and marketing materials." },
+    { Icon: Monitor, label: "Web Developers", desc: "Optimize images for faster page loads, better Core Web Vitals scores, and improved SEO." },
+    { Icon: Camera, label: "Photographers", desc: "Batch-prepare photos for client delivery, social media, or online portfolios without expensive software." },
+    { Icon: PencilSimple, label: "Bloggers & Writers", desc: "Resize and compress featured images to meet WordPress, Medium, or Substack upload requirements." },
+    { Icon: ShoppingBag, label: "E-commerce Sellers", desc: "Prepare product images at the exact dimensions required by Amazon, Etsy, Shopify, and other platforms." },
+    { Icon: DeviceMobile, label: "Social Media Creators", desc: "Resize content to the exact pixel dimensions needed for Instagram, YouTube, TikTok, and LinkedIn." },
+    { Icon: Briefcase, label: "Business Professionals", desc: "Convert, compress, and watermark images for presentations, reports, and marketing materials." },
 ];
 
 const webPageSchema = {
@@ -204,9 +205,11 @@ export default function AboutPage() {
                         regardless of your device, browser, or connection speed.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {HOW_IT_WORKS.map(({ icon, step, desc }) => (
+                        {HOW_IT_WORKS.map(({ Icon, step, desc }) => (
                             <div key={step} className="bg-[#0f0c1f] border border-violet-500/10 rounded-xl p-5">
-                                <div className="text-2xl mb-3">{icon}</div>
+                                <div className="w-10 h-10 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-3">
+                                    <Icon size={20} weight="duotone" className="text-violet-400" />
+                                </div>
                                 <h3 className="font-semibold text-violet-200 mb-2">{step}</h3>
                                 <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
                             </div>
@@ -231,9 +234,11 @@ export default function AboutPage() {
                         relaunch, PixlTools has the right tool for the job.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {WHO_ITS_FOR.map(({ icon, label, desc }) => (
+                        {WHO_ITS_FOR.map(({ Icon, label, desc }) => (
                             <div key={label} className="bg-[#16122a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
-                                <span className="text-2xl flex-shrink-0">{icon}</span>
+                                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                                    <Icon size={18} weight="duotone" className="text-violet-400" />
+                                </div>
                                 <div>
                                     <h3 className="font-semibold text-violet-200 mb-1">{label}</h3>
                                     <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>

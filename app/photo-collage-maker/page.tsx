@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import CollageMakerClient from "./CollageMakerClient";
 import Link from "next/link";
+import { Lock, Gift, Lightning } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
     title: "Free Photo Collage Maker – Combine Images Online | PixlTools",
@@ -101,12 +102,14 @@ export default function PhotoCollageMakerPage() {
                     {/* Trust signals */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {[
-                            { icon: "🔒", title: "100% Private", desc: "Images are processed entirely in your browser. Nothing is uploaded to our servers." },
-                            { icon: "🆓", title: "Always Free", desc: "No account, no watermarks, no limits. Combine up to 16 photos at zero cost." },
-                            { icon: "⚡", title: "Instant Download", desc: "Your collage is generated and ready to download in seconds — high-quality PNG output." },
-                        ].map(({ icon, title, desc }) => (
+                            { Icon: Lock, title: "100% Private", desc: "Images are processed entirely in your browser. Nothing is uploaded to our servers." },
+                            { Icon: Gift, title: "Always Free", desc: "No account, no watermarks, no limits. Combine up to 16 photos at zero cost." },
+                            { Icon: Lightning, title: "Instant Download", desc: "Your collage is generated and ready to download in seconds — high-quality PNG output." },
+                        ].map(({ Icon, title, desc }) => (
                             <div key={title} className="bg-[#14102a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
-                                <span className="text-2xl flex-shrink-0">{icon}</span>
+                                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                                    <Icon size={18} weight="duotone" className="text-violet-400" />
+                                </div>
                                 <div>
                                     <h3 className="text-sm font-semibold text-violet-200 mb-1">{title}</h3>
                                     <p className="text-xs text-gray-400 leading-relaxed">{desc}</p>

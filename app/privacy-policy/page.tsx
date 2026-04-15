@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ShieldCheck } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
     title: "Privacy Policy – PixlTools",
@@ -158,7 +159,9 @@ export default function PrivacyPolicyPage() {
             <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-14">
                 {/* Highlight box */}
                 <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-5 mb-10 flex gap-4">
-                    <span className="text-2xl">🔒</span>
+                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/25 flex items-center justify-center">
+                        <ShieldCheck size={20} weight="duotone" className="text-violet-400" />
+                    </div>
                     <div>
                         <p className="font-bold text-violet-400 mb-1">Your images are 100% private</p>
                         <p className="text-sm text-gray-400 leading-relaxed">

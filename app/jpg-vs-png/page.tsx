@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Camera, FilePng } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
     title: "JPG vs PNG: Which Format Should You Use? | PixlTools",
@@ -95,7 +96,9 @@ export default function JpgVsPngPage() {
                 {/* Quick answer */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-blue-500/10 border border-blue-500/20 rounded-2xl p-6">
-                        <div className="text-2xl mb-2">📸</div>
+                        <div className="w-10 h-10 rounded-xl bg-blue-500/15 border border-blue-500/20 flex items-center justify-center mb-3">
+                            <Camera size={20} weight="duotone" className="text-blue-400" />
+                        </div>
                         <h2 className="font-bold text-blue-400 text-lg mb-3">Use JPG when…</h2>
                         <ul className="space-y-2 text-sm text-violet-300/60">
                             {["You're sharing photographs", "File size matters (email, web)", "No transparency needed", "Colors are complex & gradients exist", "Uploading to social media"].map((item, i) => (
@@ -107,7 +110,9 @@ export default function JpgVsPngPage() {
                         </ul>
                     </div>
                     <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-6">
-                        <div className="text-2xl mb-2">🖼️</div>
+                        <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center mb-3">
+                            <FilePng size={20} weight="duotone" className="text-violet-400" />
+                        </div>
                         <h2 className="font-bold text-violet-400 text-lg mb-3">Use PNG when…</h2>
                         <ul className="space-y-2 text-sm text-violet-300/60">
                             {["You need transparent backgrounds", "Saving logos or graphics", "Image will be re-edited later", "Text or sharp edges are present", "Lossless quality is required"].map((item, i) => (

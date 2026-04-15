@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, AlertTriangle } from "lucide-react";
 
 export const metadata: Metadata = {
     title: "How to Compress Images for Instagram (2026 Guide) | PixlTools",
@@ -123,7 +123,7 @@ export default function InstagramCompressionPage() {
 
                 {/* Why it matters */}
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-6">
-                    <div className="text-2xl mb-2">⚠️</div>
+                    <div className="mb-3"><AlertTriangle size={22} className="text-amber-400" /></div>
                     <h2 className="font-bold text-amber-400 text-lg mb-2">Why Instagram Quality Degrades</h2>
                     <p className="text-violet-300/60 text-sm leading-relaxed">
                         Instagram automatically re-compresses images using JPEG quality settings around <strong className="text-amber-300">70–85%</strong>.

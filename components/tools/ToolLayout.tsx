@@ -955,15 +955,11 @@ export default function ToolLayout({
                   aria-hidden="true"
                 />
                 <span className="relative z-10">
-                  {toolIconName ? (
-                    <ToolIcon
-                      name={toolIconName}
-                      size={20}
-                      className="text-violet-200"
-                    />
-                  ) : (
-                    toolIcon
-                  )}
+                  <ToolIcon
+                    name={toolIconName ?? "FileImage"}
+                    size={20}
+                    className="text-violet-200"
+                  />
                 </span>
               </span>
               {toolName}

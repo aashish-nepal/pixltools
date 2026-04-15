@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { FilePng, Lightning } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
     title: "PNG vs WEBP: Which is Better for the Web? | PixlTools",
@@ -92,7 +93,9 @@ export default function PngVsWebpPage() {
             <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-6">
-                        <div className="text-2xl mb-2">🖼️</div>
+                        <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center mb-2">
+                            <FilePng size={20} weight="duotone" className="text-violet-400" />
+                        </div>
                         <h2 className="font-bold text-violet-400 text-lg mb-3">Use PNG when…</h2>
                         <ul className="space-y-2 text-sm text-violet-300/60">
                             {["Publishing to all browsers including old IE", "Maximum color depth needed", "Working with design tools (Photoshop, Figma)", "Creating print-ready graphics", "Absolute lossless preservation required"].map((item, i) => (
@@ -101,7 +104,9 @@ export default function PngVsWebpPage() {
                         </ul>
                     </div>
                     <div className="bg-teal-500/10 border border-teal-500/20 rounded-2xl p-6">
-                        <div className="text-2xl mb-2">⚡</div>
+                        <div className="w-10 h-10 rounded-xl bg-teal-500/15 border border-teal-500/20 flex items-center justify-center mb-2">
+                            <Lightning size={20} weight="duotone" className="text-teal-400" />
+                        </div>
                         <h2 className="font-bold text-teal-400 text-lg mb-3">Use WEBP when…</h2>
                         <ul className="space-y-2 text-sm text-violet-300/60">
                             {["Optimizing images for the web", "You want the smallest file size", "Google PageSpeed score matters", "You need transparency AND small size", "Building for modern browsers only"].map((item, i) => (
