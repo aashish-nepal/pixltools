@@ -8,7 +8,7 @@ const BLOG_LATEST = BLOG_POSTS.length > 0
     : new Date("2026-01-01");
 
 // Bump this whenever tool pages are updated — signals freshness to Googlebot
-const TOOLS_CONTENT_UPDATED = new Date("2026-04-05");
+const TOOLS_CONTENT_UPDATED = new Date("2026-04-20");
 
 // Use whichever is more recent
 const TOOLS_LAST_UPDATED = new Date(Math.max(BLOG_LATEST.getTime(), TOOLS_CONTENT_UPDATED.getTime()));
