@@ -24,6 +24,7 @@ export const BLOG_POSTS: BlogPost[] = [
         updatedDate: "2026-04-20",
         readTime: 7,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Why Image Compression Matters
 
 Images account for over 60% of the average webpage's total weight. When you compress images effectively, you dramatically improve your website's loading speed, reduce bandwidth costs, and provide a better user experience.
@@ -46,18 +47,12 @@ Online tools like PixlTools make compression effortless — simply upload your i
 
 ## Compression for Social Media
 
-Each platform resizes and recompresses your images. To avoid double compression artifacts, upload at the recommended dimensions and use quality 90+. Facebook recommends 1200×630px for shared links, Instagram prefers 1080×1080px square images.
-
-## FAQ
-
-**What quality level should I use for JPEG?**
-Quality 80 is the sweet spot for most use cases — significantly smaller files with imperceptible quality loss.
-
-**Does compressing PNG reduce quality?**
-Lossless PNG compression never reduces quality. However, converting PNG to JPEG is lossy.
-
-**What is the best format for web images?**
-WEBP is the best modern format — smaller than JPEG and PNG with excellent quality. Always provide JPEG/PNG fallbacks for older browsers.`,
+Each platform resizes and recompresses your images. To avoid double compression artifacts, upload at the recommended dimensions and use quality 90+. Facebook recommends 1200×630px for shared links, Instagram prefers 1080×1080px square images.`,
+        faqs: [
+            { question: "What quality level should I use for JPEG?", answer: "Quality 80 is the sweet spot for most use cases — significantly smaller files with imperceptible quality loss." },
+            { question: "Does compressing PNG reduce quality?", answer: "Lossless PNG compression never reduces quality. However, converting PNG to JPEG is lossy." },
+            { question: "What is the best format for web images?", answer: "WEBP is the best modern format — smaller than JPEG and PNG with excellent quality. Always provide JPEG/PNG fallbacks for older browsers." },
+        ],
         relatedSlugs: ["best-image-formats-for-websites", "how-to-reduce-image-size-for-faster-websites", "webp-vs-jpg-vs-png-which-format-is-best"],
     },
     {
@@ -68,6 +63,7 @@ WEBP is the best modern format — smaller than JPEG and PNG with excellent qual
         updatedDate: "2026-04-20",
         readTime: 9,
         category: "Formats",
+        author: "Aashish Nepal",
         content: `## Choosing the Right Image Format
 
 Picking the correct image format can cut your page load time in half. Each format has specific strengths — understanding them helps you serve the best image at the smallest size.
@@ -112,6 +108,11 @@ SVG is a vector format — images scale to any size without losing quality. File
 ## Our Recommendation
 
 Use WEBP as your primary format with JPEG/PNG fallbacks. For logos and UI elements, use SVG where possible. Convert all your existing images to WEBP using our free converter tools.`,
+        faqs: [
+            { question: "Which image format is best for websites in 2026?", answer: "WebP is the best format for websites in 2026 — it is 25–35% smaller than JPEG and 25% smaller than PNG at equivalent quality, with full transparency support and 95%+ browser coverage." },
+            { question: "When should I use PNG instead of JPEG?", answer: "Use PNG for logos, icons, screenshots, and images that require a transparent background. JPEG is better for photographs where transparency is not needed." },
+            { question: "Does WEBP work on all browsers?", answer: "WebP works on all modern browsers including Chrome, Firefox, Safari 14+, and Edge — covering over 95% of web users in 2026." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-reduce-image-size-for-faster-websites"],
     },
     {
@@ -122,6 +123,7 @@ Use WEBP as your primary format with JPEG/PNG fallbacks. For logos and UI elemen
         updatedDate: "2026-04-20",
         readTime: 8,
         category: "Optimization",
+        author: "Aashish Nepal",
         content: `## The Impact of Image Size on Website Speed
 
 A 1-second delay in page load time causes a 7% drop in conversions and a 16% decrease in customer satisfaction. Images are the #1 culprit for slow websites — optimizing them is the highest-ROI improvement you can make.
@@ -153,6 +155,11 @@ Set long cache headers for images (Cache-Control: max-age=31536000). Since image
 ## Measuring Results
 
 Use Google PageSpeed Insights or WebPageTest to measure your improvements. A well-optimized image strategy typically reduces page weight by 50–70%.`,
+        faqs: [
+            { question: "What is the fastest way to reduce image size for a website?", answer: "Resize the image to its actual display dimensions first, then compress at quality 80 using a tool like PixlTools. Converting to WebP format saves an additional 25–35% on top of standard JPEG compression." },
+            { question: "How much does image optimization improve page speed?", answer: "A well-optimized image strategy typically reduces page weight by 50–70% and can improve Largest Contentful Paint (LCP) by 1–3 seconds, directly improving Google Core Web Vitals scores." },
+            { question: "Should I use lazy loading for all images?", answer: "Use lazy loading (loading='lazy') for all images below the fold. The hero image and above-the-fold images should NOT be lazy loaded — they need to load immediately for a good LCP score." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-resize-images-for-web-complete-guide", "best-image-size-for-blogs-and-social-media"],
     },
     {
@@ -160,8 +167,10 @@ Use Google PageSpeed Insights or WebPageTest to measure your improvements. A wel
         title: "Best Image Size for Blogs and Social Media in 2026",
         excerpt: "The ultimate guide to image dimensions for every platform — WordPress, Instagram, Twitter, Facebook, and more.",
         date: "2025-12-15",
+        updatedDate: "2026-04-25",
         readTime: 6,
         category: "Social Media",
+        author: "Aashish Nepal",
         content: `## Why Image Dimensions Matter
 
 Uploading images at the wrong size causes platforms to resize and recompress them, often resulting in blurry, pixelated outcomes. Using the correct dimensions ensures your images always look their sharpest.
@@ -172,7 +181,7 @@ Uploading images at the wrong size causes platforms to resize and recompress the
 **In-post images**: 800px wide maximum, height proportional
 **Thumbnails**: 300×200px or 400×300px
 
-## Social Media Image Sizes 2025
+## Social Media Image Sizes 2026
 
 ### Instagram
 - Square post: 1080×1080px
@@ -203,6 +212,11 @@ Uploading images at the wrong size causes platforms to resize and recompress the
 ## Use Our Resize Tool
 
 Our free Image Resize tool lets you resize any image to exact pixel dimensions in seconds. Just upload, enter your target dimensions, and download the perfectly sized result.`,
+        faqs: [
+            { question: "What is the best image size for a blog featured image?", answer: "1200×628px (16:9 ratio) is the recommended size for blog featured images. This works for both your blog layout and Open Graph social sharing previews, keeping file size under 150KB when compressed." },
+            { question: "What size images does Instagram recommend in 2026?", answer: "Instagram recommends 1080×1080px for square posts, 1080×1350px for portrait posts (4:5), and 1080×1920px for Stories and Reels. Always upload at exact dimensions to avoid double compression." },
+            { question: "What happens if I upload the wrong image size to social media?", answer: "Social platforms automatically resize images that don't match their recommended dimensions, which causes double compression — your original compression plus the platform's recompression — resulting in blurry, degraded images." },
+        ],
         relatedSlugs: ["how-to-resize-images-for-web-complete-guide", "how-to-resize-images-for-social-media-2026", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -212,6 +226,7 @@ Our free Image Resize tool lets you resize any image to exact pixel dimensions i
         date: "2025-12-20",
         readTime: 10,
         category: "Resize",
+        author: "Aashish Nepal",
         content: `## Introduction to Web Image Resizing
 
 Resizing images for the web isn't just about making them smaller — it's about serving the right size to the right device at the right time. A desktop user with a 4K monitor needs a larger image than a mobile user with a 375px screen.
@@ -254,6 +269,11 @@ If you use Next.js, the built-in Image component handles responsive resizing aut
 ## Our Resize Tool
 
 Use our free Image Resize tool to resize any image online. Upload your image, enter the target width and height, choose whether to maintain aspect ratio, and download your resized image instantly — no software installation required.`,
+        faqs: [
+            { question: "What is the best width for web images?", answer: "For most websites, 1200px wide is the practical maximum for content images. Hero images can go up to 1920px. Never serve larger images than your layout actually displays — excess pixels waste bandwidth without improving quality." },
+            { question: "How do I resize images for different screen sizes?", answer: "Use the HTML srcset attribute to serve different sizes to different devices. Define breakpoints like 400w, 800w, and 1200w so mobile devices download only the smaller version they need." },
+            { question: "Does resizing an image reduce its quality?", answer: "Downscaling (making smaller) does not reduce quality — you are removing excess pixels. Upscaling (making larger) does reduce quality as pixels are interpolated. Use an AI upscaler for better results when enlarging." },
+        ],
         relatedSlugs: ["best-image-size-for-blogs-and-social-media", "how-to-resize-images-for-social-media-2026", "best-image-formats-for-websites"],
     },
     {
@@ -263,6 +283,7 @@ Use our free Image Resize tool to resize any image online. Upload your image, en
         date: "2026-01-05",
         readTime: 7,
         category: "Background Removal",
+        author: "Aashish Nepal",
         content: `## What is Background Removal?
 
 Background removal is the process of isolating the main subject of an image — a person, product, logo, or object — by erasing the surrounding background. The result is a transparent PNG that can be placed on any new background.
@@ -299,18 +320,12 @@ No signup. No watermarks. Completely free.
 - Remove white backgrounds from product photos
 - Create a transparent logo PNG for use on different coloured headers
 - Cut out people for team profile pages
-- Extract objects for YouTube thumbnails
-
-## FAQ
-
-**What formats are supported?**
-Upload JPG, PNG, or WEBP. The result is always delivered as a transparent PNG.
-
-**Does it work on complex subjects like hair?**
-Yes — our AI model handles hair, fur, and fine edges well when the original photo has good contrast and lighting.
-
-**Can I remove backgrounds in bulk?**
-The online tool processes one image at a time. For bulk processing, Sharp with the rembg model on Replicate is recommended.`,
+- Extract objects for YouTube thumbnails`,
+        faqs: [
+            { question: "What formats are supported for background removal?", answer: "Upload JPG, PNG, or WEBP. The result is always delivered as a transparent PNG." },
+            { question: "Does it work on complex subjects like hair?", answer: "Yes — our AI model handles hair, fur, and fine edges well when the original photo has good contrast and lighting." },
+            { question: "Can I remove backgrounds in bulk?", answer: "The online tool processes one image at a time. For bulk processing, Sharp with the rembg model on Replicate is recommended." },
+        ],
         relatedSlugs: ["how-to-add-watermark-to-images-online", "how-to-reduce-image-size-for-faster-websites", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -320,6 +335,7 @@ The online tool processes one image at a time. For bulk processing, Sharp with t
         date: "2026-01-12",
         readTime: 8,
         category: "Upscaling",
+        author: "Aashish Nepal",
         content: `## What is Image Upscaling?
 
 Upscaling increases an image's resolution — its pixel count — making it physically larger. The challenge is that simply stretching pixels creates blurry, blocky results. Modern upscaling tools add detail intelligently to fill the extra pixels.
@@ -362,18 +378,12 @@ Results degrade as scale factor increases. In practice:
 - Start with the highest quality original you have
 - Upscale in steps (2x then 2x again) rather than 4x in one pass for some algorithms
 - Sharpen slightly after upscaling to restore crispness
-- For print, target at least 300 DPI at the final print size
-
-## FAQ
-
-**Can upscaling make a blurry photo sharp?**
-It can improve clarity and add detail, but cannot fully recover a severely blurry or out-of-focus photo.
-
-**What's the maximum file size?**
-We support images up to 10MB for upscaling.
-
-**Does upscaling increase file size?**
-Yes — a 2x upscale quadruples the pixel count, which significantly increases file size. Compress the result afterwards if needed.`,
+- For print, target at least 300 DPI at the final print size`,
+        faqs: [
+            { question: "Can upscaling make a blurry photo sharp?", answer: "It can improve clarity and add detail, but cannot fully recover a severely blurry or out-of-focus photo." },
+            { question: "What is the maximum file size for upscaling?", answer: "We support images up to 10MB for upscaling." },
+            { question: "Does upscaling increase file size?", answer: "Yes — a 2x upscale quadruples the pixel count, which significantly increases file size. Compress the result afterwards if needed." },
+        ],
         relatedSlugs: ["how-to-remove-image-background-for-free", "how-to-compress-images-without-losing-quality", "best-image-formats-for-websites"],
     },
     {
@@ -383,6 +393,7 @@ Yes — a 2x upscale quadruples the pixel count, which significantly increases f
         date: "2026-01-20",
         readTime: 6,
         category: "Watermark",
+        author: "Aashish Nepal",
         content: `## Why Add Watermarks?
 
 Watermarks serve two key purposes: **protection** and **branding**.
@@ -427,18 +438,12 @@ Determined users can attempt to clone-stamp or AI-erase visible watermarks. For 
 - Place the watermark over complex image areas (not flat sky or solid backgrounds)
 - Use higher opacity
 - Consider a full-image semi-transparent overlay for high-value work
-- Always retain an un-watermarked original
-
-## FAQ
-
-**Can I add a logo watermark instead of text?**
-Currently our tool supports text watermarks. For logo watermarks, use design tools like Canva or Photoshop.
-
-**Does watermarking reduce image quality?**
-No — the watermark is composited at full image quality. The result is identical in quality to the original.
-
-**Can the watermark be removed by recipients?**
-Technically yes, but it raises the effort significantly and establishes a clear legal record of your ownership.`,
+- Always retain an un-watermarked original`,
+        faqs: [
+            { question: "Can I add a logo watermark instead of text?", answer: "Currently our tool supports text watermarks. For logo watermarks, use design tools like Canva or Photoshop." },
+            { question: "Does watermarking reduce image quality?", answer: "No — the watermark is composited at full image quality. The result is identical in quality to the original." },
+            { question: "Can the watermark be removed by recipients?", answer: "Technically yes, but it raises the effort significantly and establishes a clear legal record of your ownership." },
+        ],
         relatedSlugs: ["how-to-remove-image-background-for-free", "how-to-upscale-images-without-losing-quality", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -448,6 +453,7 @@ Technically yes, but it raises the effort significantly and establishes a clear 
         date: "2026-01-28",
         readTime: 9,
         category: "Formats",
+        author: "Aashish Nepal",
         content: `## The Web Image Format Dilemma
 
 Choosing the wrong image format is one of the most common performance mistakes on the web. A PNG photo can be 10x larger than the equivalent WEBP, with no visible quality difference. Here's a definitive guide.
@@ -512,6 +518,11 @@ WEBP was developed by Google specifically for the web. It offers both lossy and 
 **Use WEBP as your default.** Convert all existing JPEG and PNG images to WEBP for immediate file size savings. Keep JPEG/PNG fallbacks only if you need to support very old browsers.
 
 Use our free converters: [JPG to WEBP](/jpg-to-webp) | [PNG to WEBP](/png-to-webp)`,
+        faqs: [
+            { question: "Is WebP better than JPEG?", answer: "Yes — WebP produces files 25–35% smaller than JPEG at equivalent visual quality. It also supports transparency (which JPEG does not) and is supported by 95%+ of browsers in 2026." },
+            { question: "Can I use WebP everywhere?", answer: "WebP works in all modern browsers. However, it is not supported in some email clients (Gmail, Outlook) or older desktop software. For email and print workflows, JPEG remains the safer choice." },
+            { question: "Why are PNG files so much larger than JPEG?", answer: "PNG uses lossless compression — every pixel is stored exactly. For photographs with millions of unique colour values, this results in very large files. JPEG's lossy compression discards imperceptible detail to achieve much smaller sizes." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "best-image-formats-for-websites", "how-to-reduce-image-size-for-faster-websites"],
     },
     {
@@ -521,6 +532,7 @@ Use our free converters: [JPG to WEBP](/jpg-to-webp) | [PNG to WEBP](/png-to-web
         date: "2026-02-05",
         readTime: 7,
         category: "Social Media",
+        author: "Aashish Nepal",
         content: `## Why Exact Dimensions Matter
 
 Every social platform re-compresses images that are the wrong size. Upload an oversized photo to Instagram and it will resize and re-encode it — introducing blur and compression artifacts. Upload at the exact recommended dimensions and your image arrives pixel-perfect.
@@ -586,6 +598,11 @@ Use our free [Image Resize](/resize-image) tool:
 ## Avoid Double Compression
 
 Upload images at exactly the right dimensions — not larger. Platforms scale down oversized images, which means your image gets compressed twice: once by you, once by the platform. Always optimise at the target dimension.`,
+        faqs: [
+            { question: "What image size should I use for Instagram posts in 2026?", answer: "1080×1080px for square posts, 1080×1350px for portrait posts (4:5 ratio, shows the largest in feed), and 1080×1920px for Stories. Portrait posts at 4:5 give the most screen real estate in the Instagram feed." },
+            { question: "Why do my images look blurry after uploading to social media?", answer: "Social platforms recompress all uploaded images. Uploading at a size larger than the platform displays causes double compression — the platform's resize plus its own compression. Upload at exactly the recommended pixel dimensions to avoid this." },
+            { question: "What size should a YouTube thumbnail be?", answer: "YouTube thumbnails should be 1280×720px (16:9 ratio) at minimum, with a file size under 2MB. They display at 320×180px in search results, so ensure text and key visuals are clearly visible at that small size." },
+        ],
         relatedSlugs: ["best-image-size-for-blogs-and-social-media", "how-to-resize-images-for-web-complete-guide", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -595,6 +612,7 @@ Upload images at exactly the right dimensions — not larger. Platforms scale do
         date: "2026-02-14",
         readTime: 6,
         category: "Conversion",
+        author: "Aashish Nepal",
         content: `## Why Convert PDF to Image?
 
 PDF files are great for documents, but images are more versatile for sharing, posting online, or embedding in designs. Common reasons to convert PDF to image:
@@ -655,6 +673,11 @@ High-quality JPG at 150 DPI, suitable for web display and social sharing.
 
 **Can I convert multiple pages at once?**
 Our online tool converts the first page. For multi-page extraction, use a desktop tool.`,
+        faqs: [
+            { question: "Can I convert a PDF to JPG for free online?", answer: "Yes — PixlTools' free PDF to Image tool converts the first page of any PDF to a high-quality JPG at 150 DPI instantly. No signup or software installation required. Works on Windows, Mac, iPhone, and Android." },
+            { question: "What DPI should I use when converting PDF to JPG?", answer: "150 DPI is ideal for web display and social media sharing. For professional print output, use 300 DPI — this produces larger files but ensures sharp printed results." },
+            { question: "Why should I use PNG instead of JPG for PDF conversion?", answer: "If your PDF contains charts, diagrams, text, or line art, export to PNG instead of JPG. PNG's lossless compression preserves sharp edges without the ringing artifacts that JPEG introduces around high-contrast elements." },
+        ],
         relatedSlugs: ["best-image-formats-for-websites", "how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites"],
     },
     {
@@ -665,6 +688,7 @@ Our online tool converts the first page. For multi-page extraction, use a deskto
         updatedDate: "2026-04-20",
         readTime: 8,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Why You Need to Reduce Photo Size in KB
 
 Many websites, forms, and apps have strict file size limits. Government portals often require photos under 100KB. Email attachments have limits. Dating apps require small profile photos. Getting a photo to a specific file size is a common real-world challenge.
@@ -742,21 +766,12 @@ For web developers handling user image uploads:
 - Use **Sharp** (Node.js) with '.resize(800).jpeg({ quality: 80 })' for most web use cases
 - Validate file size client-side with 'file.size' before upload and prompt users to compress oversized files
 - Store only the processed version — never the raw upload — in cloud storage to minimize bandwidth and egress costs
-- Consider serving WEBP with JPEG fallback using the HTML '<picture>' element
-
-## FAQ
-
-**Can I reduce file size without losing quality?**
-You can reduce it significantly (50–70%) at quality 80 with negligible visible loss. Below quality 70, artifacts become visible.
-
-**What tool should I use?**
-Our free [Compress Image](/compress-image) tool works for JPG, PNG, and WEBP with no signup required.
-
-**Why are my PNG photos so large?**
-PNG uses lossless compression — perfect for graphics but enormous for photos. Convert to JPEG to reduce by 60–80%.
-
-**Does resizing reduce file size?**
-Yes — dramatically. Halving the pixel dimensions (e.g., 3000px → 1500px wide) reduces file size by approximately 75% before compression, because you remove 75% of the total pixels.`,
+- Consider serving WEBP with JPEG fallback using the HTML '<picture>' element`,
+        faqs: [
+            { question: "Can I reduce file size without losing quality?", answer: "You can reduce it significantly (50–70%) at quality 80 with negligible visible loss. Below quality 70, artifacts become visible." },
+            { question: "Why are my PNG photos so large?", answer: "PNG uses lossless compression — perfect for graphics but enormous for photos. Convert to JPEG to reduce by 60–80%." },
+            { question: "Does resizing reduce file size?", answer: "Yes — dramatically. Halving the pixel dimensions (e.g., 3000px → 1500px wide) reduces file size by approximately 75% before compression." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites"],
     },
     {
@@ -766,6 +781,7 @@ Yes — dramatically. Halving the pixel dimensions (e.g., 3000px → 1500px wide
         date: "2026-02-22",
         readTime: 8,
         category: "Conversion",
+        author: "Aashish Nepal",
         content: `## Why Convert JPG to PDF?
 
 PDF is the universal document format — accepted by government offices, schools, employers, and businesses worldwide. When you need to submit photos as a document, convert images to a shareable portfolio, or archive photos in a printable format, PDF is the answer.
@@ -858,6 +874,11 @@ Yes — PixlTools accepts JPG, PNG, and WEBP for PDF conversion. Upload any of t
 
 **Why is my converted PDF so large?**
 PDF file size reflects the original image size. Compress your image first with our [Compress Image](/compress-image) tool, then convert to PDF for a smaller output.`,
+        faqs: [
+            { question: "How do I convert JPG to PDF for free?", answer: "Use PixlTools' free Image to PDF converter — upload your JPG, PNG, or WebP file and download a PDF instantly. No signup, no watermarks, and the output PDF preserves your original image quality exactly." },
+            { question: "What image resolution do I need for a print-quality PDF?", answer: "For A4 print at 300 DPI, your image should be at least 2480×3508px. For standard office printing at 150 DPI, 1240×1754px is sufficient. Screen-only PDFs work fine at 72–96 DPI." },
+            { question: "Why is my converted PDF such a large file?", answer: "PDF file size directly reflects the embedded image size. Compress your image first with PixlTools Image Compressor before converting to PDF. A 1200px wide JPEG at quality 80 produces a PDF of 150–400KB." },
+        ],
         relatedSlugs: ["how-to-convert-pdf-to-jpg-online-free", "best-image-formats-for-websites", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -867,6 +888,7 @@ PDF file size reflects the original image size. Compress your image first with o
         date: "2026-02-25",
         readTime: 6,
         category: "Optimization",
+        author: "Aashish Nepal",
         content: `## What Does "Make an Image Smaller" Mean?
 
 "Smaller" means different things in different contexts:
@@ -933,6 +955,11 @@ Instagram compresses uploads anyway. For best results, upload at 1080px width, J
 
 **What's the fastest way to make an image under 1MB?**
 Resize to 1200px maximum width, then compress at quality 80. This handles 95% of use cases.`,
+        faqs: [
+            { question: "What is the difference between compressing and resizing an image?", answer: "Resizing changes the pixel dimensions (e.g., 4000px → 1200px wide) and dramatically reduces file size by removing pixels. Compressing keeps the same dimensions but reduces file size by increasing data compression. For maximum reduction, do both: resize first, then compress." },
+            { question: "How small can I make an image without quality loss?", answer: "For JPEG, quality 80 is the practical threshold for imperceptible quality loss — files are typically 60–75% smaller than quality 100. Below quality 70, compression artifacts become visible at normal viewing distances." },
+            { question: "What is the fastest way to make an image under 1MB?", answer: "Resize to 1200px maximum width, then compress at JPEG quality 80. This combination handles 95% of use cases and typically brings a 5MB smartphone photo down to 150–300KB." },
+        ],
         relatedSlugs: ["how-to-reduce-photo-size-in-kb", "how-to-compress-images-without-losing-quality", "how-to-resize-images-for-web-complete-guide"],
     },
     {
@@ -942,6 +969,7 @@ Resize to 1200px maximum width, then compress at quality 80. This handles 95% of
         date: "2026-03-03",
         readTime: 8,
         category: "Resize",
+        author: "Aashish Nepal",
         content: `## What is Image Cropping?
 
 Cropping removes the outer edges of an image to focus on a specific area, change the aspect ratio, or meet a platform's required dimensions. Unlike resizing (which scales the entire image), cropping cuts away parts of the image without scaling.
@@ -1048,6 +1076,11 @@ Yes — slightly, because fewer pixels means less data. For a large reduction in
 
 **What is the best crop for Instagram in 2026?**
 For maximum feed presence, use 4:5 (portrait) at 1080×1350px. For Stories, use 9:16 at 1080×1920px. For the profile grid, make sure your main subject is visible in the center 293×293px area of the image.`,
+        faqs: [
+            { question: "Does cropping an image reduce its quality?", answer: "No — cropping only removes pixels from the edges. The remaining pixels are completely unchanged in quality. Unlike compression or format conversion, cropping is a lossless operation." },
+            { question: "What is the best crop ratio for Instagram in 2026?", answer: "4:5 portrait (1080×1350px) gives the largest display area in the Instagram feed. For Stories use 9:16 (1080×1920px). For the grid thumbnail, ensure your main subject is centred in the 293×293px area." },
+            { question: "What is the difference between cropping and resizing?", answer: "Cropping cuts away the outer edges of an image, changing the composition without scaling. Resizing scales the entire image up or down, changing dimensions while keeping all content visible. Cropping changes aspect ratio; resizing does not." },
+        ],
         relatedSlugs: ["how-to-resize-images-for-web-complete-guide", "how-to-resize-images-for-social-media-2026", "best-image-size-for-blogs-and-social-media"],
     },
     {
@@ -1057,6 +1090,7 @@ For maximum feed presence, use 4:5 (portrait) at 1080×1350px. For Stories, use 
         date: "2026-03-04",
         readTime: 10,
         category: "Formats",
+        author: "Aashish Nepal",
         content: `## Why Image Format Choice Matters
 
 Choosing the wrong format can make an image 10x larger than it needs to be, or destroy quality that could have been preserved. This guide covers every major format in plain language.
@@ -1144,6 +1178,11 @@ Default to **WEBP** for all web images. Convert your existing JPEGs and PNGs usi
 - [JPG to WEBP](/jpg-to-webp)
 - [PNG to WEBP](/png-to-webp)
 - [WEBP to JPG](/webp-to-jpg) (for compatibility)`,
+        faqs: [
+            { question: "What is the difference between lossy and lossless image compression?", answer: "Lossy compression (JPEG, WebP lossy) permanently removes some image data to achieve smaller files. Lossless compression (PNG, WebP lossless) reduces file size without discarding any data — every pixel is preserved exactly." },
+            { question: "What is AVIF and should I use it?", answer: "AVIF is the newest image format, offering 20–50% better compression than WebP. It is supported in Chrome, Firefox, and Safari 16+. Use it with a WebP fallback for maximum browser coverage and minimum file size." },
+            { question: "When should I use SVG instead of PNG or JPEG?", answer: "Use SVG for logos, icons, and simple illustrations — SVG is vector-based and scales to any size without quality loss. File sizes are tiny for simple graphics. SVG is not suitable for photographs or complex raster images." },
+        ],
         relatedSlugs: ["best-image-formats-for-websites", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -1153,6 +1192,7 @@ Default to **WEBP** for all web images. Convert your existing JPEGs and PNGs usi
         date: "2026-03-05",
         readTime: 9,
         category: "Optimization",
+        author: "Aashish Nepal",
         content: `## Why Core Web Vitals Matter for SEO
 
 Google uses Core Web Vitals as a direct ranking signal. Sites that fail these metrics are penalized in search rankings. Images are the primary cause of failure for 80% of websites.
@@ -1229,6 +1269,11 @@ INP measures responsiveness. Large images loaded synchronously block the main th
 - [ ] Below-fold images: loading="lazy"
 - [ ] Format: WEBP across the site
 - [ ] CDN: Cloudflare or similar`,
+        faqs: [
+            { question: "How do images affect Core Web Vitals?", answer: "Images are the primary cause of failing Core Web Vitals for 80% of websites. The hero image is the most common LCP element — if it loads slowly, your LCP score fails. Images without width/height attributes also cause CLS layout shifts." },
+            { question: "What is the target file size for a hero image?", answer: "For a 1440px wide hero image, target under 150KB in WebP format at quality 80. Use a CDN and preload the hero image with <link rel='preload' as='image'> to ensure it loads before the browser's render-blocking resources." },
+            { question: "How do I fix 'properly size images' in Google PageSpeed Insights?", answer: "Resize your image to the maximum dimensions it is actually displayed at on your page. Use the srcset attribute to serve different sizes to mobile vs desktop. Never serve a 4000px image in an 800px container." },
+        ],
         relatedSlugs: ["how-to-reduce-image-size-for-faster-websites", "best-image-formats-for-websites", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -1237,7 +1282,8 @@ INP measures responsiveness. Large images loaded synchronously block the main th
         excerpt: "Flip any photo horizontally (mirror effect) or vertically (upside down) in one click. Free, instant, no signup.",
         date: "2026-03-06",
         readTime: 4,
-        category: "Resize",
+        category: "Advanced",
+        author: "Aashish Nepal",
         content: `## What Does Flipping an Image Do?
 
 Flipping creates a mirror image of your photo by reversing it along an axis:
@@ -1290,6 +1336,11 @@ Yes — our tool preserves transparency when flipping PNG files.
 
 **How do I flip multiple images?**
 Currently our tool processes one image at a time. For batch processing, use ImageMagick on the command line.`,
+        faqs: [
+            { question: "Does flipping an image reduce its quality?", answer: "No — flipping is a lossless operation. It rearranges existing pixels without recompressing or discarding any data. The output quality is identical to the input." },
+            { question: "What is the difference between flipping and rotating an image?", answer: "Flipping creates a mirror image by reversing the image along a horizontal or vertical axis. Rotating turns the image clockwise or counter-clockwise (90°, 180°, 270°). If your photo is sideways, you need rotation. If it is mirrored, you need to flip it." },
+            { question: "How do I flip a photo on iPhone?", answer: "In the iPhone Photos app: tap Edit → tap the Crop icon → tap the flip icon (two overlapping triangles at top left). Alternatively, use PixlTools' free Flip Image tool in Safari — no app installation needed." },
+        ],
         relatedSlugs: ["how-to-crop-an-image-online-free", "how-to-resize-images-for-web-complete-guide", "how-to-make-image-smaller"],
     },
     {
@@ -1299,6 +1350,7 @@ Currently our tool processes one image at a time. For batch processing, use Imag
         date: "2026-03-08",
         readTime: 7,
         category: "Optimization",
+        author: "Aashish Nepal",
         content: `## What is DPI?
 
 DPI stands for **Dots Per Inch** — a measurement of how many pixels are packed into one inch of printed output. The higher the DPI, the sharper and more detailed the printed result.
@@ -1357,6 +1409,11 @@ No. Web browsers ignore DPI metadata. Only pixel dimensions matter for screen di
 
 **My printer says the image is too low resolution — what can I do?**
 Upscale the image using our [Image Upscaler](/image-upscaler) to increase pixel count, then try printing again.`,
+        faqs: [
+            { question: "Does DPI affect how an image looks on screen?", answer: "No — DPI has no effect on screen display. Monitors only use pixel dimensions. A 1920×1080 image at 72 DPI looks identical to the same image at 300 DPI on any screen. DPI only matters when printing." },
+            { question: "What DPI do I need for professional photo printing?", answer: "300 DPI is the standard for professional printing. At this resolution, a 3000×2400px image prints at 10×8 inches at full quality. Below 150 DPI, prints look noticeably blurry at normal viewing distance." },
+            { question: "Can I increase DPI without losing quality?", answer: "Simply changing the DPI metadata tag does not add pixels or improve quality — it only changes print sizing instructions. To genuinely increase DPI for larger prints, you need more pixels, which requires AI upscaling." },
+        ],
         relatedSlugs: ["how-to-upscale-images-without-losing-quality", "image-file-formats-explained", "best-image-formats-for-websites"],
     },
     {
@@ -1366,6 +1423,7 @@ Upscale the image using our [Image Upscaler](/image-upscaler) to increase pixel 
         date: "2026-03-07",
         readTime: 5,
         category: "Advanced",
+        author: "Aashish Nepal",
         content: `## Why Convert to Black and White?
 
 Black and white photography has endured for over 150 years because it strips away distracting colour and focuses attention on light, shadow, texture, and composition. Modern uses include:
@@ -1420,6 +1478,11 @@ Not with our basic tool. For selective colour, use Photoshop or GIMP.
 
 **Does converting to grayscale reduce file size?**
 Slightly, because the colour channels are removed. JPEG grayscale images are typically 10–20% smaller than colour.`,
+        faqs: [
+            { question: "Is converting to black and white reversible?", answer: "No — converting to grayscale permanently removes colour data. Always keep the original colour file before converting. Our tool always processes a copy, so your original is never overwritten." },
+            { question: "Does converting to grayscale reduce file size?", answer: "Slightly — removing colour channels reduces file size by approximately 10–20% for JPEG images. For a larger size reduction, compress the grayscale image after conversion using our Image Compressor." },
+            { question: "What types of photos look best in black and white?", answer: "High-contrast photos with strong light and shadow work best — portraits with dramatic lighting, architecture with bold lines, and nature shots with fog or storm clouds. Flat, evenly-lit photos tend to look dull in grayscale." },
+        ],
         relatedSlugs: ["how-to-flip-an-image-online", "how-to-crop-an-image-online-free", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -1430,6 +1493,7 @@ Slightly, because the colour channels are removed. JPEG grayscale images are typ
         updatedDate: "2026-04-14",
         readTime: 8,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## What Makes a Great Free Image Compressor?
 
 A great online image compressor does four things: reduces file size dramatically, preserves visual quality, works instantly without software, and keeps your files private. We tested four of the most popular free tools using the same test image to give you real, comparable results.
@@ -1547,6 +1611,11 @@ Quality 80 is the standard recommendation — it provides 70–80% file size red
 
 **Can I compress PNG without losing quality?**
 Yes, using lossless PNG compression (TinyPNG does this by default for PNGs). However, converting PNG to WEBP achieves much greater size reductions with barely any visible quality loss.`,
+        faqs: [
+            { question: "Which free image compressor gives the best compression ratio?", answer: "Squoosh and PixlTools both achieved 77% compression in our tests (1.2MB → 280KB). TinyPNG achieved 68% and iLoveIMG 65%. For PNG files specifically, TinyPNG's smart lossy PNG compression is industry-leading." },
+            { question: "Is it safe to use online image compression tools?", answer: "Yes — tools like TinyPNG and PixlTools delete files immediately after processing and do not store your images. Always check a tool's privacy policy before uploading sensitive or confidential images." },
+            { question: "What quality setting should I use for the best compression results?", answer: "Quality 80 is the standard recommendation — it provides 70–80% file size reduction with no perceptible quality loss for most images. Below quality 70, compression artifacts become visible on large displays." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-photo-size-in-kb", "webp-vs-jpg-vs-png-which-format-is-best"],
     },
     {
@@ -1556,6 +1625,7 @@ Yes, using lossless PNG compression (TinyPNG does this by default for PNGs). How
         date: "2026-03-09",
         readTime: 5,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Compress Images on Your Phone — No App Needed
 
 You don't need to download a dedicated app to compress images on your iPhone or Android. A free online tool works directly in your mobile browser — Safari on iPhone, Chrome on Android — with no installation required.
@@ -1601,6 +1671,11 @@ At quality 80, the reduction is imperceptible for most photos. Your image will l
 
 **What's the best way to share large photos from iPhone?**
 Compress first to under 1 MB, then share via email as an attachment or via WhatsApp as a Document (not a photo).`,
+        faqs: [
+            { question: "Can I compress images on iPhone without downloading an app?", answer: "Yes — PixlTools works directly in Safari on iPhone. Open pixltools.com/compress-image, upload from your Camera Roll, and download the compressed result to your Photos. No installation required." },
+            { question: "Why are iPhone photos so large?", answer: "Modern iPhones capture photos at 12–48 megapixels in HEIC format. A full-resolution iPhone 15 Pro photo can be 15–25MB. Compressing to JPEG at quality 80 and 1200px wide typically reduces this to under 300KB." },
+            { question: "How do I send compressed photos from Android?", answer: "Use PixlTools in Chrome on Android — upload your photo, compress at quality 80, and download the result. Then attach the compressed file to your email or message instead of the original from your gallery." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "best-free-online-image-compressor-2026", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -1610,6 +1685,7 @@ Compress first to under 1 MB, then share via email as an attachment or via Whats
         date: "2026-03-16",
         readTime: 6,
         category: "Conversion",
+        author: "Aashish Nepal",
         content: `## PNG to JPG — The Fastest Way
 
 Converting PNG to JPG takes seconds with our free online tool. No software, no signup, no waiting.
@@ -1662,6 +1738,11 @@ Yes — JPEG doesn't support transparency. Any transparent areas become white by
 
 **What's the best quality setting?**
 Quality 80 is the sweet spot — 65% smaller than the PNG with no visible quality difference for most photos.`,
+        faqs: [
+            { question: "Does converting PNG to JPG lose quality?", answer: "Yes — JPEG uses lossy compression, so some image data is discarded. At quality 80, the loss is barely perceptible for photos. For logos, icons, or images with text, keep PNG as JPEG introduces ringing artifacts on sharp edges." },
+            { question: "Does converting PNG to JPG remove the transparent background?", answer: "Yes — JPEG does not support transparency. Any transparent areas are filled with white by default when converting to JPEG. If you need to keep transparency, convert to WebP instead of JPEG." },
+            { question: "When should I use PNG to WebP instead of PNG to JPG?", answer: "Convert PNG to WebP when your target is a modern website or app — WebP achieves 25% smaller files than JPEG losslessly, and still supports transparency. Convert to JPEG only when you need maximum compatibility (email, older software)." },
+        ],
         relatedSlugs: ["best-image-formats-for-websites", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -1671,6 +1752,7 @@ Quality 80 is the sweet spot — 65% smaller than the PNG with no visible qualit
         date: "2026-03-11",
         readTime: 5,
         category: "Resize",
+        author: "Aashish Nepal",
         content: `## Resize Images Without Photoshop
 
 You don't need Adobe Photoshop — which costs $20+/month — to resize an image. Our free [Image Resize](/resize-image) tool does it instantly in your browser, on any device.
@@ -1721,6 +1803,11 @@ Resizing changes the total pixel dimensions while keeping the whole image. Cropp
 
 **Will resizing reduce the file size?**
 Yes — significantly. A 4000×3000 image resized to 1200×900 will be approximately 11x smaller in file size.`,
+        faqs: [
+            { question: "Can I resize images for free without Photoshop?", answer: "Yes — PixlTools' free Image Resizer works in any browser on any device. Upload your image, enter your target dimensions, choose whether to lock the aspect ratio, and download — no Photoshop or software installation needed." },
+            { question: "Will resizing an image reduce its quality?", answer: "Downscaling (making smaller) does not reduce quality — you are only removing excess pixels. Upscaling (making larger) does reduce quality as pixels must be interpolated. For high-quality upscaling, use our AI Image Upscaler." },
+            { question: "What is the best image size for email?", answer: "Resize to 800px maximum width for email images. This keeps file size small (usually under 200KB at quality 80) while looking sharp on any screen. Attach as JPEG for maximum email client compatibility." },
+        ],
         relatedSlugs: ["how-to-resize-images-for-web-complete-guide", "how-to-resize-images-for-social-media-2026", "best-image-size-for-blogs-and-social-media"],
     },
     {
@@ -1730,6 +1817,7 @@ Yes — significantly. A 4000×3000 image resized to 1200×900 will be approxima
         date: "2026-03-10",
         readTime: 8,
         category: "Formats",
+        author: "Aashish Nepal",
         content: `## The New Generation of Web Image Formats
 
 JPEG and PNG have dominated the web for decades, but two modern formats — AVIF and WebP — deliver dramatically better compression with equal or superior quality. If you're building a website in 2026, you should be using one of them.
@@ -1807,6 +1895,11 @@ Next.js 14+ supports both — it automatically serves AVIF first, then WebP, the
 
 **Does AVIF work on all browsers?**
 No — older browsers (including Safari < 16) don't support AVIF. Always provide a WebP or JPEG fallback.`,
+        faqs: [
+            { question: "Is AVIF better than WebP?", answer: "AVIF offers 20–30% better compression than WebP at equivalent visual quality. However, WebP has broader browser support (95% vs 90%) and much faster encoding. For most websites, WebP is the practical choice in 2026." },
+            { question: "Should I use AVIF or WebP in Next.js?", answer: "Next.js 14+ supports both automatically — it serves AVIF to supported browsers and WebP as a fallback. Enable both in next.config.js with formats: ['image/avif', 'image/webp'] for the best coverage with maximum compression." },
+            { question: "Does AVIF work on Safari?", answer: "AVIF is supported in Safari 16+ (released 2022). Older Safari versions do not support it. Always provide a WebP or JPEG fallback using the HTML picture element when serving AVIF to ensure all users see your images correctly." },
+        ],
         relatedSlugs: ["best-image-formats-for-websites", "webp-vs-jpg-vs-png-which-format-is-best", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -1816,6 +1909,7 @@ No — older browsers (including Safari < 16) don't support AVIF. Always provide
         date: "2026-03-17",
         readTime: 6,
         category: "Conversion",
+        author: "Aashish Nepal",
         content: `## Why Your iPhone Photos Are HEIC Files
 
 Since iOS 11, iPhones capture photos in HEIC format (High Efficiency Image Container). HEIC files are typically 2x smaller than JPEG at the same quality — great for storage, but a problem when you need to share or upload photos to apps, websites, and services that don't support HEIC.
@@ -1886,21 +1980,12 @@ For Windows users, HEIC is the biggest challenge. Best transfer methods:
 
 **Via USB:** Connect iPhone, open File Explorer, navigate to iPhone → DCIM, copy HEIC files. Then use our [HEIC to JPG converter](/heic-to-jpg) to convert.
 
-**Via Email:** Email photos to yourself. iOS automatically converts HEIC to JPEG when you email photos from the Photos app.
-
-## FAQ
-
-**Will converting HEIC to JPG reduce quality?**
-The visual difference is minimal at high quality settings. HEIC and JPEG are both compressed formats — converting produces a near-identical result that's imperceptible to the human eye.
-
-**Is HEIC the same as HEIF?**
-Yes — HEIC is Apple's implementation of the HEIF (High Efficiency Image Format) standard. The file extensions .heic and .heif refer to the same format.
-
-**Can I open HEIC on Windows without converting?**
-Yes — install the **HEIF Image Extensions** from the Microsoft Store (free). This adds HEIC support to Windows Photos and File Explorer.
-
-**How do I stop my iPhone from taking HEIC photos?**
-Go to Settings → Camera → Formats and select **Most Compatible**. Your camera will now save JPG files instead of HEIC.`,
+**Via Email:** Email photos to yourself. iOS automatically converts HEIC to JPEG when you email photos from the Photos app.`,
+        faqs: [
+            { question: "Will converting HEIC to JPG reduce quality?", answer: "The visual difference is minimal at high quality settings. HEIC and JPEG are both compressed formats — converting produces a near-identical result imperceptible to the human eye." },
+            { question: "Is HEIC the same as HEIF?", answer: "Yes — HEIC is Apple's implementation of the HEIF (High Efficiency Image Format) standard. The file extensions .heic and .heif refer to the same format." },
+            { question: "How do I stop my iPhone from taking HEIC photos?", answer: "Go to Settings → Camera → Formats and select Most Compatible. Your camera will now save JPG files instead of HEIC." },
+        ],
         relatedSlugs: ["webp-vs-jpg-vs-png-which-format-is-best", "best-image-formats-for-websites", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -1910,6 +1995,7 @@ Go to Settings → Camera → Formats and select **Most Compatible**. Your camer
         date: "2026-03-13",
         readTime: 5,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Why WhatsApp Compresses Your Photos
 
 WhatsApp automatically compresses images before sending them. Photos sent via WhatsApp are reduced to approximately 1600×1200px with aggressive JPEG compression — sometimes dropping quality to as low as 50–60%. This is especially visible in:
@@ -1979,6 +2065,11 @@ Yes — WhatsApp converts all image types to JPEG before sending, stripping tran
 
 **How do I know if WhatsApp compressed my image?**
 Compare the file size. If you sent a 2MB photo and the recipient saves it and the file is 200KB, WhatsApp compressed it 10x. Send as a Document to preserve the original.`,
+        faqs: [
+            { question: "Why do WhatsApp photos look blurry after sending?", answer: "WhatsApp compresses all images sent as Photos to approximately 1600×1200px with aggressive JPEG compression. To avoid this, send your image as a Document instead of a Photo — WhatsApp does not compress document attachments." },
+            { question: "What is the best image size for WhatsApp photo mode?", answer: "To minimise WhatsApp's additional compression, resize your image to 1600×1200px or smaller and compress to under 300KB at JPEG quality 85 before sending. At this size and quality, WhatsApp's recompression is minimal." },
+            { question: "How do I send full-quality photos on WhatsApp?", answer: "Tap the attachment icon → choose Document (not Photo/Video) → select your image file. WhatsApp sends documents without compression. The recipient downloads it at full original quality." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-photo-size-in-kb", "best-image-size-for-blogs-and-social-media"],
     },
     {
@@ -1988,6 +2079,7 @@ Compare the file size. If you sent a 2MB photo and the recipient saves it and th
         date: "2026-03-12",
         readTime: 5,
         category: "Social Media",
+        author: "Aashish Nepal",
         content: `## What is a Photo Collage?
 
 A photo collage combines multiple photos into a single image, arranged in a grid layout. Collages are popular for:
@@ -2065,6 +2157,11 @@ Yes — the tool works on iPhone and Android browsers. Upload photos directly fr
 
 **How many photos can I combine?**
 Our tool supports between 2 and 16 photos in a single collage grid.`,
+        faqs: [
+            { question: "How many photos can I combine in a collage?", answer: "PixlTools' free Photo Collage Maker supports between 2 and 16 photos in a single grid collage. For the most balanced layouts, use 4 photos (2×2 grid) or 9 photos (3×3 grid)." },
+            { question: "What is the best image size for an Instagram collage?", answer: "For an Instagram single-post collage, start with each photo at 1080×1080px (square). This fills the frame perfectly and the combined collage downloads at a size Instagram accepts without recompression." },
+            { question: "Can I make a photo collage on my phone?", answer: "Yes — PixlTools Collage Maker works on iPhone and Android browsers. Upload photos directly from your camera roll, and download the finished collage to your Photos app. No app installation required." },
+        ],
         relatedSlugs: ["best-image-size-for-blogs-and-social-media", "how-to-resize-images-for-social-media-2026", "how-to-compress-images-without-losing-quality"],
     },
     {
@@ -2074,6 +2171,7 @@ Our tool supports between 2 and 16 photos in a single collage grid.`,
         date: "2026-03-15",
         readTime: 5,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Why iPhone Photos Are So Large
 
 Modern iPhones capture photos at 12–48 megapixels. A full-resolution iPhone 15 Pro photo at 48MP can be 15–25MB per file. Even iPhone 14 photos average 3–6MB each. This creates problems when:
@@ -2158,6 +2256,11 @@ No — changing Formats in Camera Settings only affects future photos. Existing 
 
 **How small can an iPhone photo be compressed?**
 Most iPhone photos can be compressed to 100–300KB at quality 80 while still looking excellent on screen. Below 50KB, quality starts to become visibly degraded.`,
+        faqs: [
+            { question: "What is the fastest way to reduce image file size on iPhone?", answer: "Open pixltools.com/compress-image in Safari on your iPhone, upload your photo from Camera Roll, and download the compressed version. The whole process takes under 30 seconds with no app installation required." },
+            { question: "How do I stop my iPhone from taking large photos?", answer: "Go to Settings → Camera → Formats → select Most Compatible to save photos as JPEG instead of HEIC. JPEG files are about 2x larger than HEIC but are universally compatible. Separately, lower the resolution in camera settings if available." },
+            { question: "What is a good target file size for iPhone photos being uploaded to a website?", answer: "Under 500KB is ideal for website uploads. Resize to 1200px wide and compress at quality 80 using PixlTools — a typical iPhone photo at these settings lands between 100–300KB, down from the original 4–8MB." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-convert-heic-to-jpg-on-iphone-and-mac", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -2167,6 +2270,7 @@ Most iPhone photos can be compressed to 100–300KB at quality 80 while still lo
         date: "2026-03-14",
         readTime: 10,
         category: "Guides",
+        author: "Aashish Nepal",
         content: `## Why Batch Process Images?
 
 Processing images one by one is tedious and time-consuming. Whether you're preparing a product catalogue with 200 photos for an e-commerce site, exporting a wedding gallery for client delivery, or optimising an entire website's image library for faster loading, you need batch processing.
@@ -2307,6 +2411,11 @@ For raw speed, Sharp CLI (Node.js) and ImageMagick are the fastest options for l
 
 **Can I batch resize images to multiple sizes at once?**
 Yes. ImageMagick and Sharp CLI both support outputting multiple sizes from a single input image in one command. This is useful for generating responsive image sets (400px, 800px, 1600px) for a srcset attribute.`,
+        faqs: [
+            { question: "What is the best free tool for batch processing images without Photoshop?", answer: "For Windows users, IrfanView is the fastest free batch processor. For Mac users, Finder Quick Actions handle basic batch conversion. For power users on any OS, ImageMagick and Sharp CLI offer the most flexibility and speed." },
+            { question: "How do I batch convert images to WebP for free?", answer: "Using ImageMagick, run: mogrify -path ./output -quality 80 -format webp *.jpg to convert all JPEGs in a folder to WebP at quality 80. For a GUI approach, XnConvert offers batch WebP conversion on Windows, Mac, and Linux." },
+            { question: "Can I batch process images without installing any software?", answer: "Yes — PixlTools works in any browser without installation. While it processes one image per session, there are no per-image costs or limits. For true batch processing of 10+ images, iLoveIMG (free, up to 30 files) is the best no-install option." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-reduce-image-size-for-faster-websites", "webp-vs-jpg-vs-png-which-format-is-best"],
     },
     {
@@ -2316,6 +2425,7 @@ Yes. ImageMagick and Sharp CLI both support outputting multiple sizes from a sin
         date: "2026-04-05",
         readTime: 6,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Why 20KB?
 
 Many government portals, job application websites, and university admission forms require a passport photo or signature image under a specific file size — commonly 20KB, 50KB, or 100KB. Uploading an image that exceeds this limit is one of the most frustrating form errors users encounter, especially because most smartphones produce photos between 2MB and 8MB by default.
@@ -2402,6 +2512,11 @@ Most portals accept 200×200 to 400×513 pixels (2:2.5 aspect ratio for standard
 
 **Why is my image still too large after compression?**
 If the file is still above 20KB after compression, the pixel dimensions are likely still too large. Resize to 300×300 or smaller, then compress again at quality 65.`,
+        faqs: [
+            { question: "How do I compress an image to below 20KB without it looking bad?", answer: "Resize to 300×300px or smaller first, then compress at JPEG quality 65–70. At these small dimensions, quality 65 is effectively indistinguishable at normal viewing sizes. Most portrait photos hit 12–18KB at 300×375px and quality 70." },
+            { question: "Can I compress a PNG file below 20KB?", answer: "Not for photographs — PNG lossless compression cannot achieve sub-20KB sizes for photographic content. Convert to JPEG first using PixlTools PNG to JPG converter, then compress the JPEG to your target size." },
+            { question: "What pixel dimensions produce a 20KB JPEG photo?", answer: "A 300×375px JPEG at quality 70 is typically 12–18KB. A 400×400px JPEG at quality 65 is typically 10–18KB. Actual file size varies based on image content — photos with complex detail (faces, textures) tend to be larger." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-make-image-smaller", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -2411,6 +2526,7 @@ If the file is still above 20KB after compression, the pixel dimensions are like
         date: "2026-04-07",
         readTime: 5,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## Why Image Size Matters for Email
 
 Email providers impose attachment size limits — typically 10MB (Outlook), 25MB (Gmail), or 20MB (Yahoo Mail). Exceed these and your email bounces or the attachment is silently stripped. Even within the limit, large attachments slow down send times, fill recipients' inboxes, and often trigger spam filters that scan oversized messages more aggressively.
@@ -2487,6 +2603,11 @@ At quality 75–80, the difference is imperceptible on screen and in print at no
 
 **Why did Gmail say my attachment was too large?**
 Gmail's attachment limit is 25MB per email. Each smartphone photo is typically 3–8MB, so 4–5 uncompressed photos exceed this. Compress photos to 500KB each and you can attach 40+ per email.`,
+        faqs: [
+            { question: "What is the ideal image size for email attachments?", answer: "Aim for 200–800KB per image. Resize to 1200px wide and compress at JPEG quality 75–80 — most smartphone photos become 150–300KB at these settings, well within all provider limits and fast for recipients to download." },
+            { question: "What image format is best for email?", answer: "JPEG is the safest format for email — it has the widest compatibility across all email clients and devices. Avoid WebP and HEIC as many email clients cannot display them inline. Convert iPhone HEIC photos to JPEG before attaching." },
+            { question: "How do I compress multiple images for email at once?", answer: "For batches, use Microsoft PowerToys Image Resizer on Windows, Finder Quick Actions on Mac, or ImageMagick via command line (mogrify -resize 1200x -quality 80 *.jpg). PixlTools is best for compressing individual images quickly." },
+        ],
         relatedSlugs: ["how-to-compress-images-without-losing-quality", "how-to-compress-image-below-20kb", "how-to-convert-heic-to-jpg-on-iphone-and-mac"],
     },
     {
@@ -2496,6 +2617,7 @@ Gmail's attachment limit is 25MB per email. Each smartphone photo is typically 3
         date: "2026-04-09",
         readTime: 5,
         category: "Compression",
+        author: "Aashish Nepal",
         content: `## The 100KB and 200KB File Size Limit
 
 Government portals, university applications, HR systems, and job boards frequently require uploaded images to be under a specific file size — most commonly 100KB or 200KB. These limits apply to passport photos, signature scans, and profile pictures.
@@ -2570,6 +2692,11 @@ A 300×300 pixel JPEG at quality 70 typically produces a 22–40KB file. A 500×
 
 **Does compressing to 100KB make the image look bad?**
 At the dimensions required for most form uploads (200–400px), quality 65–75 is effectively indistinguishable from the original at normal viewing sizes on screen and in print.`,
+        faqs: [
+            { question: "How do I compress an image to exactly 100KB?", answer: "There is no single formula — file size depends on pixel content. Start by resizing to 400×400px and compressing at quality 75. A 400×400px JPEG at quality 75 is typically 60–100KB. Adjust quality by ±5 and check the file size until you hit your target." },
+            { question: "Can I compress a PNG to 100KB or 200KB?", answer: "Not for photographs — PNG lossless compression cannot reliably achieve sub-200KB sizes for photographic content. Use PixlTools PNG to JPG converter first, then compress the resulting JPEG to your target file size." },
+            { question: "What dimensions produce a 200KB JPEG?", answer: "A 600×600px JPEG at quality 80 is typically 120–200KB. A 800×600px JPEG at quality 75 is typically 100–180KB. Images with complex detail (outdoor scenes, textures) will be larger than images with simple backgrounds." },
+        ],
         relatedSlugs: ["how-to-compress-image-below-20kb", "how-to-compress-images-for-email", "how-to-reduce-photo-size-in-kb"],
     },
     {
@@ -2785,6 +2912,11 @@ You've either compressed too aggressively (try quality 80 instead of lower) or t
 
 **The portal shows an error saying "invalid image format."**  
 This usually means the portal expects JPEG but received PNG or another format. Use [PNG to JPG](/png-to-jpg) or [WEBP to JPG](/webp-to-jpg) to convert first.`,
+        faqs: [
+            { question: "What format should a passport photo be for online applications?", answer: "JPEG (JPG) is required by almost all government and visa portals worldwide. Avoid PNG, WebP, or HEIC — convert to JPG first using PixlTools, then resize and compress to the portal's specified dimensions and file size limit." },
+            { question: "How do I compress a photo to 100KB for a visa application?", answer: "Resize to the portal's required dimensions first (commonly 200×200px to 600×800px), then compress at JPEG quality 75–80. At 400×400px and quality 80, most photos land at 35–70KB — well under 100KB." },
+            { question: "My compressed passport photo looks blurry — what do I do?", answer: "You have compressed too aggressively or the original was too low resolution. Use the highest quality original available, resize to the required pixel dimensions first, then compress at quality 80 (not lower). Avoid re-compressing an already compressed JPEG." },
+        ],
         relatedSlugs: ["how-to-compress-image-below-20kb", "how-to-compress-image-to-100kb", "how-to-compress-images-on-iphone-and-android"],
     },
     {
@@ -2949,6 +3081,11 @@ No — GPS and EXIF metadata is preserved in the JPEG output by our converter. I
 
 **My iPhone photos transferred as HEIC even though I set Automatic — why?**  
 The Automatic setting only works when transferring via USB to an updated version of iTunes or Windows Photos. Copying via File Explorer always transfers the original HEIC file.`,
+        faqs: [
+            { question: "Can Windows 11 open HEIC files without installing anything?", answer: "No — Windows 11 requires the free HEIF Image Extensions codec from the Microsoft Store, or a third-party tool. Without this codec, HEIC files show as unsupported in File Explorer and cannot be opened in the Photos app." },
+            { question: "Does converting HEIC to JPG reduce quality?", answer: "The visual difference is imperceptible at quality 85 or higher. Both HEIC and JPEG are compressed formats — converting produces a near-identical result. You lose HEIC's slightly more efficient compression but gain universal compatibility." },
+            { question: "How do I automatically get JPG files when transferring iPhone photos to Windows?", answer: "On your iPhone, go to Settings → Photos → scroll to Transfer to Mac or PC → select Automatic. iPhone will now send JPEG files when you connect via USB. Alternatively, downloading from iCloud.com always provides JPEG regardless of this setting." },
+        ],
         relatedSlugs: ["how-to-convert-heic-to-jpg-on-iphone-and-mac", "how-to-compress-images-on-iphone-and-android", "webp-vs-jpg-vs-png-which-format-is-best"],
     },
     {
@@ -3021,6 +3158,11 @@ JPEG uses different compression than WebP. It's normal for a quality-85 JPG to b
 
 **How do I open a WebP file on Windows?**  
 Modern Edge and Chrome can open WebP files by dragging them into the browser. To open in Photos, you need the WebP codec or simply convert to JPG first.`,
+        faqs: [
+            { question: "Why would I need to convert WebP to JPG?", answer: "WebP is not supported in Gmail, Outlook, Microsoft Office (Word, PowerPoint), most photo printing services, and many government or job portals. Converting to JPG ensures your image opens correctly in all these contexts." },
+            { question: "Does converting WebP to JPG reduce quality?", answer: "At quality 85 (the default), the output is visually identical to the WebP original for photographs. For WebP files using lossless encoding (common for screenshots), minor compression artifacts may appear — use WebP to PNG for those files instead." },
+            { question: "Why is my converted JPG larger than the original WebP?", answer: "JPEG uses different compression algorithms than WebP and is generally 20–40% less efficient. A larger JPG file is normal and expected — it is the trade-off for broad compatibility with email clients, desktop software, and print services." },
+        ],
         relatedSlugs: ["avif-vs-webp-which-is-better", "how-to-convert-png-to-jpg-free", "best-image-formats-for-websites"],
     },
     {
@@ -3115,6 +3257,120 @@ Use our [Crop Image](/crop-image) tool to crop your image to a 4:1 aspect ratio,
             { question: "Does LinkedIn resize images automatically?", answer: "Yes — LinkedIn recompresses every image you upload. Uploading at the exact recommended dimensions prevents double compression, which is what causes blurry profile images." },
         ],
         relatedSlugs: ["compress-image-for-passport-visa-application", "compress-image-below-50kb", "how-to-resize-images-for-social-media-2026"],
+    },
+    {
+        slug: "compress-image-for-email-attachment",
+        title: "How to Compress Images for Email Attachments – Free & Fast (2026)",
+        excerpt: "Hitting Gmail or Outlook attachment limits? Learn how to quickly reduce image file size so your photos send without issues — no software needed.",
+        date: "2026-04-23",
+        readTime: 6,
+        category: "Compression",
+        author: "Aashish Nepal",
+        content: `## Why Your Images Are Too Large to Email
+
+Most email providers cap attachments at **25 MB** (Gmail, Outlook) or even **20 MB** (Yahoo). That sounds generous until you try to send five smartphone photos — modern iPhones and Android phones produce images that are 4–8 MB *each*. Attach three of those and you've already hit your limit.
+
+Even when the email goes through, large attachments are slow to upload, slow for recipients to download, and often land in spam folders. Compressing your images before attaching them fixes all three problems at once.
+
+## What "Compressing for Email" Actually Means
+
+Email attachments don't need print-quality resolution. The recipient will view your photo on a screen — typically at 1920×1080px or less. Sending a 4000×3000px RAW-quality photo for screen viewing is always overkill.
+
+Two things determine your file size:
+
+1. **Pixel dimensions** — Reducing from 4000px wide to 1200px wide removes 91% of the pixels before you even touch compression.
+2. **JPEG quality level** — Quality 80 is visually identical to quality 100 for most photos, but files are 60–80% smaller.
+
+Do both steps and a typical 6 MB smartphone photo becomes 150–300 KB.
+
+## Step-by-Step: Compress Any Image for Email (Free)
+
+### Step 1 — Resize to a Screen-Friendly Size
+
+A 1200px wide image looks sharp on any screen and in any email client. Anything wider is invisible extra weight.
+
+1. Go to [Resize Image](/resize-image)
+2. Upload your photo
+3. Set **Width to 1200px** — height auto-adjusts to keep proportions
+4. Download the resized image
+
+### Step 2 — Compress the Resized Image
+
+1. Go to [Compress Image](/compress-image)
+2. Upload your resized image
+3. Download — a 1200px JPEG at quality 80 is almost always **100–300 KB**
+
+That's it. Two steps, two minutes, completely free.
+
+## Expected File Sizes After Compression
+
+| Original Size | After Resize + Compress | Reduction |
+|---|---|---|
+| 6 MB smartphone photo | 150–300 KB | ~95% smaller |
+| 3 MB DSLR photo | 100–200 KB | ~94% smaller |
+| 1.5 MB screenshot | 80–150 KB | ~90% smaller |
+| 500 KB PNG graphic | 40–100 KB | ~80% smaller |
+
+## Size Guidelines by Email Platform
+
+| Provider | Attachment Limit | Safe Per-Image Target |
+|---|---|---|
+| Gmail | 25 MB total | Under 500 KB |
+| Outlook / Hotmail | 20 MB total | Under 400 KB |
+| Yahoo Mail | 25 MB total | Under 500 KB |
+| iCloud Mail | 20 MB total | Under 400 KB |
+| Corporate / work email | Often 10–15 MB | Under 300 KB |
+
+**Safe rule of thumb:** Keep each image under **500 KB** and you'll have no trouble with any provider.
+
+## Special Case: Compressing PNG for Email
+
+PNG files compress very differently from JPEGs. A PNG screenshot at 1920×1080px can be 1–3 MB even after PNG compression — because PNG uses lossless encoding.
+
+**If your PNG is a photo or has no transparency**, convert it to JPEG first using our [PNG to JPG](/png-to-jpg) converter. A 2 MB photo PNG typically becomes 100–200 KB as a JPEG. The visual difference is imperceptible.
+
+**If your PNG has a transparent background** (a logo, illustration, or graphic), keep it as PNG — JPEG doesn't support transparency. But reduce the canvas dimensions to the minimum you need.
+
+## Compressing Multiple Images at Once
+
+Our tool processes one image at a time. For batches of 10+ images:
+
+- **Windows**: Use File Explorer → select images → right-click → Resize (via the free [PowerToys Image Resizer](https://learn.microsoft.com/en-us/windows/powertoys/image-resizer) from Microsoft)
+- **Mac**: Select images in Finder → right-click → Quick Actions → Convert Image → choose size
+- **Command line**: Run **mogrify -resize 1200x -quality 80 *.jpg** (requires free ImageMagick)
+
+## When Compression Isn't Enough: Use a Cloud Link Instead
+
+If you need to send very high-resolution images for print, design work, or professional delivery, don't compress — use a cloud link:
+
+1. Upload your originals to **Google Drive** or **Dropbox**
+2. Right-click → Get shareable link
+3. Paste the link in your email body
+
+The recipient downloads at full quality. Your email stays tiny.
+
+## FAQ
+
+**What is the best image format to send via email?**
+JPEG is the safest choice — every email client and device supports it. PNG works too but produces larger files for photos. Avoid WebP and HEIC; many email clients can't display them inline.
+
+**How do I compress images on my phone before emailing?**
+On iPhone: use our [mobile-friendly Compress Image](/compress-image) tool in Safari. On Android: same — open the tool in Chrome, upload, and download the compressed file.
+
+**Will the compressed image look bad?**
+At quality 80 and 1200px wide, the image is indistinguishable from the original on any screen. You'd need a magnifying glass to spot differences.
+
+**My email still says the attachment is too large — what now?**
+Check you're attaching the *compressed* version, not the original. If still large, resize to 800px wide and compress again. Alternatively, switch to a cloud link as described above.
+
+**Does Gmail compress images automatically?**
+Gmail recompresses images you insert inline into the email body. But *attached* files are sent exactly as-is — no automatic compression. That's why you need to compress before attaching.`,
+        faqs: [
+            { question: "What is the ideal image size for an email attachment?", answer: "Under 500 KB per image is the safest target for all major email providers. Resize to 1200px wide and compress at quality 80 using a free tool like PixlTools — most photos come out at 150–300 KB." },
+            { question: "Does Gmail automatically compress image attachments?", answer: "Gmail does NOT compress attached files — it sends them exactly as-is. However, Gmail recompresses images inserted inline into the email body. Always attach as a file (not inline) and compress before attaching to control the final size." },
+            { question: "What is the maximum attachment size for Gmail, Outlook, and Yahoo Mail?", answer: "Gmail allows up to 25MB per email. Outlook supports up to 20MB. Yahoo Mail allows up to 25MB. If your images exceed these limits even after compression, upload to Google Drive or Dropbox and share a link instead." },
+        ],
+        relatedSlugs: ["how-to-reduce-photo-size-in-kb", "compress-image-below-50kb", "how-to-compress-images-without-losing-quality"],
     },
 ];
 
