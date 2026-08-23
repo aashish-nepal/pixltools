@@ -28,7 +28,7 @@ export default function MobileBottomNav() {
                                 className={`flex flex-col items-center gap-1 px-4 py-1.5 rounded-2xl transition-all duration-200 min-w-[56px] ${
                                     isActive
                                         ? "text-violet-300"
-                                        : "text-gray-500 hover:text-gray-300"
+                                        : "text-gray-400 hover:text-gray-300"
                                 }`}
                             >
                                 <div className="relative">

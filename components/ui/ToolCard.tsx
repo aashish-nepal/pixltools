@@ -51,7 +51,7 @@ export default function ToolCard({ tool, isPopular, isNew }: ToolCardProps) {
                     <h3 className="font-bold text-white text-sm leading-tight mb-2 group-hover:text-violet-300 transition-colors">
                         {tool.name}
                     </h3>
-                    <p className="text-[11px] text-violet-200/50 leading-relaxed line-clamp-2 mb-4">
+                    <p className="text-[11px] text-violet-200/70 leading-relaxed line-clamp-2 mb-4">
                         {tool.shortDesc}
                     </p>
 

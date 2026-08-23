@@ -169,8 +169,8 @@ export default function PremiumClient() {
                                     </li>
                                 ))}
                                 {plan.missing.map((f) => (
-                                    <li key={f} className="flex items-start gap-2 text-sm text-violet-300/25 line-through">
-                                        <span className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-violet-500/30 font-bold text-base leading-none">—</span>{f}
+                                    <li key={f} className="flex items-start gap-2 text-sm text-violet-300/70 line-through">
+                                        <span className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-violet-300/70 font-bold text-base leading-none">—</span>{f}
                                     </li>
                                 ))}
                             </ul>
@@ -190,8 +190,8 @@ export default function PremiumClient() {
                         <table className="w-full">
                             <thead>
                                 <tr className="border-b border-violet-500/10 bg-[#16122a]">
-                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400/50">Feature</th>
-                                    <th className="text-center px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-300/60">Free</th>
+                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Feature</th>
+                                    <th className="text-center px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-300/80">Free</th>
                                     <th className="text-center px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Pro</th>
                                     <th className="text-center px-5 py-3 text-xs font-bold uppercase tracking-wider text-fuchsia-400">Business</th>
                                 </tr>
@@ -234,7 +234,7 @@ export default function PremiumClient() {
                             <p className="text-slate-400 mt-4 text-base max-w-xl">
                                 Join the waitlist. We&apos;ll notify you the moment Pro launches with an exclusive discount for early supporters.
                             </p>
-                            <p className="text-violet-300/40 text-xs mt-4">No spam. Unsubscribe any time.</p>
+                            <p className="text-gray-400 text-xs mt-4">No spam. Unsubscribe any time.</p>
                         </div>
 
                         <div className="relative">

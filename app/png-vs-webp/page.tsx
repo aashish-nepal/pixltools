@@ -97,7 +97,7 @@ export default function PngVsWebpPage() {
                             <FilePng size={20} weight="duotone" className="text-violet-400" />
                         </div>
                         <h2 className="font-bold text-violet-400 text-lg mb-3">Use PNG when…</h2>
-                        <ul className="space-y-2 text-sm text-violet-300/60">
+                        <ul className="space-y-2 text-sm text-violet-300/80">
                             {["Publishing to all browsers including old IE", "Maximum color depth needed", "Working with design tools (Photoshop, Figma)", "Creating print-ready graphics", "Absolute lossless preservation required"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-violet-400 flex-shrink-0" />{item}</li>
                             ))}
@@ -108,7 +108,7 @@ export default function PngVsWebpPage() {
                             <Lightning size={20} weight="duotone" className="text-teal-400" />
                         </div>
                         <h2 className="font-bold text-teal-400 text-lg mb-3">Use WEBP when…</h2>
-                        <ul className="space-y-2 text-sm text-violet-300/60">
+                        <ul className="space-y-2 text-sm text-violet-300/80">
                             {["Optimizing images for the web", "You want the smallest file size", "Google PageSpeed score matters", "You need transparency AND small size", "Building for modern browsers only"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 flex-shrink-0" />{item}</li>
                             ))}
@@ -125,7 +125,7 @@ export default function PngVsWebpPage() {
                         <table className="w-full">
                             <thead>
                                 <tr className="border-b border-violet-500/10 bg-[#16122a]">
-                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400/50">Feature</th>
+                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Feature</th>
                                     <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">PNG</th>
                                     <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-teal-400">WEBP</th>
                                 </tr>

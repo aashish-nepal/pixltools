@@ -114,11 +114,6 @@ export default function HomePage() {
     name: "PixlTools",
     url: "https://www.pixltools.com",
     description: "30+ free online image tools. Compress, resize, convert, and optimize images instantly.",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: "https://www.pixltools.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string",
-    },
   };
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -231,7 +226,7 @@ export default function HomePage() {
                 {STATS.map(({ value, label }) => (
                   <div key={label} className="group rounded-2xl border border-violet-500/20 bg-[#0f0d1f]/80 hover:border-violet-500/40 hover:bg-[#16122a]/80 backdrop-blur-sm px-3 sm:px-4 py-3 text-left transition-all">
                     <div className="text-xl font-bold text-violet-300 group-hover:text-violet-200">{value}</div>
-                    <div className="text-xs text-violet-400/50 mt-0.5 leading-snug">{label}</div>
+                    <div className="text-xs text-violet-400 mt-0.5 leading-snug">{label}</div>
                   </div>
                 ))}
               </div>
@@ -388,7 +383,7 @@ export default function HomePage() {
                 <div className={`w-12 h-12 ${color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-md ${glow}`}>
                   <Icon size={20} className="text-white" strokeWidth={2} />
                 </div>
-                <span className="text-xs font-bold text-violet-400/30 tracking-widest">{step}</span>
+                <span className="text-xs font-bold text-violet-400 tracking-widest">{step}</span>
                 <h3 className="font-bold text-white text-base mt-1 mb-2">{title}</h3>
                 <p className="text-gray-400 leading-relaxed">{desc}</p>
               </div>
@@ -451,9 +446,9 @@ export default function HomePage() {
                   </div>
                   <div className="relative flex flex-col gap-0">
                     {[
-                      { step: "01", label: "Upload", tag: "Drop your image", color: "bg-sky-500", ring: "ring-sky-500/30" },
-                      { step: "02", label: "Optimize", tag: "We process it instantly", color: "bg-violet-500", ring: "ring-violet-500/30" },
-                      { step: "03", label: "Deliver", tag: "Download & publish", color: "bg-fuchsia-500", ring: "ring-fuchsia-500/30" },
+                      { step: "01", label: "Upload", tag: "Drop your image", color: "bg-sky-700", ring: "ring-sky-500/30" },
+                      { step: "02", label: "Optimize", tag: "We process it instantly", color: "bg-violet-600", ring: "ring-violet-500/30" },
+                      { step: "03", label: "Deliver", tag: "Download & publish", color: "bg-fuchsia-700", ring: "ring-fuchsia-500/30" },
                     ].map(({ step, label, tag, color, ring }, i, arr) => (
                       <div key={step} className="flex gap-5 items-start">
                         {/* Dot + connector */}

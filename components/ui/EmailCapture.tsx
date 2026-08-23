@@ -68,7 +68,7 @@ export default function EmailCapture() {
                                     ) : "Notify me"}
                                 </button>
                             </form>
-                            <p className="text-xs text-violet-300/30 mt-2 text-center">No spam. Unsubscribe anytime.</p>
+                            <p className="text-xs text-gray-400 mt-2 text-center">No spam. Unsubscribe anytime.</p>
                         </>
                     ) : (
                         <div className="flex items-center gap-3 py-1">

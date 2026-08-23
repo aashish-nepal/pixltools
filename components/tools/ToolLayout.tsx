@@ -972,7 +972,7 @@ export default function ToolLayout({
         <AdBanner slot="Top Banner" />
 
         {/* Privacy strip */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs text-gray-500 font-medium py-3 mb-2">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-5 text-xs text-gray-400 font-medium py-3 mb-2">
           {[
             { icon: Lock, text: "Files never stored on server" },
             { icon: Clock, text: "Auto-deleted after processing" },
@@ -1126,11 +1126,11 @@ export default function ToolLayout({
                         {/* Drag-hint footer */}
                         {!loading && (
                           <div className="px-3 py-1.5 border-t border-violet-500/8 flex items-center justify-between">
-                            <span className="text-[10px] text-gray-700">
+                            <span className="text-[10px] text-gray-400">
                               Drag a new image here to replace
                             </span>
                             {!interactiveCrop && (
-                              <span className="text-[10px] text-gray-700">
+                              <span className="text-[10px] text-gray-400">
                                 Click image to zoom
                               </span>
                             )}
@@ -1380,7 +1380,7 @@ export default function ToolLayout({
                           </button>
                           <button
                             onClick={handleReset}
-                            className="px-4 py-3 border border-violet-500/20 text-violet-300/60 rounded-xl hover:bg-violet-500/10 hover:border-violet-500/30 transition-all duration-200 flex items-center justify-center gap-1.5"
+                            className="px-4 py-3 border border-violet-500/20 text-violet-300/80 rounded-xl hover:bg-violet-500/10 hover:border-violet-500/30 transition-all duration-200 flex items-center justify-center gap-1.5"
                             title="Reset (R)"
                             aria-label="Reset"
                           >
@@ -1388,23 +1388,23 @@ export default function ToolLayout({
                           </button>
                         </div>
                         {/* Keyboard hints */}
-                        <div className="flex items-center justify-center gap-3 text-[11px] text-gray-700">
+                        <div className="flex items-center justify-center gap-3 text-[11px] text-gray-400">
                           <span className="flex items-center gap-1">
-                            <kbd className="bg-[#0f0d1f] border border-violet-500/15 text-violet-500/70 px-1.5 py-0.5 rounded text-[10px] font-mono">
+                            <kbd className="bg-[#0f0d1f] border border-violet-500/15 text-violet-300/70 px-1.5 py-0.5 rounded text-[10px] font-mono">
                               Enter
                             </kbd>{" "}
                             process
                           </span>
                           <span>·</span>
                           <span className="flex items-center gap-1">
-                            <kbd className="bg-[#0f0d1f] border border-violet-500/15 text-violet-500/70 px-1.5 py-0.5 rounded text-[10px] font-mono">
+                            <kbd className="bg-[#0f0d1f] border border-violet-500/15 text-violet-300/70 px-1.5 py-0.5 rounded text-[10px] font-mono">
                               R
                             </kbd>{" "}
                             reset
                           </span>
                           <span>·</span>
                           <span className="flex items-center gap-1">
-                            <kbd className="bg-[#0f0d1f] border border-violet-500/15 text-violet-500/70 px-1.5 py-0.5 rounded text-[10px] font-mono">
+                            <kbd className="bg-[#0f0d1f] border border-violet-500/15 text-violet-300/70 px-1.5 py-0.5 rounded text-[10px] font-mono">
                               Ctrl+V
                             </kbd>{" "}
                             paste
@@ -1445,7 +1445,7 @@ export default function ToolLayout({
                         <div className="grid grid-cols-3 gap-2">
                           <button
                             onClick={handleCopyImage}
-                            className="relative flex flex-col items-center gap-1 px-3 py-2.5 border border-violet-500/20 text-violet-300/60 hover:border-violet-500/40 hover:text-violet-300 rounded-xl transition-all duration-200 text-xs font-medium"
+                            className="relative flex flex-col items-center gap-1 px-3 py-2.5 border border-violet-500/20 text-violet-300/80 hover:border-violet-500/40 hover:text-violet-300 rounded-xl transition-all duration-200 text-xs font-medium"
                           >
                             <Copy size={15} weight="duotone" />
                             Copy
@@ -1458,7 +1458,7 @@ export default function ToolLayout({
                           </button>
                           <button
                             onClick={handleShare}
-                            className="relative flex flex-col items-center gap-1 px-3 py-2.5 border border-violet-500/20 text-violet-300/60 hover:border-sky-500/50 hover:text-sky-400 rounded-xl transition-all duration-200 text-xs font-medium"
+                            className="relative flex flex-col items-center gap-1 px-3 py-2.5 border border-violet-500/20 text-violet-300/80 hover:border-sky-500/50 hover:text-sky-400 rounded-xl transition-all duration-200 text-xs font-medium"
                           >
                             {/* Fix #20: updated to X logo */}
                             <XLogo size={15} weight="duotone" />
@@ -1471,7 +1471,7 @@ export default function ToolLayout({
                           </button>
                           <button
                             onClick={() => setSliderMode((v) => !v)}
-                            className="flex flex-col items-center gap-1 px-3 py-2.5 border border-violet-500/20 text-violet-300/60 hover:border-violet-500/40 hover:text-violet-300 rounded-xl transition-all duration-200 text-xs font-medium"
+                            className="flex flex-col items-center gap-1 px-3 py-2.5 border border-violet-500/20 text-violet-300/80 hover:border-violet-500/40 hover:text-violet-300 rounded-xl transition-all duration-200 text-xs font-medium"
                           >
                             <ShareNetwork size={15} weight="duotone" />
                             {sliderMode ? "Split" : "Slider"}
@@ -1838,7 +1838,7 @@ export default function ToolLayout({
                         {post.title}
                       </span>
                       <div className="flex items-center gap-3 shrink-0 ml-4">
-                        <span className="text-[10px] text-gray-500 hidden sm:block">{post.readTime} min read</span>
+                        <span className="text-[10px] text-gray-400 hidden sm:block">{post.readTime} min read</span>
                         <ArrowRight size={13} className="text-violet-500 group-hover:text-violet-300 transition-colors" />
                       </div>
                     </Link>

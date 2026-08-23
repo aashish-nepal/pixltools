@@ -155,12 +155,12 @@ export default function ApiAccessPage() {
                         Include your image as <code className="text-violet-400 bg-[#16122a] px-1 py-0.5 rounded text-xs">file</code> field and any tool-specific params as additional fields.
                     </p>
 
-                    <h3 className="text-sm font-bold text-violet-400/60 mb-2 flex items-center gap-2"><Terminal size={14} /> cURL Example</h3>
+                    <h3 className="text-sm font-bold text-violet-400 mb-2 flex items-center gap-2"><Terminal size={14} /> cURL Example</h3>
                     <pre className="bg-[#0d0a1f] border border-violet-500/15 rounded-xl p-5 overflow-x-auto text-sm text-emerald-400 font-mono leading-relaxed mb-5">
                         {CURL_EXAMPLE}
                     </pre>
 
-                    <h3 className="text-sm font-bold text-violet-400/60 mb-2 flex items-center gap-2"><Code2 size={14} /> JavaScript / Fetch Example</h3>
+                    <h3 className="text-sm font-bold text-violet-400 mb-2 flex items-center gap-2"><Code2 size={14} /> JavaScript / Fetch Example</h3>
                     <pre className="bg-[#0d0a1f] border border-violet-500/15 rounded-xl p-5 overflow-x-auto text-sm text-violet-300 font-mono leading-relaxed">
                         {JS_EXAMPLE}
                     </pre>
@@ -213,7 +213,7 @@ export default function ApiAccessPage() {
                         <Link href="/" className="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-bold px-6 py-3 rounded-2xl transition-all text-sm shadow-lg shadow-violet-900/40">
                             Try the Free Tools
                         </Link>
-                        <a href="mailto:api@pixltools.com" className="inline-flex items-center gap-2 border border-violet-500/25 hover:border-violet-500/50 text-violet-300/60 hover:text-violet-300 font-semibold px-6 py-3 rounded-2xl transition-all text-sm">
+                        <a href="mailto:api@pixltools.com" className="inline-flex items-center gap-2 border border-violet-500/25 hover:border-violet-500/50 text-violet-300/80 hover:text-violet-300 font-semibold px-6 py-3 rounded-2xl transition-all text-sm">
                             Contact for API Plans <ArrowRight size={13} />
                         </a>
                     </div>

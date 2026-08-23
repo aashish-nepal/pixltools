@@ -22,7 +22,7 @@ export default function ToolGridClient() {
             <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mb-8 sm:mb-16">
                 <button
                     onClick={() => { setActiveCategory(null); setShowAll(false); }}
-                    className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold tracking-wider transition-all duration-300 ${!activeCategory ? "bg-violet-600 text-white shadow-lg shadow-violet-900/40" : "bg-white/5 text-violet-200/50 hover:bg-white/10 hover:text-violet-100 border border-white/5"}`}
+                    className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold tracking-wider transition-all duration-300 ${!activeCategory ? "bg-violet-600 text-white shadow-lg shadow-violet-900/40" : "bg-white/5 text-violet-200/70 hover:bg-white/10 hover:text-violet-100 border border-white/5"}`}
                 >
                     ALL
                 </button>
@@ -32,7 +32,7 @@ export default function ToolGridClient() {
                         <button
                             key={key}
                             onClick={() => { setActiveCategory(isActive ? null : key); setShowAll(false); }}
-                            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold tracking-wider transition-all duration-300 ${isActive ? "bg-violet-600 text-white shadow-lg shadow-violet-900/40" : "bg-white/5 text-violet-200/50 hover:bg-white/10 hover:text-violet-100 border border-white/5"}`}
+                            className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-xl text-xs font-bold tracking-wider transition-all duration-300 ${isActive ? "bg-violet-600 text-white shadow-lg shadow-violet-900/40" : "bg-white/5 text-violet-200/70 hover:bg-white/10 hover:text-violet-100 border border-white/5"}`}
                         >
                             {cat.label.toUpperCase()}
                         </button>

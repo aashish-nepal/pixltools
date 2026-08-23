@@ -151,7 +151,7 @@ export function ToolControls(props: ToolControlsProps) {
                                     }} className="w-full border border-violet-500/20 bg-[#16122a] text-violet-100 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-violet-500/50" />
                                 </div>
                             </div>
-                            {aspectLocked && <p className="text-xs text-violet-400/60 flex items-center gap-1"><Lock size={10} /> Aspect ratio locked</p>}
+                            {aspectLocked && <p className="text-xs text-violet-400/80 flex items-center gap-1"><Lock size={10} /> Aspect ratio locked</p>}
                         </div>
                     ) : (
                         <div className="space-y-2">

@@ -125,7 +125,7 @@ export default function InstagramCompressionPage() {
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-6">
                     <div className="mb-3"><AlertTriangle size={22} className="text-amber-400" /></div>
                     <h2 className="font-bold text-amber-400 text-lg mb-2">Why Instagram Quality Degrades</h2>
-                    <p className="text-violet-300/60 text-sm leading-relaxed">
+                    <p className="text-violet-300/80 text-sm leading-relaxed">
                         Instagram automatically re-compresses images using JPEG quality settings around <strong className="text-amber-300">70–85%</strong>.
                         If you upload an oversized image (e.g. a 6MB camera JPG), Instagram does two things that hurt quality:
                         it <strong className="text-amber-300">downscales</strong> the image and then <strong className="text-amber-300">re-compresses</strong> it.
@@ -143,10 +143,10 @@ export default function InstagramCompressionPage() {
                         <table className="w-full">
                             <thead>
                                 <tr className="border-b border-violet-500/10 bg-[#16122a]">
-                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400/50">Post Type</th>
+                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Post Type</th>
                                     <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-fuchsia-400">Dimensions</th>
-                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400/50">Ratio</th>
-                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400/50">Pro Tip</th>
+                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Ratio</th>
+                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Pro Tip</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -197,7 +197,7 @@ export default function InstagramCompressionPage() {
                             { label: "Color profile", value: "sRGB", note: "Other profiles may shift colors" },
                         ].map(({ label, value, note }) => (
                             <div key={label} className="bg-violet-500/5 border border-violet-500/10 rounded-xl p-4">
-                                <p className="text-xs text-violet-400/50 font-semibold uppercase tracking-wider mb-1">{label}</p>
+                                <p className="text-xs text-violet-400 font-semibold uppercase tracking-wider mb-1">{label}</p>
                                 <p className="text-fuchsia-400 font-bold text-lg">{value}</p>
                                 <p className="text-xs text-gray-400 mt-1">{note}</p>
                             </div>

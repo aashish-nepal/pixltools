@@ -140,7 +140,7 @@ export default function SitemapPage() {
                                     <p className="text-sm text-gray-300 group-hover:text-violet-200 transition-colors leading-snug">
                                         {post.title}
                                     </p>
-                                    <p className="text-xs text-gray-500 mt-0.5">{post.category} · {post.readTime} min read</p>
+                                    <p className="text-xs text-gray-400 mt-0.5">{post.category} · {post.readTime} min read</p>
                                 </div>
                             </Link>
                         ))}

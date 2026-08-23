@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { TOOLS, getToolBySlug } from "@/lib/tools-data";
+import { getRelatedPostsForTool } from "@/lib/blog-data";
 import ToolPageClient from "./ToolPageClient";
-import { Gauge, Lock, Gift, Resize, ArrowsClockwise, Lightning, Robot, Target, Wrench, DeviceMobile } from "@phosphor-icons/react/dist/ssr";
+import { Gauge, Lock, Gift, Resize, ArrowsClockwise, Lightning, Robot, Target, Wrench, DeviceMobile, BookOpen } from "@phosphor-icons/react/dist/ssr";
 
 interface Props {
     params: Promise<{ slug: string }>;
@@ -187,7 +189,39 @@ export default async function ToolPage({ params }: Props) {
                 </div>
             </div>
 
-
+            {/* Related guides — derived from posts that already link to this tool */}
+            {(() => {
+                const relatedPosts = getRelatedPostsForTool(tool.slug);
+                if (relatedPosts.length === 0) return null;
+                return (
+                    <div className="bg-[#0b0816] pb-16">
+                        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                            <div className="flex items-center gap-2 mb-4">
+                                <BookOpen size={18} weight="duotone" className="text-violet-400" />
+                                <h2 className="text-base font-semibold text-violet-300">From the Blog</h2>
+                            </div>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                                {relatedPosts.map((post) => (
+                                    <Link
+                                        key={post.slug}
+                                        href={`/blog/${post.slug}`}
+                                        className="group block bg-[#14102a] hover:bg-[#1c1738] border border-violet-500/15 hover:border-violet-500/35 rounded-xl p-5 transition-all"
+                                    >
+                                        <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2 py-0.5 rounded-full">
+                                            {post.category}
+                                        </span>
+                                        <p className="text-sm font-semibold text-violet-100 mt-3 mb-1 group-hover:text-white transition-colors line-clamp-2">
+                                            {post.title}
+                                        </p>
+                                        <p className="text-xs text-gray-400 line-clamp-2">{post.excerpt}</p>
+                                        <span className="text-xs text-violet-400 mt-3 inline-block">Read guide →</span>
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                );
+            })()}
         </>
     );
 }

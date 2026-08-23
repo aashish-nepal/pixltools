@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const url = `https://www.pixltools.com/blog/category/${category}`;
     return {
-        title: `${label} Guides & Tips – Image Optimization | PixlTools Blog`,
+        title: { absolute: `${label} Guides & Tips – Image Optimization | PixlTools Blog` },
         description: `Browse all free ${label.toLowerCase()} guides on PixlTools. Learn best practices, tips, and step-by-step tutorials on ${label.toLowerCase()} for images.`,
         robots: {
             index: false,   // thin filter page — excluded to preserve crawl budget for content pages

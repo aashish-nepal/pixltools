@@ -37,6 +37,8 @@ Images account for over 60% of the average webpage's total weight. When you comp
 
 ## Best Settings for Each Format
 
+![Table of recommended compression quality settings for JPEG, PNG, and WebP](/blog/how-to-compress-images-without-losing-quality/image/format-settings =1200x530)
+
 - **JPEG**: Use quality 75–85 for photos. Enable progressive JPEG for faster perceived loading.
 - **PNG**: Use PNG-8 for images with fewer than 256 colors. Use PNG-24 only when transparency is essential.
 - **WEBP**: Use quality 75–80. WEBP achieves 25–35% smaller sizes than JPEG at equivalent visual quality.
@@ -98,6 +100,8 @@ SVG is a vector format — images scale to any size without losing quality. File
 
 ## Format Comparison Table
 
+![Table comparing JPEG, PNG, WebP, and SVG compression, transparency, and best use case](/blog/best-image-formats-for-websites/image/format-comparison =1200x620)
+
 | Format | Compression | Transparency | Best Use Case |
 |--------|-------------|--------------|---------------|
 | JPEG | Lossy | No | Photos |
@@ -129,6 +133,8 @@ Use WEBP as your primary format with JPEG/PNG fallbacks. For logos and UI elemen
 A 1-second delay in page load time causes a 7% drop in conversions and a 16% decrease in customer satisfaction. Images are the #1 culprit for slow websites — optimizing them is the highest-ROI improvement you can make.
 
 ## Step 1: Choose the Right Format
+
+![Step-by-step: 6 steps to a faster website — format, resize, compress, lazy load, CDN, caching](/blog/how-to-reduce-image-size-for-faster-websites/image/steps =1200x920)
 
 Start by selecting the correct format. Use WEBP for photos (convert from JPEG/PNG), SVG for logos and icons, and PNG only when you need lossless transparency.
 
@@ -176,6 +182,8 @@ Use Google PageSpeed Insights or WebPageTest to measure your improvements. A wel
 Uploading images at the wrong size causes platforms to resize and recompress them, often resulting in blurry, pixelated outcomes. Using the correct dimensions ensures your images always look their sharpest.
 
 ## Blog Image Sizes
+
+![Table of blog image sizes — featured image, in-post images, and thumbnails](/blog/best-image-size-for-blogs-and-social-media/image/blog-sizes =1200x530)
 
 **Featured image**: 1200×630px (16:9 ratio) — also used for social sharing
 **In-post images**: 800px wide maximum, height proportional
@@ -237,6 +245,8 @@ Image dimensions are measured in pixels (px). A 1920×1080 image has 1920 pixels
 
 ## Resizing Methods
 
+![Table comparing fixed width, fixed height, custom dimensions, and percentage scaling resize methods](/blog/how-to-resize-images-for-web-complete-guide/image/resizing-methods =1200x620)
+
 ### Fixed Width Resizing
 Set a specific pixel width and let the height scale proportionally. This maintains the aspect ratio and prevents distortion.
 
@@ -297,6 +307,8 @@ Background removal is the process of isolating the main subject of an image — 
 
 ## How to Remove a Background for Free
 
+![Step-by-step: remove an image background for free in 4 steps](/blog/how-to-remove-image-background-for-free/image/steps =1200x720)
+
 1. Visit our free [Background Remover](/remove-image-background) tool.
 2. Upload your image (JPG, PNG, or WEBP up to 10MB).
 3. Our AI-powered tool automatically detects and removes the background.
@@ -347,6 +359,8 @@ Upscaling increases an image's resolution — its pixel count — making it phys
 **AI upscaling** (Super-Resolution, ESRGAN, Real-ESRGAN) uses neural networks trained on millions of image pairs to predict realistic detail. Results look sharper and more natural — the AI effectively "guesses" what high-resolution details would look like.
 
 ## When to Use Upscaling
+
+![Table showing when to use AI upscaling vs SVG conversion vs traditional resize](/blog/how-to-upscale-images-without-losing-quality/image/upscaling-scenarios =1200x620)
 
 | Scenario | Best Approach |
 |---|---|
@@ -414,6 +428,8 @@ Watermarks serve two key purposes: **protection** and **branding**.
 
 Our [Watermark Image](/watermark-image) tool lets you add a custom text watermark in seconds:
 
+![Step-by-step: add a watermark to an image in 4 steps](/blog/how-to-add-watermark-to-images-online/image/steps =1200x720)
+
 1. Upload your image (JPG, PNG, or WEBP)
 2. Type your watermark text (e.g., "© yoursite.com")
 3. Choose position, size, and opacity
@@ -448,7 +464,7 @@ Determined users can attempt to clone-stamp or AI-erase visible watermarks. For 
     },
     {
         slug: "webp-vs-jpg-vs-png-which-format-is-best",
-        title: "WEBP vs JPG vs PNG: Which Image Format is Best for Your Website?",
+        title: "WebP vs JPG vs PNG: Which Format Is Best for Your Site?",
         excerpt: "An in-depth comparison of the three most common web image formats to help you make the right choice for every use case.",
         date: "2026-01-28",
         readTime: 9,
@@ -507,6 +523,8 @@ WEBP was developed by Google specifically for the web. It offers both lossy and 
 
 ## File Size Comparison (Real World)
 
+![Bar chart comparing PNG, JPEG, and WebP file size for the same 1200×628px photo](/blog/webp-vs-jpg-vs-png-which-format-is-best/image/format-comparison =1200x670)
+
 | Image Type | JPEG | PNG | WEBP |
 |---|---|---|---|
 | 1200×628 photo | 280 KB | 1.1 MB | 195 KB |
@@ -527,7 +545,7 @@ Use our free converters: [JPG to WEBP](/jpg-to-webp) | [PNG to WEBP](/png-to-web
     },
     {
         slug: "how-to-resize-images-for-social-media-2026",
-        title: "Social Media Image Size Guide 2026: Instagram, YouTube, Facebook & More",
+        title: "Social Media Image Size Guide 2026 (All Platforms)",
         excerpt: "The complete, up-to-date guide to image dimensions for every major social platform in 2026 — with tips to avoid blurry uploads.",
         date: "2026-02-05",
         readTime: 7,
@@ -538,6 +556,8 @@ Use our free converters: [JPG to WEBP](/jpg-to-webp) | [PNG to WEBP](/png-to-web
 Every social platform re-compresses images that are the wrong size. Upload an oversized photo to Instagram and it will resize and re-encode it — introducing blur and compression artifacts. Upload at the exact recommended dimensions and your image arrives pixel-perfect.
 
 ## Instagram Image Sizes 2026
+
+![Table of Instagram image sizes for 2026 — square post, portrait post, landscape post, story, and profile picture dimensions](/blog/how-to-resize-images-for-social-media-2026/image/instagram-sizes =1200x710)
 
 | Format | Dimensions | Aspect Ratio |
 |---|---|---|
@@ -656,6 +676,8 @@ Our online tool handles the first page of a PDF. For multi-page extraction, desk
 
 ## Common Use Cases
 
+![Table of common PDF to image and image to PDF conversion use cases](/blog/how-to-convert-pdf-to-jpg-online-free/image/use-cases =1200x620)
+
 | Scenario | Tool |
 |---|---|
 | Share a PDF slide as an image | PDF to JPG |
@@ -742,6 +764,8 @@ Platforms like Amazon, eBay, Etsy, and Shopify accept large files but aggressive
 Instagram, Facebook, LinkedIn, and Twitter/X recompress everything. To avoid double compression artifacts, upload at the platform-recommended pixel dimensions and keep your source under 500KB.
 
 ## Format Comparison Table
+
+![Table comparing JPEG, PNG, and WebP typical file size for a 1080x1080 photo](/blog/how-to-reduce-photo-size-in-kb/image/format-comparison =1200x530)
 
 | Format | Best For | Typical 1080×1080 Size | Transparency |
 |---|---|---|---|
@@ -850,6 +874,8 @@ Our [Resize Image](/resize-image) tool can help you hit the exact pixel dimensio
 
 ## Comparing JPG to PDF Conversion Tools
 
+![Table comparing PixlTools, desktop software, and mobile apps for JPG to PDF conversion](/blog/how-to-convert-jpg-to-pdf-free/image/tool-comparison =1200x710)
+
 | Feature | PixlTools | Desktop Software | Mobile Apps |
 |---|---|---|---|
 | Price | Free | $20–$200/year | Often freemium |
@@ -907,6 +933,8 @@ Compression reduces KB/MB without changing pixel dimensions. Best for:
 - Email attachments over the limit
 
 **How to compress:**
+![Step-by-step: make an image smaller in 4 steps](/blog/how-to-make-image-smaller/image/steps =1200x720)
+
 1. Go to [Compress Image](/compress-image)
 2. Upload your image
 3. Adjust quality (lower = smaller file, more compression artifacts)
@@ -998,6 +1026,8 @@ Use our [Crop Image](/crop-image) tool:
 
 ## Common Crop Dimensions
 
+![Table of common crop dimensions for Instagram, YouTube, Facebook, and Twitter](/blog/how-to-crop-an-image-online-free/image/crop-dimensions =1200x710)
+
 | Platform | Dimensions | Aspect Ratio |
 |---|---|---|
 | Instagram square | 1080×1080px | 1:1 |
@@ -1085,7 +1115,7 @@ For maximum feed presence, use 4:5 (portrait) at 1080×1350px. For Stories, use 
     },
     {
         slug: "image-file-formats-explained",
-        title: "Image File Formats Explained: JPG, PNG, WEBP, SVG, AVIF & More",
+        title: "Image File Formats Explained: JPG, PNG, WebP & More",
         excerpt: "A complete guide to every major image format — what each one is best for, file size comparisons, and when to use each.",
         date: "2026-03-04",
         readTime: 10,
@@ -1162,6 +1192,8 @@ AVIF is the newest format, based on the AV1 video codec. Outperforms WEBP by 20�
 GIF supports animation but is limited to 256 colours, making it terrible for photos. For modern animations, use WEBP or video (MP4).
 
 ## Format Comparison Table
+
+![Table comparing JPEG, PNG, WebP, SVG, AVIF, and GIF compression, transparency, and animation support](/blog/image-file-formats-explained/image/format-comparison =1200x800)
 
 | Format | Compression | Transparency | Animation | Best For |
 |---|---|---|---|---|
@@ -1258,6 +1290,8 @@ INP measures responsiveness. Large images loaded synchronously block the main th
 
 ## Measuring Your Score
 
+![Step-by-step: measure your Core Web Vitals score in 3 steps](/blog/core-web-vitals-image-optimization/image/steps =1200x620)
+
 1. Visit https://pagespeed.web.dev
 2. Enter your URL
 3. Look at the "Opportunities" section — image issues are listed with exact savings estimates
@@ -1278,7 +1312,7 @@ INP measures responsiveness. Large images loaded synchronously block the main th
     },
     {
         slug: "how-to-flip-an-image-online",
-        title: "How to Flip an Image Online Free – Mirror Horizontally or Vertically",
+        title: "How to Flip an Image Online Free (Horizontal & Vertical)",
         excerpt: "Flip any photo horizontally (mirror effect) or vertically (upside down) in one click. Free, instant, no signup.",
         date: "2026-03-06",
         readTime: 4,
@@ -1307,6 +1341,8 @@ Flipping creates a mirror image of your photo by reversing it along an axis:
 ## How to Flip an Image for Free
 
 Use our [Flip Image](/flip-image) tool:
+
+![Step-by-step: flip an image online in 4 steps](/blog/how-to-flip-an-image-online/image/steps =1200x720)
 
 1. Go to [Flip Image](/flip-image)
 2. Upload your image (JPG, PNG, or WEBP)
@@ -1383,6 +1419,8 @@ Formula: **Pixel dimension ÷ DPI = Print size in inches**
 
 Use our [Image Metadata Viewer](/image-metadata-viewer):
 
+![Step-by-step: check an image's DPI in 3 steps](/blog/what-is-image-dpi-and-how-to-change-it/image/steps =1200x620)
+
 1. Go to [Image Metadata Viewer](/image-metadata-viewer)
 2. Upload your image
 3. Look for "Resolution" or "DPI" in the EXIF data
@@ -1438,6 +1476,8 @@ Black and white photography has endured for over 150 years because it strips awa
 
 Use our [Grayscale Converter](/image-grayscale) tool:
 
+![Step-by-step: convert a color image to black and white in 4 steps](/blog/how-to-convert-image-to-black-and-white/image/steps =1200x720)
+
 1. Go to [Grayscale Converter](/image-grayscale)
 2. Upload your colour image (JPG, PNG, or WEBP)
 3. Click "Process"
@@ -1487,7 +1527,7 @@ Slightly, because the colour channels are removed. JPEG grayscale images are typ
     },
     {
         slug: "best-free-online-image-compressor-2026",
-        title: "Best Free Online Image Compressors in 2026 (Tested & Compared)",
+        title: "Best Free Online Image Compressors in 2026 (Tested)",
         excerpt: "We tested TinyPNG, Squoosh, iLoveIMG, and PixlTools on the same image. Here are the real compression results, pros, cons, and when to use each.",
         date: "2026-03-01",
         updatedDate: "2026-04-14",
@@ -1499,6 +1539,8 @@ Slightly, because the colour channels are removed. JPEG grayscale images are typ
 A great online image compressor does four things: reduces file size dramatically, preserves visual quality, works instantly without software, and keeps your files private. We tested four of the most popular free tools using the same test image to give you real, comparable results.
 
 **Test image**: 1.2 MB JPEG photo, 1200×800px, processed at each tool's default settings.
+
+![Bar chart comparing compressed output size from TinyPNG, Squoosh, iLoveIMG, and PixlTools on the same 1.2 MB test photo](/blog/best-free-online-image-compressor-2026/image/compressor-comparison =1200x760)
 
 ## What to Look For
 
@@ -1632,6 +1674,8 @@ You don't need to download a dedicated app to compress images on your iPhone or 
 
 ## How to Compress an Image on iPhone
 
+![Step-by-step: compress a photo on iPhone or Android in 5 steps](/blog/how-to-compress-images-on-iphone-and-android/image/steps =1200x820)
+
 1. Open **Safari** on your iPhone
 2. Visit **pixltools.com/compress-image**
 3. Tap **Upload Image** and select a photo from your Camera Roll
@@ -1714,6 +1758,8 @@ Converting PNG to JPG takes seconds with our free online tool. No software, no s
 
 ## Quality Settings Explained
 
+![Table showing file size reduction and visual quality at each JPEG quality setting](/blog/how-to-convert-png-to-jpg-free/image/quality-settings =1200x710)
+
 | Quality | File Size Reduction | Visual Quality |
 |---|---|---|
 | 100 | ~10% | Identical to PNG |
@@ -1758,6 +1804,8 @@ Quality 80 is the sweet spot — 65% smaller than the PNG with no visible qualit
 You don't need Adobe Photoshop — which costs $20+/month — to resize an image. Our free [Image Resize](/resize-image) tool does it instantly in your browser, on any device.
 
 ## How to Resize an Image Online for Free
+
+![Step-by-step: resize an image without Photoshop in 5 steps](/blog/how-to-resize-image-without-photoshop/image/steps =1200x820)
 
 1. Go to [PixlTools Image Resizer](/resize-image)
 2. Upload your image (JPG, PNG, or WEBP)
@@ -1836,6 +1884,8 @@ AVIF (AV1 Image File Format) is a newer format derived from the AV1 video codec,
 
 ## Head-to-Head Comparison
 
+![Table comparing AVIF, WebP, JPEG, and PNG on compression, browser support, and features](/blog/avif-vs-webp-which-is-better/image/format-comparison =1200x800)
+
 | Feature | AVIF | WebP | JPEG | PNG |
 |---|---|---|---|---|
 | Compression efficiency | 🥇 Best | 🥈 Very good | 🥉 Good | Poor for photos |
@@ -1904,7 +1954,7 @@ No — older browsers (including Safari < 16) don't support AVIF. Always provide
     },
     {
         slug: "how-to-convert-heic-to-jpg-on-iphone-and-mac",
-        title: "How to Convert HEIC to JPG on iPhone and Mac – Free & Instant",
+        title: "How to Convert HEIC to JPG on iPhone and Mac (Free)",
         excerpt: "iPhone photos save as HEIC by default, but most apps and websites need JPG. Here's how to convert HEIC to JPG on any device — for free.",
         date: "2026-03-17",
         readTime: 6,
@@ -1923,6 +1973,8 @@ Common HEIC problems:
 ## Method 1: Convert HEIC to JPG Online (Easiest)
 
 The fastest method — works on any device, no software needed.
+
+![Step-by-step: convert HEIC to JPG on iPhone and Mac in 4 steps](/blog/how-to-convert-heic-to-jpg-on-iphone-and-mac/image/steps =1200x720)
 
 1. Transfer your HEIC photo from iPhone to your computer (via AirDrop, iCloud Drive, or USB)
 2. Visit our free [HEIC to JPG converter](/heic-to-jpg)
@@ -2027,6 +2079,8 @@ If you want to send via the Photo option but control quality, compress the image
 
 ### Step-by-step:
 
+![Step-by-step: compress a photo for WhatsApp in 5 steps](/blog/how-to-compress-image-for-whatsapp/image/steps =1200x820)
+
 1. Visit our free [Image Compressor](/compress-image)
 2. Upload your photo
 3. Set quality to **85** for the best balance
@@ -2092,6 +2146,8 @@ A photo collage combines multiple photos into a single image, arranged in a grid
 ## How to Make a Photo Collage Online for Free
 
 Our free [Photo Collage Maker](/photo-collage-maker) creates grid collages in seconds — no software required:
+
+![Step-by-step: make a photo collage online for free in 4 steps](/blog/how-to-make-a-photo-collage-online-free/image/steps =1200x720)
 
 1. Visit the [Photo Collage Maker](/photo-collage-maker) tool
 2. Upload 2–16 photos (JPG, PNG, or WebP)
@@ -2235,6 +2291,8 @@ If you need the smallest possible file, resize first then compress:
 
 ## Target File Sizes by Use Case
 
+![Table of target file sizes and methods for email, government forms, WhatsApp, Instagram, and web](/blog/how-to-reduce-image-file-size-on-iphone/image/target-sizes =1200x710)
+
 | Use Case | Target Size | Method |
 |---|---|---|
 | Email attachment | Under 1MB | Compress at quality 80 |
@@ -2266,7 +2324,7 @@ Most iPhone photos can be compressed to 100–300KB at quality 80 while still lo
     {
         slug: "how-to-batch-process-images-without-photoshop",
         title: "How to Batch Process Images Without Photoshop (Free Methods)",
-        excerpt: "Need to resize, compress, or convert dozens of images at once without paying for Photoshop? Here are the best free methods for batch processing images — including online tools, command-line options, and free desktop software.",
+        excerpt: "Need to resize, compress, or convert dozens of images at once without Photoshop? Here are the best free methods — no paid software required.",
         date: "2026-03-14",
         readTime: 10,
         category: "Guides",
@@ -2380,6 +2438,8 @@ Key features:
 
 ## Choosing the Right Method
 
+![Table comparing batch image processing methods by platform and skill level](/blog/how-to-batch-process-images-without-photoshop/image/method-comparison =1200x800)
+
 | Method | Platform | Skill Level | Best For |
 |---|---|---|---|
 | PixlTools online | Any browser | Beginner | Small batches, quick conversions |
@@ -2442,6 +2502,8 @@ Getting an image to a specific file size requires controlling two things:
 For a target of 20KB, you nearly always need to reduce *both*. A correctly dimensioned passport photo (200×200 to 400×400 pixels) at quality 60–70 will typically land between 8KB and 22KB.
 
 ## Step-by-Step: Compress Image Below 20KB
+
+![Step-by-step: compress an image below 20KB in 3 steps](/blog/how-to-compress-image-below-20kb/image/steps =1200x620)
 
 ### Step 1 – Resize to the required dimensions first
 
@@ -2521,7 +2583,7 @@ If the file is still above 20KB after compression, the pixel dimensions are like
     },
     {
         slug: "how-to-compress-images-for-email",
-        title: "How to Compress Images for Email – Smaller Attachments, Faster Send",
+        title: "How to Compress Images for Email (Faster Sending)",
         excerpt: "Email providers limit attachments to 10–25MB. Here's how to compress photos before attaching them so they send faster and actually get delivered.",
         date: "2026-04-07",
         readTime: 5,
@@ -2559,6 +2621,8 @@ For multiple photos, process each one and then attach them all. The entire proce
 **For email, always use JPEG.** It gives the smallest file size for photographs. If you're sending iPhone photos, [convert HEIC to JPG](/heic-to-jpg) before attaching.
 
 ## What Quality Setting for Email?
+
+![Table showing typical output size and verdict at each JPEG quality setting for a 3MP email photo](/blog/how-to-compress-images-for-email/image/quality-settings =1200x710)
 
 | Quality | Typical Output Size (3MP photo) | Verdict |
 |---|---|---|
@@ -2646,6 +2710,8 @@ After resizing, upload to [PixlTools Image Compressor](/compress-image) and adju
 
 ## Target Size Reference Table
 
+![Table of expected JPEG file size by dimension and quality setting](/blog/how-to-compress-image-to-100kb/image/size-reference =1200x620)
+
 | Dimensions | Quality 80 | Quality 70 | Quality 60 |
 |---|---|---|---|
 | 600×600 px | 120–200 KB | 80–130 KB | 55–90 KB |
@@ -2702,7 +2768,7 @@ At the dimensions required for most form uploads (200–400px), quality 65–75 
     {
         slug: "best-image-size-for-wordpress",
         title: "Best Image Size for WordPress Websites (2026 Guide)",
-        excerpt: "The right image dimensions and file size for WordPress can cut your page load time in half. Here's the complete guide with recommended sizes for every image type.",
+        excerpt: "The right image dimensions and file size for WordPress can cut your page load time in half. Here's the complete guide with recommended sizes.",
         date: "2026-04-12",
         readTime: 8,
         category: "Optimization",
@@ -2712,6 +2778,8 @@ At the dimensions required for most form uploads (200–400px), quality 65–75 
 Images are typically the largest assets on a WordPress page — accounting for 50–70% of total page weight. Google's Core Web Vitals (specifically Largest Contentful Paint) penalises pages with slow-loading images. Uploading correctly sized, compressed images is the single highest-impact optimization you can make to a WordPress site.
 
 ## WordPress Image Size Recommendations
+
+![Table of WordPress image size recommendations — featured image, in-post image, and header/hero dimensions](/blog/best-image-size-for-wordpress/image/wp-sizes =1200x530)
 
 ### Featured Images (Post Thumbnails)
 
@@ -2834,8 +2902,8 @@ Run your URL through Google PageSpeed Insights (pagespeed.web.dev). The "Opportu
     // ── Long-tail targeted posts (low competition, specific intent) ──────────
     {
         slug: "compress-image-for-passport-visa-application",
-        title: "How to Compress a Photo for Passport, Visa or Job Application",
-        excerpt: "Most passport and visa portals accept images under 100KB or 200KB. Here's how to compress your photo to the exact file size required — free, online, no software.",
+        title: "How to Compress a Photo for Passport or Visa",
+        excerpt: "Most passport and visa portals accept images under 100KB or 200KB. Here's how to hit that exact size — free, online, no software.",
         date: "2026-04-14",
         updatedDate: "2026-04-20",
         readTime: 6,
@@ -2889,7 +2957,9 @@ If your compressed photo is still above the limit, the usual cause is that your 
 As a rough guide for JPEG photos:
 - 200×200px at quality 80 → ~10–25KB  
 - 400×400px at quality 80 → ~35–70KB  
-- 600×800px at quality 80 → ~60–120KB  
+- 600×800px at quality 80 → ~60–120KB
+
+![Bar chart showing typical JPEG file size at quality 80 for 200×200px, 400×400px, and 600×800px photos](/blog/compress-image-for-passport-visa-application/image/size-by-dimension =1200x670)
 
 ## Common Mistakes
 
@@ -2961,6 +3031,8 @@ A 4000×3000px photo compressed to quality 10 will still be large and look terri
 
 ## Expected Output Sizes at Quality 80
 
+![Bar chart of expected JPEG file size by dimension at quality 80](/blog/compress-image-below-50kb/image/size-by-dimension =1200x850)
+
 | Dimensions | Expected JPEG Size (photo) |
 |---|---|
 | 200×200px | 8–20KB ✅ |
@@ -2997,7 +3069,7 @@ Some portals measure in KiB (kibibytes) not KB (kilobytes). 1 KiB = 1.024 KB, so
     {
         slug: "heic-to-jpg-converter-windows-11",
         title: "How to Convert HEIC to JPG on Windows 11 – Free, No Software",
-        excerpt: "iPhone photos are saved as HEIC, but Windows 11 can't open them without extra steps. Here are 3 free methods to convert HEIC to JPG on Windows 11 — no paid software needed.",
+        excerpt: "iPhone photos save as HEIC, which Windows 11 can't open without extra steps. Here are 3 free ways to convert HEIC to JPG — no paid software needed.",
         date: "2026-04-17",
         readTime: 6,
         category: "Conversion",
@@ -3061,6 +3133,8 @@ iCloud will now download all your iPhone photos as JPEGs automatically.
 
 ## Method Comparison
 
+![Table comparing HEIC to JPG conversion methods on Windows 11 by speed and batch support](/blog/heic-to-jpg-converter-windows-11/image/method-comparison =1200x620)
+
 | Method | Speed | Batch? | Requires Install? |
 |---|---|---|---|
 | Online converter | Fast | Up to 5 at once | No |
@@ -3123,6 +3197,8 @@ The one case where quality matters: if your WebP file uses lossless encoding (co
 
 ## WebP to JPG vs WebP to PNG — Which Should You Use?
 
+![Table showing when to convert WebP to JPG versus WebP to PNG by content type](/blog/webp-to-jpg-free-online/image/jpg-vs-png =1200x710)
+
 | Content Type | Use JPG | Use PNG |
 |---|---|---|
 | Photographs | ✅ Best choice | File size too large |
@@ -3167,8 +3243,8 @@ Modern Edge and Chrome can open WebP files by dragging them into the browser. To
     },
     {
         slug: "compress-image-for-linkedin",
-        title: "How to Resize and Compress Images for LinkedIn (Profile, Banner & Posts)",
-        excerpt: "LinkedIn has strict image size requirements that most people ignore — resulting in blurry profiles and slow-loading posts. Here are the exact specs and how to fix your images free.",
+        title: "How to Resize and Compress Images for LinkedIn",
+        excerpt: "LinkedIn has strict image size limits most people ignore, causing blurry profiles and slow posts. Here are the exact specs and how to fix it, free.",
         date: "2026-04-19",
         readTime: 6,
         category: "Compression",
@@ -3180,6 +3256,8 @@ LinkedIn automatically resizes and recompresses every image you upload. If you u
 The fix is simple: upload at the exact recommended dimensions so LinkedIn doesn't have to resize anything.
 
 ## LinkedIn Image Sizes (2026)
+
+![Table of LinkedIn image sizes for 2026 — profile photo, background banner, post image, and article cover dimensions](/blog/compress-image-for-linkedin/image/linkedin-sizes =1200x710)
 
 | Image Type | Recommended Size | Max File Size | Format |
 |---|---|---|---|
@@ -3260,7 +3338,7 @@ Use our [Crop Image](/crop-image) tool to crop your image to a 4:1 aspect ratio,
     },
     {
         slug: "compress-image-for-email-attachment",
-        title: "How to Compress Images for Email Attachments – Free & Fast (2026)",
+        title: "How to Compress Images for Email Attachments (2026)",
         excerpt: "Hitting Gmail or Outlook attachment limits? Learn how to quickly reduce image file size so your photos send without issues — no software needed.",
         date: "2026-04-23",
         readTime: 6,
@@ -3312,6 +3390,8 @@ That's it. Two steps, two minutes, completely free.
 | 500 KB PNG graphic | 40–100 KB | ~80% smaller |
 
 ## Size Guidelines by Email Platform
+
+![Table of attachment limits and safe per-image size targets for Gmail, Outlook, Yahoo, and iCloud Mail](/blog/compress-image-for-email-attachment/image/platform-limits =1200x710)
 
 | Provider | Attachment Limit | Safe Per-Image Target |
 |---|---|---|
@@ -3385,4 +3465,14 @@ export function getPostsByCategory(category: string): BlogPost[] {
 
 export function getAllCategories(): string[] {
     return Array.from(new Set(BLOG_POSTS.map((p) => p.category)));
+}
+
+/**
+ * Posts relevant to a tool, derived from the tool links each post already
+ * places in its own content — not a hand-maintained mapping, so it can't
+ * drift out of sync as posts are added or edited.
+ */
+export function getRelatedPostsForTool(toolSlug: string, limit = 3): BlogPost[] {
+    const linkPattern = new RegExp(`\\]\\(/${toolSlug}\\)`);
+    return BLOG_POSTS.filter((p) => linkPattern.test(p.content)).slice(0, limit);
 }

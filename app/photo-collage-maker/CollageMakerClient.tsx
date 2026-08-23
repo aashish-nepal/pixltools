@@ -117,7 +117,7 @@ export default function CollageMakerClient() {
                             <UploadCloud size={36} className="text-violet-400 mx-auto mb-3" strokeWidth={1.5} />
                             <p className="text-sm font-semibold text-violet-200/70">Drag & drop images here</p>
                             <p className="text-xs text-gray-400 mt-1">or <span className="text-violet-400 underline">click to browse</span></p>
-                            <p className="text-xs text-violet-300/30 mt-2">JPG, PNG, WEBP · Up to 16 images · 10MB each</p>
+                            <p className="text-xs text-gray-400 mt-2">JPG, PNG, WEBP · Up to 16 images · 10MB each</p>
                         </div>
 
                         {/* Settings */}
@@ -127,7 +127,7 @@ export default function CollageMakerClient() {
                                 <span className="text-sm font-bold text-violet-200/70">Collage Settings</span>
                             </div>
                             <div>
-                                <label className="text-xs text-violet-400/50 font-semibold uppercase tracking-wider block mb-2">
+                                <label className="text-xs text-violet-400 font-semibold uppercase tracking-wider block mb-2">
                                     Columns: <span className="text-violet-400">{cols}</span>
                                 </label>
                                 <div className="flex gap-2">
@@ -143,13 +143,13 @@ export default function CollageMakerClient() {
                                 </div>
                             </div>
                             <div>
-                                <label className="text-xs text-violet-400/50 font-semibold uppercase tracking-wider block mb-2">
+                                <label className="text-xs text-violet-400 font-semibold uppercase tracking-wider block mb-2">
                                     Gap spacing: <span className="text-violet-400">{gap}px</span>
                                 </label>
                                 <input type="range" min={0} max={20} value={gap} onChange={e => setGap(+e.target.value)} className="w-full accent-violet-500" />
                             </div>
                             <div>
-                                <label className="text-xs text-violet-400/50 font-semibold uppercase tracking-wider block mb-2">Background color</label>
+                                <label className="text-xs text-violet-400 font-semibold uppercase tracking-wider block mb-2">Background color</label>
                                 <div className="flex items-center gap-3">
                                     <input type="color" value={bg} onChange={e => setBg(e.target.value)} className="w-10 h-10 rounded-lg border border-violet-500/20 cursor-pointer bg-transparent" />
                                     <span className="text-sm text-gray-400 font-mono">{bg.toUpperCase()}</span>
@@ -189,7 +189,7 @@ export default function CollageMakerClient() {
                         {/* Uploaded image thumbnails */}
                         {files.length > 0 && (
                             <div className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-4">
-                                <p className="text-xs font-bold text-violet-400/50 uppercase tracking-wider mb-3">Selected images ({files.length}/16)</p>
+                                <p className="text-xs font-bold text-violet-400 uppercase tracking-wider mb-3">Selected images ({files.length}/16)</p>
                                 <div className="grid grid-cols-4 sm:grid-cols-6 gap-2">
                                     {files.map(({ id, preview }, i) => (
                                         <div key={id} className="relative group aspect-square rounded-lg overflow-hidden border border-violet-500/15">
@@ -207,7 +207,7 @@ export default function CollageMakerClient() {
                                     {files.length < 16 && (
                                         <button
                                             onClick={() => inputRef.current?.click()}
-                                            className="aspect-square rounded-lg border border-dashed border-violet-500/20 hover:border-violet-500/50 flex items-center justify-center text-violet-400/40 hover:text-violet-400 transition-colors text-xl font-bold"
+                                            className="aspect-square rounded-lg border border-dashed border-violet-500/20 hover:border-violet-500/50 flex items-center justify-center text-violet-400/80 hover:text-violet-400 transition-colors text-xl font-bold"
                                         >
                                             +
                                         </button>
@@ -238,10 +238,10 @@ export default function CollageMakerClient() {
                         {files.length === 0 && !result && (
                             <div className="border border-dashed border-violet-500/15 rounded-2xl h-64 flex flex-col items-center justify-center text-center p-8">
                                 <div className="w-14 h-14 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center mb-3">
-                                    <Images size={28} weight="duotone" className="text-violet-400/50" />
+                                    <Images size={28} weight="duotone" className="text-violet-400" />
                                 </div>
                                 <p className="text-gray-400 font-semibold">Your collage preview will appear here</p>
-                                <p className="text-xs text-violet-300/30 mt-1">Add at least 2 images to get started</p>
+                                <p className="text-xs text-gray-400 mt-1">Add at least 2 images to get started</p>
                             </div>
                         )}
                     </div>

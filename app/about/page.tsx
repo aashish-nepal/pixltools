@@ -215,7 +215,7 @@ export default function AboutPage() {
                             </div>
                         ))}
                     </div>
-                    <p className="text-sm text-gray-500 mt-5 leading-relaxed">
+                    <p className="text-sm text-gray-400 mt-5 leading-relaxed">
                         All image processing happens over HTTPS. Files are transmitted securely, processed in an
                         isolated environment, and deleted immediately. We do not use your images for training AI models,
                         analytics enrichment, or any other secondary purpose.

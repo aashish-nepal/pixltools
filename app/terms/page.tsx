@@ -156,7 +156,7 @@ export default function TermsPage() {
             <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-14">
                 {/* Summary box */}
                 <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-5 mb-10">
-                    <p className="text-sm text-violet-300/60 leading-relaxed">
+                    <p className="text-sm text-violet-300/80 leading-relaxed">
                         <strong className="text-violet-200">Plain-language summary:</strong> PixlTools is a free service. You own your images. We
                         process and delete them immediately. Don&apos;t use the service for illegal content. We offer no guarantees and have no liability
                         since the service costs you nothing.

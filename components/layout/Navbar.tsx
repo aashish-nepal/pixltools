@@ -105,7 +105,7 @@ export default function Navbar() {
                         className="flex items-center gap-1.5 px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-violet-500/10 rounded-lg transition-all"
                     >
                         <span>Pro</span>
-                        <span className="text-[9px] font-black uppercase tracking-wider bg-violet-500 text-white px-1.5 py-0.5 rounded-full ml-0.5">Soon</span>
+                        <span className="text-[9px] font-black uppercase tracking-wider bg-violet-600 text-white px-1.5 py-0.5 rounded-full ml-0.5">Soon</span>
                     </Link>
                 </div>
 
@@ -153,7 +153,7 @@ export default function Navbar() {
                         <div className="relative flex flex-col h-full overflow-y-auto overscroll-contain">
                             {/* Header */}
                             <div className="px-5 pt-5 pb-3">
-                                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-violet-400/50">Navigation</p>
+                                <p className="text-[10px] font-bold uppercase tracking-[0.25em] text-violet-400">Navigation</p>
                             </div>
 
                             {/* Tool categories */}
@@ -223,7 +223,7 @@ export default function Navbar() {
                                             <Zap size={14} className="text-amber-400" />
                                         </div>
                                         <span className="text-sm font-semibold text-gray-200">Pro</span>
-                                        <span className="text-[9px] font-black uppercase tracking-wider bg-violet-500 text-white px-1.5 py-0.5 rounded-full">Soon</span>
+                                        <span className="text-[9px] font-black uppercase tracking-wider bg-violet-600 text-white px-1.5 py-0.5 rounded-full">Soon</span>
                                     </Link>
                                 </div>
                             </div>

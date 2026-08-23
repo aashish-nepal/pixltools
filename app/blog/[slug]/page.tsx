@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { BLOG_POSTS, getPostBySlug } from "@/lib/blog-data";
+import { BLOG_CHART_DATA } from "@/lib/blog-chart-data";
 
 import FAQSection from "@/components/ui/FAQSection";
 import AdBanner from "@/components/ui/AdBanner";
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const url = `https://www.pixltools.com/blog/${slug}`;
     const ogImageUrl = `https://www.pixltools.com/blog/${slug}/opengraph-image`;
     return {
-        title: `${post.title} | PixlTools Blog`,
+        title: { absolute: `${post.title} | PixlTools Blog` },
         description: post.excerpt,
         robots: {
             index: true,
@@ -122,6 +123,25 @@ function renderContent(content: string) {
             nodes.push(<h3 key={`h3-${i}`}>{renderInline(line.slice(4))}</h3>);
             i += 1;
             continue;
+        }
+        if (line.startsWith("![")) {
+            const imgMatch = /^!\[([^\]]*)\]\(([^\s)]+)(?:\s+=(\d+)x(\d+))?\)$/.exec(line.trim());
+            if (imgMatch) {
+                const [, alt, src, w, h] = imgMatch;
+                nodes.push(
+                    <img
+                        key={`img-${i}`}
+                        src={src}
+                        alt={alt}
+                        width={w ? Number(w) : undefined}
+                        height={h ? Number(h) : undefined}
+                        loading="lazy"
+                        className="w-full h-auto rounded-xl border border-violet-500/15 my-2"
+                    />
+                );
+                i += 1;
+                continue;
+            }
         }
         if (line.startsWith("- ")) {
             const items: React.ReactNode[] = [];
@@ -248,7 +268,12 @@ export default async function BlogPostPage({ params }: Props) {
                 height: 512,
             },
         },
-        image: `https://www.pixltools.com/blog/${slug}/opengraph-image`,
+        image: [
+            `https://www.pixltools.com/blog/${slug}/opengraph-image`,
+            ...Object.keys(BLOG_CHART_DATA[slug] ?? {}).map(
+                (key) => `https://www.pixltools.com/blog/${slug}/image/${key}`
+            ),
+        ],
         mainEntityOfPage: { "@type": "WebPage", "@id": `https://www.pixltools.com/blog/${slug}` },
         inLanguage: "en-US",
         isPartOf: {
@@ -418,7 +443,7 @@ export default async function BlogPostPage({ params }: Props) {
                                             </div>
                                             <div className="min-w-0">
                                                 <p className="text-sm font-semibold text-violet-100 group-hover:text-white transition-colors">{name}</p>
-                                                <p className="text-xs text-gray-500 truncate">{desc}</p>
+                                                <p className="text-xs text-gray-400 truncate">{desc}</p>
                                             </div>
                                         </Link>
                                     ))}

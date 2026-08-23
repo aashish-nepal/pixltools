@@ -114,7 +114,7 @@ export default function Footer() {
 
                     {/* Popular Tools */}
                     <div>
-                        <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Popular Tools</p>
+                        <p className="text-[11px] font-semibold text-violet-400 uppercase tracking-widest mb-4">Popular Tools</p>
                         <ul className="flex flex-col gap-2.5">
                             {POPULAR_TOOLS.map(({ name, slug }) => (
                                 <li key={slug}>
@@ -129,7 +129,7 @@ export default function Footer() {
                     {/* Convert + More Tools */}
                     <div className="flex flex-col gap-8">
                         <div>
-                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Convert</p>
+                            <p className="text-[11px] font-semibold text-violet-400 uppercase tracking-widest mb-4">Convert</p>
                             <ul className="flex flex-col gap-2.5">
                                 {CONVERT_TOOLS.map(({ name, slug }) => (
                                     <li key={slug}>
@@ -141,7 +141,7 @@ export default function Footer() {
                             </ul>
                         </div>
                         <div>
-                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">More Tools</p>
+                            <p className="text-[11px] font-semibold text-violet-400 uppercase tracking-widest mb-4">More Tools</p>
                             <ul className="flex flex-col gap-2.5">
                                 {MORE_TOOLS.map(({ name, slug }) => (
                                     <li key={slug}>
@@ -157,7 +157,7 @@ export default function Footer() {
                     {/* Resources & Legal */}
                     <div className="flex flex-col gap-8">
                         <div>
-                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Learn</p>
+                            <p className="text-[11px] font-semibold text-violet-400 uppercase tracking-widest mb-4">Learn</p>
                             <ul className="flex flex-col gap-2.5">
                                 <li>
                                     <Link href="/blog" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
@@ -165,7 +165,7 @@ export default function Footer() {
                                     </Link>
                                 </li>
                                 <li><Link href="/blog/how-to-compress-images-without-losing-quality" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Compress Without Losing Quality</Link></li>
-                                <li><Link href="/blog/best-free-image-compressor-online-2026" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Best Image Compressors 2026</Link></li>
+                                <li><Link href="/blog/best-free-online-image-compressor-2026" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Best Image Compressors 2026</Link></li>
                                 <li><Link href="/blog/webp-vs-jpg-vs-png-which-format-is-best" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">WebP vs JPG vs PNG Guide</Link></li>
                                 <li><Link href="/blog/how-to-resize-images-for-web-complete-guide" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Resize Images for Web Guide</Link></li>
                                 <li><Link href="/blog/how-to-remove-image-background-for-free" className="text-xs text-gray-300 hover:text-violet-300 transition-colors">Remove Background Free</Link></li>
@@ -182,7 +182,7 @@ export default function Footer() {
                         </div>
 
                         <div>
-                            <p className="text-[11px] font-semibold text-violet-600 uppercase tracking-widest mb-4">Company</p>
+                            <p className="text-[11px] font-semibold text-violet-400 uppercase tracking-widest mb-4">Company</p>
                             <ul className="flex flex-col gap-2.5">
                                 <li>
                                     <Link href="/premium" className="inline-flex items-center gap-1.5 text-xs text-gray-300 hover:text-violet-300 transition-colors">
@@ -215,7 +215,7 @@ export default function Footer() {
                 </div>
 
                 {/* ── Bottom bar ── */}
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-5 text-[11px] text-violet-300/30">
+                <div className="flex flex-col sm:flex-row items-center justify-between gap-3 py-5 text-[11px] text-gray-400">
                     <p>© {new Date().getFullYear()} PixlTools. All rights reserved.</p>
                     <p>Built with <span className="text-gray-300">Sharp</span> &amp; <span className="text-gray-300">Next.js</span> · 100% free, always.</p>
                 </div>

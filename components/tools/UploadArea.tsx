@@ -132,7 +132,7 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
                             <p className="text-lg font-semibold text-violet-100">
                                 {isDragOver ? "Release to spin up the pipeline" : "Drag & drop an image to get started"}
                             </p>
-                            <p className="text-sm text-violet-300/50 mt-1">or <span className="text-violet-400 font-medium underline underline-offset-2">select from disk</span></p>
+                            <p className="text-sm text-violet-300/80 mt-1">or <span className="text-violet-400 font-medium underline underline-offset-2">select from disk</span></p>
                         </div>
 
                         {/* Format badges with icons */}
@@ -143,12 +143,12 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
                                 </span>
                             ))}
                         </div>
-                        <div className="flex items-center gap-3 text-xs text-gray-500">
-                            <span className="text-xs text-gray-500">· up to {maxSizeMB}MB each</span>
+                        <div className="flex items-center gap-3 text-xs text-gray-400">
+                            <span className="text-xs text-gray-400">· up to {maxSizeMB}MB each</span>
                         </div>
 
                         {/* Extra input methods */}
-                        <div className="flex items-center gap-3 text-xs text-gray-500">
+                        <div className="flex items-center gap-3 text-xs text-gray-400">
                             <span className="flex items-center gap-1.5">
                                 <kbd className="bg-violet-500/10 border border-violet-500/20 text-violet-400 px-1.5 py-0.5 rounded text-[10px] font-mono">Ctrl+V</kbd>
                                 <span>paste from clipboard</span>
@@ -156,7 +156,7 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
                             <span>·</span>
                             <button
                                 onClick={(e) => { e.stopPropagation(); setUrlMode(true); setError(null); }}
-                                className="flex items-center gap-1 text-gray-500 hover:text-violet-400 transition-colors"
+                                className="flex items-center gap-1 text-gray-400 hover:text-violet-400 transition-colors"
                             >
                                 <Link2 size={12} />
                                 <span>pull from URL</span>
@@ -164,7 +164,7 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
                         </div>
 
                         {/* Trust line */}
-                        <p className="flex items-center justify-center gap-3 text-xs text-gray-600 font-medium">
+                        <p className="flex items-center justify-center gap-3 text-xs text-gray-400 font-medium">
                             <span className="flex items-center gap-1"><Lock size={11} className="text-violet-500" /> Encrypted transfer</span>
                             <span>·</span>
                             <span className="flex items-center gap-1"><Zap size={11} className="text-violet-500" /> Real-time processing</span>
@@ -204,7 +204,7 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
                             Load
                         </button>
                     </div>
-                    <p className="text-xs text-gray-600 mt-2">Paste a direct link to any JPG, PNG, or WEBP image</p>
+                    <p className="text-xs text-gray-400 mt-2">Paste a direct link to any JPG, PNG, or WEBP image</p>
                 </div>
             )}
 

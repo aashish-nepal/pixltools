@@ -100,7 +100,7 @@ export default function JpgVsPngPage() {
                             <Camera size={20} weight="duotone" className="text-blue-400" />
                         </div>
                         <h2 className="font-bold text-blue-400 text-lg mb-3">Use JPG when…</h2>
-                        <ul className="space-y-2 text-sm text-violet-300/60">
+                        <ul className="space-y-2 text-sm text-violet-300/80">
                             {["You're sharing photographs", "File size matters (email, web)", "No transparency needed", "Colors are complex & gradients exist", "Uploading to social media"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <CheckCircle2 size={14} className="text-blue-400 flex-shrink-0" />
@@ -114,7 +114,7 @@ export default function JpgVsPngPage() {
                             <FilePng size={20} weight="duotone" className="text-violet-400" />
                         </div>
                         <h2 className="font-bold text-violet-400 text-lg mb-3">Use PNG when…</h2>
-                        <ul className="space-y-2 text-sm text-violet-300/60">
+                        <ul className="space-y-2 text-sm text-violet-300/80">
                             {["You need transparent backgrounds", "Saving logos or graphics", "Image will be re-edited later", "Text or sharp edges are present", "Lossless quality is required"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-2">
                                     <CheckCircle2 size={14} className="text-violet-400 flex-shrink-0" />
@@ -135,7 +135,7 @@ export default function JpgVsPngPage() {
                         <table className="w-full">
                             <thead>
                                 <tr className="border-b border-violet-500/10 bg-[#16122a]">
-                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400/50">Feature</th>
+                                    <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">Feature</th>
                                     <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-blue-400">JPG / JPEG</th>
                                     <th className="text-left px-5 py-3 text-xs font-bold uppercase tracking-wider text-violet-400">PNG</th>
                                 </tr>
