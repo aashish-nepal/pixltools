@@ -36,10 +36,11 @@ export async function POST(req: NextRequest) {
     const colorMap = new Map<string, { r: number; g: number; b: number; count: number }>();
     for (let i = 0; i < tiny.length; i += 3) {
         const r = tiny[i], g = tiny[i + 1], b = tiny[i + 2];
-        // Quantize to reduce colour clusters
-        const qr = Math.round(r / 16) * 16;
-        const qg = Math.round(g / 16) * 16;
-        const qb = Math.round(b / 16) * 16;
+        // Quantize to reduce colour clusters — clamp to 255 since Math.round(r/16)*16
+        // overflows to 256 for any channel value >= 248
+        const qr = Math.min(255, Math.round(r / 16) * 16);
+        const qg = Math.min(255, Math.round(g / 16) * 16);
+        const qb = Math.min(255, Math.round(b / 16) * 16);
         const key = `${qr},${qg},${qb}`;
         const entry = colorMap.get(key) || { r: qr, g: qg, b: qb, count: 0 };
         entry.count++;

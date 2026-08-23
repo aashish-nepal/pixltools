@@ -233,7 +233,7 @@ export default function ToolPageClient({ tool }: Props) {
                                 onClick={() => { setRotateAngle(deg); setStraightenAngle(0); }}
                                 className={`flex-1 flex flex-col items-center gap-1 py-3 text-xs font-semibold border-r border-violet-500/10 last:border-r-0 transition-all ${isActive
                                     ? "bg-violet-600/20 text-violet-300"
-                                    : "text-gray-500 hover:bg-violet-500/8 hover:text-violet-300"
+                                    : "text-gray-400 hover:bg-violet-500/8 hover:text-violet-300"
                                     }`}
                             >
                                 <span className="text-lg leading-none">{icons[deg]}</span>
