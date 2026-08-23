@@ -665,15 +665,25 @@ export default function ToolLayout({
         return;
       }
       if (xhr.status !== 200) {
-        const body = (() => {
+        // responseText throws when responseType is "blob" — read the Blob body instead
+        const finishWithError = (text: string) => {
+          let body: { error?: string };
           try {
-            return JSON.parse(xhr.responseText);
+            body = JSON.parse(text);
           } catch {
-            return { error: xhr.responseText };
+            body = { error: text };
           }
-        })();
-        setError(body.error || "Processing failed. Please try again.");
-        setLoading(false);
+          setError(body.error || "Processing failed. Please try again.");
+          setLoading(false);
+        };
+        if (xhr.responseType === "blob") {
+          (xhr.response as Blob).text().then(finishWithError).catch(() => {
+            setError("Processing failed. Please try again.");
+            setLoading(false);
+          });
+        } else {
+          finishWithError(xhr.responseText);
+        }
         return;
       }
       if (jsonMode) {

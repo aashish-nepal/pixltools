@@ -21,7 +21,7 @@ export default function EmailCapture() {
     if (dismissed) return null;
 
     return (
-        <div className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-full max-w-lg px-4 sm:px-0 animate-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed bottom-5 right-5 left-5 sm:left-auto z-50 sm:w-full sm:max-w-sm animate-in slide-in-from-bottom-4 duration-300">
             <div className="relative bg-[#16122a] border border-violet-500/25 rounded-2xl shadow-2xl shadow-violet-900/50 overflow-hidden">
                 {/* Glow strip */}
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 via-purple-400 to-fuchsia-500" />

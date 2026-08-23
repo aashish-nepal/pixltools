@@ -31,8 +31,10 @@ export default function UploadArea({ onFileSelect, acceptedFormats, maxSizeMB = 
 
     const validateAndSelect = useCallback((file: File) => {
         setError(null);
-        if (file.type === "image/heic" || file.name.toLowerCase().endsWith(".heic")) {
-            setError("HEIC files detected. Please use our HEIC → JPG converter (coming soon) or convert it first.");
+        const isHeic = file.type === "image/heic" || file.type === "image/heif" || file.name.toLowerCase().endsWith(".heic");
+        const toolAcceptsHeic = acceptedFormats.includes("image/heic") || acceptedFormats.includes("image/heif");
+        if (isHeic && !toolAcceptsHeic) {
+            setError("HEIC files aren't supported here. Use our HEIC to JPG converter first.");
             return;
         }
         if (!acceptedFormats.includes(file.type)) {
