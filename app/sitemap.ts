@@ -22,6 +22,7 @@ const STATIC_DATES = {
     seoGuides: new Date("2026-04-14"),
     premium: new Date("2026-03-08"),
     apiAccess: new Date("2026-03-08"),
+    legal: new Date("2026-05-22"),
 };
 
 const BASE = "https://www.pixltools.com";
@@ -41,6 +42,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${BASE}/api-access`, lastModified: STATIC_DATES.apiAccess, changeFrequency: "monthly", priority: 0.65 },
         // Informational
         { url: `${BASE}/about`, lastModified: STATIC_DATES.about, changeFrequency: "yearly", priority: 0.5 },
+        // Legal — indexable trust pages, low priority
+        { url: `${BASE}/privacy-policy`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
+        { url: `${BASE}/terms`, lastModified: STATIC_DATES.legal, changeFrequency: "yearly", priority: 0.3 },
         // NOTE: /sitemap-page intentionally excluded — it's a crawl-budget cost with no ranking value.
     ];
 

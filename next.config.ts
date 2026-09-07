@@ -98,6 +98,18 @@ const nextConfig: NextConfig = {
         source: "/api/(.*)",
         headers: apiHeaders,
       },
+      // OpenGraph image routes: keep them fetchable for social scrapers, but tell
+      // search engines not to index them as standalone pages. Without this, every
+      // /opengraph-image URL lands in Search Console's "Crawled - currently not
+      // indexed" bucket (they're PNGs, not pages, so Google can never index them).
+      {
+        source: "/opengraph-image",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
+      {
+        source: "/:path*/opengraph-image",
+        headers: [{ key: "X-Robots-Tag", value: "noindex" }],
+      },
       // Long-term immutable caching for hashed static chunks (JS, CSS, fonts)
       {
         source: "/_next/static/(.*)",

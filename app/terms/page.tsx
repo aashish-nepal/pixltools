@@ -4,7 +4,8 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "Terms of Service – PixlTools",
     description: "Read the Terms of Service for PixlTools. Free image tools with no signup, no data stored, and no hidden terms.",
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
+    alternates: { canonical: "https://www.pixltools.com/terms" },
 };
 
 const sections: { title: string; content: React.ReactNode }[] = [

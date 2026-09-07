@@ -5,7 +5,8 @@ import { ShieldCheck } from "@phosphor-icons/react/dist/ssr";
 export const metadata: Metadata = {
     title: "Privacy Policy – PixlTools",
     description: "Learn how PixlTools handles your data. We process images in real-time and never store, log, or share your files.",
-    robots: { index: false, follow: true },
+    robots: { index: true, follow: true },
+    alternates: { canonical: "https://www.pixltools.com/privacy-policy" },
 };
 
 
