@@ -38,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         { url: `${BASE}/jpg-vs-png`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
         { url: `${BASE}/png-vs-webp`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
         { url: `${BASE}/how-to-compress-images-for-instagram`, lastModified: STATIC_DATES.seoGuides, changeFrequency: "monthly", priority: 0.75 },
+        // Pillar 2 — high-intent landing pages (2026-10-01)
+        { url: `${BASE}/compress-image-for-whatsapp`, lastModified: new Date("2026-10-01"), changeFrequency: "monthly", priority: 0.80 },
+        { url: `${BASE}/compress-image-to-100kb`, lastModified: new Date("2026-10-01"), changeFrequency: "monthly", priority: 0.80 },
+        { url: `${BASE}/compress-image-for-email`, lastModified: new Date("2026-10-01"), changeFrequency: "monthly", priority: 0.80 },
+        { url: `${BASE}/resize-image-for-instagram`, lastModified: new Date("2026-10-01"), changeFrequency: "monthly", priority: 0.80 },
+        { url: `${BASE}/heic-to-jpg-iphone`, lastModified: new Date("2026-10-01"), changeFrequency: "monthly", priority: 0.80 },
         // API access
         { url: `${BASE}/api-access`, lastModified: STATIC_DATES.apiAccess, changeFrequency: "monthly", priority: 0.65 },
         // Informational
