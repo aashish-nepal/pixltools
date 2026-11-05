@@ -115,14 +115,14 @@ export default function CompressForWhatsAppPage() {
 
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-emerald-300 mb-6">
                         Platform Guide · WhatsApp
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
                         Compress Images{" "}
-                        <span className="bg-gradient-to-r from-emerald-400 to-violet-400 bg-clip-text text-transparent">for WhatsApp</span>
+                        <span className="bg-linear-to-r from-emerald-400 to-violet-400 bg-clip-text text-transparent">for WhatsApp</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         WhatsApp re-compresses photos when you send them — causing blurry, degraded images.
@@ -139,11 +139,11 @@ export default function CompressForWhatsAppPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
 
                 {/* Warning callout */}
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-6 flex gap-4">
-                    <AlertCircle size={22} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                    <AlertCircle size={22} className="text-amber-400 shrink-0 mt-0.5" />
                     <div>
                         <h2 className="font-bold text-amber-400 text-lg mb-2">Why WhatsApp Makes Photos Blurry</h2>
                         <p className="text-violet-300/80 text-sm leading-relaxed">
@@ -158,7 +158,7 @@ export default function CompressForWhatsAppPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">WhatsApp Image Size Limits (2026)</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-violet-500/15">
                         <table className="w-full">
@@ -190,12 +190,12 @@ export default function CompressForWhatsAppPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">How to Compress Images for WhatsApp (4 Steps)</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {STEPS.map(({ n, title, desc }) => (
                             <div key={n} className="flex gap-4 bg-[#16122a] border border-violet-500/15 rounded-xl p-5">
-                                <span className="w-9 h-9 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+                                <span className="w-9 h-9 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
                                     {n}
                                 </span>
                                 <div>
@@ -211,7 +211,7 @@ export default function CompressForWhatsAppPage() {
                 <div className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Recommended Settings for WhatsApp Photos</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
                         {[
@@ -231,7 +231,7 @@ export default function CompressForWhatsAppPage() {
 
                 {/* Pro tip */}
                 <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-2xl p-6 flex gap-4">
-                    <CheckCircle size={22} className="text-emerald-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={22} className="text-emerald-400 shrink-0 mt-0.5" />
                     <div>
                         <h2 className="font-bold text-emerald-300 text-lg mb-2">Pro Tip: Send as Document for Zero Compression</h2>
                         <p className="text-violet-300/80 text-sm leading-relaxed">
@@ -245,7 +245,7 @@ export default function CompressForWhatsAppPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Free Tools to Compress WhatsApp Photos</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         {[
@@ -265,7 +265,7 @@ export default function CompressForWhatsAppPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Frequently Asked Questions</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {FAQS.map(({ q, a }) => (

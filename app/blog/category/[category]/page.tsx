@@ -92,8 +92,8 @@ export default async function CategoryPage({ params }: Props) {
 
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-6 text-center">
                     <Link href="/blog" className="text-violet-400 text-sm hover:text-violet-300 mb-4 inline-block">
                         ← All Articles
                     </Link>
@@ -112,7 +112,7 @@ export default async function CategoryPage({ params }: Props) {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-12">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 py-12">
                 {/* Other categories */}
                 <div className="flex flex-wrap gap-2 mb-10">
                     <Link

@@ -31,7 +31,7 @@ export default function FAQSection({ faqs }: { faqs: FAQItem[] }) {
                             <span className={`text-sm font-semibold leading-snug transition-colors ${isOpen ? "text-violet-300" : "text-white"}`}>
                                 {faq.question}
                             </span>
-                            <span className={`flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-200
+                            <span className={`shrink-0 w-6 h-6 flex items-center justify-center rounded-full transition-colors duration-200
                 ${isOpen ? "bg-violet-500 text-white" : "bg-violet-500/10 text-violet-400"}`}>
                                 {isOpen ? <Minus size={13} strokeWidth={2.5} /> : <Plus size={13} strokeWidth={2.5} />}
                             </span>

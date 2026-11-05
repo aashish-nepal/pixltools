@@ -134,7 +134,7 @@ export default async function ToolPage({ params }: Props) {
             {/* extendedDesc: fully visible "About This Tool" section — same content for users and Googlebot */}
             {tool.extendedDesc && (
                 <div className="bg-[#0b0816] pb-6">
-                    <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                    <div className="max-w-350 mx-auto px-4 sm:px-6">
                         <div className="bg-[#110e24] border border-violet-500/15 rounded-2xl p-6 sm:p-8">
                             <h2 className="text-base font-semibold text-violet-300 mb-3">About This Tool</h2>
                             <p className="text-sm text-gray-300 leading-relaxed">{tool.extendedDesc}</p>
@@ -145,7 +145,7 @@ export default async function ToolPage({ params }: Props) {
 
             {/* Trust signals — category-specific so each tool page has unique content */}
             <div className="bg-[#0b0816] pb-10">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                <div className="max-w-350 mx-auto px-4 sm:px-6">
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         {((): { Icon: React.ElementType; iconClass: string; title: string; desc: string }[] => {
                             if (tool.category === "compression") return [
@@ -176,7 +176,7 @@ export default async function ToolPage({ params }: Props) {
                             ];
                         })().map(({ Icon, iconClass, title, desc }) => (
                             <div key={title} className="bg-[#14102a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
-                                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                                <div className="shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
                                     <Icon size={18} weight="duotone" className={iconClass} />
                                 </div>
                                 <div>
@@ -195,7 +195,7 @@ export default async function ToolPage({ params }: Props) {
                 if (relatedPosts.length === 0) return null;
                 return (
                     <div className="bg-[#0b0816] pb-16">
-                        <div className="max-w-[1400px] mx-auto px-4 sm:px-6">
+                        <div className="max-w-350 mx-auto px-4 sm:px-6">
                             <div className="flex items-center gap-2 mb-4">
                                 <BookOpen size={18} weight="duotone" className="text-violet-400" />
                                 <h2 className="text-base font-semibold text-violet-300">From the Blog</h2>

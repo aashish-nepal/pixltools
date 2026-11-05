@@ -915,7 +915,7 @@ export default function ToolLayout({
           aria-hidden="true"
         />
         <div
-          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-violet-600/10 blur-3xl pointer-events-none"
+          className="absolute -top-32 left-1/2 -translate-x-1/2 w-150 h-75 rounded-full bg-violet-600/10 blur-3xl pointer-events-none"
           aria-hidden="true"
         />
         <div
@@ -923,7 +923,7 @@ export default function ToolLayout({
           aria-hidden="true"
         />
 
-        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 pt-6 pb-12 text-center">
+        <div className="relative max-w-350 mx-auto px-4 sm:px-6 pt-6 pb-12 text-center">
           {/* Breadcrumb */}
           <nav
             className="flex items-center justify-center gap-1.5 text-xs text-gray-500 mb-6"
@@ -978,7 +978,7 @@ export default function ToolLayout({
         </div>
       </div>
 
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8">
+      <div className="max-w-350 mx-auto px-4 sm:px-6 py-8">
         <AdBanner slot="Top Banner" />
 
         {/* Privacy strip */}
@@ -1429,7 +1429,7 @@ export default function ToolLayout({
                         <Warning
                           size={16}
                           weight="duotone"
-                          className="mt-0.5 flex-shrink-0"
+                          className="mt-0.5 shrink-0"
                         />
                         {error}
                       </div>
@@ -1557,7 +1557,7 @@ export default function ToolLayout({
         {/* ── About ───────────────────────────────────────────── */}
         <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
           <div
-            className="absolute inset-0 bg-gradient-to-br from-violet-500/8 via-transparent to-transparent"
+            className="absolute inset-0 bg-linear-to-br from-violet-500/8 via-transparent to-transparent"
             aria-hidden="true"
           />
           <div className="relative">
@@ -1590,7 +1590,7 @@ export default function ToolLayout({
         {/* ── How to Use ──────────────────────────────────────── */}
         <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
           <div
-            className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent"
+            className="absolute inset-0 bg-linear-to-br from-violet-500/6 via-transparent to-transparent"
             aria-hidden="true"
           />
           <div className="relative">
@@ -1606,7 +1606,7 @@ export default function ToolLayout({
             </h2>
             <div className="relative">
               <div
-                className="hidden md:block absolute left-[15px] top-8 bottom-8 w-px bg-gradient-to-b from-violet-500/30 via-violet-500/15 to-transparent"
+                className="hidden md:block absolute left-[15px] top-8 bottom-8 w-px bg-linear-to-b from-violet-500/30 via-violet-500/15 to-transparent"
                 aria-hidden="true"
               />
               <div className="grid gap-3 my-6 md:grid-cols-2">
@@ -1616,7 +1616,7 @@ export default function ToolLayout({
                     className="step-card flex items-start gap-4 bg-[#16122a] border border-violet-500/15 rounded-xl p-4 hover:border-violet-500/30 transition-all duration-200"
                     style={{ animationDelay: `${i * 80}ms` }}
                   >
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-violet-600/30 to-purple-600/20 text-violet-300 border border-violet-500/25 rounded-full flex items-center justify-center text-sm font-bold">
+                    <span className="shrink-0 w-8 h-8 bg-linear-to-br from-violet-600/30 to-purple-600/20 text-violet-300 border border-violet-500/25 rounded-full flex items-center justify-center text-sm font-bold">
                       {i + 1}
                     </span>
                     <span className="text-gray-400 text-sm leading-relaxed pt-1">
@@ -1634,7 +1634,7 @@ export default function ToolLayout({
         {/* ── Key Benefits ─────────────────────────────────────── */}
         <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
           <div
-            className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent"
+            className="absolute inset-0 bg-linear-to-br from-violet-500/6 via-transparent to-transparent"
             aria-hidden="true"
           />
           <div className="relative">
@@ -1657,7 +1657,7 @@ export default function ToolLayout({
                   <CheckCircle
                     size={14}
                     weight="duotone"
-                    className="text-violet-400 flex-shrink-0"
+                    className="text-violet-400 shrink-0"
                   />
                   {b}
                 </span>
@@ -1669,7 +1669,7 @@ export default function ToolLayout({
         {/* ── Stats strip ─────────────────────────────────────── */}
         <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
           <div
-            className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent"
+            className="absolute inset-0 bg-linear-to-br from-violet-500/6 via-transparent to-transparent"
             aria-hidden="true"
           />
           <div className="relative">
@@ -1708,7 +1708,7 @@ export default function ToolLayout({
         {/* ── FAQ ─────────────────────────────────────────────── */}
         <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
           <div
-            className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent"
+            className="absolute inset-0 bg-linear-to-br from-violet-500/6 via-transparent to-transparent"
             aria-hidden="true"
           />
           <div className="relative">
@@ -1828,7 +1828,7 @@ export default function ToolLayout({
 
           return (
             <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent" aria-hidden="true" />
+              <div className="absolute inset-0 bg-linear-to-br from-violet-500/6 via-transparent to-transparent" aria-hidden="true" />
               <div className="relative">
                 <div className="flex items-center gap-3 py-6 text-[11px] uppercase tracking-[0.35em] text-violet-300/70 hero-reveal" style={{ animationDelay: "0ms" }}>
                   <span className="h-px w-8 bg-violet-500/70" />
@@ -1864,7 +1864,7 @@ export default function ToolLayout({
         {relatedTools.length > 0 && (
           <div className="relative mb-8 rounded-2xl border border-violet-500/15 bg-[#131026] p-5 sm:p-6 overflow-hidden">
             <div
-              className="absolute inset-0 bg-gradient-to-br from-violet-500/6 via-transparent to-transparent"
+              className="absolute inset-0 bg-linear-to-br from-violet-500/6 via-transparent to-transparent"
               aria-hidden="true"
             />
             <div className="relative">
@@ -1885,7 +1885,7 @@ export default function ToolLayout({
                     href={`/${tool.slug}`}
                     className="group relative flex flex-col items-center gap-2 bg-[#16122a] border border-violet-500/15 hover:border-violet-500/30 hover:bg-[#1c1738] rounded-xl p-4 text-center transition-all duration-200 overflow-hidden"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-b from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+                    <div className="absolute inset-0 bg-linear-to-b from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
                     <span className="text-2xl relative">
                       <ToolIcon
                         name={TOOL_ICON_MAP[tool.slug] || "FileImage"}

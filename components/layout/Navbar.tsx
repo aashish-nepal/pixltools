@@ -31,7 +31,7 @@ export default function Navbar() {
 
     return (
         <nav className="sticky top-0 z-50 bg-[#0b0816]/90 backdrop-blur-md border-b border-violet-500/10">
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 flex items-center justify-between h-16">
 
                 {/* Logo */}
                 <Link href="/" className="flex items-center group" onClick={closeMobile}>
@@ -81,7 +81,7 @@ export default function Navbar() {
                                                 onBlur={closeMenu}
                                                 className="flex items-center gap-2.5 px-3 py-2 text-sm text-gray-300 hover:bg-violet-500/10 hover:text-white rounded-xl transition-colors"
                                             >
-                                                <span className="flex-shrink-0 w-6 h-6 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400">
+                                                <span className="shrink-0 w-6 h-6 bg-violet-500/10 rounded-lg flex items-center justify-center text-violet-400">
                                                     <ToolIcon name={TOOL_ICON_MAP[tool.slug] || "FileImage"} size={14} />
                                                 </span>
                                                 {tool.name}
@@ -148,7 +148,7 @@ export default function Navbar() {
                         <div className="absolute inset-0 bg-[#0e0c1e]/97 backdrop-blur-2xl border-l border-violet-500/15" />
 
                         {/* Subtle glow at top */}
-                        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
+                        <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-violet-500/40 to-transparent" />
 
                         <div className="relative flex flex-col h-full overflow-y-auto overscroll-contain">
                             {/* Header */}
@@ -190,7 +190,7 @@ export default function Navbar() {
                                                             className="flex items-center gap-2.5 px-3 py-2.5 text-sm text-gray-400 hover:text-white hover:bg-violet-500/8 rounded-xl transition-all"
                                                             onClick={closeMobile}
                                                         >
-                                                            <span className="flex-shrink-0 w-6 h-6 bg-violet-500/8 rounded-lg flex items-center justify-center text-violet-400/70">
+                                                            <span className="shrink-0 w-6 h-6 bg-violet-500/8 rounded-lg flex items-center justify-center text-violet-400/70">
                                                                 <ToolIcon name={TOOL_ICON_MAP[tool.slug] || "FileImage"} size={12} />
                                                             </span>
                                                             <span>{tool.name}</span>

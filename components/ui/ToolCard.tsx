@@ -21,7 +21,7 @@ export default function ToolCard({ tool, isPopular, isNew }: ToolCardProps) {
             <div className="relative h-full bg-[#16122a]/40 backdrop-blur-md border border-white/5 rounded-2xl p-5 flex flex-col overflow-hidden transition-all duration-300 ease-out hover:border-violet-500/30 hover:shadow-[0_0_30px_rgba(139,92,246,0.1)] hover:-translate-y-1.5 active:scale-[0.98]">
 
                 {/* Background Glow */}
-                <div className={`absolute -right-4 -top-4 w-24 h-24 bg-gradient-to-br ${categoryColorClass} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`} />
+                <div className={`absolute -right-4 -top-4 w-24 h-24 bg-linear-to-br ${categoryColorClass} opacity-0 group-hover:opacity-10 blur-2xl transition-opacity duration-500`} />
 
                 {/* Popular / New badge */}
                 {(isPopular || isNew) && (
@@ -71,7 +71,7 @@ export default function ToolCard({ tool, isPopular, isNew }: ToolCardProps) {
 
                 {/* Shimmer Effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                    <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </div>
             </div>
         </Link>

@@ -67,7 +67,7 @@ export default function PhotoCollageMakerPage() {
 
             {/* Server-rendered content — fully visible to users and Googlebot */}
             <div className="bg-[#0b0816] pb-10">
-                <div className="max-w-[1400px] mx-auto px-4 sm:px-6 space-y-8">
+                <div className="max-w-350 mx-auto px-4 sm:px-6 space-y-8">
 
                     {/* About section */}
                     <div className="bg-[#110e24] border border-violet-500/15 rounded-2xl p-6 sm:p-8">
@@ -89,7 +89,7 @@ export default function PhotoCollageMakerPage() {
                                 { n: "3", title: "Download your collage", text: "Click Download PNG to save your collage at full resolution. No watermarks added, no signup required." },
                             ].map(({ n, title, text }) => (
                                 <li key={n} className="flex gap-4">
-                                    <span className="flex-shrink-0 w-7 h-7 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-300 text-xs font-bold flex items-center justify-center">{n}</span>
+                                    <span className="shrink-0 w-7 h-7 rounded-full bg-violet-500/20 border border-violet-500/30 text-violet-300 text-xs font-bold flex items-center justify-center">{n}</span>
                                     <div>
                                         <p className="text-sm font-semibold text-violet-200">{title}</p>
                                         <p className="text-xs text-gray-400 mt-0.5 leading-relaxed">{text}</p>
@@ -107,7 +107,7 @@ export default function PhotoCollageMakerPage() {
                             { Icon: Lightning, title: "Instant Download", desc: "Your collage is generated and ready to download in seconds — high-quality PNG output." },
                         ].map(({ Icon, title, desc }) => (
                             <div key={title} className="bg-[#14102a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
-                                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                                <div className="shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
                                     <Icon size={18} weight="duotone" className="text-violet-400" />
                                 </div>
                                 <div>

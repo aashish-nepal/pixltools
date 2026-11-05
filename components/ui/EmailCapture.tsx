@@ -24,7 +24,7 @@ export default function EmailCapture() {
         <div className="fixed bottom-5 right-5 left-5 sm:left-auto z-50 sm:w-full sm:max-w-sm animate-in slide-in-from-bottom-4 duration-300">
             <div className="relative bg-[#16122a] border border-violet-500/25 rounded-2xl shadow-2xl shadow-violet-900/50 overflow-hidden">
                 {/* Glow strip */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-violet-500 via-purple-400 to-fuchsia-500" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-linear-to-r from-violet-500 via-purple-400 to-fuchsia-500" />
 
                 {/* Dismiss button */}
                 <button
@@ -39,7 +39,7 @@ export default function EmailCapture() {
                     {!submitted ? (
                         <>
                             <div className="flex items-start gap-4">
-                                <div className="w-9 h-9 bg-violet-500/10 border border-violet-500/25 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <div className="w-9 h-9 bg-violet-500/10 border border-violet-500/25 rounded-xl flex items-center justify-center shrink-0">
                                     <Lightning size={16} weight="duotone" className="text-violet-400" />
                                 </div>
                                 <div className="flex-1 min-w-0 pr-4">
@@ -72,7 +72,7 @@ export default function EmailCapture() {
                         </>
                     ) : (
                         <div className="flex items-center gap-3 py-1">
-                            <CheckCircle size={20} weight="duotone" className="text-violet-400 flex-shrink-0" />
+                            <CheckCircle size={20} weight="duotone" className="text-violet-400 shrink-0" />
                             <div>
                                 <p className="font-bold text-violet-100 text-sm">You&apos;re on the list! 🎉</p>
                                 <p className="text-xs text-gray-400">We&apos;ll email you when new tools and Pro features launch.</p>

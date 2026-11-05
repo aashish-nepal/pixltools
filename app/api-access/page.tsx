@@ -92,14 +92,14 @@ export default function ApiAccessPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-violet-300 mb-6">
                         <Code2 size={12} />
                         Developer API
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
-                        PixlTools <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">API Access</span>
+                        PixlTools <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">API Access</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         Integrate professional image processing directly into your app.
@@ -108,7 +108,7 @@ export default function ApiAccessPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
 
                 {/* Features */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -129,15 +129,15 @@ export default function ApiAccessPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Available Endpoints</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="rounded-2xl border border-violet-500/15 overflow-hidden">
                         {ENDPOINTS.map(({ method, path, desc }, i) => (
                             <div key={path} className={`flex items-center gap-4 px-5 py-4 ${i !== ENDPOINTS.length - 1 ? "border-b border-violet-500/10" : ""} ${i % 2 === 0 ? "bg-[#16122a]" : "bg-[#130f25]"}`}>
-                                <span className="inline-flex items-center px-2 py-0.5 bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-bold rounded-md flex-shrink-0">
+                                <span className="inline-flex items-center px-2 py-0.5 bg-violet-500/10 border border-violet-500/20 text-violet-400 text-xs font-bold rounded-md shrink-0">
                                     {method}
                                 </span>
-                                <code className="text-violet-400 text-sm font-mono flex-shrink-0">{path}</code>
+                                <code className="text-violet-400 text-sm font-mono shrink-0">{path}</code>
                                 <p className="text-gray-400 text-sm">{desc}</p>
                             </div>
                         ))}
@@ -148,7 +148,7 @@ export default function ApiAccessPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-4">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Request Format</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <p className="text-gray-400 text-sm leading-relaxed mb-4">
                         All endpoints accept <code className="text-violet-400 bg-[#16122a] px-1 py-0.5 rounded text-xs">multipart/form-data</code> POST requests.
@@ -170,7 +170,7 @@ export default function ApiAccessPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-4">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Response Format</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="bg-[#16122a] border border-violet-500/15 rounded-xl p-5">
@@ -188,7 +188,7 @@ export default function ApiAccessPage() {
                 <div className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-4 mb-4">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Rate Limits & Fair Use</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <ul className="space-y-2 text-sm text-gray-400">
                         {[
@@ -199,7 +199,7 @@ export default function ApiAccessPage() {
                             "No monthly quota — fair use policy applies",
                         ].map((item, i) => (
                             <li key={i} className="flex items-start gap-2">
-                                <CheckCircle2 size={14} className="text-violet-400 flex-shrink-0 mt-0.5" />
+                                <CheckCircle2 size={14} className="text-violet-400 shrink-0 mt-0.5" />
                                 {item}
                             </li>
                         ))}

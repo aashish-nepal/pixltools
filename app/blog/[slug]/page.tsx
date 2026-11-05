@@ -339,7 +339,7 @@ export default async function BlogPostPage({ params }: Props) {
             {/* Header */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 text-white py-16">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[320px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6">
+                <div className="relative max-w-350 mx-auto px-4 sm:px-6">
                     <Link href="/blog" className="text-violet-400 text-sm hover:text-violet-300 mb-4 inline-block">← Back to Blog</Link>
                     <span className="text-xs font-semibold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-3 py-1 rounded-full">{post!.category}</span>
                     <h1 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 text-center">{post!.title}</h1>
@@ -352,7 +352,7 @@ export default async function BlogPostPage({ params }: Props) {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-12">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 py-12">
                 <AdBanner slot="Blog Post Top" />
 
                 <div className="mt-6 grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -361,7 +361,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <div className="lg:col-span-2">
                         <article className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#141026] shadow-[0_20px_60px_rgba(17,10,40,0.65)]">
                             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(139,92,246,0.12),transparent_60%)]" />
-                            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-400/50 to-transparent" />
+                            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-violet-400/50 to-transparent" />
                             <div className="relative z-10 p-8 md:p-10">
                                 <div className="prose max-w-[720px]">
                                     {renderContent(post!.content)}
@@ -399,7 +399,7 @@ export default async function BlogPostPage({ params }: Props) {
                         <div className="relative overflow-hidden rounded-3xl border border-violet-500/20 bg-[#130f28] p-8 text-white text-center mt-10">
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(139,92,246,0.22),transparent_55%)]" />
                             <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_30%,rgba(99,102,241,0.18),transparent_60%)]" />
-                            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-violet-600/60 to-transparent" />
+                            <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-violet-600/60 to-transparent" />
                             <div className="relative z-10">
                                 <h3 className="font-display text-gray-200 leading-[1.1] text-3xl md:text-4xl mt-4 mb-4 text-center">Try Our Free Image Tools</h3>
                                 <p className="text-violet-100/80 mb-4">30+ free online tools to compress, resize, convert and optimize your images.</p>
@@ -438,7 +438,7 @@ export default async function BlogPostPage({ params }: Props) {
                                         { href: "/photo-collage-maker", slug: "photo-collage-maker", name: "Collage Maker", desc: "Combine up to 16 photos" },
                                     ].map(({ href, slug, name, desc }) => (
                                         <Link key={href} href={href} className="flex items-center gap-3 px-5 py-3.5 hover:bg-violet-500/5 transition-colors group">
-                                            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 group-hover:border-violet-500/40 group-hover:bg-violet-500/10 flex items-center justify-center transition-all">
+                                            <div className="shrink-0 w-8 h-8 rounded-lg bg-white/5 border border-white/10 group-hover:border-violet-500/40 group-hover:bg-violet-500/10 flex items-center justify-center transition-all">
                                                 <ToolIcon name={TOOL_ICON_MAP[slug] || "FileImage"} size={16} className="text-violet-200 group-hover:text-violet-400" />
                                             </div>
                                             <div className="min-w-0">

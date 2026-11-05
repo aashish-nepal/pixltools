@@ -81,8 +81,8 @@ export default function CollageMakerClient() {
         <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 py-14 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-6 py-14 text-center">
                     <div className="inline-flex items-center justify-center w-14 h-14 bg-violet-500/10 border border-violet-500/20 rounded-2xl mb-5">
                         <Images size={32} weight="duotone" className="text-violet-400" />
                     </div>
@@ -93,7 +93,7 @@ export default function CollageMakerClient() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-8">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 
                     {/* Left: Upload + Controls */}

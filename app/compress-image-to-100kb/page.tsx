@@ -126,14 +126,14 @@ export default function CompressTo100KBPage() {
 
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-600/12 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-600/12 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-violet-300 mb-6">
                         File Size Guide · 100KB Target
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
                         Compress Image to{" "}
-                        <span className="bg-gradient-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Under 100KB</span>
+                        <span className="bg-linear-to-r from-violet-400 to-fuchsia-400 bg-clip-text text-transparent">Under 100KB</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         Reduce any JPG, PNG, or WebP image below 100KB in seconds. Perfect for government
@@ -150,13 +150,13 @@ export default function CompressTo100KBPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
 
                 {/* Use cases */}
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Why You Need an Image Under 100KB</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {USE_CASES.map(({ icon, title, desc }) => (
@@ -173,12 +173,12 @@ export default function CompressTo100KBPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">How to Compress an Image to 100KB</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {STEPS.map(({ n, title, desc }) => (
                             <div key={n} className="flex gap-4 bg-[#16122a] border border-violet-500/15 rounded-xl p-5">
-                                <span className="w-9 h-9 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">
+                                <span className="w-9 h-9 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">
                                     {n}
                                 </span>
                                 <div>
@@ -194,10 +194,10 @@ export default function CompressTo100KBPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Quality Settings Reference Guide</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="bg-[#0f0c1e] border border-violet-500/10 rounded-2xl p-4 flex gap-3 mb-4">
-                        <Info size={16} className="text-violet-400 flex-shrink-0 mt-0.5" />
+                        <Info size={16} className="text-violet-400 shrink-0 mt-0.5" />
                         <p className="text-xs text-violet-300/70 leading-relaxed">
                             The quality setting you need depends on both the original file size and dimensions. Always resize the image to a reasonable pixel size first — this is the most effective way to reduce file size without ugly compression artifacts.
                         </p>
@@ -230,7 +230,7 @@ export default function CompressTo100KBPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Tools You Will Need</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         {[
@@ -250,7 +250,7 @@ export default function CompressTo100KBPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Frequently Asked Questions</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {FAQS.map(({ q, a }) => (

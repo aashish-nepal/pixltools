@@ -56,8 +56,8 @@ export default function SitemapPage() {
         <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-14">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[280px] bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-[280px] bg-violet-500/8 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-6 text-center">
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">PixlTools</p>
                     <h1 className="font-display text-gray-200 text-3xl sm:text-4xl font-bold mb-3">Full Site Map</h1>
                     <p className="text-gray-400 max-w-xl mx-auto text-sm">
@@ -66,7 +66,7 @@ export default function SitemapPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-12 space-y-12">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 py-12 space-y-12">
 
                 {/* Static Pages */}
                 <section>
@@ -108,7 +108,7 @@ export default function SitemapPage() {
                                                 href={`/${tool.slug}`}
                                                 className="flex items-center gap-3 px-5 py-3 hover:bg-violet-500/5 transition-colors group"
                                             >
-                                                <span className="flex-shrink-0 text-violet-400/70 group-hover:text-violet-300 transition-colors">
+                                                <span className="shrink-0 text-violet-400/70 group-hover:text-violet-300 transition-colors">
                                                     <ToolIcon name={TOOL_ICON_MAP[tool.slug] || "FileImage"} size={16} className="" />
                                                 </span>
                                                 <span className="text-sm text-gray-300 group-hover:text-violet-200 transition-colors">

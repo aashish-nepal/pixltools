@@ -149,18 +149,18 @@ export default function PrivacyPolicyPage() {
         <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 text-center">
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">Legal</p>
                     <h1 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mb-4">Privacy Policy</h1>
                     <p className="text-gray-400">Last updated: March 2026</p>
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-14">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-14">
                 {/* Highlight box */}
                 <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-5 mb-10 flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/25 flex items-center justify-center">
+                    <div className="shrink-0 w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/25 flex items-center justify-center">
                         <ShieldCheck size={20} weight="duotone" className="text-violet-400" />
                     </div>
                     <div>
@@ -177,7 +177,7 @@ export default function PrivacyPolicyPage() {
                         <section key={title}>
                             <div className="flex items-center gap-4 mb-3">
                                 <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">{title}</h2>
-                                <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                                <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                             </div>
                             <div className="text-gray-400 leading-relaxed text-sm">{content}</div>
                         </section>

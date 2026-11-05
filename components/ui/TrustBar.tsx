@@ -21,7 +21,7 @@ export default function TrustBar() {
       onPointerUp={() => setPaused(false)}
       onPointerLeave={() => setPaused(false)}
     >
-      <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 pb-16">
+      <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 pb-16">
         <div className="trust-marquee">
           <div className={`trust-track ${paused ? "is-paused" : ""}`}>
             {[0, 1].map((copyIndex) => (

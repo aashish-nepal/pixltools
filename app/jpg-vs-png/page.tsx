@@ -76,13 +76,13 @@ export default function JpgVsPngPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-violet-300 mb-6">
                         Format Guide
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
-                        JPG vs PNG: <span className="bg-gradient-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">Complete Comparison</span>
+                        JPG vs PNG: <span className="bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent">Complete Comparison</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         Choosing between JPEG and PNG is one of the most common decisions in web design and photography.
@@ -91,7 +91,7 @@ export default function JpgVsPngPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
 
                 {/* Quick answer */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -103,7 +103,7 @@ export default function JpgVsPngPage() {
                         <ul className="space-y-2 text-sm text-violet-300/80">
                             {["You're sharing photographs", "File size matters (email, web)", "No transparency needed", "Colors are complex & gradients exist", "Uploading to social media"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-2">
-                                    <CheckCircle2 size={14} className="text-blue-400 flex-shrink-0" />
+                                    <CheckCircle2 size={14} className="text-blue-400 shrink-0" />
                                     <span>{item}</span>
                                 </li>
                             ))}
@@ -117,7 +117,7 @@ export default function JpgVsPngPage() {
                         <ul className="space-y-2 text-sm text-violet-300/80">
                             {["You need transparent backgrounds", "Saving logos or graphics", "Image will be re-edited later", "Text or sharp edges are present", "Lossless quality is required"].map((item, i) => (
                                 <li key={i} className="flex items-center gap-2">
-                                    <CheckCircle2 size={14} className="text-violet-400 flex-shrink-0" />
+                                    <CheckCircle2 size={14} className="text-violet-400 shrink-0" />
                                     {item}
                                 </li>
                             ))}
@@ -129,7 +129,7 @@ export default function JpgVsPngPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Side-by-Side Comparison</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-violet-500/15">
                         <table className="w-full">
@@ -158,7 +158,7 @@ export default function JpgVsPngPage() {
                     <div>
                         <div className="flex items-center gap-4 mb-3">
                             <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">What is JPG/JPEG?</h2>
-                            <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                         </div>
                         <p className="text-gray-400 leading-relaxed text-sm">
                             JPEG (Joint Photographic Experts Group) is the most widely used image format for photographs and complex imagery.
@@ -170,7 +170,7 @@ export default function JpgVsPngPage() {
                     <div>
                         <div className="flex items-center gap-4 mb-3">
                             <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">What is PNG?</h2>
-                            <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                         </div>
                         <p className="text-gray-400 leading-relaxed text-sm">
                             PNG (Portable Network Graphics) uses <strong className="text-violet-200">lossless compression</strong>, preserving every single pixel.
@@ -182,7 +182,7 @@ export default function JpgVsPngPage() {
                     <div>
                         <div className="flex items-center gap-4 mb-3">
                             <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">The Modern Alternative: WEBP</h2>
-                            <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                         </div>
                         <p className="text-gray-400 leading-relaxed text-sm">
                             In most cases, <strong className="text-violet-200">WEBP</strong> is now the best choice for web images. It offers 25–35% smaller file sizes than JPEG
@@ -195,7 +195,7 @@ export default function JpgVsPngPage() {
                 <div className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Convert Between Formats — Free</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         {[

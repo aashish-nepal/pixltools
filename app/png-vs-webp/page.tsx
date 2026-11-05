@@ -75,13 +75,13 @@ export default function PngVsWebpPage() {
         <main className="min-h-screen bg-[#0b0816]">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/15 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-violet-300 mb-6">
                         Format Guide
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
-                        PNG vs WEBP: <span className="bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Which is Better?</span>
+                        PNG vs WEBP: <span className="bg-linear-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">Which is Better?</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         WEBP is the modern successor to PNG for web images. But when should you stick with PNG?
@@ -90,7 +90,7 @@ export default function PngVsWebpPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="bg-violet-500/10 border border-violet-500/20 rounded-2xl p-6">
                         <div className="w-10 h-10 rounded-xl bg-violet-500/15 border border-violet-500/20 flex items-center justify-center mb-2">
@@ -99,7 +99,7 @@ export default function PngVsWebpPage() {
                         <h2 className="font-bold text-violet-400 text-lg mb-3">Use PNG when…</h2>
                         <ul className="space-y-2 text-sm text-violet-300/80">
                             {["Publishing to all browsers including old IE", "Maximum color depth needed", "Working with design tools (Photoshop, Figma)", "Creating print-ready graphics", "Absolute lossless preservation required"].map((item, i) => (
-                                <li key={i} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-violet-400 flex-shrink-0" />{item}</li>
+                                <li key={i} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-violet-400 shrink-0" />{item}</li>
                             ))}
                         </ul>
                     </div>
@@ -110,7 +110,7 @@ export default function PngVsWebpPage() {
                         <h2 className="font-bold text-teal-400 text-lg mb-3">Use WEBP when…</h2>
                         <ul className="space-y-2 text-sm text-violet-300/80">
                             {["Optimizing images for the web", "You want the smallest file size", "Google PageSpeed score matters", "You need transparency AND small size", "Building for modern browsers only"].map((item, i) => (
-                                <li key={i} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 flex-shrink-0" />{item}</li>
+                                <li key={i} className="flex items-center gap-2"><CheckCircle2 size={14} className="text-teal-400 shrink-0" />{item}</li>
                             ))}
                         </ul>
                     </div>
@@ -119,7 +119,7 @@ export default function PngVsWebpPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Side-by-Side Comparison</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-violet-500/15">
                         <table className="w-full">
@@ -147,7 +147,7 @@ export default function PngVsWebpPage() {
                     <div>
                         <div className="flex items-center gap-4 mb-3">
                             <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">The Verdict: WEBP for Web, PNG for Everything Else</h2>
-                            <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                         </div>
                         <p className="text-gray-400 leading-relaxed text-sm">
                             For websites, <strong className="text-violet-200">WEBP is almost always the better choice</strong>. It can be both lossy and lossless,
@@ -157,7 +157,7 @@ export default function PngVsWebpPage() {
                     <div>
                         <div className="flex items-center gap-4 mb-3">
                             <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">When PNG Still Wins</h2>
-                            <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                            <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                         </div>
                         <p className="text-gray-400 leading-relaxed text-sm">
                             PNG remains the best choice when you need raw editing compatibility — design tools like Photoshop, Figma,
@@ -170,7 +170,7 @@ export default function PngVsWebpPage() {
                 <div className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Convert Between Formats — Free</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         {[

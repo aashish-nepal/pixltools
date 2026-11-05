@@ -133,8 +133,8 @@ export default function AboutPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 text-center">
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">About PixlTools</p>
                     <h1 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mb-5">
                         Professional Image Tools,<br />Free for Everyone
@@ -146,13 +146,13 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-14 space-y-10">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-14 space-y-10">
 
                 {/* Mission */}
                 <section className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-4 mb-5">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Our Mission</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4 text-gray-400 leading-relaxed">
                         <p>
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 <section>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Why PixlTools?</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         {FEATURES.map(({ icon: Icon, title, desc, color, bg, border }) => (
@@ -236,7 +236,7 @@ export default function AboutPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                         {WHO_ITS_FOR.map(({ Icon, label, desc }) => (
                             <div key={label} className="bg-[#16122a] border border-violet-500/15 rounded-xl p-5 flex gap-4">
-                                <div className="flex-shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                                <div className="shrink-0 w-9 h-9 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
                                     <Icon size={18} weight="duotone" className="text-violet-400" />
                                 </div>
                                 <div>
@@ -252,11 +252,11 @@ export default function AboutPage() {
                 <section id="author" className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Meet the Author</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="flex flex-col sm:flex-row gap-6 items-start">
                         {/* Avatar */}
-                        <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-3xl font-black text-white select-none">
+                        <div className="shrink-0 w-20 h-20 rounded-2xl bg-linear-to-br from-violet-600 to-indigo-600 flex items-center justify-center text-3xl font-black text-white select-none">
                             AN
                         </div>
                         <div className="flex-1 min-w-0">
@@ -333,13 +333,13 @@ export default function AboutPage() {
                 {/* Contact */}
                 <section className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-8">
                     <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 bg-violet-500/10 border border-violet-500/20 rounded-xl flex items-center justify-center shrink-0">
                             <Mail size={18} className="text-violet-400" strokeWidth={1.8} />
                         </div>
                         <div>
                             <div className="flex items-center gap-3 mb-2">
                                 <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Contact Us</h2>
-                                <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                                <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                             </div>
                             <p className="text-gray-400 text-sm leading-relaxed mb-3">
                                 Have a question, feature request, or found a bug? We&apos;d love to hear from you.

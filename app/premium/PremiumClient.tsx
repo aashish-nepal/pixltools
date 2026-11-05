@@ -124,15 +124,15 @@ export default function PremiumClient() {
         <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-6 text-center">
                     <div className="mb-6 text-center">
             <h1 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5">PixlTools Pro — Coming Soon</h1>
           </div>
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 py-16 space-y-16">
 
                 {/* Pricing cards */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
@@ -141,8 +141,8 @@ export default function PremiumClient() {
                             key={plan.name}
                             className={`relative group bg-[#16122a] border ${plan.color} rounded-2xl p-7 flex flex-col transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-black/40`}
                         >
-                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                            <div className="absolute -top-px left-6 right-6 h-px bg-gradient-to-r from-transparent via-violet-400/60 to-transparent" />
+                            <div className="absolute inset-0 rounded-2xl bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <div className="absolute -top-px left-6 right-6 h-px bg-linear-to-r from-transparent via-violet-400/60 to-transparent" />
                             {plan.badge && (
                                 <div className="absolute -top-3.5 left-6">
                                     <span className="inline-flex items-center gap-1.5 bg-violet-600 text-white text-xs font-black px-3.5 py-1 rounded-full shadow-lg shadow-violet-900/40">
@@ -160,17 +160,17 @@ export default function PremiumClient() {
                                     <span className="text-gray-400 text-sm mb-1">/{plan.period}</span>
                                 </div>
                                 <p className="text-sm text-gray-400 mt-2">{plan.desc}</p>
-                                <div className="mt-4 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+                                <div className="mt-4 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
                             </div>
                             <ul className="relative space-y-2.5 mb-8 flex-1">
                                 {plan.features.map((f) => (
                                     <li key={f} className="flex items-start gap-2 text-sm text-violet-200/80">
-                                        <Check size={14} className="text-violet-400 flex-shrink-0 mt-0.5" />{f}
+                                        <Check size={14} className="text-violet-400 shrink-0 mt-0.5" />{f}
                                     </li>
                                 ))}
                                 {plan.missing.map((f) => (
                                     <li key={f} className="flex items-start gap-2 text-sm text-violet-300/70 line-through">
-                                        <span className="w-3.5 h-3.5 flex-shrink-0 mt-0.5 text-violet-300/70 font-bold text-base leading-none">—</span>{f}
+                                        <span className="w-3.5 h-3.5 shrink-0 mt-0.5 text-violet-300/70 font-bold text-base leading-none">—</span>{f}
                                     </li>
                                 ))}
                             </ul>
@@ -219,7 +219,7 @@ export default function PremiumClient() {
                 </div>
 
                 {/* Email waitlist */}
-                <div id="notify" className="relative overflow-hidden rounded-[32px] border border-violet-500/20 bg-[#0f0d1f]/70 p-8 sm:p-10 backdrop-blur-xl shadow-[0_0_60px_rgba(88,28,135,0.35)]">
+                <div id="notify" className="relative overflow-hidden rounded-4xl border border-violet-500/20 bg-[#0f0d1f]/70 p-8 sm:p-10 backdrop-blur-xl shadow-[0_0_60px_rgba(88,28,135,0.35)]">
                     <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 20%, rgba(139,92,246,0.18), transparent 55%)" }} />
                     <div className="absolute inset-0 tool-hero-pattern opacity-30 pointer-events-none" />
                     <div className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
@@ -239,7 +239,7 @@ export default function PremiumClient() {
 
                         <div className="relative">
                             <div className="absolute -inset-6 rounded-[28px] bg-violet-600/10 blur-3xl" />
-                            <div className="relative rounded-[24px] border border-violet-500/20 bg-[#120f25]/80 p-6">
+                            <div className="relative rounded-3xl border border-violet-500/20 bg-[#120f25]/80 p-6">
                                 {submitted ? (
                                     <div className="text-violet-300 font-bold text-lg">✓ You&apos;re on the list! We&apos;ll be in touch.</div>
                                 ) : (
@@ -276,7 +276,7 @@ export default function PremiumClient() {
                         <div className="absolute -bottom-20 right-[-10%] w-[45%] h-[45%] rounded-full bg-fuchsia-600/06 blur-[150px]" />
                         <div className="absolute inset-0 hero-grid-lines opacity-10" />
                     </div>
-                    <div className="relative z-10 max-w-[1400px] mx-auto">
+                    <div className="relative z-10 max-w-350 mx-auto">
                         <div className="mb-12 text-center">
                             <h2 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5">
                                 Pricing FAQ
@@ -284,7 +284,7 @@ export default function PremiumClient() {
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
                             <div className="lg:col-span-2 space-y-4">
-                                <div className="rounded-[24px] border border-violet-500/15 bg-[#120f25]/70 p-5 backdrop-blur-xl">
+                                <div className="rounded-3xl border border-violet-500/15 bg-[#120f25]/70 p-5 backdrop-blur-xl">
                                     <div className="text-xs uppercase tracking-[0.3em] text-violet-300/70">Support Desk</div>
                                     <p className="text-gray-400 text-sm leading-relaxed mt-4">
                                         Everything you need to know about PixlTools Pro. Can&apos;t find your answer?
@@ -296,7 +296,7 @@ export default function PremiumClient() {
                                         Read our image guides &rarr;
                                     </a>
                                 </div>
-                                <div className="rounded-[24px] border border-violet-500/15 bg-[#120f25]/70 p-5">
+                                <div className="rounded-3xl border border-violet-500/15 bg-[#120f25]/70 p-5">
                                     <div className="text-xs uppercase tracking-[0.3em] text-violet-300/70">Popular Topics</div>
                                     <div className="flex flex-wrap gap-2 mt-4">
                                         {["Pricing", "Limits", "Billing", "Support", "Launch"].map((topic) => (

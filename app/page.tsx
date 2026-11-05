@@ -160,11 +160,11 @@ export default function HomePage() {
           {/* Structural grid */}
           <div className="hidden sm:block absolute inset-0 hero-grid-lines opacity-55" />
           {/* Primary centre violet bloom */}
-          <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[920px] h-[540px] rounded-full blur-[150px]" style={{ background: "radial-gradient(ellipse, rgba(109,40,217,0.42) 0%, rgba(76,29,149,0.22) 45%, transparent 72%)" }} />
+          <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-230 h-135 rounded-full blur-[150px]" style={{ background: "radial-gradient(ellipse, rgba(109,40,217,0.42) 0%, rgba(76,29,149,0.22) 45%, transparent 72%)" }} />
           {/* Top-left indigo leak */}
-          <div className="hidden sm:block absolute -top-24 -left-40 w-[520px] h-[520px] rounded-full blur-[110px]" style={{ background: "radial-gradient(ellipse, rgba(79,70,229,0.28) 0%, transparent 65%)" }} />
+          <div className="hidden sm:block absolute -top-24 -left-40 w-130 h-130 rounded-full blur-[110px]" style={{ background: "radial-gradient(ellipse, rgba(79,70,229,0.28) 0%, transparent 65%)" }} />
           {/* Bottom-right fuchsia accent */}
-          <div className="hidden sm:block absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full blur-[120px]" style={{ background: "radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 68%)" }} />
+          <div className="hidden sm:block absolute bottom-0 right-0 w-105 h-105 rounded-full blur-[120px]" style={{ background: "radial-gradient(ellipse, rgba(168,85,247,0.2) 0%, transparent 68%)" }} />
           {/* Dot grid overlay */}
           <div className="hidden sm:block absolute inset-0 tool-hero-pattern opacity-60" />
           {/* Edge vignette */}
@@ -173,7 +173,7 @@ export default function HomePage() {
           <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "linear-gradient(90deg, transparent, rgba(139,92,246,0.45) 50%, transparent)" }} />
         </div>
 
-        <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-14 md:py-24">
+        <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-14 md:py-24">
           <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
             {/* Copy */}
             <div className="text-left">
@@ -254,7 +254,7 @@ export default function HomePage() {
 
               <div className="relative rounded-[28px] border border-violet-500/25 bg-[#0f0d1f]/90 backdrop-blur-xl p-6 shadow-2xl shadow-black/50 hero-reveal" style={{ animationDelay: "240ms" }}>
                 <div className="absolute inset-0 rounded-[28px] overflow-hidden">
-                  <div className="hero-sheen absolute top-6 -left-20 h-[1px] w-[70%] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+                  <div className="hero-sheen absolute top-6 -left-20 h-px w-[70%] bg-linear-to-r from-transparent via-white/30 to-transparent" />
                 </div>
 
                 <div className="flex items-center justify-between mb-5">
@@ -274,12 +274,12 @@ export default function HomePage() {
                       {["Before", "After"].map((label, idx) => (
                         <div key={label} className="rounded-xl border border-white/10 bg-white/5 p-2">
                           <div className="text-[10px] text-slate-500">{label}</div>
-                          <div className={`mt-3 h-14 rounded-lg ${idx === 0 ? "bg-gradient-to-br from-violet-500/20 via-fuchsia-500/10 to-transparent" : "bg-gradient-to-br from-emerald-500/30 via-sky-500/10 to-transparent"}`} />
+                          <div className={`mt-3 h-14 rounded-lg ${idx === 0 ? "bg-linear-to-br from-violet-500/20 via-fuchsia-500/10 to-transparent" : "bg-linear-to-br from-emerald-500/30 via-sky-500/10 to-transparent"}`} />
                         </div>
                       ))}
                     </div>
                     <div className="mt-3 h-2 rounded-full bg-white/5 overflow-hidden">
-                      <div className="h-full w-[72%] bg-gradient-to-r from-violet-500 to-fuchsia-500" />
+                      <div className="h-full w-[72%] bg-linear-to-r from-violet-500 to-fuchsia-500" />
                     </div>
                     <div className="mt-3 flex justify-between text-xs text-slate-500">
                       <span>4.2MB</span>
@@ -296,7 +296,7 @@ export default function HomePage() {
                       {["Original", "Optimized", "Preview"].map((label) => (
                         <div key={label} className="rounded-xl border border-white/10 bg-white/5 p-2">
                           <div className="text-[10px] text-slate-500">{label}</div>
-                          <div className="mt-3 h-10 rounded-lg bg-gradient-to-br from-violet-500/30 via-fuchsia-500/20 to-transparent" />
+                          <div className="mt-3 h-10 rounded-lg bg-linear-to-br from-violet-500/30 via-fuchsia-500/20 to-transparent" />
                         </div>
                       ))}
                     </div>
@@ -336,7 +336,7 @@ export default function HomePage() {
       <AdBanner slot="Homepage Top Banner" />
 
       {/* ───── TOOL GRID ───── */}
-      <section id="tools" className="relative max-w-[1400px] mx-auto px-4 sm:px-6 py-8 sm:py-12 mb-12 sm:mb-20 overflow-hidden rounded-2xl sm:rounded-[3rem] border border-white/5 bg-[#0f0d1f]/40 backdrop-blur-xl">
+      <section id="tools" className="relative max-w-350 mx-auto px-4 sm:px-6 py-8 sm:py-12 mb-12 sm:mb-20 overflow-hidden rounded-2xl sm:rounded-[3rem] border border-white/5 bg-[#0f0d1f]/40 backdrop-blur-xl">
         <SectionAtmosphere />
 
         <div className="relative z-10">
@@ -356,14 +356,14 @@ export default function HomePage() {
       {/* ───── HOW IT WORKS ───── */}
       <section className="cv-section relative overflow-hidden bg-[#0f0d1f] border-y border-violet-500/10 py-20 px-4 sm:px-8">
         <SectionAtmosphere />
-        <div className="relative z-10 max-w-[1400px] mx-auto">
+        <div className="relative z-10 max-w-350 mx-auto">
           {/* Section header */}
           <div className="mb-12 text-center">
             <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Compress, Convert &amp; Resize in 3 Clicks</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
             {/* Connector line (desktop) */}
-            <div className="hidden md:block absolute top-10 left-[calc(16.7%+24px)] right-[calc(16.7%+24px)] h-px bg-gradient-to-r from-violet-900 via-violet-500/40 to-violet-900" />
+            <div className="hidden md:block absolute top-10 left-[calc(16.7%+24px)] right-[calc(16.7%+24px)] h-px bg-linear-to-r from-violet-900 via-violet-500/40 to-violet-900" />
             {[
               {
                 icon: Upload, step: "01",
@@ -401,7 +401,7 @@ export default function HomePage() {
       </section>
 
       {/* ───── FEATURES ───── */}
-      <section className="cv-section relative overflow-hidden max-w-[1400px] mx-auto px-4 sm:px-8 py-20">
+      <section className="cv-section relative overflow-hidden max-w-350 mx-auto px-4 sm:px-8 py-20">
         <SectionAtmosphere />
         <div className="relative z-10">
           {/* Section header */}
@@ -424,7 +424,7 @@ export default function HomePage() {
 
       {/* ───── SEO CONTENT ───── */}
       <section className="cv-section bg-[#0f0d1f] border-y border-violet-500/10 py-20">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-8">
+        <div className="max-w-350 mx-auto px-4 sm:px-8">
           {/* Section header */}
           <div className="mb-12 text-center">
             <h2 className="font-display text-gray-200 leading-tight text-xl sm:text-3xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">The Importance of Optimizing Images</h2>
@@ -435,7 +435,7 @@ export default function HomePage() {
             {/* Left — heading + vertical roadmap */}
             <div className="lg:col-span-2 flex flex-col items-start">
               <div className="relative w-full max-w-sm rounded-[30px] border border-violet-500/20 bg-[#0f0d1f]/70 p-6 backdrop-blur-xl shadow-[0_0_40px_rgba(88,28,135,0.35)]">
-                <div className="absolute -inset-px rounded-[30px] bg-gradient-to-br from-violet-500/15 via-transparent to-fuchsia-500/10 pointer-events-none" />
+                <div className="absolute -inset-px rounded-[30px] bg-linear-to-br from-violet-500/15 via-transparent to-fuchsia-500/10 pointer-events-none" />
                 <div className="relative">
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-sm font-semibold text-slate-200">Optimization Flow</div>
@@ -449,7 +449,7 @@ export default function HomePage() {
                       <span>Realtime</span>
                     </div>
                     <div className="h-2 rounded-full bg-white/5 overflow-hidden">
-                      <div className="h-full w-[78%] bg-gradient-to-r from-violet-500 via-fuchsia-500 to-emerald-400" />
+                      <div className="h-full w-[78%] bg-linear-to-r from-violet-500 via-fuchsia-500 to-emerald-400" />
                     </div>
                   </div>
                   <div className="relative flex flex-col gap-0">
@@ -460,12 +460,12 @@ export default function HomePage() {
                     ].map(({ step, label, tag, color, ring }, i, arr) => (
                       <div key={step} className="flex gap-5 items-start">
                         {/* Dot + connector */}
-                        <div className="flex flex-col items-center flex-shrink-0">
-                          <div className={`w-10 h-10 rounded-full ${color} ${ring} ring-4 flex items-center justify-center shadow-lg flex-shrink-0`}>
+                        <div className="flex flex-col items-center shrink-0">
+                          <div className={`w-10 h-10 rounded-full ${color} ${ring} ring-4 flex items-center justify-center shadow-lg shrink-0`}>
                             <span className="text-[10px] font-black text-white tracking-widest">{step}</span>
                           </div>
                           {i < arr.length - 1 && (
-                            <div className="w-px flex-1 min-h-[56px] bg-gradient-to-b from-violet-500/40 to-violet-500/10 mt-1" />
+                            <div className="w-px flex-1 min-h-14 bg-linear-to-b from-violet-500/40 to-violet-500/10 mt-1" />
                           )}
                         </div>
                         {/* Label */}
@@ -482,7 +482,7 @@ export default function HomePage() {
 
 
             <div className="lg:col-span-3 relative">
-              <div className="hidden sm:block absolute left-4 top-4 bottom-4 w-px bg-gradient-to-b from-violet-500/40 via-violet-500/10 to-transparent" />
+              <div className="hidden sm:block absolute left-4 top-4 bottom-4 w-px bg-linear-to-b from-violet-500/40 via-violet-500/10 to-transparent" />
               <div className="grid gap-4">
                 {[
                   {
@@ -505,8 +505,8 @@ export default function HomePage() {
                     <div className="absolute left-0 top-6 flex h-9 w-9 items-center justify-center rounded-full border border-violet-500/30 bg-violet-500/10 text-xs font-black text-violet-300">
                       {label}
                     </div>
-                    <div className="group relative rounded-[24px] border border-violet-500/15 bg-[#120f25]/70 p-6 transition-all hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-900/20">
-                      <div className="absolute inset-0 rounded-[24px] opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: "radial-gradient(ellipse at 30% 10%, rgba(139,92,246,0.12), transparent 55%)" }} />
+                    <div className="group relative rounded-3xl border border-violet-500/15 bg-[#120f25]/70 p-6 transition-all hover:border-violet-500/30 hover:shadow-lg hover:shadow-violet-900/20">
+                      <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ background: "radial-gradient(ellipse at 30% 10%, rgba(139,92,246,0.12), transparent 55%)" }} />
                       <div className="relative">
                         <h3 className="font-bold text-white mb-2">{title}</h3>
                         <p className="text-sm text-gray-400 leading-7">{body}</p>
@@ -531,7 +531,7 @@ export default function HomePage() {
           <div className="absolute -bottom-20 right-[-10%] w-[45%] h-[45%] rounded-full bg-fuchsia-600/06 blur-[150px]" />
           <div className="absolute inset-0 hero-grid-lines opacity-10" />
         </div>
-        <div className="relative z-10 max-w-[1400px] mx-auto px-4 sm:px-8">
+        <div className="relative z-10 max-w-350 mx-auto px-4 sm:px-8">
           {/* Section header */}
           <div className="mb-12 text-center">
             <h2 className="font-display text-gray-200 leading-tight text-2xl sm:text-4xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Frequently Asked Questions About Image Tools</h2>
@@ -540,7 +540,7 @@ export default function HomePage() {
 
             {/* Left — label + heading + copy */}
             <div className="lg:col-span-2 space-y-4">
-              <div className="rounded-[24px] border border-violet-500/15 bg-[#120f25]/70 p-5 backdrop-blur-xl">
+              <div className="rounded-3xl border border-violet-500/15 bg-[#120f25]/70 p-5 backdrop-blur-xl">
                 <div className="text-xs uppercase tracking-[0.3em] text-violet-300/70">Support Desk</div>
                 <p className="text-gray-400 text-sm leading-relaxed mt-4">
                   Everything you need to know about using PixlTools. Can&apos;t find your answer?
@@ -552,7 +552,7 @@ export default function HomePage() {
                   Read our image guides &rarr;
                 </a>
               </div>
-              <div className="rounded-[24px] border border-violet-500/15 bg-[#120f25]/70 p-5">
+              <div className="rounded-3xl border border-violet-500/15 bg-[#120f25]/70 p-5">
                 <div className="text-xs uppercase tracking-[0.3em] text-violet-300/70">Popular Topics</div>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {["File limits", "Formats", "Privacy", "Speed", "Quality"].map((topic) => (
@@ -686,8 +686,8 @@ export default function HomePage() {
         <SectionAtmosphere />
 
         <div className="relative max-w-5xl mx-auto">
-          <div className="rounded-[32px] border border-violet-500/20 bg-[#0f0d1f]/70 p-8 sm:p-10 backdrop-blur-xl shadow-[0_0_60px_rgba(88,28,135,0.35)]">
-            <div className="absolute inset-0 rounded-[32px] pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 20%, rgba(139,92,246,0.18), transparent 55%)" }} />
+          <div className="rounded-4xl border border-violet-500/20 bg-[#0f0d1f]/70 p-8 sm:p-10 backdrop-blur-xl shadow-[0_0_60px_rgba(88,28,135,0.35)]">
+            <div className="absolute inset-0 rounded-4xl pointer-events-none" style={{ background: "radial-gradient(ellipse at 70% 20%, rgba(139,92,246,0.18), transparent 55%)" }} />
             <div className="relative grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
               <div>
                 <div className="inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-violet-300/70">
@@ -718,18 +718,18 @@ export default function HomePage() {
               </div>
               <div className="relative">
                 <div className="absolute -inset-6 rounded-[28px] bg-violet-600/10 blur-3xl" />
-                <div className="relative rounded-[24px] border border-violet-500/20 bg-[#120f25]/80 p-6">
+                <div className="relative rounded-3xl border border-violet-500/20 bg-[#120f25]/80 p-6">
                   <div className="flex items-center justify-between text-xs text-slate-400">
                     <span>Instant Preview</span>
                     <span className="text-emerald-300">Active</span>
                   </div>
-                  <div className="mt-4 h-28 rounded-2xl bg-gradient-to-br from-violet-500/30 via-fuchsia-500/20 to-transparent" />
+                  <div className="mt-4 h-28 rounded-2xl bg-linear-to-br from-violet-500/30 via-fuchsia-500/20 to-transparent" />
                   <div className="mt-4 flex items-center justify-between text-xs text-slate-400">
                     <span>Before: 4.2MB</span>
                     <span>After: 380KB</span>
                   </div>
                   <div className="mt-4 h-2 rounded-full bg-white/5 overflow-hidden">
-                    <div className="h-full w-[78%] bg-gradient-to-r from-violet-500 via-fuchsia-500 to-emerald-400" />
+                    <div className="h-full w-[78%] bg-linear-to-r from-violet-500 via-fuchsia-500 to-emerald-400" />
                   </div>
                 </div>
                 <div className="absolute -bottom-6 left-6 hidden md:flex items-center gap-2 rounded-full border border-white/10 bg-[#0f0d1f]/80 px-3 py-1 text-xs text-slate-400">

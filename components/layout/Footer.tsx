@@ -40,7 +40,7 @@ const TRUST_BADGES = [
 export default function Footer() {
     return (
         <footer className="bg-[#0b0816] border-t border-violet-500/10">
-            <div className="max-w-[1400px] mx-auto px-6 sm:px-8">
+            <div className="max-w-350 mx-auto px-6 sm:px-8">
 
                 {/* ── Main grid ── */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 py-10 sm:py-14 border-b border-violet-500/10">
@@ -65,7 +65,7 @@ export default function Footer() {
                         <div className="flex flex-col gap-1.5 pt-1">
                             {TRUST_BADGES.map(({ icon: Icon, label }) => (
                                 <div key={label} className="flex items-center gap-1.5 text-xs text-gray-300">
-                                    <Icon size={11} className="text-violet-400 flex-shrink-0" strokeWidth={2} />
+                                    <Icon size={11} className="text-violet-400 shrink-0" strokeWidth={2} />
                                     {label}
                                 </div>
                             ))}

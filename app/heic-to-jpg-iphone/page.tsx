@@ -95,14 +95,14 @@ export default function HeicToJpgIphonePage() {
 
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-blue-300 mb-6">
                         <Smartphone size={12} /> iPhone Guide · HEIC Conversion
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
                         Convert HEIC to JPG{" "}
-                        <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">on iPhone</span>
+                        <span className="bg-linear-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">on iPhone</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         iPhone photos are saved as HEIC by default — a format that Windows, Android,
@@ -119,7 +119,7 @@ export default function HeicToJpgIphonePage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
 
                 {/* Why HEIC */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -141,19 +141,19 @@ export default function HeicToJpgIphonePage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">3 Ways to Convert HEIC to JPG on iPhone</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-6">
                         {METHODS.map(({ title, badge, badgeColor, steps, note }) => (
                             <div key={title} className="bg-[#16122a] border border-violet-500/15 rounded-2xl p-6">
                                 <div className="flex items-start justify-between gap-4 mb-4">
                                     <h3 className="font-bold text-white text-lg">{title}</h3>
-                                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border flex-shrink-0 ${badgeColor}`}>{badge}</span>
+                                    <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold border shrink-0 ${badgeColor}`}>{badge}</span>
                                 </div>
                                 <ol className="space-y-2 mb-4">
                                     {steps.map((step, i) => (
                                         <li key={i} className="flex gap-3 text-sm text-gray-400">
-                                            <span className="w-5 h-5 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">
+                                            <span className="w-5 h-5 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                                                 {i + 1}
                                             </span>
                                             {step}
@@ -170,7 +170,7 @@ export default function HeicToJpgIphonePage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">HEIC Compatibility by Platform</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-violet-500/15">
                         <table className="w-full">
@@ -207,7 +207,7 @@ export default function HeicToJpgIphonePage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Free Conversion Tools</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         {[
@@ -227,7 +227,7 @@ export default function HeicToJpgIphonePage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Frequently Asked Questions</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {FAQS.map(({ q, a }) => (

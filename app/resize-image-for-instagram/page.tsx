@@ -85,13 +85,13 @@ export default function ResizeForInstagramPage() {
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] rounded-full blur-3xl pointer-events-none"
                     style={{ background: "radial-gradient(ellipse, rgba(217,70,239,0.12) 0%, rgba(109,40,217,0.08) 50%, transparent 70%)" }} />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-8 py-20 text-center">
+                <div className="relative max-w-350 mx-auto px-4 sm:px-8 py-20 text-center">
                     <div className="inline-flex items-center gap-2 bg-fuchsia-500/10 border border-fuchsia-500/20 rounded-full px-4 py-1.5 text-xs font-medium text-fuchsia-300 mb-6">
                         Platform Guide · Instagram
                     </div>
                     <h1 className="text-4xl md:text-5xl font-extrabold text-gray-300 mb-4 tracking-tight">
                         Resize Image for{" "}
-                        <span className="bg-gradient-to-r from-fuchsia-400 to-violet-400 bg-clip-text text-transparent">Instagram</span>
+                        <span className="bg-linear-to-r from-fuchsia-400 to-violet-400 bg-clip-text text-transparent">Instagram</span>
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
                         Get the exact pixel dimensions for every Instagram format — posts, stories,
@@ -108,13 +108,13 @@ export default function ResizeForInstagramPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-8 py-16 space-y-16">
+            <div className="max-w-350 mx-auto px-4 sm:px-8 py-16 space-y-16">
 
                 {/* Size table */}
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Instagram Image Sizes 2026 — Complete Reference</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="overflow-x-auto rounded-2xl border border-violet-500/15">
                         <table className="w-full">
@@ -146,12 +146,12 @@ export default function ResizeForInstagramPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">How to Resize an Image for Instagram</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {STEPS.map(({ n, title, desc }) => (
                             <div key={n} className="flex gap-4 bg-[#16122a] border border-violet-500/15 rounded-xl p-5">
-                                <span className="w-9 h-9 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">{n}</span>
+                                <span className="w-9 h-9 bg-violet-500/10 border border-violet-500/20 text-violet-400 rounded-full flex items-center justify-center font-bold text-sm shrink-0 mt-0.5">{n}</span>
                                 <div>
                                     <h3 className="font-semibold text-white mb-1">{title}</h3>
                                     <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
@@ -174,7 +174,7 @@ export default function ResizeForInstagramPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-xl font-bold text-gray-300 whitespace-nowrap">Free Tools for Instagram-Ready Images</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                         {[
@@ -194,7 +194,7 @@ export default function ResizeForInstagramPage() {
                 <div>
                     <div className="flex items-center gap-4 mb-8">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">Frequently Asked Questions</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <div className="space-y-4">
                         {FAQS.map(({ q, a }) => (

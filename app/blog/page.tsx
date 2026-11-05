@@ -33,8 +33,8 @@ export default function BlogPage() {
         <main className="min-h-screen bg-[#0b0816]">
             {/* Hero */}
             <div className="relative overflow-hidden bg-[#0f0d1f] border-b border-violet-500/10 py-16">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
-                <div className="relative max-w-[1400px] mx-auto px-4 sm:px-6 text-center">
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-violet-500/10 rounded-full blur-3xl pointer-events-none" />
+                <div className="relative max-w-350 mx-auto px-4 sm:px-6 text-center">
                     <p className="text-xs font-bold uppercase tracking-widest text-violet-400 mb-3">PixlTools Blog</p>
                     <div className="mb-4 text-center">
                         <h1 className="font-display text-gray-200 leading-[1.02] text-4xl sm:text-5xl lg:text-5xl mt-2 rounded-xl border border-violet-500/20 bg-violet-500/10 px-4 py-1.5 inline-block">Image Optimization Blog</h1>
@@ -46,14 +46,14 @@ export default function BlogPage() {
                 </div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-4 sm:px-6 py-12">
+            <div className="max-w-350 mx-auto px-4 sm:px-6 py-12">
                 <AdBanner slot="Blog Top Banner" />
 
                 {/* Editorial intro */}
                 <div className="mt-8 mb-8 bg-[#16122a] border border-violet-500/15 rounded-2xl p-7">
                     <div className="flex items-center gap-4 mb-6">
                         <h2 className="text-2xl font-bold text-gray-300 whitespace-nowrap">About This Blog</h2>
-                        <span className="h-px flex-1 bg-gradient-to-r from-violet-500/60 to-transparent" />
+                        <span className="h-px flex-1 bg-linear-to-r from-violet-500/60 to-transparent" />
                     </div>
                     <p className="text-gray-400 leading-relaxed text-sm mb-3 text-justify">
                         The PixlTools blog covers everything you need to know about working with images on the web and beyond.

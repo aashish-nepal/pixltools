@@ -15,7 +15,7 @@ export default function MobileBottomNav() {
     return (
         <nav className="sm:hidden fixed bottom-0 left-0 right-0 z-50 safe-area-bottom">
             {/* Glow line on top */}
-            <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-violet-500/40 to-transparent" />
+            <div className="absolute top-0 left-4 right-4 h-px bg-linear-to-r from-transparent via-violet-500/40 to-transparent" />
 
             <div className="bg-[#0b0816]/85 backdrop-blur-xl border-t border-violet-500/15 px-2 pt-2 pb-3">
                 <div className="flex items-center justify-around gap-1">
